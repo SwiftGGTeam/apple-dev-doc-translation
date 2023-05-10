@@ -1,0 +1,234 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: Refactor the code to use custom scenes
+  提示: ''
+  翻译: ''
+- 内容: A scene contains the view hierarchy of your app.
+  提示: ''
+  翻译: ''
+- 内容: Let’s look at the view hierarchy the sample defines for macOS.
+  提示: ''
+  翻译: ''
+- 内容: The iPhone version of the app displays a scene with a tabbed user interface,
+    while the Mac version displays a scene with split view interface. The Mac app
+    also displays the secondary scene Settings when you select the Preferences item
+    under the app menu.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: To describe the scene that displays on iOS devices, the sample includes the
+    custom scene MyScene, which is a structure that conforms to the Scene protocol.
+  提示: ''
+  翻译: ''
+- 内容: To compile the first view hierarchy for iOS, the sample uses a platform conditional
+    compilation block that tells the Swift compiler to compile the code only when
+    the target platform is iOS.
+  提示: ''
+  翻译: ''
+- 内容: Unlike the previous hierarchy, the root node of this hierarchy is the custom
+    view, AlternativeContentView.
+  提示: ''
+  翻译: ''
+- 内容: Specifying the view hierarchy of an app using a scene
+  提示: ''
+  翻译: ''
+- 内容: However, after refactoring the code, the MyApp structure is easier to read and
+    maintain.
+  提示: ''
+  翻译: ''
+- 内容: Each of these views apply the tabItem(_:) modifier, which tells the TabView
+    the image and text to display in each tab.
+  提示: ''
+  翻译: ''
+- 内容: The source code in the MyApp structure does the job of defining view hierarchies
+    different versions of the sample app, but the code is lengthy making it difficult
+    to maintain. One improvement that can help make the code more readable and easier
+    to maintain is to use custom scenes. A custom scene is one that you compose from
+    other scenes.
+  提示: ''
+  翻译: ''
+- 内容: Keep your app’s view layouts fluid on any device for each type of content your
+    app displays.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: The root node of the view hierarchy is TabView, a container view that provides
+    tabs that people can use to switch between different subviews.
+  提示: ''
+  翻译: ''
+- 内容: Create custom scenes
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: Here’s the view hierarchy discussed in the previous section.
+  提示: ''
+  翻译: ''
+- 内容: A structure that conforms to Scene must implement the computed property body,
+    just like structures that conform to the App protocol do.
+  提示: ''
+  翻译: ''
+- 内容: Define another view hierarchy
+  提示: ''
+  翻译: ''
+- 内容: The code for this scene is the same code from the MyApp structure, discussed
+    in the Define another view hierarchy section.
+  提示: ''
+  翻译: ''
+- 内容: Here’s how the scenes appear when you run the app on iPhone and Mac.
+  提示: ''
+  翻译: ''
+- 内容: The computed body property can return one or more primary and secondary scenes.
+  提示: ''
+  翻译: ''
+- 内容: The MyApp structure implements the computed property body, which returns a scene.
+  提示: ''
+  翻译: ''
+- 内容: A conditional compilation block tells the Swift compiler to conditionally compile
+    the code block depending on the value of one or more compilation conditions. For
+    more information about conditional compilation blocks, see Compiler Control Statements
+  提示: ''
+  翻译: ''
+- 内容: For macOS, the sample includes another custom scene, MyAlternativeScene, which
+    is another structure that conforms to Scene.
+  提示: ''
+  翻译: ''
+- 内容: This approach can make the implementation of computed property body more difficult
+    to maintain.
+  提示: ''
+  翻译: ''
+- 内容: It too implements the computed body property.
+  提示: ''
+  翻译: ''
+- 内容: The sample defines the other view hierarchy in a WindowGroup scene.
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: This sample uses a journaling app as an example. To describe the view hierarchy
+    of the app’s user interface, the MyApp structure declares a scene and its contents.
+    Let’s take a look at the structure and its scene.
+  提示: ''
+  翻译: ''
+- 内容: The Settings scene is only available in macOS.
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: The TabView contains two subviews, ContentView and SettingsView.
+  提示: ''
+  翻译: ''
+- 内容: Maintaining the adaptable sizes of built-in views
+  提示: ''
+  翻译: ''
+- 内容: 'The sample defines the view hierarchy using a WindowGroup scene that contains
+    a TabView. In turn, the TabView contains two subviews: ContentView and SettingsView.'
+  提示: ''
+  翻译: ''
+- 内容: SwiftUI provides building blocks that help you create the user interface of
+    your app. One of those building blocks is Scene, which contains a view hierarchy
+    that defines the user interface of your app. You can specify your app’s view hierarchy
+    in a scene that SwiftUI provides, or you can create a custom scene. This tutorial
+    walks you through both approaches.
+  提示: ''
+  翻译: ''
+- 内容: The root node of the previous view hierarchy is the container view, TabView.
+  提示: ''
+  翻译: ''
+- 内容: Both are custom views. ContentView displays a list of journal entries, and SettingsView
+    displays other views that let people edit the settings for the app, such as the
+    account associated with the journal.
+  提示: ''
+  翻译: ''
+- 内容: Add a scene to the app
+  提示: ''
+  翻译: ''
+- 内容: The sample uses the secondary scene Settings to provide a Settings menu item
+    that’s available in the app menu, which is a common feature of Mac apps.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: In this sample, body returns the primary scene WindowGroup, which describes
+    the view hierarchy of the sample’s main window.
+  提示: ''
+  翻译: ''
+- 内容: The entry point and MyApp structure are responsible for the start up of the
+    app. Each SwiftUI app has one and only one entry point and main app structure.
+  提示: ''
+  翻译: ''
+- 内容: With two separate view hierarchies defined, the sample must specify which one
+    to use based on the target platform.
+  提示: ''
+  翻译: ''
+- 内容: Before refactoring the MyApp structure to use the custom scenes, the code is
+    fairly long and complex.
+  提示: ''
+  翻译: ''
+- 内容: The computed body property includes the secondary scene Settings. This scene
+    is only available in macOS, so it’s placed inside a platform conditional compilation
+    block.
+  提示: ''
+  翻译: ''
+- 内容: The sample defines an entry point using the @main attribute and the structure
+    MyApp, which conforms to the App protocol.
+  提示: ''
+  翻译: ''
+- 内容: The WindowGroup scene is one of the more commonly used scenes. It provides platform-specific
+    behaviors for your app, such as supporting multiple windows in macOS and iPadOS.
+    For more information about this scene as well as other scenes that SwiftUI provides,
+    see Scenes.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: The Settings scene contains the custom view, SettingView, which displays app
+    settings in a window that the Settings menu item provides.
+  提示: ''
+  翻译: ''
+- 内容: Change the code so that the sample uses MyScene in macOS and MyAlternativeScene
+    in iOS.
+  提示: ''
+  翻译: ''
+- 内容: The implementation of body uses the same code from the MyApp structure, covered
+    in the Add a scene to the app section of this tutorial.
+  提示: ''
+  翻译: ''
+- 内容: The sample app runs on multiple devices including iPhone and Mac. But the view
+    hierarchy described in the previous section doesn’t look quite right in macOS.
+    So the sample declares another view hierarchy that takes advantage of features
+    specific to the Mac.
+  提示: ''
+  翻译: ''
+- 内容: With the MyScene and MyAlternativeScene in place, the final step is to refactor
+    the code in the MyApp structure so that it uses the custom scenes.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: The app uses a separate platform conditional to compile the scenes that the
+    Mac app uses.
+  提示: ''
+  翻译: ''
+- 内容: 'When the sample app runs, it displays the view hierarchy described in the WindowGroup
+    scene, which is a tab interface with two tabs: Journal and Settings.'
+  提示: ''
+  翻译: ''

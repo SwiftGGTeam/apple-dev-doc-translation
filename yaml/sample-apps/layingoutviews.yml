@@ -1,0 +1,412 @@
+- 内容: Because all views are unique, different types of views have their own space
+    requirements within a container. This is why the Rectangle view adjusts how much
+    space it takes up, but the Text and Image only take up as much space as they need.
+  提示: ''
+  翻译: ''
+- 内容: There is just one more thing to fix. By default any content inside the frame
+    is center-aligned. However, the crown at the center of the HalfCard needs to align
+    to the bottom edge of HalfCard.
+  提示: ''
+  翻译: ''
+- 内容: Can you think of anyway to fix this so the contents of the VStack fill the entire
+    frame?
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Push the card title to the edge by setting the maximum height to .infinity.
+  提示: ''
+  翻译: ''
+- 内容: You can also organize your views on top of each other using a ZStack. To stack
+    a circle view on top of a rectangle, the views need to be put into a ZStack.
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: A view can also maintain a specific size that doesn’t change, like Stepper.
+  提示: ''
+  翻译: ''
+- 内容: Try it out yourself by going to the Swift Playgrounds App to practice laying
+    out views for a journal app!
+  提示: ''
+  翻译: ''
+- 内容: If you add the frame to the Text view, the actual text inside the view doesn’t
+    change — it makes the view holding the text larger. This allows for more text
+    to fit into the view.
+  提示: ''
+  翻译: ''
+- 内容: Organize, size and align view layouts.
+  提示: ''
+  翻译: ''
+- 内容: Look at the difference in the blue and green borders. The blue border surrounds
+    the squished graphics in the VStack, but doesn’t expand into the empty surrounding
+    space of the green frame.
+  提示: ''
+  翻译: ''
+- 内容: Meme Creator
+  提示: ''
+  翻译: ''
+- 内容: Organize your views in different configurations using container views.
+  提示: ''
+  翻译: ''
+- 内容: Providing fixed values for the width and height limits how adaptive the view
+    can be. 🙃
+  提示: ''
+  翻译: ''
+- 内容: By applying the padding modifier to the VStack, you only have to add it once
+    instead of adding it to every subview inside the VStack.
+  提示: ''
+  翻译: ''
+- 内容: 'Try adding in the alignment: .leading parameter to your VStack and see what
+    happens.'
+  提示: ''
+  翻译: ''
+- 内容: Start by setting height of your card. There are many different ways to lay out
+    a view and using .frame(minHeight:maxHeight:) is just one way you can set the
+    height.
+  提示: ''
+  翻译: ''
+- 内容: Using both can help get a precise size for an image that is not distorted or
+    too large.
+  提示: ''
+  翻译: ''
+- 内容: If you want to make the text bigger or different than the default, you can add
+    the font(_:) modifier to your Text view.
+  提示: ''
+  翻译: ''
+- 内容: Now that you’ve gone through all of the different parts for laying out a view,
+    it’s time to bring them all together to see how you can use it when creating a
+    view for a real app.
+  提示: ''
+  翻译: ''
+- 内容: You could add horizontal padding to every row of shelves and books, but that’s
+    a lot of work and not easy to maintain. Instead, apply modifiers to the container
+    view. In this case, the container is the VStack.
+  提示: ''
+  翻译: ''
+- 内容: It’s the queen of hearts playing card (or, it’s supposed to be 😵‍💫). As the
+    name suggests, HalfCard contains half a card. You use two HalfCard instances in
+    a VStack to create this view. Then, flip the bottom HalfCard upside down to form
+    a mirror image of the top HalfCard. By combining the top and bottom halves, you
+    create a full playing card.
+  提示: ''
+  翻译: ''
+- 内容: A SwiftUI View determines its size based on the space offered by its container
+    view. That’s why this rectangle is taking up the entire view – because that’s
+    what the parent VStack is doing.
+  提示: ''
+  翻译: ''
+- 内容: You are now on your way to being a SwiftUI view layout expert!
+  提示: ''
+  翻译: ''
+- 内容: Step 12
+  提示: ''
+  翻译: ''
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: To adjust the amount of space views need, you can specify which view needs to
+    take up more space. The frame(width:height:alignment:) allows you to adjust the
+    size of a view. The frame modifier is setting a specific height and width for
+    the rose image view.
+  提示: ''
+  翻译: ''
+- 内容: Refine the spacing and alignment of your views
+  提示: ''
+  翻译: ''
+- 内容: Woohoo! Now you have all the tools to create your own views.
+  提示: ''
+  翻译: ''
+- 内容: Different types of views and circumstances require different techniques. To
+    learn more about the size and spacing of views, see Laying out a simple view.
+  提示: ''
+  翻译: ''
+- 内容: You may have noticed that you have stacks that contain other stacks. SwiftUI
+    organizes and tracks the relationships of views using a view hierarchy.
+  提示: ''
+  翻译: ''
+- 内容: Notice that there are Text and Image views in your VStack. No matter how big
+    the screen you’re using, the Text and Image views take up exactly the amount of
+    space they need depending on the size of the content.
+  提示: ''
+  翻译: ''
+- 内容: Debug your views when something goes wrong.
+  提示: ''
+  翻译: ''
+- 内容: You can also add padding to the .trailing edge the image view to position it
+    further from the edge.
+  提示: ''
+  翻译: ''
+- 内容: 'Adding the alignment: .leading parameter to your VStack aligns the books to
+    the left edge of the screen. This is because the VStack is the container view
+    and the images and shapes are subviews.'
+  提示: ''
+  翻译: ''
+- 内容: In this sample, you’ll learn all of these skills and more. Ready to start your
+    journey into view layout?
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: There are more containers than just HStack, VStack, and ZStack views. To explore
+    different containers and how to use them to lay out your content, see Picking
+    container views for your content
+  提示: ''
+  翻译: ''
+- 内容: Adding resizable after frame causes a compiler error. Applying the frame modifier
+    to the Image actually creates a new view that’s no longer an Image, so it doesn’t
+    have access to the resizable modifier.
+  提示: ''
+  翻译: ''
+- 内容: Warning
+  提示: ''
+  翻译: ''
+- 内容: Bringing it all together
+  提示: ''
+  翻译: ''
+- 内容: By setting the maxWidth to .infinity, you stretch the Image view horizontally
+    until it fills the remaining space. Setting alignment parameter to .trailing makes
+    the frame contents align to the .trailing edge.
+  提示: ''
+  翻译: ''
+- 内容: Organize your views
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: Adding a border to a view is a great debugging tool because it allows you to
+    see how much space a view occupies. You can use this technique to diagnose lots
+    of issues in your code.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Views can also resize to fit their content such as Text(“Supercalifragilisticexpialidocious”)
+    or Image("myCoolImage").
+  提示: ''
+  翻译: ''
+- 内容: Views are somewhat magical, in that certain view types control how they resize
+    when placed in a container. They can expand to fill the available space, such
+    as Rectangle or other Shape.
+  提示: ''
+  翻译: ''
+- 内容: When your SwiftUI views don’t show up as you expect, you’ll need to flex your
+    debugging skills to fix them. Start by looking at the view displayed in the preview
+    — it’s clearly not showing up correctly! 😩 Can you guess what this view is supposed
+    to be?
+  提示: ''
+  翻译: ''
+- 内容: Tip
+  提示: ''
+  翻译: ''
+- 内容: What if you switched up the order of the overlay and the frame? That would allow
+    you to expand the frame first, which gives you extra space, then apply the overlay
+    where it fits.
+  提示: ''
+  翻译: ''
+- 内容: Often times you need to add size constraints to images since they can be extremely
+    large.
+  提示: ''
+  翻译: ''
+- 内容: With the card title aligned, add padding to create space between the title of
+    the view and the edge of the card. By adding padding to the VStack, you are applying
+    padding to every view within the VStack.
+  提示: ''
+  翻译: ''
+- 内容: You might wonder, why would it make a difference if you apply the border before
+    or after the frame? This is because you actually produce a new view each time
+    you apply a modifier, so the order that you apply them really matters. See Configuring
+    views for more on this.
+  提示: ''
+  翻译: ''
+- 内容: Step 11
+  提示: ''
+  翻译: ''
+- 内容: Any code applied to the HalfCard view affects both the top and bottom halves
+    of the card, allowing you to fix issues in both halves at the same time.
+  提示: ''
+  翻译: ''
+- 内容: Debugging views
+  提示: ''
+  翻译: ''
+- 内容: Another way to align books to the other side of the shelf is to use a frame
+    modifier and specify the alignment.
+  提示: ''
+  翻译: ''
+- 内容: There are multiple ways to specify alignment in SwiftUI. One way is to specify
+    the alignment inside HStack, VStack, or ZStack. The default alignment for a VStack
+    is centered.
+  提示: ''
+  翻译: ''
+- 内容: In horizontal stacks you can only set the vertical alignment, like .top or .bottom.
+  提示: ''
+  翻译: ''
+- 内容: But wait, there’s more! You can also create space in a view with a Spacer.
+  提示: ''
+  翻译: ''
+- 内容: The Spacer only fills in the empty space in the HStack. On the contrary, if
+    there is no space available for the spacer, it won’t render.
+  提示: ''
+  翻译: ''
+- 内容: 'When creating an app, one of the first skills to learn is how to lay out your
+    user interface, or UI. When laying out a UI, there are three major things you
+    need to do:'
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: A better way to do this is to give a maximum, minimum, or ideal width and height
+    for a view. This allows the view to resize as necessary based on how much space
+    is available in the container.
+  提示: ''
+  翻译: ''
+- 内容: You just learned about three different ways to align your views. Using the alignment
+    parameter in the container view, adding a frame modifier with the alignment parameter
+    and utilizing a Spacer are all great ways to align your views.
+  提示: ''
+  翻译: ''
+- 内容: Try removing the existing frame and add a new one right below the top-level
+    VStack.
+  提示: ''
+  翻译: ''
+- 内容: Explore other padding options such as .leading, .top, .bottom, .horizontal,
+    and so on.
+  提示: ''
+  翻译: ''
+- 内容: Setting the minHeight and maxHeight allows the view to scale for different screen
+    sizes.
+  提示: ''
+  翻译: ''
+- 内容: You can also specify the spacing as a parameter for the HStack. This changes
+    the horizontal spacing between every subview inside the HStack.
+  提示: ''
+  翻译: ''
+- 内容: Fetch structured data from a server asynchronously.
+  提示: ''
+  翻译: ''
+- 内容: 'There are two ways to align the crown to the bottom of your HalfCard view.
+    You can add the alignment parameter to the frame– .frame(maxWidth: .infinity,
+    maxHeight: .infinity, alignment: .bottom) Or, add a Spacer above the crown.'
+  提示: ''
+  翻译: ''
+- 内容: Add a yellow background color to the image next to the Spacer to visualize how
+    much space it’s creating.
+  提示: ''
+  翻译: ''
+- 内容: Modify and determine view sizes
+  提示: ''
+  翻译: ''
+- 内容: If you want to organize a pair of circles horizontally, you can use an HStack.
+  提示: ''
+  翻译: ''
+- 内容: Fine tune the sizing, spacing, alignment, and positioning of your views.
+  提示: ''
+  翻译: ''
+- 内容: Having a .frame modifier with a maxWidth of .infinity stretches the Text view
+    horizontally and fills the available space. The alignment parameter ensures that
+    any content inside the frame aligns to the leading edge.
+  提示: ''
+  翻译: ''
+- 内容: Different views have different space requirements; not all views take up the
+    same amount of space.
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: Laying Out Views
+  提示: ''
+  翻译: ''
+- 内容: When you use the frame modifer on an Image it only affects the size of the displayed
+    image if you first use the .resizable modifier to indicate that you want the image
+    to be resized as its frame changes.
+  提示: ''
+  翻译: ''
+- 内容: Shape views expand to fill the entire space that’s offered by the container
+    view. Because there are two shape views that need to share the space in the VStack
+    equally, their sizes adapt accordingly.
+  提示: ''
+  翻译: ''
+- 内容: Step 13
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: Even though the frame expanded, all of the graphics are still squished together.
+    Add another border above the frame modifier. This allows you to see the outline
+    of the VStack before you apply the frame.
+  提示: ''
+  翻译: ''
+- 内容: You want the emojis to be in the middle of the view. To make sure they aren’t
+    squished in the middle of the view, set the maxWidth to infinity.
+  提示: ''
+  翻译: ''
+- 内容: A view can act as a container that holds and organizes other views, known as
+    subviews. The VStack that holds all of your code is an example of a container
+    view that organizes the two shape subviews vertically.
+  提示: ''
+  翻译: ''
+- 内容: Look at that beautiful playing card! The next time you’re unsure why your views
+    aren’t displaying the way you want them to, don’t forget that you can add a border
+    or background to help you debug issues with your views.
+  提示: ''
+  翻译: ''
+- 内容: However, if you want your bookshelf to have a specific width, use a frame instead
+    of padding. Adding a border after the frame helps you visualize the frame.
+  提示: ''
+  翻译: ''
+- 内容: Can you figure out a way to make this happen? Remember that you can add a border
+    to visualize how much space your view needs and compare it to how you think the
+    view should behave.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: Step 14
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Adding a Spacer inside an HStack causes the stack to expand to fill in any remaining
+    horizontal space, and pushes the Image view to the .trailing edge.
+  提示: ''
+  翻译: ''
+- 内容: The first major problem here is that all of the graphics are squished together.
+    Add a frame in HalfCard and set the maxWidth and maxHeight to .infinity. This
+    allows the frame to expand to fill any available space offered by the container,
+    VStack.
+  提示: ''
+  翻译: ''
+- 内容: Now that you have fixed the alignment in this card, you can remove any borders
+    that you’ve added.
+  提示: ''
+  翻译: ''
+- 内容: To add a gap between the circular buttons and the emojis you need to add padding
+    below the text.
+  提示: ''
+  翻译: ''
+- 内容: Adding a frame to an image can sometimes cause it to look stretched even by
+    adding an ideal width and height. For images, it’s often better to use scaledToFill()
+    or scaledToFit() instead of a frame.
+  提示: ''
+  翻译: ''
+- 内容: In vertical stacks, you can only set the horizontal alignment, like .leading
+    or .trailing.
+  提示: ''
+  翻译: ''
+- 内容: A different way to add a row of books aligned to the right edge of the shelf
+    is by adding a VStack and setting its alignment to .trailing.
+  提示: ''
+  翻译: ''

@@ -1,0 +1,110 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: Provide an alternative to a state variable by using a custom binding.
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: DetailView passes recipe to the RecipeDetailView view as a binding value, which
+    allows the detail view to read and write to the recipe value.
+  提示: ''
+  翻译: ''
+- 内容: The computed recipe property doesn’t return a Recipe. Instead, it returns a
+    custom Binding of type Recipe. This allows the view to share the recipe as a source
+    of truth with other views.
+  提示: ''
+  翻译: ''
+- 内容: To get the recipe value in the DetailView, this sample implements the computed
+    property recipe instead of declaring a state variable.
+  提示: ''
+  翻译: ''
+- 内容: Specifying the source of truth
+  提示: ''
+  翻译: ''
+- 内容: The most common way to define a source of truth that binds to other views in
+    your app is to declare a state variable using the State property wrapper. However,
+    there may be those rare occasions when the source of truth is dynamic and can’t
+    be defined using the @State attribute. For instance, this sample app needs to
+    retrieve a recipe as the source of truth using the recipe’s id. The app accomplishes
+    this by creating a computed property that returns a custom binding.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Using a custom binding is a useful feature of SwiftUI, but isn’t always the
+    best option. Limit its use to use cases where using a state variable or object
+    isn’t possible. In most cases, define the source of truth as either a State variable
+    (for state local to the view) or StateObject (for shared data models) to let SwiftUI
+    manage the value or object for you.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: The navigationTitle(_:) modifier accepts a string value not a binding to a string
+    value, so the view passes the recipe binding’s wrappedValue.
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: A Binding provides read and write access to a value. To provide this access
+    to the recipe value, the computed recipe property uses the init(get:set:) initializer
+    method to create a binding.
+  提示: ''
+  翻译: ''
+- 内容: In the set closure, the binding updates the recipe box with the new recipe value,
+    updatedRecipe.
+  提示: ''
+  翻译: ''
+- 内容: Because the computed property recipe returns a Binding, it isn’t necessary to
+    include the dollar sign ($) prefix that’s required when passing a state variable
+    as a binding. For state variables — variables defined with a State property wrapper
+    — the dollar sign ($) prefix tells SwiftUI to pass the projectedValue, which is
+    a Binding.
+  提示: ''
+  翻译: ''
+- 内容: A wrappedValue is the underlying value referenced by the binding. Since the
+    computed recipe property returns a binding, its wrapped value is the actual recipe
+    value. So recipe.wrappedValue.title gets the wrappedValue of the recipe binding,
+    then it passes the title property of the recipe value to navigationTitle(_:).
+  提示: ''
+  翻译: ''
+- 内容: The binding’s get closure uses recipeId to retrieve a recipe from the data store
+    recipeBox.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: If the recipe no longer exists or can’t be found, the closure returns an empty
+    recipe.
+  提示: ''
+  翻译: ''
+- 内容: This sample app displays the details of a recipe in the custom view DetailView.
+    The view only knows the recipe id, but not the recipe, so it uses the id to retrieve
+    the recipe from the recipe box (a data store that contains all the recipes). Because
+    the view needs to retrieve the recipe, it uses a custom binding as the source
+    of truth of the recipe instead of declaring a state variable for the recipe.
+  提示: ''
+  翻译: ''
+- 内容: Important
+  提示: ''
+  翻译: ''
+- 内容: Defining the source of truth using a custom binding
+  提示: ''
+  翻译: ''
+- 内容: This update happens any time data changes in the binding’s recipe value; for
+    instance, after a person changes the rating of the recipe.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''

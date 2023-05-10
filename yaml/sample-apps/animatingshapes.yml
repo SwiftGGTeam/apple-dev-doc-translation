@@ -1,0 +1,382 @@
+- 内容: For each BigDot, you can create a circle view with its offset, color, and scale.
+  提示: ''
+  翻译: ''
+- 内容: Try changing the number of columns, by changing the value for count in gridColumns.
+    What happens if you change the colors in the colors array?
+  提示: ''
+  翻译: ''
+- 内容: Learn how to use shapes and simple animations in SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: To make the heart pulse, you’ll tap the play button. When the heart pulses,
+    it scales up and then back down, repeating the animation indefinitely. Your heartPulse
+    state property determines the scale of the heart in this animation.
+  提示: ''
+  翻译: ''
+- 内容: In this walkthrough, you will learn how to create a custom heart shape as well
+    as how to make it pulse. From there, you’ll learn how to scale the pulsing heart
+    up or down.
+  提示: ''
+  翻译: ''
+- 内容: Rollin' Rainbow
+  提示: ''
+  翻译: ''
+- 内容: 'Here’s the sequence: .easeInOut first creates an animation that eases in and
+    eases out. Then .repeatForever(autoreverses: true) takes the .easeInOut animation
+    and puts it in a loop that runs forever. Because autoreverses is true, the animation
+    first runs forward, then in reverse before starting over. And finally, .speed(2)
+    determines how quickly the animation runs. With an argument of 2, it runs at 200
+    percent of its default speed.'
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Spinning Animation
+  提示: ''
+  翻译: ''
+- 内容: This is a much larger grid than Rollin’ Rainbow – there are a lot more circles
+    and columns. See what happens when you change the number of dots in the grid.
+    Do you need more circles in this animation?
+  提示: ''
+  翻译: ''
+- 内容: When you tap play, the heartPulse value increases. Setting autoreverses to true
+    allows the animation to first play forward, as the heart scales up, and then backward
+    as it scales back down again.
+  提示: ''
+  翻译: ''
+- 内容: For each of these small rectangles, you’ll use a conditional modifier to animate
+    their offsets to random positions in the view. This makes it look like they’re
+    little shards of the larger rectangle that propel out in different directions.
+  提示: ''
+  翻译: ''
+- 内容: Try changing the animationSpeed to something very low, like 20. How does the
+    animation change?
+  提示: ''
+  翻译: ''
+- 内容: You may notice that the BigDot class and DotTracker both include a randomizePositions()
+    function that do almost the same thing. The function in BigDot creates random
+    positions for each SmallDot in its smallDot array, while the function in DotTracker
+    creates random positions for each BigDot. Together, these functions create the
+    changes in the offset, color, and scale values reflected by animations in your
+    grid view.
+  提示: ''
+  翻译: ''
+- 内容: The isExploded state property tracks whether the exploding animation is currently
+    running. You’ll use this value to start all of the animations when you tap the
+    button.
+  提示: ''
+  翻译: ''
+- 内容: When you tap the play button, the circles animate and the randomizePositions()
+    function is called. This causes the circles’ offsets to change, creating a dancing
+    effect for the dots.
+  提示: ''
+  翻译: ''
+- 内容: To create a heart shape, define a structure that adopts the Shape protocol by
+    implementing the required path(in:) method.
+  提示: ''
+  翻译: ''
+- 内容: path.addCurve creates a curved line from where your point is to a specified
+    end point. This is what draws the curved sides of the heart shape.
+  提示: ''
+  翻译: ''
+- 内容: Heart Pulse
+  提示: ''
+  翻译: ''
+- 内容: Learn how to create an explosion effect.
+  提示: ''
+  翻译: ''
+- 内容: The randomizePositions() function calls bigDot.randomizePositions(). This puts
+    every SmallDot in the smallDot array defined in the BigDot class into random positions.
+  提示: ''
+  翻译: ''
+- 内容: Step 12
+  提示: ''
+  翻译: ''
+- 内容: There you have it…a beautiful rolling rainbow!
+  提示: ''
+  翻译: ''
+- 内容: Previewing the Camera Output
+  提示: ''
+  翻译: ''
+- 内容: Dancing Dots
+  提示: ''
+  翻译: ''
+- 内容: path.addArc adds the arcs at the top of the heart shape. By specifying the start
+    and end angles, the path knows where to draw the arc. The arc is drawn off of
+    specific points in the unit circle that you specify for the start and end angles.
+  提示: ''
+  翻译: ''
+- 内容: The numCircles constant defines the number of circles in your grid. Your LazyVGrid
+    uses gridColumns and numCircles to generate the initial grid of circles.
+  提示: ''
+  翻译: ''
+- 内容: Now, a grid of big dots needs to populate the grid with five small dots for
+    every big dot. Because there are so many dots, you’ll use a DotTracker class when
+    publishing an array of BigDots. This is the published value you’ll track to create
+    your animations. What happens to the animation if you increase or decrease the
+    number of smallDots in the array?
+  提示: ''
+  翻译: ''
+- 内容: You’ll need a few state properties to keep track of how the circles change when
+    you tap them. The gridColumns property defines the columns for the grid, and colors
+    provides the color options for the rainbow effect.
+  提示: ''
+  翻译: ''
+- 内容: There is no preset animation that actually causes a shape to spin, but you can
+    create the illusion of spinning by changing the width of the shape. To do this,
+    you’ll use a width state property.
+  提示: ''
+  翻译: ''
+- 内容: Next, you’ll learn to create a spinning animation when you tap a button. Time
+    to get dizzy!
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Use a drag gesture to move a grid of dots.
+  提示: ''
+  翻译: ''
+- 内容: This animation results in a spinning effect as the circle’s width changes first
+    from 200 to 0, and then from 0 to 200, repeating the entire animation on a recurring
+    loop.
+  提示: ''
+  翻译: ''
+- 内容: Make the circles boogie!
+  提示: ''
+  翻译: ''
+- 内容: Now you know how to create more complex animations with shapes. Time to take
+    what you’ve learned in this guide and use it to make some cool Swift apps!
+  提示: ''
+  翻译: ''
+- 内容: Add a twist! Try changing the speed of the ease-in -out animation for the small
+    rectangles and see what happens.
+  提示: ''
+  翻译: ''
+- 内容: Because the index of circles starts at 0, you need to set the scaleFactor using
+    index+1 so you never have to set the scaleFactor to an undefined number.
+  提示: ''
+  翻译: ''
+- 内容: When the offset changes, you’ll animate the circles to their new positions.
+    Instead of moving all of the dots at the same time, you can use delay on the animation
+    so that each circle moves individually. If you set the delay based on each circle’s
+    index, the circles will have a slightly different delay. This results in the entire
+    grid animating one circle after the other. Because this animation would otherwise
+    be very slow, you can divide the value for delay by the animationSpeed value to
+    speed it up.
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: When you create a bigDot, you also need to create an array of small dots that
+    are linked to the big dot.
+  提示: ''
+  翻译: ''
+- 内容: Animating Shapes
+  提示: ''
+  翻译: ''
+- 内容: Draggin’ Drop Dots is very similar to Rollin’ Rainbow, but with some differences.
+    Instead of changing the scale of the circles when you tap them, the circle’s offset
+    changes based on a drag gesture applied to the entire grid. Time to dive into
+    the code.
+  提示: ''
+  翻译: ''
+- 内容: Because everything is animating, adding drawingGroup() helps to make the animation
+    render smoothly.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: The tapGesture modifier allows you to change the scaleFactor by tapping a circle
+    in the grid. When you tap a circle, the value of scaleFactor is set based on that
+    circle’s index. The further the circle’s position is in the grid, the larger the
+    scaleFactor will be.
+  提示: ''
+  翻译: ''
+- 内容: The springAnimation constant defines the animation to use later in the animation
+    modifier.
+  提示: ''
+  翻译: ''
+- 内容: The .animation modifier determines how the circle animates, but the value for
+    scaleFactor and any changes made to scaleFactor are what causes the increase in
+    scale.
+  提示: ''
+  翻译: ''
+- 内容: As those little rectangles explode out, you’ll fade their opacity from 1 to
+    0 so they eventually disappear. And that’s your explosion animation. Now, you
+    may be thinking, “This isn’t a real explosion, it’s an illusion.”, and you’re
+    absolutely right. All animations are illusions, and you’re the magician who creates
+    them. 🪄
+  提示: ''
+  翻译: ''
+- 内容: path.move starts the path at the point of the heart.
+  提示: ''
+  翻译: ''
+- 内容: Discover how to create a spinning effect.
+  提示: ''
+  翻译: ''
+- 内容: Because every BigDot has five SmallDots, you can do the same thing for the small
+    dots.
+  提示: ''
+  翻译: ''
+- 内容: Your springAnimation is used to animate changes to the scale of the circles
+    in the grid. However, to create a rolling wave effect you want to animate the
+    circles in your grids at different times. Add delay(_:) to springAnimation to
+    specify the duration of the animation delay for each individual circle. To calculate
+    the delay, divide the circle’s index by the number of columns, taking the truncating
+    remainder as a value between 1 and 10 (the number of columns). This creates a
+    per-column animation effect.
+  提示: ''
+  翻译: ''
+- 内容: Step 11
+  提示: ''
+  翻译: ''
+- 内容: Your bigDots array has 100 BigDot instances that appear in the grid view.
+  提示: ''
+  翻译: ''
+- 内容: You’ll learn the basics of animating views and how to create animations – some
+    easy, some more complex!
+  提示: ''
+  翻译: ''
+- 内容: First up, you’ll learn to use the SwiftUI Shape protocol to create and modify
+    shape views.
+  提示: ''
+  翻译: ''
+- 内容: Try tinkering with this animation until it’s exactly as you like it. Good luck!
+  提示: ''
+  翻译: ''
+- 内容: Now that you’ve dabbled with some basic animations, take a look at how you can
+    combine them to create a more advanced interactive effect. You’ll learn how to
+    animate a grid of circles to form a fabulous wave effect when you tap them. In
+    the preview, try tapping on different circles in the grid. What do you notice?
+  提示: ''
+  翻译: ''
+- 内容: The DancingDotsView needs to define an instance of the DotTracker as a @StateObject
+    so SwiftUI redraws its contents whenever any of the view’s dots change color or
+    position.
+  提示: ''
+  翻译: ''
+- 内容: Add this isAnimating state property, which calls the resetPositions() method
+    and resets the circle’s positions when you tap Reset.
+  提示: ''
+  翻译: ''
+- 内容: Try changing the number of small rectangles to see how that affects the animation.
+  提示: ''
+  翻译: ''
+- 内容: Step 16
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Try changing the value of the scale in the randomizePositions() function. What
+    happens to the animation when you lower the scale value?
+  提示: ''
+  翻译: ''
+- 内容: Discover how to make a heart pulse in this basic animation.
+  提示: ''
+  翻译: ''
+- 内容: Use scaling and animation delays to create a wave effect.
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: In the large Rectangle view, the opacity animates from 1 to 0 when isExploded
+    is set to true; this makes the large rectangle disappear.
+  提示: ''
+  翻译: ''
+- 内容: Animate more complex model data in cool and interesting ways using observable
+    objects.
+  提示: ''
+  翻译: ''
+- 内容: Add in this ForEach loop to place each BigDot tracked by the tracker into the
+    grid.
+  提示: ''
+  翻译: ''
+- 内容: Step 13
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: When the large rectangle disappears, you want many small rectangles to explode
+    outward. To create this effect, you’ll first generate a large number of smaller
+    rectangles using a ForEach. These rectangles are initially hidden behind the large
+    rectangle in a ZStack. When the large rectangle disappears, you’ll see the smaller
+    rectangles.
+  提示: ''
+  翻译: ''
+- 内容: To create an exploding animation, you’ll replace a rectangle with many small
+    rectangular pieces that animate outward.
+  提示: ''
+  翻译: ''
+- 内容: 'When you tap the button, the ellipse animates to change its width from 200
+    to 0. Notice that the Animation used is .easeInOut.repeatForever(autoreverses:
+    true).speed(2). This chains together three animations to create a specific effect.
+    Try to predict how each part of the animation affects the overall effect.'
+  提示: ''
+  翻译: ''
+- 内容: Try changing the value of numCircles and see how your grid changes.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: Draggin' Drop It
+  提示: ''
+  翻译: ''
+- 内容: Step 14
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Step 15
+  提示: ''
+  翻译: ''
+- 内容: Add a drag gesture instead of a tap gesture so the grid moves when you drag
+    it. You can use the translation value in the drag gesture closure to set the offset
+    of each circle, resulting in the entire grid moving to the new drag.translation
+    value.
+  提示: ''
+  翻译: ''
+- 内容: Add a resetPositions() function, so the dots reset to their original positions
+    when you tap the reset button. This is very similar to the randomizePositions()
+    function used to place circles in random locations around the view.
+  提示: ''
+  翻译: ''
+- 内容: Try changing some of these values and tap the grid to see how they affect the
+    animation.
+  提示: ''
+  翻译: ''
+- 内容: Add a SmallDot observable object that publishes a color and an offset.
+  提示: ''
+  翻译: ''
+- 内容: Exploding Animation
+  提示: ''
+  翻译: ''
+- 内容: Preview the output from the camera.
+  提示: ''
+  翻译: ''
+- 内容: What if the changes you want to animate aren’t coming from user actions? SwiftUI
+    has a way of animating published values in observable objects. Create an observable
+    object BigDot that publishes an offset, color, scale, and an array of small dot
+    observable objects. You’ll use this object to model the view animations you want
+    in your view.
+  提示: ''
+  翻译: ''
+- 内容: By changing the value of heartPulse inside of a withAnimation closure, you animate
+    any changes to its value with the animation you pass in, resulting in the pulsing
+    effect. 💗
+  提示: ''
+  翻译: ''

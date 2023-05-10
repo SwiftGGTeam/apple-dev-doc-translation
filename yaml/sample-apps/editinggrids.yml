@@ -1,0 +1,216 @@
+- 内容: To display the views for editing or adding a symbol, simply toggle the associated
+    value to true using a toolbar button.
+  提示: ''
+  翻译: ''
+- 内容: Before diving into SymbolGrid, take a look at an example of the data used to
+    populate it. SymbolDetail is a view that uses a property, symbol, to create an
+    image view using an SF Symbol.
+  提示: ''
+  翻译: ''
+- 内容: After you have an image view, you can use modifiers to change how the view looks
+    and behaves. Modifiers in SwiftUI are methods called on a view one after another,
+    but they are arranged vertically on separate lines in your code to make the code
+    more readable. Try changing the .foregroundColor or .symbolRenderingMode modifiers
+    to see how the preview changes.
+  提示: ''
+  翻译: ''
+- 内容: Editing Grids
+  提示: ''
+  翻译: ''
+- 内容: To add a new symbol, the app displays a sheet when isAddingSymbol is true, and
+    that sheet displays the SymbolPicker view. When you dismiss the sheet, addSymbol
+    adds the selected symbol to the grid.
+  提示: ''
+  翻译: ''
+- 内容: Image Gallery
+  提示: ''
+  翻译: ''
+- 内容: Another feature is an editing mode, allowing you to edit the data in your app.
+    Here you’ll learn how to add editing functionality to a grid, including adding
+    and removing grid items.
+  提示: ''
+  翻译: ''
+- 内容: These views are deeply nested. You have an image view inside of a ZStack, inside
+    of a NavigationLink, inside of a ForEach, inside a LazyVGrid, inside a ScrollView.
+    SwiftUI uses composable view elements as building blocks to create the functionality
+    of a dynamic interface. Take a second to think of how changing the order of these
+    views might change the functionality of the grid.
+  提示: ''
+  翻译: ''
+- 内容: Creating the Navigation for Your App
+  提示: ''
+  翻译: ''
+- 内容: To make it easy for people to move around in your app, you need to provide a
+    way for them to navigate between different views. For Editing Grids, you’ll configure
+    the app so people can tap a symbol in the grid to switch views.
+  提示: ''
+  翻译: ''
+- 内容: Let people edit data that your app displays.
+  提示: ''
+  翻译: ''
+- 内容: There are several places in the body where you’ll see isEditing checked with
+    conditional code. This allows you to show the enclosed UI only if isEditing is
+    true. Using these conditional checks, you can create an editing UI within the
+    same view as the grid itself. Again, because isEditing is a @State variable, SwiftUI
+    updates GridView to automatically display or hide the conditional views when that
+    value changes.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: To create a grid, use a LazyVGrid. This is a container that lays out views in
+    a grid shape. However, you also want to nest the LazyVGrid inside a ScrollView,
+    so you can scroll through content if it exceeds the vertical space of the grid
+    view.
+  提示: ''
+  翻译: ''
+- 内容: 'In Organizing with Grids, you learned how to lay out your app’s interface using
+    a grid of colored rectangles. In this sample, you’ll create a similar grid interface
+    populated with SF Symbols. To build on what you’ve learned, Editing Grids takes
+    your app to the next level by teaching you about two important features in app
+    design: navigating within your app, and making it possible for people to edit
+    data that they store in the app.'
+  提示: ''
+  翻译: ''
+- 内容: There are multiple ways to create an Image in SwiftUI. One way is to use the
+    argument systemName, which creates an image using the SF Symbol associated with
+    the string passed in.
+  提示: ''
+  翻译: ''
+- 内容: To create the grid of SF Symbols, you’ll set up SymbolGrid with a variable,
+    symbols, to track a collection of Symbol instances for the various symbols. When
+    you mark this variable with @State, SwiftUI manages the storage for the value.
+    Whenever this state value changes, SwiftUI updates any views using the value (the
+    grid, in this case). For instance, if you deleted a symbol, the corresponding
+    symbol image disappears from the grid.
+  提示: ''
+  翻译: ''
+- 内容: Learn how to create data that is uniquely identifiable in SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: Explore how to add navigation to your app using a NavigationStack.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: Explore how to add editing functionality to your grid, including the ability
+    to add or delete items.
+  提示: ''
+  翻译: ''
+- 内容: The name property contains a String value that corresponds to an SF Symbol.
+    You use the value of name to create the Image views in your grid.
+  提示: ''
+  翻译: ''
+- 内容: After ForEach, you’ll create image views for each symbol in the grid. Create
+    the image view using the name of the symbol, and wrap the image in a NavigationLink.
+    This turns the view into a button that links to the destination view, SymbolDetail,
+    when tapped or clicked. When this happens, the top-level navigation stack displays
+    SymbolDetail, and provides a link to navigate back to SymbolGrid.
+  提示: ''
+  翻译: ''
+- 内容: This code defines your app, SymbolGridApp. Any time you define an app in SwiftUI,
+    you must also provide at least one view inside WindowGroup of the app body property.
+    This view is known as the top-level view, because it sits on the top of your view
+    hierarchy. You can think of the view hierarchy as a structure that defines the
+    layout of views relative to other views. The top-level view may contain any number
+    of subviews, each of which may contain their own subviews, and so on.
+  提示: ''
+  翻译: ''
+- 内容: Adding an Editing Mode
+  提示: ''
+  翻译: ''
+- 内容: The argument to SymbolPicker ($selectedSymbol) is a special type of value, known
+    as a binding. When you pass a binding value into a subview, that subview can modify
+    its value, but only the parent view stores the actual value. Passing selectedSymbol
+    as an argument allows SymbolPicker to modify the value, which modifies the variable
+    selectedSymbolName stored in SymbolGrid.
+  提示: ''
+  翻译: ''
+- 内容: Creating a Symbol
+  提示: ''
+  翻译: ''
+- 内容: To populate the grid, use ForEach to iterate over each uniquely identifiable
+    Symbol in symbols. ForEach usually requires that you provide an ID for each element
+    of the collection so it’s able to track when specific elements in the collection
+    change. However, since Symbol conforms to Identifiable, this requirement has been
+    fulfilled and you no longer need the id parameter. Because you are using the @State
+    variable symbols as the argument to ForEach, the entire grid updates any time
+    the array changes.
+  提示: ''
+  翻译: ''
+- 内容: Building the Navigation Grid
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: To arrange several views vertically, you can put them inside of a VStack, which
+    is short for vertical stack. In this VStack, there’s a text view layered on top
+    of the image view with the SF Symbol.
+  提示: ''
+  翻译: ''
+- 内容: When the sheet dismisses, addSymbol inserts the value assigned to selectedSymbol
+    to the symbols array. Because symbols is a @State variable, SwiftUI recognizes
+    the change and updates the grid UI with the new symbol.
+  提示: ''
+  翻译: ''
+- 内容: Retrieve and display images from an asset catalog or a photo library.
+  提示: ''
+  翻译: ''
+- 内容: 'You populate the grid with many Image views, each created from a Symbol instance
+    such as Symbol(name: "eyes"). Because the Symbol type conforms to Identifiable,
+    SwiftUI can uniquely identify each cell of your grid, even if several symbols
+    use the same name value. Adding Identifiable conformance to your data model is
+    a great pattern to follow when using ForEach to populate a grid or list with views.'
+  提示: ''
+  翻译: ''
+- 内容: By creating an instance of SymbolGrid inside of your navigation stack, you tell
+    the navigation stack to display SymbolGrid when the app first launches. When a
+    person using your app navigates to another view, SymbolGrid moves down in the
+    view hierarchy to show a different view and its content.
+  提示: ''
+  翻译: ''
+- 内容: To provide navigation functionality in your app, you can create a NavigationStack
+    as your top-level view. The NavigationStack acts as a container that can show
+    any other view. The NavigationStack provides a stack style rather than a column
+    style. This means only a single view displays at any given time.
+  提示: ''
+  翻译: ''
+- 内容: Create a grid of SF Symbols from an array of Symbol values.
+  提示: ''
+  翻译: ''
+- 内容: Learn how to create an image view using an SF Symbol.
+  提示: ''
+  翻译: ''
+- 内容: Defining an Identifiable Type
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Now that you have a grid, it’s time to add editing functionality. The first
+    thing to notice here are two @State variables, isAddingSymbol and isEditing. These
+    are Boolean values that, when true, change some of UI of the app to enable you
+    to edit or add photos to the grid.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Your Symbol type contains an id property — a requirement of the Identifiable
+    protocol. To ensure that each item is uniquely identifiable, set the id property
+    to a UUID value.
+  提示: ''
+  翻译: ''
+- 内容: 'At the bottom of the view, you’ll see two modifiers: navigationTitle, which
+    sets the title of the navigation stack, and navigationBarTitleDisplayMode, which
+    determines how to display the title. In this case, the display mode is inline,
+    meaning the title shows in line with the rest of the toolbar at the top of the
+    view.'
+  提示: ''
+  翻译: ''

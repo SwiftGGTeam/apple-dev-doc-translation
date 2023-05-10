@@ -1,0 +1,398 @@
+- 内容: This method returns a string describing the value of a Double using a fixed
+    number of digits. You can pass in the number of integer digits and fraction digits
+    you want, or leave those arguments out for the default values of 2.
+  提示: ''
+  翻译: ''
+- 内容: An extension is a way to make custom behavior for existing types. Declaring
+    extension Double means you’re adding new capabilities to the Double type. Any
+    time you use a Double value in your code, you can access anything defined in this
+    extension.
+  提示: ''
+  翻译: ''
+- 内容: This is the size of the level display, both width and height. You can change
+    this value to make the display larger or smaller.
+  提示: ''
+  翻译: ''
+- 内容: The .number style has modifiers much like those for SwiftUI views.
+  提示: ''
+  翻译: ''
+- 内容: Because detector is an observable object, any changes to its published values
+    allows SwiftUI to automatically update any views using those values. In this case,
+    you’ll update the bubble’s position.
+  提示: ''
+  翻译: ''
+- 内容: Bubble Level
+  提示: ''
+  翻译: ''
+- 内容: This property represents the range of values the motion detector reports as
+    you tilt the device (assuming you don’t turn it upside down). Negative values
+    indicate a tilt to the left, and positive values indicate a tilt to the right.
+    (You could assign the value 3.14 to this property, but Double.pi is convenient
+    shorthand for the mathematical constant π, and it’s a closer approximation because
+    it includes many digits of precision.)
+  提示: ''
+  翻译: ''
+- 内容: This property holds a MotionDetector instance, which senses changes in your
+    device’s motion. You can access this instance in your code to update the user
+    interface as the motion data changes.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Bubble Level View
+  提示: ''
+  翻译: ''
+- 内容: Orientation Data View
+  提示: ''
+  翻译: ''
+- 内容: Then, use this adjusted value to calculate the roll as a fraction of the entire
+    range of roll values, so that full tilt left is 0.0, flat is 0.5, and full tilt
+    right is 1.0.
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: The .sign modifier lets you format the number so that it’s always preceded by
+    a sign, even when the number is positive.
+  提示: ''
+  翻译: ''
+- 内容: The deviceMotion data may not be there in certain conditions. The way you can
+    tell if the data exists is to try to assign it to a variable or constant using
+    if let. If the motion data exists, it’s assigned to data and the code inside the
+    braces runs. Otherwise, it skips the entire if statement.
+  提示: ''
+  翻译: ''
+- 内容: Investigate using an extension on Double to format them in an easy to read way.
+  提示: ''
+  翻译: ''
+- 内容: The timer property stores a Timer instance. A timer waits for a period of time
+    that you specify before running some code. The MotionDetector uses the timer to
+    update its pitch, roll, and zAcceleration values at regular intervals, defined
+    by the updateInterval property.
+  提示: ''
+  翻译: ''
+- 内容: Seismometer
+  提示: ''
+  翻译: ''
+- 内容: The .number style gives you a string describing this Double value as a simple
+    number, as opposed to a percentage or a price.
+  提示: ''
+  翻译: ''
+- 内容: The OrientationDataView displays the roll and pitch of your iPad as numbers.
+    Roll is the degree of left and right tilt, and pitch is the degree of forward
+    and backward tilt.
+  提示: ''
+  翻译: ''
+- 内容: This app displays the orientation of your device as numbers and as a graphical
+    version of a bubble level. Try tilting your device and watch the bubble move.
+    Try to make your device level by centering the bubble in the crosshairs. Or place
+    it on a surface like your bedroom floor to determine whether the floor is level.
+  提示: ''
+  翻译: ''
+- 内容: This property calculates the horizontal placement of the bubble using three
+    steps.
+  提示: ''
+  翻译: ''
+- 内容: Step 12
+  提示: ''
+  翻译: ''
+- 内容: A ZStack view allows you to draw the components of the level over each other.
+  提示: ''
+  翻译: ''
+- 内容: Welcome to Bubble Level.
+  提示: ''
+  翻译: ''
+- 内容: Multiplying the fraction with the size of the level gives you the X position
+    of the bubble.
+  提示: ''
+  翻译: ''
+- 内容: Because detector is an observable object, any changes made to its published
+    values cause SwiftUI to automatically update any views using those values. In
+    this case, changes from the device’s sensors update the Text view with the latest
+    values for the pitch and roll.
+  提示: ''
+  翻译: ''
+- 内容: Step 20
+  提示: ''
+  翻译: ''
+- 内容: Step 23
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Use the userAcceleration property to get the device’s acceleration after accounting
+    for the downward pull of gravity. If it’s at rest, this number is 0. If it’s accelerating
+    upward, the number is negative, and if it’s accelerating downward, the number
+    is positive.
+  提示: ''
+  翻译: ''
+- 内容: Because all of these calculations are hidden in a property, your view’s body
+    code remains simple and readable.
+  提示: ''
+  翻译: ''
+- 内容: Your device has sensors such as accelerometers and gyroscopes that it uses to
+    sense motion and orientation. The Core Motion framework gives you access to data
+    from these and other sensors.
+  提示: ''
+  翻译: ''
+- 内容: These two computed properties provide the strings used in the view. They take
+    the roll or pitch value from the motion detector and format that number as a string
+    with a fixed number of digits. The describeAsFixedLengthString() method is a custom
+    method on the Double type. You can learn how it works in DoubleExtension.swift.
+  提示: ''
+  翻译: ''
+- 内容: This deinitializer runs when a MotionDetector instance is about to go away.
+    It’s important to clean up here; otherwise the timer would continue to run even
+    after the motion detector is gone.
+  提示: ''
+  翻译: ''
+- 内容: 'This method stops updating the motion data. It does two important things:'
+  提示: ''
+  翻译: ''
+- 内容: Step 17
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: This property returns a vertical line that you use to draw the bubble level
+    display. Because there are multiple identical vertical lines, you can use this
+    property whenever you need one rather than repeating the more complex code inside
+    it.
+  提示: ''
+  翻译: ''
+- 内容: 'In the center are a smaller circle and a crosshair made of two lines: one horizontal
+    and one vertical.'
+  提示: ''
+  翻译: ''
+- 内容: Double Extension
+  提示: ''
+  翻译: ''
+- 内容: Learn to display the tilt of your device using a bubble level UI.
+  提示: ''
+  翻译: ''
+- 内容: The .precision modifier lets you specify exactly how many digits to use.
+  提示: ''
+  翻译: ''
+- 内容: The argument to formatted() is a format style.
+  提示: ''
+  翻译: ''
+- 内容: Because these properties use published values from MotionDetector, SwiftUI updates
+    the bubble view’s position each time they change.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: It’s useful to define and use constants like these for important values in your
+    code, rather than using the values themselves. When you read the code, you’ll
+    have a better idea of what it does than if you see a lot of numbers with no context.
+  提示: ''
+  翻译: ''
+- 内容: With a monospaced font, each character has the same width. (For example, the
+    strings 1.01 and 3.14 have different widths with a proportional font like Helvetica
+    or Times, but 1.01 and 3.14 have the same width with a monospaced font like Courier
+    or Menlo.)
+  提示: ''
+  翻译: ''
+- 内容: The overlay is useful here because it positions the level’s components relative
+    to the circle they’re drawn in.
+  提示: ''
+  翻译: ''
+- 内容: Step 18
+  提示: ''
+  翻译: ''
+- 内容: Step 22
+  提示: ''
+  翻译: ''
+- 内容: Use the attitude property to get the device’s tilt in three directions. You
+    may be familiar with X, Y, and Z axes in 3D space. Pitch, roll, and yaw are numbers
+    that describe rotation along those axes.
+  提示: ''
+  翻译: ''
+- 内容: You can use the MotionDetector class to observe the motion of your device.
+  提示: ''
+  翻译: ''
+- 内容: A CMDeviceMotion instance represents device motion, stored here in data. It
+    has quite a few properties describing the input from the motion sensors.
+  提示: ''
+  翻译: ''
+- 内容: The block of code at the end of the line that reads { _ in is the start of a
+    closure containing the code that the timer runs. The closure calls updateMotionData().
+  提示: ''
+  翻译: ''
+- 内容: This property calculates the vertical position of the bubble in the same way
+    that bubbleXPosition works.
+  提示: ''
+  翻译: ''
+- 内容: Because this view uses a published value from detector, SwiftUI updates it any
+    time the motion detector’s roll value changes.
+  提示: ''
+  翻译: ''
+- 内容: This method starts updating the motion detector.
+  提示: ''
+  翻译: ''
+- 内容: You use a CMMotionManager object to get motion data from sensors, such as the
+    accelerometer. It gathers information from the sensors and translates their data
+    into values that you can understand.
+  提示: ''
+  翻译: ''
+- 内容: Step 11
+  提示: ''
+  翻译: ''
+- 内容: A bubble level helps you determine whether something is level or tilted.
+  提示: ''
+  翻译: ''
+- 内容: While you can write all of the code here in a longer mathematical expression,
+    decomposing the code makes it easier to understand. (Can you imagine having to
+    explain this code if it were written in one line?!)
+  提示: ''
+  翻译: ''
+- 内容: Motion Detector
+  提示: ''
+  翻译: ''
+- 内容: These three properties store data for the tilt of your device in two dimensions
+    (roll and pitch), as well as its vertical acceleration (zAcceleration).
+  提示: ''
+  翻译: ''
+- 内容: You can choose an update interval that makes sense for your app. For example,
+    you’ll want a short update interval for the bubble level in this project because
+    the interface presents real-time data as the device moves.
+  提示: ''
+  翻译: ''
+- 内容: The .font modifier formats this Text view with a monospaced font. By default,
+    a Text view uses a system font with proportional width, but that causes the text
+    view to change its width as the numbers change.
+  提示: ''
+  翻译: ''
+- 内容: Always use isDeviceMotionAvailable to verify that motion data is available before
+    you try to access it.
+  提示: ''
+  翻译: ''
+- 内容: The .overlay modifier adds a view on top of the circle that occupies the same
+    area.
+  提示: ''
+  翻译: ''
+- 内容: Step 19
+  提示: ''
+  翻译: ''
+- 内容: The first circle represents the bubble. Notice that the bubbleXPosition and
+    bubbleYPosition values position the bubble inside the overlay view.
+  提示: ''
+  翻译: ''
+- 内容: Access and display device sensor data by subscribing to notifications.
+  提示: ''
+  翻译: ''
+- 内容: Step 16
+  提示: ''
+  翻译: ''
+- 内容: This property holds a MotionDetector instance. The motion detector senses changes
+    in your device’s motion and provides that data for you to use in your code.
+  提示: ''
+  翻译: ''
+- 内容: First, it tells the CMMotionManager to stop updating its values by calling stopDeviceMotionUpdates(),
+    then it stops the timer by calling invalidate().
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Learn to display motion data as string values in the view.
+  提示: ''
+  翻译: ''
+- 内容: This method does the core work of the motion detector. It’s responsible for
+    updating all the published properties with current data from the sensors, as well
+    as calling the code in onUpdate.
+  提示: ''
+  翻译: ''
+- 内容: You run the code in onUpdate just as you’d call any function, with a set of
+    parentheses following its name.
+  提示: ''
+  翻译: ''
+- 内容: There are four other lines on the edge of the frame of the bubble level display.
+    You can use the .position modifier to move them relative to their default position
+    at the center of the overlay view.
+  提示: ''
+  翻译: ''
+- 内容: This code creates a new timer and schedules it to run. The updateInterval property
+    tells the timer how long to wait between updates, and repeats is set to true so
+    that the timer runs forever until you stop it. (If you pass false to repeats,
+    the timer only runs once.)
+  提示: ''
+  翻译: ''
+- 内容: First, adjust the roll value from the detector so that it has a minimum of 0
+    and goes up to the value of π, and store the adjusted value in zeroBasedRoll.
+    This helps with the next part of the calculation, which needs values greater than
+    0.
+  提示: ''
+  翻译: ''
+- 内容: This method tells the CMMotionManager to start updating motion data.
+  提示: ''
+  翻译: ''
+- 内容: This property stores code that runs when the MotionDetector updates its motion
+    data. If you want to execute custom actions every time the motion data changes,
+    you can put your own code into onUpdate in your instance of MotionDetector.
+  提示: ''
+  翻译: ''
+- 内容: Here is the value for the roll of the device, presented as text.
+  提示: ''
+  翻译: ''
+- 内容: Step 13
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: You can use a .frame modifier to give the circle a fixed width and height, which
+    is important to draw the other components correctly.
+  提示: ''
+  翻译: ''
+- 内容: Step 14
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Step 15
+  提示: ''
+  翻译: ''
+- 内容: Here’s a circle with a gray foreground color that provides a visual boundary
+    for the display.
+  提示: ''
+  翻译: ''
+- 内容: Step 21
+  提示: ''
+  翻译: ''
+- 内容: These properties have a @Published property wrapper, which means that any SwiftUI
+    view that depends on their values updates when they change. You make a view dependent
+    on a published property by referring to it in the view’s code. The BubbleLevel,
+    LevelView, and OrientationDataView views use these properties, which enables them
+    to update when the MotionDetector detects a change to the roll, pitch, or zAcceleration
+    values.
+  提示: ''
+  翻译: ''
+- 内容: Present dynamic data in custom views.
+  提示: ''
+  翻译: ''
+- 内容: The formatted() method operates on a number of basic types such as Date, Int,
+    and Double, which are all commonly represented as strings in an app. Because there
+    are so many ways to format these strings, the formatted() method gives you ways
+    to customize how they’re represented. For example, does a number represent a percentage,
+    or a simple value, or maybe a price?
+  提示: ''
+  翻译: ''
+- 内容: This view displays the tilt of your device by drawing a circle within a larger
+    circular boundary with crosshairs to indicate its centerpoint. When your device
+    is level, the bubble rests at the center of the frame. Try tilting your device
+    to see how the bubble moves.
+  提示: ''
+  翻译: ''

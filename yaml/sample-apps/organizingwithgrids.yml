@@ -1,0 +1,151 @@
+- 内容: If you tap a color in the grid, you’ll notice that the text element on top of
+    the grid changes color.
+  提示: ''
+  翻译: ''
+- 内容: Inside the LazyVGrid, you define each item for the grid to display. To do this,
+    you use a ForEach loop to iterate over the allColors array. By using the color’s
+    name as an identifier, ForEach can find the right element when it needs to update
+    the color’s view.
+  提示: ''
+  翻译: ''
+- 内容: Inside the ScrollView, you create a grid view using LazyVGrid. The grid is “lazy”
+    because it doesn’t create its grid items until they are needed. LazyVGrid takes
+    an argument for columns which determines how many columns show up in the grid.
+  提示: ''
+  翻译: ''
+- 内容: To populate the grid with different colors, you’ll use the allColors variable
+    to store an array of color values. The grid iterates over this array and adds
+    a rectangular button for each color in the array.
+  提示: ''
+  翻译: ''
+- 内容: Editing Grids
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Explore how to create and fill the grid view with colored rectangles.
+  提示: ''
+  翻译: ''
+- 内容: The value assigned to columnLayout specifies a three-column grid. You can change
+    this value any time you want.
+  提示: ''
+  翻译: ''
+- 内容: Creating a Grid
+  提示: ''
+  翻译: ''
+- 内容: When you create a new app, ContentView is configured as your top-level view
+    by default. This is useful because you can go to ContentView to see how an app’s
+    views are put together. However, this view can be renamed, so if you’re unsure
+    what the top-level view of an app is, look here in the body property of the app
+    definition.
+  提示: ''
+  翻译: ''
+- 内容: Welcome to the Organizing with Grids sample. This sample shows you how to arrange
+    content using a grid view, and how to use a state variable to track the selection
+    of a color in that grid.
+  提示: ''
+  翻译: ''
+- 内容: The Text view uses selectedColor for its foreground color. Because selectedColor
+    is a state variable, whenever the state changes, SwiftUI changes the color of
+    this text.
+  提示: ''
+  翻译: ''
+- 内容: Let people edit data that your app displays.
+  提示: ''
+  翻译: ''
+- 内容: When your app runs, it displays whatever content you place in the body property.
+    Notice that this body creates the ContentView. When the app launches, it fills
+    the screen with this view.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Learn the basics of building and configuring an app with SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: The first view inside ContentView is a VStack, which arranges its views vertically,
+    with some text above the grid.
+  提示: ''
+  翻译: ''
+- 内容: Each item in the grid is a Button view, and each button has an action (something
+    that happens when you tap it), and a label (text or an image that tells people
+    what the button does, like “Save” to save a file).
+  提示: ''
+  翻译: ''
+- 内容: The grid might contain more items than it can display at one time, so the code
+    wraps it in a ScrollView to scroll the content vertically, if necessary.
+  提示: ''
+  翻译: ''
+- 内容: When you tap a grid element, the selectedColor value changes to that element’s
+    color, which also changes the color of the text.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: This is the ContentView. It creates a grid of rounded rectangles, each a different
+    color. ContentView is a View, so it can contain any number of other views inside
+    of it. The grid is one of those views.
+  提示: ''
+  翻译: ''
+- 内容: You’ll add any code that defines a view to the view’s body. You’ll define any
+    variables that ContentView needs outside of its body.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: The code marks ColorGridApp with @main, making it the entry point of the program
+    — the code the app starts running first.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: You add @State before a variable to tell SwiftUI to manage the storage for a
+    value. When the value changes, SwiftUI updates any parts of the view that use
+    the value. The state variable selectedColor tracks the most recently selected
+    color, which the text at the top of the view uses for its foreground color.
+  提示: ''
+  翻译: ''
+- 内容: Before diving into the grid, take a look at how this code gets made into an
+    app. Your ColorGridApp follows a set of guidelines created by the App protocol.
+    This allows your project to run and behave just like any other app.
+  提示: ''
+  翻译: ''
+- 内容: Display visual content in an arrangement of rows and columns.
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: Organizing with Grids
+  提示: ''
+  翻译: ''
+- 内容: Configuring the App
+  提示: ''
+  翻译: ''
+- 内容: Investigate how SwiftUI changes the appearance of a view.
+  提示: ''
+  翻译: ''
+- 内容: Using a State Variable
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: The label for the button uses a RoundedRectangle view, and one of the colors
+    from the ForEach loop. You can see this in the foregroundColor(color) modifer.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''

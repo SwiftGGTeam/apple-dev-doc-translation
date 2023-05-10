@@ -1,0 +1,177 @@
+- 内容: Layering content
+  提示: ''
+  翻译: ''
+- 内容: Try some other Font.TextStyle values, like Font.TextStyle.largeTitle or Font.TextStyle.caption
+    to see how the sizes of the word and the leaf symbol change.
+  提示: ''
+  翻译: ''
+- 内容: The name parameter retrieves a system image to display. To look up the names
+    of available system images, download the SF Symbols app.
+  提示: ''
+  翻译: ''
+- 内容: Scaling views to complement text
+  提示: ''
+  翻译: ''
+- 内容: To keep the content inside the bubble at large text sizes without adding too
+    much padding for small text sizes, define a custom padding metric that scales
+    with the text size.
+  提示: ''
+  翻译: ''
+- 内容: The padding(_:) modifier adds a specific amount of space, in points, around
+    the label on all four edges. Because paddingWidth is a ScaledMetric, padding(_:)
+    adds more space when the Label uses a larger text size.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: The default values for dimensions such as the padding on this view, or the width
+    and height of a frame aren’t always going to work for your layout. In many cases,
+    you can design a small set of values to use across a range of environments. But
+    there are over one hundred combinations of Dynamic Type settings and Font.TextStyle
+    options, so choosing a specific value for each isn’t really practical. When you
+    need to provide a numeric value that adapts to the environment’s effective font
+    size, use the ScaledMetric property wrapper.
+  提示: ''
+  翻译: ''
+- 内容: Xcode provides a Canvas where you can preview layouts as your code changes.
+    To see a preview of a custom SwiftUI view, implement the PreviewProvider protocol.
+    The Canvas can display several variants of your view so you can see how it adapts
+    to different environments.
+  提示: ''
+  翻译: ''
+- 内容: A Label applies the same font to both the text and image. An image that displays
+    an SF Symbol uses font information to determine its size and position.
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: Construct a layout that adapts to font styles, Dynamic Type, and varying string
+    lengths.
+  提示: ''
+  翻译: ''
+- 内容: The keywords array defines two String values of different lengths. The previews
+    property defines both of these in a VStack to display how the KeywordBubble view
+    adapts to the text length.
+  提示: ''
+  翻译: ''
+- 内容: When composing a view that includes text, it’s important to define other elements
+    relative to that text, like a symbol or padding, so the view adapts to the text’s
+    size.
+  提示: ''
+  翻译: ''
+- 内容: Look at the KeywordBubbleDefaultPadding preview for the AX 5 text size. With
+    the default padding, the tip of the leaf symbol collides with the edge of the
+    Capsule shape.
+  提示: ''
+  翻译: ''
+- 内容: To verify whether your view works with a range of inputs, configure more than
+    one preview, and define static data to display in each preview.
+  提示: ''
+  翻译: ''
+- 内容: Associate content with the text
+  提示: ''
+  翻译: ''
+- 内容: Using the padding(_:_:) modifier without any arguments creates a view that adds
+    a default amount of space on all four edges of the view that it modifies.
+  提示: ''
+  翻译: ''
+- 内容: This example coordinates a name and a symbol to represent a single item with
+    a Label. It also defines a Capsule in a background(alignment:content:) modifier,
+    to maintain a consistent margin around the Label.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: This line defines the KeywordBubble view, and provides the text and image for
+    it.
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: Preview a custom view in Xcode
+  提示: ''
+  翻译: ''
+- 内容: To make KeywordBubble reusable, the label’s text and symbol name are properties
+    of the view. When another view uses a KeywordBubble, that other view specifies
+    the text and symbol to display.
+  提示: ''
+  翻译: ''
+- 内容: The Capsule shape provides a rounded rectangle that expands to fill its container.
+    The fill(_:style:) modifier specifies the color of the capsule, and opacity(_:)
+    gives the capsule a bit of transparency.
+  提示: ''
+  翻译: ''
+- 内容: This paddingWidth variable provides a value of 14.5 for content in a DynamicTypeSize.large
+    Dynamic Type environment. With the ScaledMetric property wrapper, the value is
+    proportionally larger or smaller, according to the current value of dynamicTypeSize.
+  提示: ''
+  翻译: ''
+- 内容: Specifying Font.TextStyle.title for the textStyle parameter indicates that this
+    metric scales with, or is relative to, the title style.
+  提示: ''
+  翻译: ''
+- 内容: Define views in an overlay or background to adapt their layout to the primary
+    content.
+  提示: ''
+  翻译: ''
+- 内容: The capsule’s size includes the padding around the Label because the background
+    modifier is after the padding modifier.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Adjust dimensions with ScaledMetric
+  提示: ''
+  翻译: ''
+- 内容: The symbol and padding can adapt as the text content changes for localizations,
+    Dynamic Type sizes, or to display a different phrase.
+  提示: ''
+  翻译: ''
+- 内容: Try replacing leaf with the name of another SF Symbol. For more information
+    about customizing the appearance of SF Symbols, see SF Symbols in the Human Interface
+    Guidelines.
+  提示: ''
+  翻译: ''
+- 内容: You can see a live preview of a SwiftUI View in Xcode side by side with the
+    code that defines it.
+  提示: ''
+  翻译: ''
+- 内容: For more information about using ScaledMetric to scale dimensions in proportion
+    to text, see Applying custom fonts to text.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: To preview a custom view, implement the PreviewProvider protocol by defining
+    a static previews property.
+  提示: ''
+  翻译: ''
+- 内容: To specify that the capsule belongs behind the text and symbol, the code defines
+    the capsule inside a background(alignment:content:) modifier.
+  提示: ''
+  翻译: ''
+- 内容: The Label uses the Font.TextStyle.title style to define the text size.
+  提示: ''
+  翻译: ''
+- 内容: With the ScaledMetric variable padding, all the Dynamic Type variants now have
+    padding between the leaf symbol and the edge of the Capsule shape in the background.
+  提示: ''
+  翻译: ''
+- 内容: To verify how your view looks with the full range of Dynamic Type text sizes,
+    choose Variants > Dynamic Type Variants in the Xcode Canvas view.
+  提示: ''
+  翻译: ''
+- 内容: Label is a built-in view that arranges the text and the symbol, the main content
+    of this view. Label adjusts the symbol’s size and aligns the two pieces of content,
+    so you don’t have to manually align the Text with an Image.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''

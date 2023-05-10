@@ -1,0 +1,176 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: This avoids rounding the bottom corners of the stripe Rectangle.
+  提示: ''
+  翻译: ''
+- 内容: This second use of the same padding(_:_:) modifier on the main content adds
+    space for the stripe at the top of the view, in addition to the space defined
+    by the previous padding(_:_:) modifier.
+  提示: ''
+  翻译: ''
+- 内容: A background(alignment:content:) modifier bases its size on the size of the
+    view it modifies, and puts its contents behind that view.
+  提示: ''
+  翻译: ''
+- 内容: Specify the alignment and spacing of your content.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Create dynamic alignments that adapt to data and environment changes using stacks.
+  提示: ''
+  翻译: ''
+- 内容: Customize this symbol with the techniques in Configuring and displaying symbol
+    images in your UI.
+  提示: ''
+  翻译: ''
+- 内容: Manage related data with a view model
+  提示: ''
+  翻译: ''
+- 内容: This frame(width:height:alignment:) modifier specifies the height of the stripe,
+    leaving its width dependent on its containing view.
+  提示: ''
+  翻译: ''
+- 内容: The first step in defining a view is to identify the data that the view displays.
+    This view layout displays the details of an upcoming event, including the event’s
+    name, date, and location. It also includes an icon indicating the type of event.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: To make the background bigger than the HStack that encloses all the content,
+    this padding(_:_:) modifier adds some space on all four edges of the view.
+  提示: ''
+  翻译: ''
+- 内容: Specifying a frame on a decorative Shape like this stripe is a common pattern.
+  提示: ''
+  翻译: ''
+- 内容: Clipping the final view with clipShape(_:style:) and the RoundedRectangle shape
+    applies the rounded corners only to the outermost edges, rather than rounding
+    the corners of each view.
+  提示: ''
+  翻译: ''
+- 内容: The EventTile gets all the data for a specific instance from the Event structure
+    in the tile’s event property.
+  提示: ''
+  翻译: ''
+- 内容: This top-aligned ZStack layers the brighter stripe Rectangle over the Rectangle
+    that fills the background of the EventTile.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: This defines a background that adapts to the size of the information the main
+    view displays.
+  提示: ''
+  翻译: ''
+- 内容: To organize that related data into a view model, this sample defines a custom
+    structure.
+  提示: ''
+  翻译: ''
+- 内容: A VStack arranges the text in a column, and an HStack aligns the icon with the
+    title text.
+  提示: ''
+  翻译: ''
+- 内容: This Event struct defines all the data for the event. The date is a Date value
+    rather than a formatted String so the view can specify the date format. The symbol
+    property is the name of an SF Symbol for the EventTile to display.
+  提示: ''
+  翻译: ''
+- 内容: The title font makes the title text and the gift image more prominent than any
+    content in the default body font.
+  提示: ''
+  翻译: ''
+- 内容: Adjusting the space between views
+  提示: ''
+  翻译: ''
+- 内容: This initializer automatically accounts for environment-specific conditions,
+    like the current calendar and locale.
+  提示: ''
+  翻译: ''
+- 内容: Define a view with nested stacks
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Applying the teal foregroundColor(_:) to the stack specifies the color for both
+    of the Rectangle views in the stack.
+  提示: ''
+  翻译: ''
+- 内容: After you define a data model, you can create views to display that data, and
+    organize those views with stacks and alignment.
+  提示: ''
+  翻译: ''
+- 内容: This is the only constant that specifies a dimension in this layout. All the
+    other dimensions of this view depend on the data in the Event and semantic values
+    in modifiers, such as font(_:).
+  提示: ''
+  翻译: ''
+- 内容: The firstTextBaseline alignment in the HStack aligns the gift image with the
+    title text.
+  提示: ''
+  翻译: ''
+- 内容: Add a background with layered shapes
+  提示: ''
+  翻译: ''
+- 内容: The Text initializer init(_:format:) formats a date.
+  提示: ''
+  翻译: ''
+- 内容: The precise font size and weight depend on the environment, including the user’s
+    current Dynamic Type settings.
+  提示: ''
+  翻译: ''
+- 内容: Organizing and aligning content with stacks
+  提示: ''
+  翻译: ''
+- 内容: To indicate that all of this information represents a single event, a background(alignment:content:)
+    modifier contains a ZStack of Shape views.
+  提示: ''
+  翻译: ''
+- 内容: The leading alignment on the VStack overrides the stack’s default center alignment.
+  提示: ''
+  翻译: ''
+- 内容: If you’re arranging text and a symbol that only need to align with each other,
+    it’s better to use a Label. Label aligns its icon to the first baseline of its
+    title by default, and adapts to the context in which it appears.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: When you have information to communicate that draws from a changeable data source
+    that includes text and images, it’s important to align the content in a way that
+    can adapt. This tutorial walks through using stacks to align content in rows and
+    columns. It also uses stacks to create graphic elements that help organize information.
+  提示: ''
+  翻译: ''
+- 内容: The stack’s alignment puts the stripe at the top of the EventTile.
+  提示: ''
+  翻译: ''
+- 内容: Three different parts of the EventTile view need to use the height of the top
+    stripe, so it’s also a property outside of the body.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: Specifying frames on text and controls may interfere with the sizing behavior
+    and usability of those views. To learn best practices for adjusting the size of
+    various views, see Maintaining the adaptable sizes of built-in views.
+  提示: ''
+  翻译: ''

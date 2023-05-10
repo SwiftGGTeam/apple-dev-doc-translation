@@ -1,0 +1,168 @@
+- 内容: This custom view defines an Image view that displays an SF Symbol of a train
+    car, with a pink background to show the extent of the view.
+  提示: ''
+  翻译: ''
+- 内容: You can define your own custom views so that you can have similar views in multiple
+    places without having to specify the same modifiers and parameters in each place.
+  提示: ''
+  翻译: ''
+- 内容: Specify the alignment and spacing of your content.
+  提示: ''
+  翻译: ''
+- 内容: The effect of the padding modifier depends on which view it modifies.
+  提示: ''
+  翻译: ''
+- 内容: The default spacing of an HStack isn’t right for all layouts. You can specify
+    a constant spacing between a stack’s subviews, spacing that scales with Dynamic
+    Type, or no spacing at all.
+  提示: ''
+  翻译: ''
+- 内容: Adjust the Dynamic Type slider in the Canvas Device Settings to see how the
+    train cars and spacing in the preview change.
+  提示: ''
+  翻译: ''
+- 内容: As you define the views that display information, you can adjust the layout
+    by declaring where any extra space should go. Depending on how you want your layout
+    to adapt, you may choose different tools. Some of the tools for managing the space
+    between views are themselves views, like Spacer. There are also view modifiers
+    that affect the space adjacent to a view, like padding(_:_:). In some cases, you
+    affect a layout by providing a non-default value as a parameter of a view or modifier.
+  提示: ''
+  翻译: ''
+- 内容: This layout specifies an amount of space that depends on the size of a view
+    by using the opacity modifier to create an invisible version of that view to take
+    up the correct amount of space.
+  提示: ''
+  翻译: ''
+- 内容: This HStack contains three TrainCar views - front, middle, and rear - to form
+    a train. The code doesn’t add any custom space or padding to the HStack or the
+    TrainCar views, but there’s still a little space between the frames of the train
+    cars.
+  提示: ''
+  翻译: ''
+- 内容: Besides modifying a content view to create space, you can also create space
+    by adding an invisible view that modifies your layout without displaying any content.
+  提示: ''
+  翻译: ''
+- 内容: You can add padding to the outer edges of a view to put some space between that
+    view and any neighboring views, or to the edge of a window or scene.
+  提示: ''
+  翻译: ''
+- 内容: Change to a landscape orientation in the Canvas Device Settings or choose a
+    different size device for previews to see how the width of the device changes
+    the layout.
+  提示: ''
+  翻译: ''
+- 内容: You can specify a minimum width for each Spacer, or let it squish all the way
+    to zero if the adjacent content needs all the space.
+  提示: ''
+  翻译: ''
+- 内容: This example defines a specific amount of padding in the length parameter.
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: A ZStack adapts to the size of its largest view, so the invisible view in this
+    stack creates a visual appearance like padding around the middle train car.
+  提示: ''
+  翻译: ''
+- 内容: Indicate data dependencies in a view using state, and share those dependencies
+    with other views using bindings.
+  提示: ''
+  翻译: ''
+- 内容: padding(_:_:) without any parameters puts space around all four edges. The size
+    of the default padding varies, depending on attributes of the view and the environment
+    where the view appears.
+  提示: ''
+  翻译: ''
+- 内容: Many of these container views include some negative space by default, so set
+    up your content and a PreviewProvider first to see how the defaults look before
+    you customize the spacing.
+  提示: ''
+  翻译: ''
+- 内容: Using the value of 0 for the spacing parameter here removes all of the space
+    between the views. In this HStack, the train cars are right next to each other.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: Add padding around subviews
+  提示: ''
+  翻译: ''
+- 内容: Adjusting the space between views
+  提示: ''
+  翻译: ''
+- 内容: This example pads the leading edge of a train car, but not the other edges,
+    by specifying a set that contains only leading.
+  提示: ''
+  翻译: ''
+- 内容: Because these train cars are SF symbols, their size changes when the current
+    dynamicTypeSize changes. This train’s spacing adjusts proportionally. In this
+    HStack, the value for the spacing parameter is the trainCarSpace property of the
+    ScaledSpacing view.
+  提示: ''
+  翻译: ''
+- 内容: You can also use a ScaledMetric to adjust the spacing in response to font changes.
+  提示: ''
+  翻译: ''
+- 内容: Customize a container's spacing
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Here’s an example of that custom TrainCar view in use. This view declaration
+    only specifies which part of the train it represents. The TrainCar structure defines
+    the Image view with the corresponding symbol and adds a background.
+  提示: ''
+  翻译: ''
+- 内容: To show some different strategies for changing the spacing between views, this
+    example uses a sequence of train cars. Each train has three views — a front, middle,
+    and rear section — and uses the train car symbols from SF Symbols. These examples
+    use an HStack to show horizontal spacing. The same principles apply on the vertical
+    axis and to other stack and grid views in SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: The spacing parameter of an HStack customizes the spacing between its views.
+    This value of 20 puts 20 points of space between the front and middle TrainCar
+    views and 20 points of space between the middle and rear TrainCar views, instead
+    of the default spacing.
+  提示: ''
+  翻译: ''
+- 内容: Define your content
+  提示: ''
+  翻译: ''
+- 内容: Try changing the color of the background(_:ignoresSafeAreaEdges:) to another
+    color, and see the color of the background change on all the train cars.
+  提示: ''
+  翻译: ''
+- 内容: Driving changes in your UI with state and bindings
+  提示: ''
+  翻译: ''
+- 内容: An HStack, like many of SwiftUI’s built-in collection views, puts some spacing
+    between its subviews by default.
+  提示: ''
+  翻译: ''
+- 内容: The ScaledMetric property wrapper configures the trainCarSpace property to change
+    in proportion to the current body font size.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Add a view to create space
+  提示: ''
+  翻译: ''
+- 内容: This Spacer() between views pushes the content views as far apart as possible.
+  提示: ''
+  翻译: ''
+- 内容: Applying the padding(_:_:) modifier to the stack that contains the TrainCar
+    views puts padding around the edges of the stack instead of between the train
+    cars.
+  提示: ''
+  翻译: ''

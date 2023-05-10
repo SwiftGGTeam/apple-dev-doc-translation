@@ -1,0 +1,269 @@
+- 内容: The Landmark.Category case name identifies each item in the list, which must
+    be unique among other categories because it’s an enumeration.
+  提示: ''
+  翻译: Landmark.Category 枚举中的每个case名称用于标识列表中的每一项，因为它是一个枚举，所以在其他类别中必须是唯一的。
+- 内容: Complete the Category View
+  提示: ''
+  翻译: ''
+- 内容: You use navigation views along with NavigationLink instances and related modifiers
+    to build hierarchical navigation structures in your app.
+  提示: ''
+  翻译: 你可以使用导航视图以及 NavigationLink 实例和相关修饰符在应用中构建分层导航结构。
+- 内容: The category item itself is the label for the button, and its destination is
+    the landmark detail view for the landmark represented by the card.
+  提示: ''
+  翻译: 类别项作为按钮的标签，其导航目标是卡片所代表地标的地标详细视图。
+- 内容: Add the rows and the featured image to the category home page.
+  提示: ''
+  翻译: 将行和特色图像添加到类别主页。
+- 内容: In CategoryHome.swift, create a modelData environment object.
+  提示: ''
+  翻译: 在 CategoryHome.swift 中，创建一个 modelData 环境对象。
+- 内容: The landmarkData.json file already includes a category value for each landmark
+    with one of three string values. By matching the names in the data file, you can
+    rely on the structure’s Codable conformance to load the data.
+  提示: ''
+  翻译: landmarkData.json 文件已经为每个地标包含了一个类别，包含了这三个属性。通过匹配数据文件中的名称，你可以依赖结构体的 Codable 协议来加载数据。
+- 内容: Step 5
+  提示: ''
+  翻译: 步骤 5
+- 内容: Create a new custom view called CategoryItem that displays one landmark.
+  提示: ''
+  翻译: 创建一个名为 CategoryItem 的新自定义视图，用于显示一个地标。
+- 内容: In CategoryHome.swift, add the image of the first featured landmark to the top
+    of the list.
+  提示: ''
+  翻译: 在 CategoryHome.swift 中，将第一个特色地标的图片添加到列表顶部。
+- 内容: With all of the differently categorized landmarks visible in the view, the user
+    needs a way to reach each section in the app. Use the navigation and presentation
+    APIs to make the category home, the detail view, and favorites list navigable
+    from a tab view.
+  提示: ''
+  翻译: 由于视图中显示了所有不同分类的地标，因此用户需要一种方法来访问应用程序中的每个部分。使用导航和演示 API 使类别主页、详细信息视图和收藏夹列表可从选项卡视图导航。
+- 内容: Check Your Understanding
+  提示: ''
+  翻译: ''
+- 内容: ContentView
+  提示: ''
+  翻译: ContentView
+- 内容: Create a Category Row
+  提示: ''
+  翻译: 创建一个横向滚动显示的类别组
+- 内容: Set the edge insets to zero on both kinds of landmark previews so the content
+    can extend to the edges of the display.
+  提示: ''
+  翻译: 将两种地标预览的边缘间距设置为零，让内容可以延伸到显示器的边缘。
+- 内容: Define a new custom view CategoryRow for holding the contents of a row.
+  提示: ''
+  翻译: 定义一个新的自定义视图 CategoryRow 以显示这一行的内容。
+- 内容: Step 6
+  提示: ''
+  翻译: 步骤 6
+- 内容: Text that you pass as the label for a navigation link renders using the environment’s
+    accent color, and images may render as template images. You can modify either
+    behavior to best suit your design.
+  提示: ''
+  翻译: 作为导航链接标签的文本会使用环境的强调色进行渲染，而图像可能作为模板图像渲染。您可以根据设计需求修改这两种展示效果。
+- 内容: You’ll turn this view into an interactive carousel in a later tutorial. For
+    now, it displays one of the featured landmarks with a scaled and cropped preview
+    image.
+  提示: ''
+  翻译: 在后续教程中，你将会把此视图变成一个交互式轮播。现在，它以缩放和裁剪的预览图像显示一个特色地标。
+- 内容: In Landmark.swift, add a new isFeatured property.
+  提示: ''
+  翻译: 在 Landmark.swift 中，添加一个新的 isFeatured 属性。
+- 内容: Composing Complex Interfaces
+  提示: ''
+  翻译: ''
+- 内容: Add properties for the category name and the list of items in that category.
+  提示: ''
+  翻译: 添加类别名称和项目列表属性。
+- 内容: Reuse parts of the Landmark view you created in Creating and Combining Views
+    to create familiar previews of a landmark.
+  提示: ''
+  翻译: 重用您在“创建和组合视图”中创建的Landmark视图的部分内容，以生成熟悉的地标预览。
+- 内容: Add a state variable for the tab selection, and give it a default value.
+  提示: ''
+  翻译: 添加一个用于表示当前 Tab 的状态变量，并为其设置一个默认值。
+- 内容: You can provide a different way to browse the landmarks by creating a view that
+    sorts landmarks by category, while highlighting a featured landmark at the top
+    of the view.
+  提示: ''
+  翻译: 你可以提供一种不同的方式来浏览地标，方法是创建一个按类别对地标进行排序的视图，同时在视图顶部突出显示特色地标。
+- 内容: Display the name of the category.
+  提示: ''
+  翻译: 显示类别的名称。
+- 内容: Add a NavigationView to host the different categories.
+  提示: ''
+  翻译: 添加一个 NavigationView 来导航到不同的类别。
+- 内容: Next, you’ll add a featured landmark to the top of the view. You’ll need more
+    information from the landmark data to do this.
+  提示: ''
+  翻译: 接下来，你将在视图顶部添加一个特色地标。为此，你需要从地标数据中获取更多信息。
+- 内容: Step 3
+  提示: ''
+  翻译: 步骤 3
+- 内容: Create a tab view that wraps the LandmarkList, as well as the new CategoryHome.
+  提示: ''
+  翻译: 创建一个包装 LandmarkList 以及新的 CategoryHome 的底部标签视图。
+- 内容: Step 4
+  提示: ''
+  翻译: 步骤 4
+- 内容: Like for other landmark properties you’ve added, this Boolean already exists
+    in the data — you just need to declare a new property.
+  提示: ''
+  翻译: 与你添加的其他地标属性一样，这个布尔值已经存在于数据中，你只需要声明一个新属性。
+- 内容: In the Landmarks app, users can create a profile to express their personality.
+    To give users the ability to change their profile, you’ll add an edit mode and
+    design the preferences screen.
+  提示: ''
+  翻译: 在 Landmarks 应用中，用户可以创建一个个人资料以表达自己的个性。为了让用户能够更改个人资料，你将添加一个编辑模式并设计偏好设置屏幕。
+- 内容: Pin the preview so you can see the effect of the next step on the CategoryRow.
+  提示: ''
+  翻译: 固定预览，以便您可以在 CategoryRow 上看到下一步的效果。
+- 内容: The tag(_:) modifier on each of the views matches one of the possible values
+    that the selection property can take so the TabView can coordinate which view
+    to display when the user makes a selection in the user interface.
+  提示: ''
+  翻译: 每个视图上的 tag(_:) 修饰符 与 selection 属性可能具有的值之一相匹配，这样 TabView 就可以显示用户在用户界面进行选择的视图。
+- 内容: Display the categories in Landmarks using a List.
+  提示: ''
+  翻译: 使用 List 显示 Landmarks 中的类别。
+- 内容: Section 2
+  提示: ''
+  翻译: 第 2 节
+- 内容: In CategoryRow.swift, replace the Text that holds the landmark name with the
+    new CategoryItem view.
+  提示: ''
+  翻译: 在 CategoryRow.swift 中，用新的 CategoryItem 视图替换包含地标名称的 Text。
+- 内容: Add a Category View
+  提示: ''
+  翻译: 添加一个类别视图
+- 内容: Updating the view preview with a larger sampling of data makes it easier to
+    ensure that the scrolling behavior is correct.
+  提示: ''
+  翻译: 使用多数据更新视图预览，可以更容易地确保滚动行为正确。
+- 内容: Follow the steps to build this project, or download the finished project to
+    explore on your own.
+  提示: ''
+  翻译: 按照以下步骤构建此项目，或者下载完成的项目自行探索。
+- 内容: Landmarks displays each category in a row that scrolls horizontally. Add a new
+    view type to represent the row, then display all the landmarks for that category
+    in the new view.
+  提示: ''
+  翻译: 地标应用将每个类别以水平滚动的行形式展示。添加一个新的视图类型来代表这一行，然后在新视图中展示该类别下的所有地标。
+- 内容: Create a Categories group in your project’s Views group, and create a custom
+    view called CategoryHome to the new group.
+  提示: ''
+  翻译: 在项目的 Views 文件夹中创建一个 Categories 分组，并在新文件夹中创建一个名为 CategoryHome 的自定义视图。
+- 内容: Section 3
+  提示: ''
+  翻译: 第 3 节
+- 内容: Start the live preview and try out the new navigation.
+  提示: ''
+  翻译: 启动实时预览并尝试新的导航。
+- 内容: Step 1
+  提示: ''
+  翻译: 步骤 1
+- 内容: Landmarks
+  提示: ''
+  翻译: Landmarks
+- 内容: Start by reading category data from the landmarkData.json file.
+  提示: ''
+  翻译: 首先从 landmarkData.json 文件中读取分类数据。
+- 内容: Put the category’s items in an HStack, and group that with the category name
+    in a VStack.
+  提示: ''
+  翻译: 将类别的项目展示放在一个 HStack 中，并将其与类别名称一起包在一个 VStack 中。
+- 内容: Next you’ll modify the app’s main content view to show a tab view that lets
+    the user choose between the category view you just created, and the existing list
+    of landmarks.
+  提示: ''
+  翻译: 接下来，你将修改应用的主内容视图，显示一个底部标签视图，让用户在刚刚创建的类别视图和现有的地标列表之间进行选择。
+- 内容: In CategoryRow.swift, wrap the existing CategoryItem with a NavigationLink.
+  提示: ''
+  翻译: 在 CategoryRow.swift 中，用 NavigationLink 包装现有的 CategoryItem。
+- 内容: The category view for Landmarks shows a vertically scrolling list of horizontally
+    scrolling landmarks. As you build this view and connect it to your existing views,
+    you’ll explore how composed views can adapt to different device sizes and orientations.
+  提示: ''
+  翻译: 在 Landmarks 应用中，分类视图显示一个垂直滚动的列表，列表中包含水平滚动的地标。在构建这个视图并将其连接到现有视图时，你将探究如何使组合视图适应不同的设备尺寸和方向。
+- 内容: Give each tab a label.
+  提示: ''
+  翻译: 为每个底部标签添加文本和图标。
+- 内容: Which view is the root view for the Landmarks app?
+  提示: ''
+  翻译: Landmarks 应用的根视图是哪个？
+- 内容: Question 1 of 3
+  提示: ''
+  翻译: 问题 1（共 3 个问题）
+- 内容: In ModelData.swift, add a computed categories dictionary, with category names
+    as keys, and an array of associated landmarks for each key.
+  提示: ''
+  翻译: 在 ModelData.swift 中，添加一个 categories 字典，以类别名称为键，以每个键的相关地标数组做为值。
+- 内容: Update the body of CategoryHome to pass category information to instances of
+    the row type.
+  提示: ''
+  翻译: 更新 CategoryHome 的 body，将类别信息传递给每一行。
+- 内容: In Landmark.swift, add a Category enumeration and a category property to the
+    Landmark structure.
+  提示: ''
+  翻译: 在 Landmark.swift 中，为 Landmark 结构添加一个 Category 枚举和一个 category 属性。
+- 内容: Section 4
+  提示: ''
+  翻译: 第 4 节
+- 内容: Section 1
+  提示: ''
+  翻译: 第 1 节
+- 内容: Add Navigation Between Sections
+  提示: ''
+  翻译: 在不同的部分添加导航
+- 内容: Unpin the preview, switch to the ContentView and add an enumeration of the tabs
+    to display.
+  提示: ''
+  翻译: 取消固定预览，切换到 ContentView 并添加要显示的底部标签栏的枚举。
+- 内容: The category view displays all categories in separate rows arranged in a vertical
+    column for easier browsing. You do this by combining vertical and horizontal stacks,
+    and adding scrolling to the list.
+  提示: ''
+  翻译: 分类视图以垂直列表方式显示所有的类别，以便于浏览。你可以通过结合垂直和水平堆栈，并为列表添加滚动来实现这一点。
+- 内容: Section 5
+  提示: ''
+  翻译: 第 5 节
+- 内容: You’ll need access to the categories right now, as well as to other landmark
+    data later.
+  提示: ''
+  翻译: 你现在需要访问类别，以及稍后访问其他地标数据。
+- 内容: Step 2
+  提示: ''
+  翻译: 步骤 2
+- 内容: LandmarksApp
+  提示: ''
+  翻译: LandmarksApp
+- 内容: Create a Category List
+  提示: ''
+  翻译: 创建一个类别列表
+- 内容: Change the navigation appearance of the category items by applying the renderingMode(_:)
+    and foregroundColor(_:) modifiers.
+  提示: ''
+  翻译: 通过应用 renderingMode(:) 和 foregroundColor(:) 修饰符来更改类别项目的导航外观。
+- 内容: In ModelData.swift, add a new computed features array, which contains only the
+    landmarks that have isFeatured set to true.
+  提示: ''
+  翻译: 在 ModelData.swift 中，添加一个新的 features 数组，其中仅包含将 isFeatured 设置为 true 的地标。
+- 内容: Give the content some space by specifying a tall frame(width:height:), adding
+    padding, and wrapping the HStack in a scroll view.
+  提示: ''
+  翻译: 通过指定一个高度较高的 frame(width:height:)，添加内边距，并将 HStack 包装在滚动视图中，为内容留出一定的空间。
+- 内容: Step 7
+  提示: ''
+  翻译: 步骤7
+- 内容: The view showcases one or more featured landmarks at the top.
+  提示: ''
+  翻译: 该视图在顶部展示一个或多个特色地标。
+- 内容: Set the title of the navigation bar to Featured.
+  提示: ''
+  翻译: 将导航栏的标题设置为精选（Featured）。
+- 内容: Working with UI Controls
+  提示: ''
+  翻译: ''

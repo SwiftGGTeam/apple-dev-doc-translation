@@ -1,0 +1,337 @@
+- 内容: To prepare for adding a custom UIPageControl, you need a way to track the current
+    page from within PageView.
+  提示: ''
+  翻译: 要准备添加自定义 UIPageControl，你需要一种从 PageView 中跟踪当前页面的方法。
+- 内容: Next, you’ll create a custom view to present your UIViewControllerRepresentable
+    view.
+  提示: ''
+  翻译: 接下来，你将创建一个自定义视图来呈现你的 UIViewControllerRepresentable 视图。
+- 内容: Which protocol do you use to bridge UIKit view controllers into SwiftUI?
+  提示: ''
+  翻译: 你使用哪种协议将 UIKit 视图控制器桥接到 SwiftUI 中？
+- 内容: Because SwiftUI calls this method whenever a page switching animation completes,
+    you can find the index of the current view controller and update the binding.
+  提示: ''
+  翻译: 因为 SwiftUI 会在页面切换动画完成时调用此方法，所以你可以找到当前视图控制器的索引并更新绑定值。
+- 内容: Update the preview provider to pass the required array of views, and the preview
+    starts working.
+  提示: ''
+  翻译: 更新预览提供类并传递所需的视图数组，然后预览将会开始工作。
+- 内容: Step 6
+  提示: ''
+  翻译: 步骤 6
+- 内容: Observe that when you swipe from page to page, the value doesn’t change.
+  提示: ''
+  翻译: 请注意，当你从一页滑动到另一页时，它的值不会改变。
+- 内容: Add an updateUIViewController(_:context:) method that calls setViewControllers(_:direction:animated:)
+    to provide a view controller for display.
+  提示: ''
+  翻译: 添加一个调用了 setViewControllers(_:direction:animated:) 的 updateUIViewController(_:context:)
+    方法来提供用于显示的视图控制器。
+- 内容: UIViewRepresentable and UIViewControllerRepresentable types have the same life
+    cycle, with methods that correspond to their underlying UIKit types.
+  提示: ''
+  翻译: UIViewRepresentable 和 UIViewControllerRepresentable 类型具有相同的生命周期，它们具有与其底层 UIKit
+    类型相对应的方法。
+- 内容: Step 8
+  提示: ''
+  翻译: 步骤 8
+- 内容: With the binding connected in both directions, the text view updates to show
+    the correct page number after each swipe.
+  提示: ''
+  翻译: 通过双向连接的绑定，在每次滑动后文本视图会更新显示正确的页码。
+- 内容: The preview fails because Xcode can’t infer a type for Page.
+  提示: ''
+  翻译: 预览失败，因为 Xcode 无法推断 Page 的类型。
+- 内容: Add a makeUIViewController(context:) method that creates a UIPageViewController
+    with the desired configuration.
+  提示: ''
+  翻译: 添加一个 makeUIViewController(context:) 方法来创建带有我们需要配置的 UIPageViewController。
+- 内容: Interfacing with UIKit
+  提示: ''
+  翻译: ''
+- 内容: Section 1
+  提示: ''
+  翻译: 第 1 节
+- 内容: A landmark’s feature image, if it exists, has different dimensions than the
+    regular image.
+  提示: ''
+  翻译: 地标的特征图像（如果存在）与常规图像具有不同的尺寸。
+- 内容: Create a View to Represent a UIPageViewController
+  提示: ''
+  翻译: 创建一个视图来表示 UIPageViewController
+- 内容: Create the View Controller’s Data Source
+  提示: ''
+  翻译: 创建视图控制器的数据源
+- 内容: Replace the text box with the page control, switching from a VStack to a ZStack
+    for layout.
+  提示: ''
+  翻译: 将文本框替换为 PageControl，将布局从 VStack 切换到 ZStack。
+- 内容: Create a nested Coordinator type in PageControl, and add a makeCoordinator()
+    method to create and return a new coordinator.
+  提示: ''
+  翻译: 在 PageControl 中创建一个嵌套的 Coordinator 类型，并添加一个 makeCoordinator() 方法来创建并返回一个新的协调器。
+- 内容: You can use this coordinator to implement common Cocoa patterns, such as delegates,
+    data sources, and responding to user events via target-action.
+  提示: ''
+  翻译: 你可以使用这个协调器来实现常见的 Cocoa 模式，比如委托，数据源以及通过目标 - 动作响应用户事件。
+- 内容: Check Your Understanding
+  提示: ''
+  翻译: ''
+- 内容: This tutorial gives you a chance to apply much of what you’ve already learned
+    about SwiftUI, and — with little effort — migrate the Landmarks app to watchOS.
+  提示: ''
+  翻译: 本教程让你有机会应用你已了解的有关 SwiftUI 的大部分知识，并且只需很少的努力即可将 Landmarks 应用程序迁移到 watchOS。
+- 内容: This tutorial shows you how to convert the featured landmark from the home screen
+    to wrap instances of UIPageViewController and UIPageControl. You’ll use UIPageViewController
+    to display a carousel of SwiftUI views, and use state variables and bindings to
+    coordinate data updates throughout the user interface.
+  提示: ''
+  翻译: 本教程向你展示如何将主屏幕上的特色地标转换成为包装 UIPageViewController 和 UIPageControl 的实例。 你将使用 UIPageViewController
+    来显示 SwiftUI 视图的轮播，并使用状态变量和绑定来协调整个用户界面的数据更新。
+- 内容: Finally, in CategoryHome, replace the placeholder feature image with the new
+    page view.
+  提示: ''
+  翻译: 最后，在 CategoryHome 中，将占位图片替换为新的 PageView。
+- 内容: Overlay text information about the landmark on the image.
+  提示: ''
+  翻译: 在图像上叠加有关地标的文本信息。
+- 内容: Test that the value flows through the binding to the PageViewController by changing
+    its initial value.
+  提示: ''
+  翻译: 通过更改其初始值来测试该值是否通过绑定流向 PageViewController。
+- 内容: Before you continue, prepare a feature card for use as a page.
+  提示: ''
+  翻译: 在继续之前，请准备一张功能卡片视图以用作页面。
+- 内容: Step 3
+  提示: ''
+  翻译: 步骤 3
+- 内容: Add the coordinator as the target for the valueChanged event, specifying the
+    updateCurrentPage(sender:) method as the action to perform.
+  提示: ''
+  翻译: 添加协调器作为 valueChanged 事件的目标，指定 updateCurrentPage(sender:) 方法作为要执行的操作。
+- 内容: Section 2
+  提示: ''
+  翻译: 第 2 节
+- 内容: Add a button to PageView that makes the page view controller jump to the second
+    view.
+  提示: ''
+  翻译: 向 PageView 添加一个按钮，使页面视图控制器跳转到第二个视图。
+- 内容: Initialize an array of controllers in the coordinator using the pages array
+    of views.
+  提示: ''
+  翻译: 使用 pages 视图数组初始化协调器中的控制器数组。
+- 内容: To do this, you’ll declare a @State property in PageView, and pass a binding
+    to this property down to the PageViewController view. The PageViewController updates
+    the binding to match the visible page.
+  提示: ''
+  翻译: 为了做到这种效果，你需要在 PageView 中声明一个 @State 属性，并将对该属性的绑定向下传递到 PageViewController 视图。
+    PageViewController 更新绑定的值来匹配可见页面。
+- 内容: SwiftUI manages your UIViewControllerRepresentable type’s coordinator, and provides
+    it as part of the context when calling the methods you created above.
+  提示: ''
+  翻译: SwiftUI 管理你的 UIViewControllerRepresentable 类型的协调器，并在调用你在上面创建的方法时将其作为上下文的一部分提供。
+- 内容: Section 4
+  提示: ''
+  翻译: 第 4 节
+- 内容: Create a PageView group in your project’s Views folder, and add a new Swift
+    file named PageViewController.swift; Declare the PageViewController type as conforming
+    to UIViewControllerRepresentable.
+  提示: ''
+  翻译: 在项目的 Views 文件夹中创建一个 PageView 文件夹，并添加一个名为 PageViewController.swift 的新 Swift 文件；
+    将 PageViewController 类型声明为符合 UIViewControllerRepresentable 协议。
+- 内容: Now try out all the different interactions — PageView shows how UIKit and SwiftUI
+    views and controllers can work together.
+  提示: ''
+  翻译: 现在尝试一下所有不同的交互效果——PageView 展示了 UIKit 和 SwiftUI 视图和控制器如何协同工作。
+- 内容: Step 7
+  提示: ''
+  翻译: 步骤 7
+- 内容: Step 5
+  提示: ''
+  翻译: 步骤 5
+- 内容: SwiftUI works seamlessly with the existing UI frameworks on all Apple platforms.
+    For example, you can place UIKit views and view controllers inside SwiftUI views,
+    and vice versa.
+  提示: ''
+  翻译: SwiftUI 可以与所有 Apple 平台上的现有 UI 框架无缝协作。 例如，你可以将 UIKit 视图和视图控制器放置在 SwiftUI 视图中，反之亦然。
+- 内容: These two methods establish the relationships between view controllers, so that
+    you can swipe back and forth between them.
+  提示: ''
+  翻译: 这两种方法建立视图控制器之间的关系，让你可以在它们之间来回滑动。
+- 内容: The page view controller stores an array of Page instances, which must be a
+    type of View. These are the pages you use to scroll between landmarks.
+  提示: ''
+  翻译: 页面视图控制器存储一个 Page 实例数组，它必须是 View 类型。 这些是你用来在滚动切换地标的页面。
+- 内容: Tip
+  提示: ''
+  翻译: 提示
+- 内容: UIViewRepresentable
+  提示: ''
+  翻译: UIViewRepresentable
+- 内容: Question 1 of 2
+  提示: ''
+  翻译: 第 1 个问题，共 2 个
+- 内容: Add a Custom Page Control
+  提示: ''
+  翻译: 添加自定义页面控件
+- 内容: Add another method to PageViewController to make the coordinator.
+  提示: ''
+  翻译: 向 PageViewController 添加另一个方法来创建协调器。
+- 内容: Because UIControl subclasses like UIPageControl use the target-action pattern
+    instead of delegation, this Coordinator implements an @objc method to update the
+    current page binding.
+  提示: ''
+  翻译: 因为像 UIPageControl 这样的 UIControl 子类使用目标-动作模式而不是代理模式，所以这个 Coordinator 实现了一个@objc
+    方法来更新当前页面绑定。
+- 内容: Create a new SwiftUI view file, named PageControl.swift. Update the PageControl
+    type to conform to the UIViewRepresentable protocol.
+  提示: ''
+  翻译: 创建一个新的 SwiftUI 视图文件，命名为 PageControl.swift。 更新 PageControl 类使它遵循 UIViewRepresentable
+    协议。
+- 内容: You’re ready to add a custom UIPageControl to your view, wrapped in SwiftUI
+    UIViewRepresentable view.
+  提示: ''
+  翻译: 你已准备好将自定义 UIPageControl 添加到你的视图，包装在 SwiftUI UIViewRepresentable 视图中。
+- 内容: Add a text view with the currentPage property, so that you can keep an eye on
+    the @State property’s value.
+  提示: ''
+  翻译: 添加具有 currentPage 属性的文本视图，以便你可以观察 @State 属性的值。
+- 内容: UIHostingController
+  提示: ''
+  翻译: UIHostingController
+- 内容: In addition to declaring the @Binding property, you also update the call to
+    setViewControllers(_:direction:animated:), passing the value of the currentPage
+    binding.
+  提示: ''
+  翻译: 除了声明 @Binding 属性之外，你还将更新对 setViewControllers(_:direction:animated:) 的调用，传递了
+    currentPage 的值进行绑定。
+- 内容: Follow the steps to build this project, or download the finished project to
+    explore on your own.
+  提示: ''
+  翻译: 按照步骤构建此项目，或下载已完成的项目来自行探索。
+- 内容: SwiftUI calls this method a single time when it’s ready to display the view,
+    and then manages the view controller’s life cycle.
+  提示: ''
+  翻译: SwiftUI 在准备好显示视图时会调用此方法一次，然后管理视图控制器的生命周期。
+- 内容: Return to PageView, turn on live previews, and test out the swipe interactions.
+  提示: ''
+  翻译: 返回 PageView，打开实时预览，并测试滑动交互。
+- 内容: Remember to use the $ syntax to create a binding to a value that is stored as
+    state.
+  提示: ''
+  翻译: 请记住使用 $ 语法设置带 @State 属性的值。
+- 内容: For now, you create the UIHostingController that hosts the page SwiftUI view
+    on every update. Later, you’ll make this more efficient by initializing the controller
+    only once for the life of the page view controller.
+  提示: ''
+  翻译: 现在，你在每次更新时都创建托管 SwiftUI 视图的 UIHostingController。稍后，将通过仅在页面视图控制器的生命周期内初始化一次控制器来提高效率。
+- 内容: Step 2
+  提示: ''
+  翻译: 步骤 2
+- 内容: In a few short steps, you’ve done a lot — the PageViewController uses a UIPageViewController
+    to show content from a SwiftUI view. Now it’s time to enable swiping interactions
+    to move from page to page.
+  提示: ''
+  翻译: 在几个简短的步骤中，你已经完成了很多工作 —— PageViewController 使用 UIPageViewController 来显示来自 SwiftUI
+    视图的内容。 现在是时候启用滑动交互以从一个页面移动到另一个页面了。
+- 内容: UIViewControllerRepresentable
+  提示: ''
+  翻译: UIViewControllerRepresentable
+- 内容: Creating a watchOS App
+  提示: ''
+  翻译: ''
+- 内容: Assign the coordinator as the delegate for the UIPageViewController, in addition
+    to the data source.
+  提示: ''
+  翻译: 除了数据源之外，还将协调器指定为 UIPageViewController 的委托。
+- 内容: To represent UIKit views and view controllers in SwiftUI, you create types that
+    conform to the UIViewRepresentable and UIViewControllerRepresentable protocols.
+    Your custom types create and configure the UIKit types that they represent, while
+    SwiftUI manages their life cycle and updates them when needed.
+  提示: ''
+  翻译: 要在 SwiftUI 中展示 UIKit 视图和视图控制器，你可以创建符合 UIViewRepresentable 和 UIViewControllerRepresentable
+    协议的类。 然后用你自定义的类创建和配置它们所表示的 UIKit 类型，而 SwiftUI 管理它们的生命周期并在需要时更新它们。
+- 内容: Next, add the two requirements for the UIViewControllerRepresentable protocol.
+  提示: ''
+  翻译: 接下来，添加 UIViewControllerRepresentable 协议的两个要求。
+- 内容: Because you’re passing the page count and the binding to the current page, the
+    page control is already showing the correct values.
+  提示: ''
+  翻译: 因为你已经将页数和当前定位传递到当前页面，所以页面控件已经显示了正确的值。
+- 内容: Track the Page in a SwiftUI View’s State
+  提示: ''
+  翻译: 在 SwiftUI 视图的状态中跟踪页面变化
+- 内容: A SwiftUI view that represents a UIKit view controller can define a Coordinator
+    type that SwiftUI manages and provides as part of the representable view’s context.
+  提示: ''
+  翻译: 表示 UIKit 视图控制器的 SwiftUI 视图可以定义一个 Coordinator 类型，这个视图由 SwiftUI 管理并作为可呈现视图上下文的一部分
+- 内容: Experiment
+  提示: ''
+  翻译: 实验
+- 内容: 'In PageViewController.swift, conform the coordinator to UIPageViewControllerDelegate,
+    and add the pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted
+    completed: Bool) method.'
+  提示: ''
+  翻译: '在 PageViewController.swift 中，使协调器符合 UIPageViewControllerDelegate 协议，并添加 pageViewController(_:didFinishAnimating:previousViewControllers:transitionCompleted
+    completed: Bool) 方法。'
+- 内容: Add the coordinator as the data source of the UIPageViewController.
+  提示: ''
+  翻译: 添加协调器作为 UIPageViewController 的数据源。
+- 内容: Declare the @State variable in PageView, and pass a binding to the property
+    when creating the child PageViewController.
+  提示: ''
+  翻译: 在 PageView 中声明 @State 变量，并在创建子 PageViewController 时将该属性传进去。
+- 内容: Start by adding a currentPage binding as a property of PageViewController.
+  提示: ''
+  翻译: 首先为 PageViewController 添加一个 currentPage 绑定属性。
+- 内容: SwiftUI calls this makeCoordinator() method before makeUIViewController(context:),
+    so that you have access to the coordinator object when configuring your view controller.
+  提示: ''
+  翻译: SwiftUI 在 makeUIViewController(context:) 之前调用此 makeCoordinator() 方法，这样在配置视图控制器时就可以访问协调器对象。
+- 内容: Create a new SwiftUI view file, named PageView.swift, and update the PageView
+    type to declare PageViewController as a child view.
+  提示: ''
+  翻译: 创建一个新的 SwiftUI 视图文件，命名为 PageView.swift，并更新 PageView 类，将 PageViewController 声明为子视图。
+- 内容: Step 4
+  提示: ''
+  翻译: 步骤 4
+- 内容: Declare a nested Coordinator class inside PageViewController.
+  提示: ''
+  翻译: 在 PageViewController 中声明一个嵌套的 Coordinator 类。
+- 内容: Add UIPageViewControllerDataSource conformance to the Coordinator type, and
+    implement the two required methods.
+  提示: ''
+  翻译: 将 UIPageViewControllerDataSource 协议添加到 Coordinator 类，并实现两个必需的方法。
+- 内容: Next, make the page control interactive so users can tap one side or the other
+    to move between pages.
+  提示: ''
+  翻译: 接下来，使页面控件能够进行交互，以便用户可以点击一侧或另一侧以在页面之间移动。
+- 内容: Step 9
+  提示: ''
+  翻译: 步骤 9
+- 内容: Section 3
+  提示: ''
+  翻译: 第 3 节
+- 内容: Step 1
+  提示: ''
+  翻译: 步骤 1
+- 内容: Add a computed property to the Landmark structure that returns the feature image,
+    if it exists.
+  提示: ''
+  翻译: 将计算属性添加到 Landmark 结构体（如果存在），这个属性返回地标的特征图像 。
+- 内容: Important
+  提示: ''
+  翻译: 重要的
+- 内容: The coordinator is a good place to store these controllers, because the system
+    initializes them only once, and before you need them to update the view controller.
+  提示: ''
+  翻译: 协调器是存储这些控制器的好地方，因为系统只初始化它们一次，并且是在你需要它们更新视图控制器之前。
+- 内容: Drag the images in the downloaded project files’ Resources directory into your
+    app’s Asset catalog.
+  提示: ''
+  翻译: 将下载的项目文件的 Resources 目录中的图像拖到应用程序的 Asset 目录中。
+- 内容: Add a new SwiftUI view file, named FeatureCard.swift that displays the landmark’s
+    feature image.
+  提示: ''
+  翻译: 添加一个名为 FeatureCard.swift 的新 SwiftUI 视图文件，用于显示地标的特征图像。

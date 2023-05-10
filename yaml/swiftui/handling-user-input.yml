@@ -1,0 +1,356 @@
+- 内容: Use an Observable Object for Storage
+  提示: ''
+  翻译: 使用可观察对象来存储
+- 内容: You can customize the list view so that it shows all of the landmarks, or just
+    the user’s favorites. To do this, you’ll need to add a bit of state to the LandmarkList
+    type.
+  提示: ''
+  翻译: 你可以自定义列表视图，使其显示所有地标，或仅显示用户收藏的地标。 要实现这种效果，你需要向 LandmarkList 类型添加一些状态。
+- 内容: Step 6
+  提示: ''
+  翻译: 步骤 6
+- 内容: Use the filtered version of the list of landmarks in the List.
+  提示: ''
+  翻译: 将列表修改为使用过滤之后的数据。
+- 内容: Use modelData.landmarks as the data when filtering landmarks.
+  提示: ''
+  翻译: 筛选地标时使用 modelData.landmarks 作为数据。
+- 内容: You use the $ prefix to access a binding to a state variable, or one of its
+    properties.
+  提示: ''
+  翻译: 你可以使用 $ 前缀来绑定状态变量或它的某个属性。
+- 内容: Change the initial value of showFavoritesOnly to true to see how the list reacts.
+  提示: ''
+  翻译: 将 showFavoritesOnly 的初始值更改为 true 查看列表的变化。
+- 内容: Because system images are vector based, you can change their color with the
+    foregroundColor(_:) modifier.
+  提示: ''
+  翻译: 因为系统图像是基于矢量的，所以你可以使用 foregroundColor(_:) 修饰符更改它们的颜色。
+- 内容: To give the user control over the list’s filter, you need to add a control that
+    can alter the value of showFavoritesOnly. You do this by passing a binding to
+    a toggle control.
+  提示: ''
+  翻译: 要让用户控制列表的过滤，你需要添加一个控件用来更改 showFavoritesOnly 值。 你可以将这个值绑定到一个开关上。
+- 内容: Because you use a binding, changes made inside this view propagate back to the
+    data source.
+  提示: ''
+  翻译: 因为使用 @Binding 属性，所以在此视图内所做的更改会传播回数据源。
+- 内容: "\x01Step 7"
+  提示: ''
+  翻译: 步骤 7
+- 内容: Which of the following passes data downward in the view hierarchy?
+  提示: ''
+  翻译: 以下哪项在视图层次结构中向下传递数据？
+- 内容: Users receive a badge whenever they visit a landmark in their list. Of course,
+    for a user to receive a badge, you’ll need to create one. This tutorial takes
+    you through the process of creating a badge by combining paths and shapes, which
+    you then overlay with another shape that represents the location.
+  提示: ''
+  翻译: 每当用户访问其列表中的地标时，他们都会收到一个徽章。 当然，要让用户收到徽章，你需要创建一个。 本教程将引导你完成通过组合路径和形状创建徽章的过程，然后你将其与代表该位置的另一个形状叠加。
+- 内容: "\x01Step 6"
+  提示: ''
+  翻译: 步骤 6
+- 内容: Add a @State property called showFavoritesOnly with its initial value set to
+    false.
+  提示: ''
+  翻译: 添加一个名为 showFavoritesOnly 的 @State 属性，初始值设置为 false。
+- 内容: Question 1 of 3
+  提示: ''
+  翻译: 第 1 个问题，共 3 个
+- 内容: Section 1
+  提示: ''
+  翻译: 第 1 节
+- 内容: Update the LandmarkRow preview to work with the ModelData object.
+  提示: ''
+  翻译: 更新 LandmarkRow 的预览以使用 ModelData 对象。
+- 内容: The Landmarks app can now switch between a filtered and unfiltered view of the
+    landmarks, but the list of favorite landmarks is still hard coded. To allow the
+    user to add and remove favorites, you need to add a favorite button to the landmark
+    detail view.
+  提示: ''
+  翻译: Landmarks 应用程序现在可以在过滤和未过滤的地标视图之间切换，但收藏的地标列表仍然是写死的。 要允许用户自己添加和删除收藏夹，你需要在地标详细视图中添加收藏夹按钮。
+- 内容: Switch back to LandmarkList.swift and turn on the live preview to verify that
+    everything is working properly.
+  提示: ''
+  翻译: 切换回 LandmarkList.swift 并打开实时预览，验证一切是否正常。
+- 内容: In LandmarkList.swift, add an @EnvironmentObject property declaration to the
+    view, and an environmentObject(_:) modifier to the preview.
+  提示: ''
+  翻译: 在 LandmarkList.swift 中，向视图添加一个 @EnvironmentObject 属性声明，并向预览添加一个 environmentObject(_:)
+    修饰符。
+- 内容: Check Your Understanding
+  提示: ''
+  翻译: ''
+- 内容: Switch back to LandmarkList.swift, and turn on the live preview.
+  提示: ''
+  翻译: 切换回 LandmarkList.swift，并打开实时预览。
+- 内容: Create a new view called FavoriteButton.swift.
+  提示: ''
+  翻译: 创建一个名为 FavoriteButton.swift 的新视图。
+- 内容: When you make changes to your view’s structure, like adding or modifying a property,
+    you need to manually refresh the canvas.
+  提示: ''
+  翻译: 当你更改视图的结构时，例如添加或修改属性，你需要手动刷新画布。
+- 内容: Embed the landmark’s name in an HStack with a new FavoriteButton; provide a
+    binding to the isFavorite property with the dollar sign ($).
+  提示: ''
+  翻译: 将新的收藏按钮以及地标的名称嵌入到 HStack 中； 使用符号 $ 对 isFavorite 属性进行绑定。
+- 内容: In the Landmarks app, a user can flag their favorite places, and filter the
+    list to show just their favorites. To create this feature, you’ll start by adding
+    a switch to the list so users can focus on just their favorites, and then you’ll
+    add a star-shaped button that a user taps to flag a landmark as a favorite.
+  提示: ''
+  翻译: 在 Landmarks 应用程序中，用户可以标记他们最喜欢的地方并且对列表进行过滤仅显示他们的收藏。 要创建此功能，你首先要在列表中添加一个开关，用户可以切换开关展示他的收藏夹，然后你将添加一个星形按钮，用户点击该按钮可将地标标记为收藏。
+- 内容: In SwiftUI blocks, you use if statements to conditionally include views.
+  提示: ''
+  翻译: 在 SwiftUI 块中，你可以使用 if 语句判断是否显示视图。
+- 内容: You’ll first create a reusable FavoriteButton.
+  提示: ''
+  翻译: 你将首先创建一个可重用的 FavoriteButton。
+- 内容: Step 3
+  提示: ''
+  翻译: 步骤 3
+- 内容: Begin by enhancing the list to show users their favorites at a glance. Add a
+    property to the Landmark structure to read the initial state of a landmark as
+    a favorite, and then add a star to each LandmarkRow that shows a favorite landmark.
+  提示: ''
+  翻译: 首先优化列表，让用户一目了然地看到他们喜欢的地标。 向 Landmark 结构添加一个属性表示是否收藏，然后向每个已收藏的 LandmarkRow 添加一个星星图标。
+- 内容: Section 2
+  提示: ''
+  翻译: 第 2 节
+- 内容: Filter the List View
+  提示: ''
+  翻译: 过滤列表视图
+- 内容: A binding acts as a reference to a mutable state. When a user taps the toggle
+    from off to on, and off again, the control uses the binding to update the view’s
+    state accordingly.
+  提示: ''
+  翻译: binding 关键词相当于对可变状态的引用。 当用户点击开关从关闭到打开，然后再次关闭时，使用绑定能相应地更新视图的状态。
+- 内容: The star is present whenever a landmark’s isFavorite property is true. You’ll
+    see how to modify that property later in this tutorial.
+  提示: ''
+  翻译: 每当地标的 isFavorite 属性为 true，星星图标就会显示。 你将在本教程后面看到如何修改该属性。
+- 内容: An observable object needs to publish any changes to its data, so that its subscribers
+    can pick up the change.
+  提示: ''
+  翻译: 可观察对象对其数据的任何更改都需要发布出去，以便订阅者可以收到更改的消息。
+- 内容: A preview fails if any subview requires a model object in the environment, but
+    the view you are previewing doesn’t have the environmentObject(_:) modifier.
+  提示: ''
+  翻译: 如果有任何子视图需要环境中的对象，而你正在预览的视图没有传入 environmentObject(_:) 修饰符，则会预览失败。
+- 内容: As you navigate from the list to the detail and tap the button, those changes
+    persist when you return to the list. Because both views access the same model
+    object in the environment, the two views maintain consistency.
+  提示: ''
+  翻译: 当你从列表导航到详细信息并点击收藏按钮时，这些更改在你返回列表时仍然存在。 因为两个视图访问环境中的同一个模型对象，所以两个视图保持一致。
+- 内容: Section 4
+  提示: ''
+  翻译: 第 4 节
+- 内容: After the spacer, add a star image inside an if statement to test whether the
+    current landmark is a favorite.
+  提示: ''
+  翻译: 在 spacer 之后，在 if 语句中添加一个星星图像来标识当前地标是否是收藏。
+- 内容: The landmarkData.json file has a key with this name for each landmark. Because
+    Landmark conforms to Codable, you can read the value associated with the key by
+    creating a new property with the same name as the key.
+  提示: ''
+  翻译: landmarkData.json 文件中的每个地标对象都有一个对应的 isFavorite 键。 因为 Landmark 符合 Codable，你可以通过创建与
+    json 中同名的属性来读取与键关联的值。
+- 内容: Step 7
+  提示: ''
+  翻译: 步骤 7
+- 内容: Step 5
+  提示: ''
+  翻译: 步骤 5
+- 内容: State is a value, or a set of values, that can change over time, and that affects
+    a view’s behavior, content, or layout. You use a property with the @State attribute
+    to add state to a view.
+  提示: ''
+  翻译: 状态是一个值或一组值，可以随时间变化，并影响视图的行为、内容或布局。 你可以使用带有 @State 特性的属性来将状态添加到视图。
+- 内容: Open the starting point Xcode project or the project you finished in the previous
+    tutorial, and select Landmark.swift in the Project navigator.
+  提示: ''
+  翻译: 打开初始 Xcode 项目或者你在上个教程中完成的项目，然后在项目导航器中选择 Landmark.swift。
+- 内容: Update the ContentView preview to add the model object to the environment, which
+    makes the object available to any subview.
+  提示: ''
+  翻译: 更新 ContentView 预览，将模型对象添加到环境中，这使得该对象可用于任何子视图。
+- 内容: An observable object is a custom object for your data that can be bound to a
+    view from storage in SwiftUI’s environment. SwiftUI watches for any changes to
+    observable objects that could affect a view, and displays the correct version
+    of the view after a change.
+  提示: ''
+  翻译: 对于你的数据来说，可观察对象是可自定义的，它可以绑定到 SwiftUI 环境中存储的视图。 SwiftUI 会监听可能影响视图的可观察对象的任何修改，并在可观察对象发生更改后刷新视图，保证显示数据正确。
+- 内容: Declare a new model type that conforms to the ObservableObject protocol from
+    the Combine framework.
+  提示: ''
+  翻译: 创建一个新的模型类型，使它遵循 Combine 框架中的 ObservableObject 协议。
+- 内容: Download the starter project and follow along with this tutorial, or open the
+    finished project and explore the code on your own.
+  提示: ''
+  翻译: 下载初始项目并按照本教程进行操作，或者打开完成的项目自己探索代码。
+- 内容: Create a Favorite Button for Each Landmark
+  提示: ''
+  翻译: 为每个地标创建一个收藏按钮
+- 内容: Next, you’ll add the FavoriteButton to the detail view, binding the button’s
+    isSet property to the isFavorite property of a given landmark.
+  提示: ''
+  翻译: 接下来，将 FavoriteButton 添加到详情视图，将按钮的 isSet 属性绑定给定地标的 isFavorite 属性。
+- 内容: Because you use state properties to hold information that’s specific to a view
+    and its subviews, you always create state as private.
+  提示: ''
+  翻译: 因为你使用 @State 属性来保存针对于特定视图及其子视图的状态，所以你需要将属性设置为私有的。
+- 内容: To support this, you also need access to the environment’s model data.
+  提示: ''
+  翻译: 为此，你还需要访问环境中的模型数据。
+- 内容: Add a Control to Toggle the State
+  提示: ''
+  翻译: 添加控制显示状态的控件
+- 内容: "\x01Step 5"
+  提示: ''
+  翻译: 步骤 5
+- 内容: Use the live preview and try out this new functionality by tapping the toggle.
+  提示: ''
+  翻译: 使用实时预览并通过点击切换开关来尝试这个新功能。
+- 内容: "\x01Step 4"
+  提示: ''
+  翻译: 步骤 4
+- 内容: Add an isSet binding that indicates the button’s current state, and provide
+    a constant value for the preview.
+  提示: ''
+  翻译: 添加一个 isSet 属性表示按钮当前的状态，并为预览视图提供一个常量。
+- 内容: Add the @Published attribute to the landmarks array.
+  提示: ''
+  翻译: 将 @Published 属性添加到 landmarks 数组。
+- 内容: Select LandmarkRow.swift in the Project navigator.
+  提示: ''
+  翻译: 在项目文件目录中选择 LandmarkRow.swift。
+- 内容: Create a nested ForEach group to transform the landmarks into rows.
+  提示: ''
+  翻译: 创建一个嵌套的 ForEach 将地标数据转换为行视图。
+- 内容: Compute a filtered version of the landmarks list by checking the showFavoritesOnly
+    property and each landmark.isFavorite value.
+  提示: ''
+  翻译: 检查 showFavoritesOnly 属性和每个 landmark.isFavorite 值来决定地标列表的过滤方案。
+- 内容: Switch to LandmarkDetail.swift, and compute the index of the input landmark
+    by comparing it with the model data.
+  提示: ''
+  翻译: 切换到 LandmarkDetail.swift，通过将传入的 landmark 与 modelData 进行比较来计算地标的索引。
+- 内容: Before moving on, return the default value of showsFavoritesOnly to false.
+  提示: ''
+  翻译: 在继续之前，将 showsFavoritesOnly 的默认值设置为 false。
+- 内容: Select LandmarkList.swift in the Project navigator and revert the preview to
+    show only a single version of the list.
+  提示: ''
+  翻译: 在项目文件目录中选择 LandmarkList.swift 并将预览恢复为仅显示单个列表的版本。
+- 内容: Click Resume to refresh the canvas.
+  提示: ''
+  翻译: 单击 Resume 刷新画布。
+- 内容: Add a Toggle view as the first child of the List view, passing a binding to
+    showFavoritesOnly.
+  提示: ''
+  翻译: 添加一个开关作为列表视图的第一个子视图，将 showFavoritesOnly 值绑定到开关。
+- 内容: Now that you’ve created the ModelData object, you need to update your views
+    to adopt it as the data store for your app.
+  提示: ''
+  翻译: 现在你已经创建了 ModelData 对象，你将使用它更新您的视图，它将作为你应用的数据存储。
+- 内容: In the project’s navigation pane, select ModelData.swift.
+  提示: ''
+  翻译: 在项目的文件列表中，选择 ModelData.swift。
+- 内容: Section 5
+  提示: ''
+  翻译: 第 5 节
+- 内容: Section 6
+  提示: ''
+  翻译: 第 6 节
+- 内容: Step 2
+  提示: ''
+  翻译: 步骤 2
+- 内容: Move the landmarks array into the model.
+  提示: ''
+  翻译: 将 landmarks 数组移动到模型中。
+- 内容: SwiftUI subscribes to your observable object, and updates any views that need
+    refreshing when the data changes.
+  提示: ''
+  翻译: SwiftUI 会订阅你的可观察对象，并在数据更改时更新任何需要刷新的视图。
+- 内容: To prepare for the user to control which particular landmarks are favorites,
+    you’ll first store the landmark data in an observable object.
+  提示: ''
+  翻译: 为了让用户能够修改喜欢的特定地标数据，首先要将地标数据存储在一个可观察对象中。
+- 内容: Mark the User’s Favorite Landmarks
+  提示: ''
+  翻译: 标记用户最喜欢的地标
+- 内容: Adopt the Model Object in Your Views
+  提示: ''
+  翻译: 在你的视图中使用模型对象
+- 内容: Drawing Paths and Shapes
+  提示: ''
+  翻译: ''
+- 内容: Update the LandmarksApp to create a model instance and supply it to ContentView
+    using the environmentObject(_:) modifier.
+  提示: ''
+  翻译: 更新 LandmarksApp 创建 modelDarta 实例并使用 environmentObject(_:) 修饰符将其提供给 ContentView。
+- 内容: As your project grows, it’s a good idea to add hierarchy. Before moving on,
+    create a few more groups.
+  提示: ''
+  翻译: 随着项目的增长，我们有必要给文件进行结构化管理。 在继续之前，再创建几个文件夹。
+- 内容: The @EnvironmentObject attribute.
+  提示: ''
+  翻译: '@EnvironmentObject 属性。'
+- 内容: Collect the general purpose CircleImage.swift, MapView.swift, and FavoriteButton.swift,
+    into a Helpers group, and the landmark views into a Landmarks group.
+  提示: ''
+  翻译: 将 CircleImage.swift、MapView.swift 和 FavoriteButton.swift 放到一个 Helpers 文件夹中，并将地标视图放到一个
+    Landmarks 文件夹中。
+- 内容: The title string that you provide for the button’s label doesn’t appear in the
+    UI when you use the iconOnly label style, but VoiceOver uses it to improve accessibility.
+  提示: ''
+  翻译: 当你使用 iconOnly 标签样式时，你为按钮标签提供的标题字符串不会出现在 UI 中，但 VoiceOver 可以使用它来提高可访问性。
+- 内容: Step 4
+  提示: ''
+  翻译: 步骤 4
+- 内容: Add an isFavorite property to the Landmark structure.
+  提示: ''
+  翻译: 将 isFavorite 属性添加到 Landmark 结构体中。
+- 内容: To combine static and dynamic views in a list, or to combine two or more different
+    groups of dynamic views, use the ForEach type instead of passing your collection
+    of data to List.
+  提示: ''
+  翻译: 要在列表中组合静态和动态视图，或者组合两个或多个不同的动态视图组，请使用 ForEach 类型，而不是将数据集合传递给 List。
+- 内容: Use landmarkIndex with the modelData object to ensure that the button updates
+    the isFavorite property of the landmark stored in your model object.
+  提示: ''
+  翻译: 将 landmarkIndex 与 modelData 对象一起使用，保证按钮更新 modelData 的地标数组其中的一个地标的 isFavorite
+    属性。
+- 内容: The modelData property gets its value automatically, as long as the environmentObject(_:)
+    modifier has been applied to a parent.
+  提示: ''
+  翻译: 只要 environmentObject(_:) 修饰符在父级应用，子级的 modelData 属性就会自动获取其值。
+- 内容: Update the LandmarkDetail view to work with the ModelData object in the environment.
+  提示: ''
+  翻译: 更新 LandmarkDetail 视图的预览以使用环境中的 ModelData 对象。
+- 内容: Section 3
+  提示: ''
+  翻译: 第 3 节
+- 内容: Step 1
+  提示: ''
+  翻译: 步骤 1
+- 内容: Use the @StateObject attribute to initialize a model object for a given property
+    only once during the life time of the app. This is true when you use the attribute
+    in an app instance, as shown here, as well as when you use it in a view.
+  提示: ''
+  翻译: 使用 @StateObject 修饰指定属性，在应用程序的生命周期内仅会初始化一次模型对象。 当你在 App 实例中使用该属性时（如此处所示）以及在子视图中使用它时都是如此。
+- 内容: Next, you’ll update the app instance to put the model object in the environment
+    when you run the app in the simulator or on a device.
+  提示: ''
+  翻译: 接下来，当你在模拟器或设备上运行应用程序时，你将更新 App 文件将模型对象放入环境中。
+- 内容: The environmentObject(_:) modifier.
+  提示: ''
+  翻译: environmentObject(_:) 修饰符。
+- 内容: Handling User Input
+  提示: ''
+  翻译: ''
+- 内容: Create a Button with an action that toggles the isSet state, and that changes
+    its appearance based on the state.
+  提示: ''
+  翻译: 创建一个按钮用来切换 isSet 的状态，并且根据状态改变外观。

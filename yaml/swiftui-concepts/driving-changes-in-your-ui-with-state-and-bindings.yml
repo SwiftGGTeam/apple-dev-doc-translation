@@ -1,0 +1,311 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: By setting the isFavorite and collections properties, the new recipe automatically
+    appears in the appropriate list of recipes after saving the recipe.
+  提示: ''
+  翻译: ''
+- 内容: When a person taps the Add Recipe button, the button’s action calls the mutating
+    method presentAddRecipe(sidebarItem:), which changes the data contained in recipeEditorConfig.
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: The recipeEditorConfig declaration includes the attribute for the State property
+    wrapper, which tells SwiftUI to create and manage the instance of RecipeEditorConfig.
+    Each time view state changes, that is, data that recipeEditorConfig contains changes,
+    SwiftUI reinitializes the view, reconnects the RecipeEditorConfig instance to
+    the view, and rebuilds the view defined in the computed body property, which reflects
+    the current state of the data. For more information, see Model data.
+  提示: ''
+  翻译: ''
+- 内容: The user interface of a SwiftUI app is a composition of views that form a view
+    hierarchy. Each view has a dependency on some data. As that data changes, either
+    due to external events or because of actions taken by a person using the app,
+    SwiftUI automatically updates the view to reflect those changes.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: The Binding property wrapper provides a two-way, read-write binding to data
+    that the view needs. However, RecipeEditor doesn’t own the data. Instead, another
+    view creates and owns the instance of RecipeEditorConfig that RecipeEditor binds
+    to and uses.
+  提示: ''
+  翻译: ''
+- 内容: Keeping reading to learn how the recipe editor appears based on the isPresented
+    value.
+  提示: ''
+  翻译: ''
+- 内容: The Add Recipe button appears as a button with a plus sign as its label.
+  提示: ''
+  翻译: ''
+- 内容: When the value of isPresented changes from true to false, the sheet calls its
+    onDismiss action, which calls the didDismissEditor method.
+  提示: ''
+  翻译: ''
+- 内容: The static method emptyRecipe() creates a new instance of Recipe, setting its
+    properties to the default values of a new recipe.
+  提示: ''
+  翻译: ''
+- 内容: The structure declares the binding variable config of type RecipeEditorConfig,
+    which contains the state data that the view uses to determine its appearance.
+  提示: ''
+  翻译: ''
+- 内容: Bind the view to its state data
+  提示: ''
+  翻译: ''
+- 内容: When a view needs to manage more than a single piece of state data, it can be
+    helpful to manage that data in a separate view-specific structure. This approach
+    helps make the declarative interface code of a view more readable by moving properties
+    and imperative code outside of the view. It also helps make unit testing state
+    changes easier to implement.
+  提示: ''
+  翻译: ''
+- 内容: The done() method indicates that the editor should save changes made to the
+    recipe, and dismiss the RecipeEditor view.
+  提示: ''
+  翻译: ''
+- 内容: The modifier sheet(isPresented:onDismiss:content:) receives a binding as indicated
+    by the dollar sign ($) prefix. This binding lets the sheet read and write to the
+    property. For instance, when a person dismisses the sheet by swiping it downward,
+    the sheet sets recipeEditorConfig.isPresented to false. This change causes SwiftUI
+    to reinitialize and rebuild the view. And because isPresented is now false, the
+    sheet no longer appears.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: The sheet contains RecipeEditor, a custom view that displays a form containing
+    input fields that let a person change the data of a recipe.
+  提示: ''
+  翻译: ''
+- 内容: The Boolean value recipeEditorConfig.isPresented determines whether to present
+    the sheet that contains the RecipeEditor view. When the value changes from false
+    to true, the sheet presents a modal view containing RecipeEditor. When the value
+    changes from true to false, the sheet dismisses the modal view.
+  提示: ''
+  翻译: ''
+- 内容: The structure RecipeEditorConfig stores the state data that the RecipeEditor
+    view needs.
+  提示: ''
+  翻译: ''
+- 内容: This view implements the didDismissEditor method, which saves the changes a
+    person makes to the recipe if recipeEditorConfig.shouldSaveChanges is true; otherwise,
+    the method disregards the changes.
+  提示: ''
+  翻译: ''
+- 内容: Indicate data dependencies in a view using state, and share those dependencies
+    with other views using bindings.
+  提示: ''
+  翻译: ''
+- 内容: The app calls this method when a person taps the Add Recipe button.
+  提示: ''
+  翻译: ''
+- 内容: Recall that presentAddRecipe(sidebarItem:) creates an empty recipe and sets
+    its isFavorite and collections property values based on the selected sidebar item.
+    The method also sets shouldSaveChanges to false and isPresented to true. Keeping
+    this imperative code outside of the view helps make the declarative code of the
+    view easier to understand and maintain.
+  提示: ''
+  翻译: ''
+- 内容: After calling presentAddRecipe(sidebarItem:), isPresented is true, which tells
+    SwiftUI to display a sheet that contains the recipe editor.
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: RecipeEditor contains RecipeEditorForm, which displays the input fields needed
+    to edit recipe data.
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: RecipeEditorConfig concerns itself with RecipeEditor and only that view, which
+    is why ContentListView implements the didDismissEditor method instead of RecipeEditorConfig.
+    This approach keeps the areas of concern separate.
+  提示: ''
+  翻译: ''
+- 内容: This method sets the isPresented flag to true to tell SwiftUI to display the
+    editor view.
+  提示: ''
+  翻译: ''
+- 内容: The editor displays a Cancel button in its toolbar.
+  提示: ''
+  翻译: ''
+- 内容: The method sets shouldSaveChanges to true to indicate that the app should save
+    changes made to the recipe. It also sets isPresented to false, which tells SwiftUI
+    to dismiss the editor view.
+  提示: ''
+  翻译: ''
+- 内容: ContentListView is a custom view that conforms to the View protocol and displays
+    a list of recipes.
+  提示: ''
+  翻译: ''
+- 内容: The cancel() method is similar to done(), but it sets shouldSaveChanges to false,
+    telling the app to disregard the changes made to the recipe.
+  提示: ''
+  翻译: ''
+- 内容: Creating a custom input control that binds to a value
+  提示: ''
+  翻译: ''
+- 内容: RecipeEditor receives a binding to recipeEditorConfig — as indicated by the
+    dollar sign ($) prefix — which makes it possible for the editor to retrieve and
+    make changes to data contained in recipeEditorConfig. This includes changing recipe
+    data and triggering state changes.
+  提示: ''
+  翻译: ''
+- 内容: RecipeEditor is a structure that conforms to the View protocol.
+  提示: ''
+  翻译: ''
+- 内容: This view also displays an Add Recipe button in its toolbar.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: The RecipeEditor view has a binding to an instance of RecipeEditorConfig. The
+    editor can read and write the data but it doesn’t own the recipe data. Instead,
+    the view ContentListView creates and owns the data, and SwiftUI manages that data
+    for the lifespan of the content list view.
+  提示: ''
+  翻译: ''
+- 内容: The method presentAddRecipe(sidebarItem:) changes the state of the view to indicate
+    that its editing a new recipe.
+  提示: ''
+  翻译: ''
+- 内容: In addition to the default values that emptyRecipes() sets, presentAddRecipe(sidebarItem:)
+    sets the recipe’s isFavorite and collections properties based on the selected
+    sidebar item.
+  提示: ''
+  翻译: ''
+- 内容: ContentListView is also responsible for displaying the recipe editor when a
+    person wants to add a recipe, making this view the ideal place to create an instance
+    of RecipeEditorConfig.
+  提示: ''
+  翻译: ''
+- 内容: The method presentEditRecipe(_:) is similar to presentAddRecipe(sidebarItem:),
+    but for editing an existing recipe.
+  提示: ''
+  翻译: ''
+- 内容: 'This sample app displays a collection of cooking recipes. A person using the
+    app can view the details of a recipe and add new ones. To add a recipe, the sample
+    presents the custom view RecipeEditor, which needs three pieces of state data:
+    a recipe, a flag indicating whether to save the changes, and a flag indicating
+    whether to present the RecipeEditor view.'
+  提示: ''
+  翻译: ''
+- 内容: The view defines the private state variable recipeEditorConfig, of type RecipeEditorConfig.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: Create a state variable in another view
+  提示: ''
+  翻译: ''
+- 内容: When presentAddRecipe(sidebarItem:) changes the data in recipeEditorConfig,
+    SwiftUI reinitializes the ContentListView instance and reconnects recipeEditorConfig
+    to the instance that it’s managing. SwiftUI then rebuilds the view from its computed
+    body property so that the view reflects the current state of the data.
+  提示: ''
+  翻译: ''
+- 内容: The sheet also calls onDismiss when isPresented changes from true to false in
+    the cancel() and done() methods that RecipeEditorConfig defines. The sheet is
+    able to detect the value change because it has a binding to the recipeEditorConfig.isPresented
+    property.
+  提示: ''
+  翻译: ''
+- 内容: When a person taps the Cancel button, its action calls the mutating method cancel()
+    defined in RecipeEditorConfig, which sets shouldSaveChanges to false and isPresented
+    to false.
+  提示: ''
+  翻译: ''
+- 内容: Settings shouldSaveChanges and isPresented in the cancel() and done() methods
+    make the view code easier to read because each button’s action only needs one
+    line of code. The button actions could’ve explicitly set config.saveConfig and
+    config.isPresented, but keeping imperative code in an action to a minimum helps
+    make the declarative interface code of the view more readable and easier to maintain.
+  提示: ''
+  翻译: ''
+- 内容: The method also sets isPresented to false, which tells SwiftUI to dismiss the
+    editor view.
+  提示: ''
+  翻译: ''
+- 内容: Important
+  提示: ''
+  翻译: ''
+- 内容: Driving changes in your UI with state and bindings
+  提示: ''
+  翻译: ''
+- 内容: RecipeEditor passes the binding variable config to RecipeEditorForm. It passes
+    the variable as a binding, indicated by prefixing the variable name config with
+    the $ symbol. Because RecipeEditorForm receives config as a binding, the form
+    can read and write data to config.
+  提示: ''
+  翻译: ''
+- 内容: 'The RecipeEditorConfig supports two other mutating methods that trigger state
+    changes in the editor while also separating imperative code from declarative interface
+    code: done() and cancel().'
+  提示: ''
+  翻译: ''
+- 内容: The editor also displays a Save button that, when a person taps it, calls the
+    mutating done() method, which sets shouldSaveChanges to true and isPresented to
+    false, telling the app to save any changes made to the recipe and dismiss the
+    editor view.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: This sample shows examples of using State variables to indicate data dependencies,
+    and sharing data with other views using the Binding property wrapper.
+  提示: ''
+  翻译: ''
+- 内容: Instead of creating an empty recipe like presentAddRecipe(sidebarItem:) does,
+    presentEditRecipe(_:) receives the recipe to edit as a parameter and sets recipe
+    to the incoming recipe.
+  提示: ''
+  翻译: ''
+- 内容: presentAddRecipe(sidebarItem:) sets the shouldSaveChanges flag to false because
+    the person using the app hasn’t indicated that they want to save the changes yet.
+  提示: ''
+  翻译: ''
+- 内容: Provide interactions that are unique to your app with custom controls that bind
+    to a value.
+  提示: ''
+  翻译: ''
+- 内容: This method creates an empty recipe as the recipe to edit.
+  提示: ''
+  翻译: ''
+- 内容: To trigger state changes that happen in the RecipeEditor view, RecipeEditorConfig
+    provides mutating functions that update the data to reflect a new state.
+  提示: ''
+  翻译: ''
+- 内容: The sample app separates its state data and imperative code from RecipeEditor
+    by defining a structure, RecipeEditorConfig.
+  提示: ''
+  翻译: ''
+- 内容: Separate properties and imperative code from the view
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: With a structure in place that contains the data that the recipe editor needs,
+    and methods that change the state of the editor, look at the RecipeEditor view
+    to see how it uses RecipeEditorConfig.
+  提示: ''
+  翻译: ''

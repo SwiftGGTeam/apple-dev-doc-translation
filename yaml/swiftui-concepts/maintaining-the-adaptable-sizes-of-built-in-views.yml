@@ -1,0 +1,136 @@
+- 内容: A Text view displays read-only text. Its contents could be a short String, like
+    the title of a play or the heading of a section. A Text view could also display
+    a much longer String, like all of the actors’ lines for a scene in the play.
+  提示: ''
+  翻译: ''
+- 内容: Display photos and other rich graphics in an Image. By default, an Image displays
+    at the asset’s original size. You can add modifiers like resizable(capInsets:resizingMode:)
+    and scaledToFit() or scaledToFill() to scale it to the available space.
+  提示: ''
+  翻译: ''
+- 内容: For more information about working with images, see Fitting images into available
+    space.
+  提示: ''
+  翻译: ''
+- 内容: The following example shows three different shapes. The foregroundColor(_:)
+    on each shape customizes that shape’s fill color. The RoundedRectangle includes
+    values for the cornerRadius and style parameters to define the rounded corners.
+    The HStack provides some default spacing between each shape and, to give each
+    shape a square space to fill, the aspectRatio(_:contentMode:) modifier makes the
+    HStack three times as wide as it is tall.
+  提示: ''
+  翻译: ''
+- 内容: Scaling views to complement text
+  提示: ''
+  翻译: ''
+- 内容: Keep your app’s view layouts fluid on any device for each type of content your
+    app displays.
+  提示: ''
+  翻译: ''
+- 内容: If you’re accessing an image asset from a server, use an AsyncImage to handle
+    the download while keeping your app responsive.
+  提示: ''
+  翻译: ''
+- 内容: Views that people interact with come in discrete sizes, to maintain consistency
+    when several elements of the same type appear together, like in a Settings pane.
+    Controls also need to be large enough for people to accurately click or tap. You
+    can use view modifiers to choose among these sizes. For example, you can use the
+    controlSize(_:) modifier to make a control smaller or larger, or you can use the
+    progressViewStyle(_:) modifier to choose a linear or circular appearance for a
+    progress bar.
+  提示: ''
+  翻译: ''
+- 内容: Images and shapes
+  提示: ''
+  翻译: ''
+- 内容: Text and symbols
+  提示: ''
+  翻译: ''
+- 内容: Construct a layout that adapts to font styles, Dynamic Type, and varying string
+    lengths.
+  提示: ''
+  翻译: ''
+- 内容: The following example uses an HStack to create a row of three Image views that
+    display icons from SF Symbols.
+  提示: ''
+  翻译: ''
+- 内容: There are general-purpose controls like Menu and Link, and specialized views
+    like EditButton and ColorPicker. Use these views to provide familiar UI elements
+    rather than creating custom controls that you’ll need to maintain. To explore
+    more of these built-in views, see Controls and indicators.
+  提示: ''
+  翻译: ''
+- 内容: The following example shows a Picker and a Button with different ControlSize
+    values.
+  提示: ''
+  翻译: ''
+- 内容: Graphical elements, such as images and shapes, can add a level of visual enhancement
+    for your app. These can vary from product images for a shopping app, achievements
+    for a game, or a dynamic background pattern you create by layering and aligning
+    various shapes.
+  提示: ''
+  翻译: ''
+- 内容: Maintaining the adaptable sizes of built-in views
+  提示: ''
+  翻译: ''
+- 内容: Controls
+  提示: ''
+  翻译: ''
+- 内容: Symbols, such as the iconography that SF Symbols provides, can denote common
+    app features, like folders, heart shapes for favorites, or a camera icon to access
+    the camera. Effective symbols streamline your app’s UI, and are easily recognizable
+    by the people who use your app. You can customize their colors and sizes using
+    standard view modifiers provided in SwiftUI. Even though you specify a system
+    or custom symbol in an Image, treat SF Symbols more like text. To adjust the size
+    and weight of a symbol, specify a semantic Font, like title, just like you would
+    for a Text view.
+  提示: ''
+  翻译: ''
+- 内容: When defining the layout for your app, text and symbols play a central role
+    in conveying information to people – in navigation links, button labels, tables,
+    and more. Text and symbols that display information or label other elements need
+    to have enough space to display their contents.
+  提示: ''
+  翻译: ''
+- 内容: A Text view can adjust to some space constraints with line-wrapping or truncation,
+    but it doesn’t change font size to accommodate situations where its ideal size
+    is smaller or larger than the available space.
+  提示: ''
+  翻译: ''
+- 内容: The views you define with SwiftUI either directly contain views that SwiftUI
+    provides, or use other custom views that contain these built-in views. SwiftUI
+    views determine their own size, and understanding how to modify the size of built-in
+    views while preserving their adaptability is the best way to create a fluid layout
+    without complicating your code.
+  提示: ''
+  翻译: ''
+- 内容: For an example of the rich possibilities of composing shapes, see Drawing Paths
+    and Shapes.
+  提示: ''
+  翻译: ''
+- 内容: SwiftUI provides several common shapes, and modifiers to change their size,
+    color, or other aspects of their appearance. Use a single shape or a composition
+    of multiple shapes to create a background, border, or other visual element. You
+    can define a shape’s size with a modifier like frame(minWidth:idealWidth:maxWidth:minHeight:idealHeight:maxHeight:alignment:),
+    or allow it to fill all available space.
+  提示: ''
+  翻译: ''
+- 内容: When you declare a Text view in your layout, give the system semantic information
+    about your text with the Font attribute. The system chooses font faces and sizes
+    so that, for example, a Text with the title font is more prominent than one with
+    body or caption.
+  提示: ''
+  翻译: ''
+- 内容: For more information about localization, see Preparing views for localization.
+    For guidance about supporting Dynamic Type, see Applying custom fonts to text.
+  提示: ''
+  翻译: ''
+- 内容: To use both text and a symbol to represent a single element in your app, use
+    a Label. A Label takes care of matching its title and icon sizes and their alignment.
+    The following code defines a Label that combines an SF Symbol of some books, with
+    some text for its title. The Label applies the largeTitle font to both the icon
+    and the title. The titleAndIcon style tells the view to display both its title
+    and icon, overriding any built-in or custom LabelStyle that a containing view
+    might specify.
+  提示: ''
+  翻译: ''

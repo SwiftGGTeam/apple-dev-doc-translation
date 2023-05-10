@@ -1,0 +1,418 @@
+- 内容: Add the Landmarks List
+  提示: ''
+  翻译: 添加地标列表
+- 内容: This file holds the Watch-specific app definition. Its name depends on the Xcode
+    project name, but it’s always the first item in the WatchLandmarks Extension group.
+    You’ll reuse the iOS app definition instead, in the next few steps.
+  提示: ''
+  翻译: 这个文件包含了针对 Apple Watch 的特定的应用定义，它的名称取决于 Xcode 项目名称，但它始终是 WatchLandmarks Extension
+    文件夹中的第一项。在接下来的几个步骤中，您将复用 iOS 应用定义。
+- 内容: The first time you run the notification scheme, the system asks for permission
+    to send notifications. Select Allow.
+  提示: ''
+  翻译: 第一次运行通知方案时，系统会请求发送通知的权限。 选择允许。
+- 内容: The LandmarkList that you created for iOS works for your watch app as well,
+    and it automatically navigates to the watch-specific detail view that you just
+    created when compiled for watchOS. Next, you’ll connect the list to the watch’s
+    ContentView, so that it acts as the top level view for the watch app.
+  提示: ''
+  翻译: 你为 iOS 创建的 LandmarkList 也适用于你的手表应用程序，它会自动导航到你刚刚专门为 watchOS 手表创建的详细信息视图。 接下来，你会让列表导航到手表的
+    ContentView，这样能让它充当手表应用程序的顶级视图。
+- 内容: 'In the Project navigator, Command-click to select the following files: LandmarksApp.swift,LandmarkList.swift,
+    LandmarkRow.swift, CircleImage.swift, MapView.swift.'
+  提示: ''
+  翻译: 在项目导航器中，按住 Command 单击以选择以下文件：LandmarksApp.swift、LandmarkList.swift、LandmarkRow.swift、CircleImage.swift、MapView.swift。
+- 内容: Step 6
+  提示: ''
+  翻译: 步骤 6
+- 内容: Create the Detail View
+  提示: ''
+  翻译: 创建详细视图
+- 内容: The first of these is the shared app definition. The others are views that the
+    app can display on watchOS with no changes.
+  提示: ''
+  翻译: 其中第一个是共享应用程序入口。 其他是应用程序可以在 watchOS 上显示而无需更改的视图。
+- 内容: As you can see, the information doesn’t quite fit on the watch screen, but you
+    can fix that by placing the VStack within a scroll view.
+  提示: ''
+  翻译: 如你所见，信息不太适合在手表屏幕上显示，但你可以通过将 VStack 放在滚动视图中来解决这个问题。
+- 内容: Finally, add a watchOS app icon that matches the iOS app icon you already have.
+  提示: ''
+  翻译: 最后，添加一个与你已有的 iOS 应用程序图标相匹配的 watchOS 应用程序图标。
+- 内容: Add a title to the back button.
+  提示: ''
+  翻译: 给后退按钮添加标题。
+- 内容: Select the WatchLandmarks Extension project and navigate to the project’s General
+    tab; select the Supports Running Without iOS App Installation checkbox.
+  提示: ''
+  翻译: 选择 WatchLandmarks Extension 项目并点击到项目的 General 页面； 选中支持不需要安装 iOS App 运行（Supports
+    Running Without iOS App Installation）。
+- 内容: The watchOS app’s root view displays the default “Hello, World!” message.
+  提示: ''
+  翻译: watchOS 应用程序的根视图显示默认的“Hello, World!” 信息。
+- 内容: Step 8
+  提示: ''
+  翻译: 步骤 8
+- 内容: Add a new custom view to the WatchLandmarks Extension folder named LandmarkDetail.swift.
+  提示: ''
+  翻译: 将新的自定义视图添加到名为 LandmarkDetail.swift 的 WatchLandmarks 扩展文件夹。
+- 内容: 'Finish Command-clicking to add resource files loaded by the model: landmarkData.json,
+    hikeData.json, and Assets.xcassets.'
+  提示: ''
+  翻译: 按住 Command 单击以添加模型加载的资源文件：landmarkData.json、hikeData.json 和 Assets.xcassets。
+- 内容: Create a Custom Notification Interface
+  提示: ''
+  翻译: 创建一个自定义的通知界面
+- 内容: Like LandmarkDetail.swift the content view for the watchOS target has the same
+    name as the one for the iOS target. Keeping names and interfaces the same makes
+    it easy to share files between targets.
+  提示: ''
+  翻译: 与 LandmarkDetail.swift 一样，watchOS 目标的内容视图与 iOS 目标的内容视图具有相同的名称。 保持名称和接口相同可以轻松地在目标之间共享文件。
+- 内容: Define the LandmarkIndexKey.
+  提示: ''
+  翻译: 定义 LandmarkIndexKey。
+- 内容: These are identical to the properties you added in Handling User Input.
+  提示: ''
+  翻译: 这些与你在处理用户输入教程中添加的属性相同。
+- 内容: Change scaleToFill() to scaleToFit() and add padding.
+  提示: ''
+  翻译: 将 scaleToFill() 更改为 scaleToFit() 并添加填充。
+- 内容: Whenever possible, create an independent watchOS app. Independent watchOS apps
+    don’t require an iOS companion app.
+  提示: ''
+  翻译: 尽可能创建一个独立的 watchOS 应用程序。 独立的 watchOS 应用不需要 iOS 配套应用。
+- 内容: Creating a macOS App
+  提示: ''
+  翻译: ''
+- 内容: Section 1
+  提示: ''
+  翻译: 第 1 节
+- 内容: 'After you grant permission, the Simulator displays a scrollable notification
+    which includes: the app’s icon to help identify the Landmarks app as the sender,
+    the notification view, and buttons for the notification’s actions.'
+  提示: ''
+  翻译: 在你授予权限后，模拟器会显示一个可滚动的通知，其中包括：应用程序的图标（帮助用户识别是 Landmarks 应用程序的通知）、通知视图和通知操作按钮。
+- 内容: This sets the text for the back button to “Landmarks”.
+  提示: ''
+  翻译: 这会将后退按钮的文本设置为“Landmarks”。
+- 内容: Create previews for the largest (44mm) and smallest (40mm) watch faces.
+  提示: ''
+  翻译: 为最大 (44mm) 和最小 (40mm) 表盘创建预览。
+- 内容: By testing against the largest and smallest watch faces, you can see how well
+    your app scales to fit on the display. As always, you should test your user interface
+    on all supported device sizes.
+  提示: ''
+  翻译: 通过针对最大和最小的表盘进行测试，你可以了解你的应用程序自适应的效果。 和之前一样，你应该在所有支持的设备尺寸上测试你的用户界面。
+- 内容: Watch App for iOS App
+  提示: ''
+  翻译: 适用于 iOS 应用程序的手表应用程序
+- 内容: Note
+  提示: ''
+  翻译: 笔记
+- 内容: Watch App
+  提示: ''
+  翻译: 手表应用
+- 内容: When Apple Watch receives a notification, it looks for a scene in your app associated
+    with the notification’s category.
+  提示: ''
+  翻译: 当 Apple Watch 收到通知时，它会在你的应用程序中查找与通知类别相关联的场景。
+- 内容: Check Your Understanding
+  提示: ''
+  翻译: ''
+- 内容: This tutorial gives you a chance to apply much of what you’ve already learned
+    about SwiftUI, and — with little effort — migrate the Landmarks app to watchOS.
+  提示: ''
+  翻译: 本教程让你有机会应用已经学到的关于 SwiftUI 的很多知识，并且只需很少的努力，就可以将 Landmarks 应用迁移到 watchOS。
+- 内容: Configure the test payload to use the LandmarkNear category and to pass along
+    the data expected by the notification controller.
+  提示: ''
+  翻译: 配置通知的测试装置，使用 LandmarkNear 类别并传递通知控制器需要的数据。
+- 内容: In the Project navigator, delete the first item in the WatchLandmarks Extension
+    folder; When asked, choose Move to trash.
+  提示: ''
+  翻译: 在项目导航栏中，删除 WatchLandmarks Extension 文件夹中的第一项； 当询问时，选择移至垃圾箱（Move To Trash）。
+- 内容: To create a watchOS app, start by adding a watchOS target to the project. Xcode
+    adds groups and files for the watchOS app to your project, along with the schemes
+    needed to build and run the app.
+  提示: ''
+  翻译: 要创建 watchOS 应用程序，首先要将 watchOS 目标添加到项目中。 Xcode 将 watchOS 应用程序的文件夹和文件添加到你的项目，以及编译和运行应用程序所需的方案配置。
+- 内容: You’ll start by adding a watchOS target to your project, before copying over
+    the shared data and views you created for the iOS app. With all of the assets
+    in place, you’ll customize the SwiftUI views to display the detail and list views
+    on watchOS.
+  提示: ''
+  翻译: 你将首先为项目添加一个 watchOS 目标，然后复制之前为 iOS 应用创建的共享数据和视图。在所有资源就绪后，你将自定义 SwiftUI 视图，以在
+    watchOS 上显示详细信息和列表视图。
+- 内容: This method updates the controller’s properties. After calling this method,
+    the system invalidates the controller’s body property, which updates your navigation
+    view. The system then displays the notification on Apple Watch.
+  提示: ''
+  翻译: 这个方法更新控制器的属性。 调用此方法后，系统会使控制器的 body 属性失效，从而更新你的导航视图。 然后系统会在 Apple Watch 上显示通知。
+- 内容: Now that the iOS target resources are in place for working on the watch app,
+    you’ll need to create a watch-specific view for displaying landmark details. To
+    test the detail view, you’ll create custom previews for the largest and smallest
+    watch sizes, and make some changes to the circle view so everything fits on the
+    watch face.
+  提示: ''
+  翻译: 现在针对 iOS 平台的资源已准备好用于手表应用程序，你需要创建一个特定用于手表的视图来显示地标详细信息。 为了测试详细视图，您将为最大和最小手表尺寸创建自定义预览，并对圆形视图进行一些修改，以使所有内容都适应手表表盘。
+- 内容: Step 3
+  提示: ''
+  翻译: 步骤 3
+- 内容: The map appears off screen, but if you enable live preview, you can scroll down
+    to see it.
+  提示: ''
+  翻译: 地图显示在屏幕外，但如果启用实时预览，则可以向下滚动来查看它。
+- 内容: The scene only makes sense for watchOS, so add the conditional compilation.
+  提示: ''
+  翻译: 该场景仅对 watchOS 有意义，因此添加条件编译。
+- 内容: Section 2
+  提示: ''
+  翻译: 第 2 节
+- 内容: This template adds a new watchOS app to your project, setting the iOS app as
+    its companion.
+  提示: ''
+  翻译: 这个模板将新的 watchOS 应用程序添加到你的项目，将 iOS 应用程序设置为它的配套应用。
+- 内容: Step 10
+  提示: ''
+  翻译: 步骤 10
+- 内容: Share Files Between Targets
+  提示: ''
+  翻译: 在目标之间共享文件
+- 内容: Section 4
+  提示: ''
+  翻译: 第 4 节
+- 内容: 'Continue Command-clicking to add the following model files: ModelData.swift,
+    Landmark.swift, Hike.swift, Profile.swift.'
+  提示: ''
+  翻译: 继续按住 Command 单击添加以下模型文件：ModelData.swift、Landmark.swift、Hike.swift、Profile.swift。
+- 内容: In the File inspector, select the WatchLandmarks Extension checkbox in the Target
+    Membership section.
+  提示: ''
+  翻译: 在文件检查器（File inspector）中，选中目标列表中的 WatchLandmarks 扩展。
+- 内容: Here you reuse the CircleImage view from the iOS project. Because you created
+    a resizable image, the call to scaledToFill() adjusts the circle’s size so that
+    it fills the display.
+  提示: ''
+  翻译: 在这里，你复用了 iOS 项目中的 CircleImage 视图。 因为你创建了一个可调整大小的图像，所以调用 scaledToFill() 调整圆的填充模式，使其充满视图。
+- 内容: Open NotificationView.swift and create a view that displays information about
+    a landmark, title, and message.
+  提示: ''
+  翻译: 打开 NotificationView.swift 并创建一个显示有关地标、标题和消息的信息的视图。
+- 内容: Step 7
+  提示: ''
+  翻译: 步骤 7
+- 内容: Step 5
+  提示: ''
+  翻译: 步骤 5
+- 内容: You use this key to extract the landmark index from the notification.
+  提示: ''
+  翻译: 使用这个键从通知中提取地标索引。
+- 内容: Because any notification value can be nil, the preview will display two versions
+    of the notification view. The first just shows the default values when no data
+    is provided, and the second displays the title, message, and location you provide.
+  提示: ''
+  翻译: 因为任何通知值都可以为 nil，所以预览会显示两个版本的通知视图。 第一个是未提供数据时显示默认值，第二个显示你提供的标题、消息和位置。
+- 内容: Select ContentView.swift in the WatchLandmarks Extension folder.
+  提示: ''
+  翻译: 在 WatchLandmarks Extension 文件夹中选择 ContentView.swift。
+- 内容: Select the Landmarks-Watch (Notification) scheme, and build and run your app.
+  提示: ''
+  翻译: 选择 Landmarks-Watch (Notification) 方案，编译并运行你的应用程序。
+- 内容: Question 1 of 2
+  提示: ''
+  翻译: 第 1 个问题，共 2 个
+- 内容: This scales the circle image to match the display’s width and ensures the landmark
+    name is visible below the circle image.
+  提示: ''
+  翻译: 这会缩放圆形图像来适应显示屏的宽度，并确保地标名称在圆形图像下方可见。
+- 内容: Drag the AppIcon.appiconset folder from the downloaded projects’ Resources folder
+    into the WatchLandmark’s Asset catalog.
+  提示: ''
+  翻译: 将 AppIcon.appiconset 文件夹从下载项目的 Resources 文件夹拖到 WatchLandmark 的 Asset 目录中。
+- 内容: 'After creating a version of the Landmarks app for watchOS, it’s time to set
+    your sights on something bigger: bringing Landmarks to the Mac. You’ll build upon
+    everything you’ve learned so far, to round out the experience of building a SwiftUI
+    app for iOS, watchOS, and macOS.'
+  提示: ''
+  翻译: 在为 watchOS 创建 Landmarks 应用程序版本后，是时候将你的目光投向更大的目标了：将 Landmarks 引入 Mac。 你将以迄今为止所学的一切为基础，完善为
+    iOS、watchOS 和 macOS 构建 SwiftUI 应用程序的体验。
+- 内容: 'This turns on view scrolling, but it creates another problem: the circle image
+    now expands to full size, and it resizes other UI elements to match the image
+    size. You’ll need to resize the circle image so that just the circle and landmark
+    name appear onscreen.'
+  提示: ''
+  翻译: 这会让视图可滚动，但会产生另一个问题：圆形图像现在会扩展到整个屏幕大小，并且会调整其他 UI 元素的大小来匹配图像大小。 你需要调整圆圈图像的大小，以便只有圆圈和地标名称出现在屏幕上。
+- 内容: Follow the steps to build this project, or download the finished project to
+    explore on your own.
+  提示: ''
+  翻译: 按照步骤编译此项目，或下载完成的项目来自行探索。
+- 内容: Be sure to provide the model data as an environment object to the preview. The
+    LandmarksApp already provides this at the app level at run time, just as it does
+    for iOS, but you also have to provide it for any previews that need it.
+  提示: ''
+  翻译: 请确保将模型数据作为环境对象提供给预览。 LandmarksApp 已在运行时在应用程序级别提供此功能，就像它在 iOS 平台所做的那样，但是你还是必须要在预览中提供它，让需要的它的视图能够正确预览。
+- 内容: In the preview, create an instance of the model data, and use it to pass a landmark
+    object to the LandmarkDetail structure’s initializer. You also need to set the
+    view’s environment object.
+  提示: ''
+  翻译: 在预览中，创建模型数据的实例，并使用它将地标对象传递给 LandmarkDetail 结构体来初始化。 你还需要设置视图的环境对象。
+- 内容: These properties store values about an incoming notification.
+  提示: ''
+  翻译: 这些属性存储消息通知相关的值。
+- 内容: You’ll replace this in the next step.
+  提示: ''
+  翻译: 你将在下一步中替换它。
+- 内容: This method instantiates the notification view that you created earlier.
+  提示: ''
+  翻译: 这个方法实例化你之前创建的通知视图。
+- 内容: Start the live preview to check out how the app behaves.
+  提示: ''
+  翻译: 启动实时预览检查应用程序的行为。
+- 内容: In the sheet, enter WatchLandmarks as the Product Name. Set the Interface to
+    SwiftUI, the Life Cycle to SwiftUI App, and the Language to Swift. Select the
+    Include Notification Scene checkbox, and then click Finish.
+  提示: ''
+  翻译: 在工作表中，输入 WatchLandmarks 作为产品名称。 将界面框架设置为 SwiftUI，将应用生命周期设置为 SwiftUI 应用程序，并将语言设置为
+    Swift。 选中包含通知场景，然后单击完成。
+- 内容: Select the WatchLandmarks scheme.
+  提示: ''
+  翻译: 选择 WatchLandmarks 方案。
+- 内容: Which application template do you use when adding a watchOS target to an iOS
+    project?
+  提示: ''
+  翻译: 将 watchOS 目标添加到 iOS 项目时，你使用哪个应用程序模板？
+- 内容: This makes the symbols you selected in the previous steps available to your
+    watchOS app.
+  提示: ''
+  翻译: 这将使你在前面的步骤中选择的符号可用于你的 watchOS 应用程序。
+- 内容: Open the NotificationController and add the landmark, title, and message properties.
+  提示: ''
+  翻译: 打开 NotificationController 并添加地标、标题和消息属性。
+- 内容: Section 5
+  提示: ''
+  翻译: 第 5 节
+- 内容: Step 2
+  提示: ''
+  翻译: 步骤 2
+- 内容: With the watchOS target set, you’ll need to share some resources from the iOS
+    target. You’ll reuse the Landmark app’s data model, some resource files, as well
+    as any views that both platforms can display without modification.
+  提示: ''
+  翻译: 设置 watchOS 目标后，你需要从 iOS 目标共享一些资源。 你将重用 Landmark 应用程序的数据模型、一些资源文件，以及任何一个无需修改即可在两个平台显示的视图。
+- 内容: Add the modelData, landmark, and landmarkIndex properties to to the new LandmarkDetail
+    structure.
+  提示: ''
+  翻译: 将 modelData、landmark 和 landmarkIndex 属性添加到新的 LandmarkDetail 结构体中。
+- 内容: Game App
+  提示: ''
+  翻译: 游戏应用
+- 内容: Creating a watchOS App
+  提示: ''
+  翻译: ''
+- 内容: These items define the app’s data model. You won’t use all aspects of the model,
+    but you need all of the files to successfully compile the app.
+  提示: ''
+  翻译: 这些项目定义了应用程序的数据模型。 你不会使用模型的所有数据，但你需要所有文件才能成功编译应用程序。
+- 内容: Your version of Landmarks for watchOS is almost complete. In this final section,
+    you’ll create a notification interface that displays landmark information whenever
+    you receive a notification indicating that you are close to one of your favorite
+    locations.
+  提示: ''
+  翻译: 你的 watchOS 版本的 Landmarks 应用几乎完成了。在最后这一部分，你将创建一个通知界面，每当收到通知表示你靠近某个喜欢的地点时，它会显示地标信息。
+- 内容: Wrap the vertical stack in a scroll view.
+  提示: ''
+  翻译: 将垂直堆栈包装在滚动视图中。
+- 内容: Return a CircleImage view from the body() method.
+  提示: ''
+  翻译: 从 body() 方法返回一个 CircleImage 视图。
+- 内容: Embed the circle image in a VStack. Display the landmark name and its information
+    below the image.
+  提示: ''
+  翻译: 将圆形图像嵌入到 VStack 中。 在图像下方显示地标名称及其信息。
+- 内容: Update the body() method to use these properties.
+  提示: ''
+  翻译: 更新 body() 方法来使用这些属性。
+- 内容: The payload file simulates data sent from your server in a remote notification.
+  提示: ''
+  翻译: 负载文件模拟从你的服务器在远程通知中发送的数据。
+- 内容: Select the PushNotificationPayload.apns file, and update the title, body, category,
+    and landmarkIndex properties. Be sure to set category to LandmarkNear. You also
+    delete any keys that are not used in the tutorial, such as the subtitle, WatchKit
+    Simulator Actions, and customKey.
+  提示: ''
+  翻译: 选择 PushNotificationPayload.apns 文件，并更新 title 、 body 、 category 和 landmarkIndex
+    属性。请务必将 category 设置为 LandmarkNear 。你还需要删除教程中未使用的其他的键，例如 subtitle 、 WatchKit Simulator
+    Actions 和 customKey 。
+- 内容: This lets you build and run your watchOS app.
+  提示: ''
+  翻译: 这使你可以编译和运行 watchOS 应用程序。
+- 内容: Add the MapView after a divider.
+  提示: ''
+  翻译: 在分隔符之后添加 MapView。
+- 内容: Next select all the files, including the app’s entry point, that your watchOS
+    target can share with the existing iOS target.
+  提示: ''
+  翻译: 接下来选择 watchOS 平台能够和现有 iOS 平台共享的所有文件，包括应用程序的入口点。
+- 内容: Choose File > New > Target. When the template sheet appears, choose the watchOS
+    tab, select the Watch App for iOS App template and click Next.
+  提示: ''
+  翻译: 选择  File > New > Target。 在选项列表选择 watchOS 选项，选择 Watch App for iOS App 模板，然后单击
+    Next。
+- 内容: Later, when you create a notification, the system presents your app’s icon to
+    help identify the source of the notification.
+  提示: ''
+  翻译: 稍后，当你创建通知时，系统会显示你应用的图标以帮助用户识别通知的来源。
+- 内容: Modify ContentView so that it displays the List view.
+  提示: ''
+  翻译: 修改 ContentView，使其显示列表视图。
+- 内容: Step 4
+  提示: ''
+  翻译: 步骤 4
+- 内容: Step 9
+  提示: ''
+  翻译: 步骤 9
+- 内容: Add a watchOS Target
+  提示: ''
+  翻译: 添加 watchOS 目标
+- 内容: Section 3
+  提示: ''
+  翻译: 第 3 节
+- 内容: Step 1
+  提示: ''
+  翻译: 步骤 1
+- 内容: You’re going to want to start with the WatchLandmarks scheme instead, which
+    you choose next.
+  提示: ''
+  翻译: 你将要从接下来选择的 WatchLandmarks 方案开始。
+- 内容: Update the didReceive(_:) method to parse data from the notification.
+  提示: ''
+  翻译: 更新 didReceive(_:) 方法来解析通知中的数据。
+- 内容: This file is distinguished from the file with the same name in the iOS project
+    by its target membership — it applies only to the Watch Extension target.
+  提示: ''
+  翻译: 此文件通过选择其 Watch 目标来和 iOS 项目中具有相同名称的文件区分开来 —— 它仅仅适用于 Watch Extension 目标。
+- 内容: Select the Assets.xcasset file in the WatchLandmarks folder and delete the empty
+    AppIcon item.
+  提示: ''
+  翻译: 选择 WatchLandmarks 文件夹中的 Assets.xcasset 文件并删除空的 AppIcon 项。
+- 内容: Go to LandmarksApp.swift and add a WKNotificationScene using the LandmarkNear
+    category.
+  提示: ''
+  翻译: 转到 LandmarksApp.swift 并使用 LandmarkNear 类别添加 WKNotificationScene。
+- 内容: The circle image resizes to fill the display. Unfortunately, this causes clipping.
+    To fix the clipping problem, you’ll embed the image in a VStack and make some
+    additional layout changes so that the circle image fits any watch.
+  提示: ''
+  翻译: 圆形图像调整大小来填充视图。 不幸的是，这会导致图片被裁剪。 要解决这个问题，你需要将图像嵌入 VStack 并进行一些额外的布局更改，以便圆形图像适合任何手表。
+- 内容: If prompted by Xcode to activate the WatchLandmarks (Complication) scheme, click
+    Cancel.
+  提示: ''
+  翻译: 如果 Xcode 提示激活 WatchLandmarks (Complication) 方案，请单击取消。
+- 内容: This section only covers how to display the notification after you receive it.
+    It doesn’t describe how to set up or send notifications.
+  提示: ''
+  翻译: 本节仅介绍如何在收到通知后显示通知。 不会介绍如何设置或发送通知。
+- 内容: First, delete the entry point for the watchOS app. You don’t need it because
+    you’ll reuse the entry point defined in LandmarksApp.swift instead.
+  提示: ''
+  翻译: 首先，删除 watchOS 应用程序的入口。 你不需要它，因为你将重用 LandmarksApp.swift 中定义的入口点。

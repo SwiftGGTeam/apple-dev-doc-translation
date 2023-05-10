@@ -1,0 +1,223 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: Build and run the sample using Xcode. Then play around with code by following
+    the suggested experiments mentioned in the previous steps.
+  提示: ''
+  翻译: ''
+- 内容: The entry point is responsible for the start up of the app.
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: To access the symbols and features of SwiftUI, the app uses an import declaration
+    to import the SwiftUI framework.
+  提示: ''
+  翻译: ''
+- 内容: SwiftUI provides platform-specific behaviors for WindowGroup. For instance,
+    in macOS and iPadOS, a person can open more than one window from the group. And
+    in macOS, a person can combine multiple instances of the window group into a set
+    of tabs.
+  提示: ''
+  翻译: ''
+- 内容: A scene contains the view hierarchy of your app.
+  提示: ''
+  翻译: ''
+- 内容: To indicate the entry point of the SwiftUI app, the sample applies the @main
+    attribute to the app structure.
+  提示: ''
+  翻译: ''
+- 内容: For more information, see Import Declaration in The Swift Programming Language.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: Replace “Hello, world!” with “Hello, your name!” or other text.
+  提示: ''
+  翻译: ''
+- 内容: Specifying the view hierarchy of an app using a scene
+  提示: ''
+  翻译: ''
+- 内容: Exploring the structure of a SwiftUI app
+  提示: ''
+  翻译: ''
+- 内容: If you’re creating a document-based app such as a word processor or text editor,
+    you can use the DocumentGroup scene to open, save, and edit documents. For more
+    information, see Building a Document-Based App with SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: Implementing body is a common pattern that you see throughout your SwiftUI code;
+    for instance, when a structure conforms to protocols such as App, Scene, and View.
+  提示: ''
+  翻译: ''
+- 内容: When you run the sample app, it displays the scene that contains the view hierarchy
+    described in ContentView.
+  提示: ''
+  翻译: ''
+- 内容: The scene contains ContentView, a custom view that creates a view hierarchy
+    that consists of an image and text.
+  提示: ''
+  翻译: ''
+- 内容: SwiftUI is a declarative framework that helps you compose the user interface
+    of your app. The principle building blocks that form the structure of a SwiftUI
+    app are the App, Scene, and View protocols. This sample introduces you to these
+    protocols by walking through lines of code, and explaining what’s happening and
+    why.
+  提示: ''
+  翻译: ''
+- 内容: App structure
+  提示: ''
+  翻译: ''
+- 内容: The second subview of VStack is Text, a view that displays one or more lines
+    of read-only text.
+  提示: ''
+  翻译: ''
+- 内容: ContentView contains the SwiftUI-provided view VStack, which arranges subviews
+    vertically.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Content view
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: Tip
+  提示: ''
+  翻译: ''
+- 内容: This sample uses a WindowGroup scene to represent the main window that the app
+    displays.
+  提示: ''
+  翻译: ''
+- 内容: Keep reading to learn how ContentView composes the view hierarchy.
+  提示: ''
+  翻译: ''
+- 内容: ContentView applies the padding(_:_:) modifier to the VStack, adding a platform-specific
+    default amount of padding — that is, space — to the edges of the VStack view.
+  提示: ''
+  翻译: ''
+- 内容: A VStack simultaneously renders any on- or off-screen views it contains. Using
+    VStack is ideal when you have a small number of subviews. However, if your app
+    needs to display many more subviews, consider using LazyVStack, which only renders
+    the views when the app needs to display them onscreen.
+  提示: ''
+  翻译: ''
+- 内容: Replace VStack with either HStack or LazyHStack to arrange subviews horizontally.
+  提示: ''
+  翻译: ''
+- 内容: Change Image.Scale.large to another scale size. For a list of sizes, see Image.Scale.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: The source code begins by importing the SwiftUI framework.
+  提示: ''
+  翻译: ''
+- 内容: The structure implements the computed property body, which is a requirement
+    of the App protocol.
+  提示: ''
+  翻译: ''
+- 内容: The sample displays an image of a globe using the initializer method init(systemName:).
+    This method creates an image view that displays a system symbol image. Symbol
+    images like globe come from SF Symbols, a library of icons that you can use in
+    your app.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: An app structure describes the content and behavior of your app, and each SwiftUI
+    app has one and only one main app structure. This sample defines its app structure
+    in the MyApp.swift file. Let’s take a look at the contents of that file.
+  提示: ''
+  翻译: ''
+- 内容: The foregroundColor(_:) modifier adds color to the image view.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: Walk through code that explores the structure of a SwiftUI app.
+  提示: ''
+  翻译: ''
+- 内容: ContentView applies the view modifier imageScale(_:) to the image view to scale
+    the image within the view to the relative size Image.Scale.large.
+  提示: ''
+  翻译: ''
+- 内容: In this sample, ContentView applies the semantic color accentColor, which reflects
+    the accent color of the system or app. To learn more about color representations,
+    see Color.
+  提示: ''
+  翻译: ''
+- 内容: ContentView implements the computed property body, just like the ‘MyApp’ structure
+    does in the previous section.
+  提示: ''
+  翻译: ''
+- 内容: This property returns the contents of your app described as a Scene. A scene
+    contains the view hierarchy that defines the app’s user interface. SwiftUI provides
+    different types of scenes including WindowGroup, Window, DocumentGroup, and Settings.
+  提示: ''
+  翻译: ''
+- 内容: Step 10
+  提示: ''
+  翻译: ''
+- 内容: You can specify which edges and amount of padding to apply by providing edges
+    and length parameter values; for example, padding([.bottom, .trailing], 20). Change
+    the padding edges and amount or comment the line of code to see what effect it
+    has on the view.
+  提示: ''
+  翻译: ''
+- 内容: Important
+  提示: ''
+  翻译: ''
+- 内容: A SwiftUI app contains one and only one entry point. Attempting to apply @main
+    to more than one structure in the app results in a compiler error.
+  提示: ''
+  翻译: ''
+- 内容: The MyApp structure conforms to the App protocol, and provides the content of
+    the app and its behavior.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Without the import declaration, ContentView wouldn’t have access to symbols
+    in SwiftUI.
+  提示: ''
+  翻译: ''
+- 内容: In SwiftUI, a scene contains the view hierarchy that an app displays as its
+    user interface. A view hierarchy defines the layout of views relative to other
+    views. In this sample, a WindowGroup scene contains the view hierarchy that ContentView
+    composes using other views.
+  提示: ''
+  翻译: ''
+- 内容: Change the foreground color to another semantic color such as primary or a standard
+    color like teal.
+  提示: ''
+  翻译: ''
+- 内容: The first subview in VStack is Image, a view that displays an image.
+  提示: ''
+  翻译: ''
+- 内容: A view defines one or more visual elements that appear somewhere on a screen.
+    A view is typically made up of other views, creating a view hierarchy.
+  提示: ''
+  翻译: ''
+- 内容: ContentView is a structure that conforms to the View protocol.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''

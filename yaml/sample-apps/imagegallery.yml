@@ -1,0 +1,253 @@
+- 内容: A GridItemView contains properties for item and size. The item property provides
+    the URL to asynchronously load the image, while the size property provides the
+    value for the height and width of the image and its placeholder.
+  提示: ''
+  翻译: ''
+- 内容: Welcome to the Image Gallery app. This walkthrough shows how to create a grid
+    of images, complete with photo-picking and -editing functionality.
+  提示: ''
+  翻译: ''
+- 内容: To edit your photo grid, you’ll use the state value isEditing. You’ll add a
+    Remove button (X) on top of each image when the value toggles to true.
+  提示: ''
+  翻译: ''
+- 内容: Learn how to put together a grid view using a series of SwiftUI built-in and
+    composed views.
+  提示: ''
+  翻译: ''
+- 内容: To create dataModel as a state object, apply the @StateObject property wrapper
+    and provide an initial value that conforms to the ObservableObject protocol. SwiftUI
+    manages storage for a state object, and updates all of the child views that use
+    the value when the published values change.
+  提示: ''
+  翻译: ''
+- 内容: Image Gallery
+  提示: ''
+  翻译: ''
+- 内容: You can initialize an AsyncImage with the item.url value to load the image asynchronously.
+    Because you have many images to load when the app first launches, you can load
+    them asynchronously to allow the app to keep running the rest of its code while
+    it waits for the images to return. This prevents any noticable lag in your UI.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: In the body of your GridItemView, you’ll create your image view. Since you’ll
+    have a conditional editing UI overlaid on top of your image, wrap the image in
+    a ZStack.
+  提示: ''
+  翻译: ''
+- 内容: DataModel provides methods for adding and removing items from items. addItem
+    adds a new item at the first index of the array so you can see when new images
+    appear in the view.
+  提示: ''
+  翻译: ''
+- 内容: GridView is where you’ll create your image gallery. If you need to review the
+    basics of creating a grid, check out Color Grid. In this walkthrough, you’ll learn
+    how to implement the grid using a model type, Item, and an observable object,
+    dataModel.
+  提示: ''
+  翻译: ''
+- 内容: AsyncImage contains a content closure that provides an instance of a SwiftUI
+    Image. You’ll use this instance to create your image view. You’ll add the .resizable
+    and .scaledToFill modifiers to scale the image to fill the available space of
+    the view.
+  提示: ''
+  翻译: ''
+- 内容: removeItem removes an item by finding its index and removing it from the items
+    array. The method also removes the item’s corresponding image file from the document
+    directory, if it exists there. This ensures that the image won’t reload from local
+    app storage the next time you launch the app.
+  提示: ''
+  翻译: ''
+- 内容: When isAddingPhoto is true, a sheet displays the PhotoPicker modally. In PhotoPicker,
+    selecting a new photo adds the corresponding item to DataModel.items. This causes
+    SwiftUI to update the grid view and add the corresponding image.
+  提示: ''
+  翻译: ''
+- 内容: GridItemView represents a single item of your grid, an image view that displays
+    the photo defined by an Item instance.
+  提示: ''
+  翻译: ''
+- 内容: When a person taps the Remove button (X), the code removes the current item
+    from dataModel.items. Because dataModel.items is a published value, this change
+    causes SwiftUI to update the grid view’s appearance and remove the item.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Laying Out Views
+  提示: ''
+  翻译: ''
+- 内容: Learn how your app uses a data model to load and store all photo data.
+  提示: ''
+  翻译: ''
+- 内容: To simplify the code in GridView, generate each view of the grid using a GridItemView,
+    which handles all of the asynchronous image loading as well as transitions between
+    editing states.
+  提示: ''
+  翻译: ''
+- 内容: Larger images can load slowly, which can cause noticeable delays when loading
+    your app’s UI. This sample focuses on unblocking delays by showing progress indicators
+    until each image loads and keeping your app responsive during the loading process.
+  提示: ''
+  翻译: ''
+- 内容: To add a new photo to the grid, you’ll use the state value isAddingPhoto. You’ll
+    toggle this value to true whenever you press the Add button (+) in the toolbar.
+  提示: ''
+  翻译: ''
+- 内容: DataModel is an observable object that gathers file URLs from images in your
+    document directory as well as from your bundle resources. It uses these URLs to
+    populate an array of Item instances which display as the content of your grid.
+  提示: ''
+  翻译: ''
+- 内容: Adding an Image to the Gallery
+  提示: ''
+  翻译: ''
+- 内容: Your ForEach loop iterates through dataModel.items, and creates a GridItemView
+    based upon each item value in the array. Because each item instance is Identifiable,
+    you don’t need an id parameter when creating your grid views. Instead, SwiftUI
+    uses the id property of each item to uniquely identify it.
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: To create the grid, you’ll nest a LazyVGrid inside of a ScrollView, which allows
+    the content of the grid to scroll vertically, if necessary.
+  提示: ''
+  翻译: ''
+- 内容: Your Item contains an id property that SwiftUI uses to uniquely identify the
+    view.
+  提示: ''
+  翻译: ''
+- 内容: Find out how to load an image asynchronously from a URL using AsyncImage.
+  提示: ''
+  翻译: ''
+- 内容: Item also has a url property that the app uses to identify the location of the
+    corresponding image using a path to the file. AsyncImage uses this URL in GridItemView
+    to asynchronously load the image.
+  提示: ''
+  翻译: ''
+- 内容: DataModel publishes an array of item values, each of which correlates to an
+    image in the grid. Because the code marks this value as @Published, any time you
+    add or delete an Item from this array, SwiftUI updates the grid view (and any
+    other views that use this value) to reflect those changes.
+  提示: ''
+  翻译: ''
+- 内容: The data for populating the grid comes from an array of Item instances (found
+    in dataModel.items), each of which references a single image URL.
+  提示: ''
+  翻译: ''
+- 内容: Creating Your Gallery
+  提示: ''
+  翻译: ''
+- 内容: Learn how the app passes photo data from DataModel to its view hierarchy.
+  提示: ''
+  翻译: ''
+- 内容: Organize, size and align view layouts.
+  提示: ''
+  翻译: ''
+- 内容: Modeling an Item
+  提示: ''
+  翻译: ''
+- 内容: Creating a Grid Item
+  提示: ''
+  翻译: ''
+- 内容: To access the app’s dataModel, you define an @EnvironmentObject of type DataModel,
+    which gives you access to the environment object passed into the top-level view
+    of the view hierarchy in ImageGalleryApp.swift.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: When you initialize DataModel, it searches the document directory for any images
+    you’ve added, gathering their corresponding URLs and appending them to the items
+    array. Your app stores data locally in this directory, so searching here allows
+    you to display any images you added while using the app.
+  提示: ''
+  翻译: ''
+- 内容: Retrieve and display images from an asset catalog or a photo library.
+  提示: ''
+  翻译: ''
+- 内容: When isEditing is true, you’ll show a Remove button (X) on top of the images.
+  提示: ''
+  翻译: ''
+- 内容: Sharing App Data
+  提示: ''
+  翻译: ''
+- 内容: Similarly, you’ll load all image URLs from the bundle resources directory and
+    add them to items. Bundle resources is the directory of images that are included
+    with the project, as opposed to images that you added yourself.
+  提示: ''
+  翻译: ''
+- 内容: To initialize GridItemView, you pass in the current item from the ForEach loop
+    as well as the width of the parent view provided from GeometryReader. GridItem
+    uses geo.size.width as the value for its height and width, which creates a square-shaped
+    grid item.
+  提示: ''
+  翻译: ''
+- 内容: To provide relative size information of a parent view to its child views, you
+    can use a GeometryReader. This gives you information on the width and height of
+    the parent view depending on how much screen size is available. You can access
+    this information using the closure value and use it to set the size of a size
+    of a child view.
+  提示: ''
+  翻译: ''
+- 内容: Image Gallery loads a gallery of images when you first launch the app. Because
+    the images are so large, and you don’t want the app to lag when loading them all
+    at the same time, you’ll use asynchronous requests to keep the app responsive
+    even when data retrieval is slow.
+  提示: ''
+  翻译: ''
+- 内容: AsyncImage uses a placeholder to show some content while the image loads. This
+    placeholder uses a SwiftUI ProgressView which displays as a spinning circle.
+  提示: ''
+  翻译: ''
+- 内容: 'The .toolbar modifier contains two toolbar items: one to edit photos in the
+    grid and one to add a new photo. These buttons toggle the state values isEditing
+    and isAddingPhoto, respectively.'
+  提示: ''
+  翻译: ''
+- 内容: NavigationStack passes in the DataModel instance using the .environmentObject
+    modifier, making the observable object available to all of the NavigationStack’s
+    child views. As a result, those views can access the data from dataModel to perform
+    various tasks, such as loading image views asynchronously or updating the grid
+    view when the data changes.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: 'This sample is an extension of two simpler implementations: Organizing with
+    Grids and Editing Grids. This walkthrough focuses on solving some common issues
+    after your grid displays images, instead of shapes or SF Symbols.'
+  提示: ''
+  翻译: ''
+- 内容: 'Data Model: Gathering Image URLs'
+  提示: ''
+  翻译: ''
+- 内容: When you use ForEach to construct a collection view, such as a list or grid,
+    SwiftUI wants to uniquely identify each view so it can find and update them. To
+    make this easier, you can create a model that conforms to Identifiable, which
+    creates an id property requirement.
+  提示: ''
+  翻译: ''
+- 内容: Explore how the Item type models a grid item’s data and adds Identifiable conformance.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: Explore how to add and edit photos in the gallery.
+  提示: ''
+  翻译: ''

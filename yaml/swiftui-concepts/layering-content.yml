@@ -1,0 +1,196 @@
+- 内容: Note
+  提示: ''
+  翻译: ''
+- 内容: To experiment with the code, download the project files and open the sample
+    in Xcode.
+  提示: ''
+  翻译: ''
+- 内容: The scaled image is the only view at the top level of this body, so the image
+    determines the size of the CaptionedPhoto view. For more information about resizing
+    images, see Fitting images into available space.
+  提示: ''
+  翻译: ''
+- 内容: Layering content
+  提示: ''
+  翻译: ''
+- 内容: ABBA
+  提示: 12测一下
+  翻译: 陈奕舟
+- 内容: This view defines an assetName property to hold the name of the image asset.
+  提示: ''
+  翻译: ''
+- 内容: Change the cornerRadius value to a larger number to see its effect on the photo’s
+    corners.
+  提示: ''
+  翻译: ''
+- 内容: Specifying an alignment of bottom pushes the overlay(alignment:content:) modifier’s
+    contents to the bottom center of the primary view.
+  提示: ''
+  翻译: ''
+- 内容: Control whether a view exists, and how that affects the overall layout.
+  提示: ''
+  翻译: ''
+- 内容: Step 5
+  提示: ''
+  翻译: ''
+- 内容: AAAA
+  提示: ''
+  翻译: ''
+- 内容: This padding(_:_:) modifier adds some space between the words and the edges
+    of the contrasting background underneath. The structure of the code matches the
+    visual appearance of the view — the padding is between the text and the background.
+  提示: ''
+  翻译: ''
+- 内容: Step 6
+  提示: ''
+  翻译: ''
+- 内容: Experiment
+  提示: ''
+  翻译: ''
+- 内容: An overlay can be smaller than the view it modifies.
+  提示: ''
+  翻译: ''
+- 内容: Choose carefully how to combine padding with an overlay or background modifier.
+    If you pad the primary view before modifying it with the overlay or background,
+    the system uses the size of the padded primary view to calculate the placement
+    of the secondary view. Apply the padding after the overlay or background to put
+    a little space around the view that includes both layers.
+  提示: ''
+  翻译: ''
+- 内容: Choosing the right way to hide a view
+  提示: ''
+  翻译: ''
+- 内容: This Image view initializer retrieves a photo or graphic by name from your app
+    and displays it.
+  提示: ''
+  翻译: ''
+- 内容: Designs that layer content often specify that some content stays within the
+    bounds of other content, or maintains a specific margin around that content. You
+    can define these relationships between views with overlay and background modifiers.
+    For example, if your design includes a graphic that provides contrast behind some
+    text, you can define a layout so that the graphic adapts its size and position
+    as the text updates. You can wrap text to fit within the width of another view
+    by defining the text in a background or overlay of that other view.
+  提示: ''
+  翻译: ''
+- 内容: The Caption view uses the background(_:in:fillStyle:) modifier to place a shape
+    behind the text that partially obscures any content behind it — in this example,
+    the photo — to provide higher contrast for the text.
+  提示: ''
+  翻译: ''
+- 内容: When you arrange content on the z-axis, you can use a ZStack or an overlay or
+    background modifier, like overlay(alignment:content:) or background(_:in:fillStyle:),
+    respectively. A ZStack sizes each view based on the available space, without consideration
+    for the other views in the stack. To specify that the size of some content depends
+    on the size of other content, define this secondary content inside one of the
+    overlay or background modifiers.
+  提示: ''
+  翻译: ''
+- 内容: Step 8
+  提示: ''
+  翻译: ''
+- 内容: Step 3
+  提示: ''
+  翻译: ''
+- 内容: Step 4
+  提示: ''
+  翻译: ''
+- 内容: CaptionedPhoto is a custom View that defines the layout of a photo and another
+    custom Caption view, which defines the layout of the caption text that appears
+    on top of the image.
+  提示: ''
+  翻译: ''
+- 内容: Defining the caption inside overlay(alignment:content:) declares that the caption
+    belongs in front of the image. The size of the primary view limits the size of
+    the overlay(alignment:content:) that modifies the primary view.
+  提示: ''
+  翻译: ''
+- 内容: To provide high contrast whether or not people use Dark Mode, this background(_:in:fillstyle:)
+    modifier uses a custom color with partial opacity.
+  提示: ''
+  翻译: ''
+- 内容: Step 9
+  提示: ''
+  翻译: ''
+- 内容: The overlay(alignment:content:) on the CaptionedPhoto contains a Caption view
+    to display the caption text.
+  提示: ''
+  翻译: ''
+- 内容: Define views in an overlay or background to adapt their layout to the primary
+    content.
+  提示: ''
+  翻译: ''
+- 内容: A background modifier like background(_:in:fillStyle:) is similar to an overlay
+    modifier, in that its content bases its size on the size of the view it modifies.
+    However, a background modifier puts its contents behind the view it modifies,
+    rather than in front.
+  提示: ''
+  翻译: ''
+- 内容: Step 1
+  提示: ''
+  翻译: ''
+- 内容: This example presents a photo with a block of text over the lower portion of
+    the photo. To improve readability of the text without completely obscuring that
+    portion of the photo, there’s a mostly transparent background behind the text.
+    The text wraps to fit within the width of the photo. The text’s background sizes
+    to fit around the text. The CaptionedPhoto view arranges the image and provides
+    the text to a Caption view in the image’s overlay(alignment:content:).
+  提示: ''
+  翻译: ''
+- 内容: This padding(_:_:) puts some space between all four edges of the photo and its
+    containing view.
+  提示: ''
+  翻译: ''
+- 内容: By default, an Image displays an image at its original size. The resizable(capInsets:resizingMode:)
+    and scaledToFit() modifiers adjust this Image to fit within the available space.
+  提示: ''
+  翻译: ''
+- 内容: Clipping the view to a RoundedRectangle rounds the corners of the image without
+    changing its size or position.
+  提示: ''
+  翻译: ''
+- 内容: Important
+  提示: ''
+  翻译: ''
+- 内容: RoundedRectangle, as a Shape, accepts whatever size its containing view proposes.
+  提示: ''
+  翻译: ''
+- 内容: In this case, the background(_:in:fillstyle:) modifier creates that containing
+    view, and any background modifier determines its size from the view it modifies.
+    This results in a RoundedRectangle that is the same size as the padding around
+    the Text view.
+  提示: ''
+  翻译: ''
+- 内容: Define an overlay
+  提示: ''
+  翻译: ''
+- 内容: The Caption custom view defines the text and its background.
+  提示: ''
+  翻译: ''
+- 内容: Step 2
+  提示: ''
+  翻译: ''
+- 内容: Delete the padding(_:_:) modifier to see how that changes the layout. The padding
+    modifier also appears twice in the Caption view. Remove each of those as well
+    to see how their absence affects the layout.
+  提示: ''
+  翻译: ''
+- 内容: The TextContrast color set in this project’s asset catalog defines separate
+    color values for light and dark appearances.
+  提示: ''
+  翻译: ''
+- 内容: Define a background
+  提示: ''
+  翻译: ''
+- 内容: This additional padding(_:_:) around the background adds space between the outside
+    of the Caption view and the container it appears inside; in this case, CaptionedPhoto
+    is the containing view.
+  提示: ''
+  翻译: ''
+- 内容: Step 7
+  提示: ''
+  翻译: ''
+- 内容: This view also defines a captionText property to contain the caption text that
+    it eventually passes along to the Caption view.
+  提示: ''
+  翻译: ''
