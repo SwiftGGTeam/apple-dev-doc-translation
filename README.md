@@ -12,8 +12,6 @@ SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://githu
 数组结构示例：
 
 ```
-
-...
 - 内容: Familiarize yourself with the new views. They work together to display the hike
     data loaded into your model.
   提示: ''
@@ -31,9 +29,6 @@ SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://githu
     the menu item File > New > File.
   提示: ''
   翻译: ''
-  
-...
-
 ```
 
 3. 社区小伙伴提交PR且由社区校对工作同学approve后，更新内容会在第二天进行发布，如果需要加急，请联系SwiftGG管理员。
