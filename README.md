@@ -1,13 +1,14 @@
 # SwiftUI-Tutorial-Chinese
-SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin) 插件的翻译文件。我们将 Apple 官方文档的原文，翻译和提示信息进行归拢整理，旨在为广大开发者提供一个高质量的 SwiftUI 中文教程。
+SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin) 插件的翻译文件。我们将 Apple 官方文档的原文，翻译和提示信息进行归拢整理，旨在为广大开发者提供一个高质量的中文教程。
 
-翻译文件是以 yaml 文件格式进行存储的，以下是存储规则和存储格式的具体介绍：
+翻译的映射文件是以 yaml 文件格式进行存储的，以下是存储规则和存储格式的具体介绍：
+
 1. 翻译内容以单独的网页为基本单位，每个网页对应一个翻译文件，如对于url: `https://developer.apple.com/tutorials/swiftui/creating-and-combining-views`来说，它的翻译文件存储路径为：`project/swiftui/creating-and-combining-views`；
 2. 翻译文件的基本结构是一个一维数组，每个数组元素由三部分组成，“内容”，“提示”，“翻译”。
 
-    * “内容”：由swiftGG项目组提供，从当前教程中抓取的原文内容，也是社区同学需要帮忙进行翻译的内容；
-    * “提示”：当我们面对一些涉及内容的问题时，为了方便其他开发者快速应对问题，可以增加非翻译的的额外信息；
-    * “翻译”：具体的翻译内容，也是社区小伙伴需要帮忙翻译校验的主要部分。
+    * “内容”：相关文档的原始内容，为英文，由 SwiftGG 项目组提供；
+    * “提示”：可以增加的额外信息，帮助开发者快速理解当前内容的小提示；
+    * “翻译”：需要翻译和校对的主要内容，是我们与社区小伙伴共建的核心部分。
 
 数组结构示例：
 
@@ -32,7 +33,6 @@ SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://githu
 ```
 
 3. 社区小伙伴提交PR且由社区校对工作同学approve后，更新内容会在第二天进行发布，如果需要加急，请联系SwiftGG管理员。
-
 
 ## 贡献力量
 如果想做出贡献的话，你可以：
