@@ -3,9 +3,8 @@ SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://githu
 
 翻译的映射文件是以 yaml 文件格式进行存储的，以下是存储规则和存储格式的具体介绍：
 
-1. 翻译内容以单独的网页为基本单位，每个网页对应一个翻译文件，如对于url: `https://developer.apple.com/tutorials/swiftui/creating-and-combining-views`来说，它的翻译文件存储路径为：`project/swiftui/creating-and-combining-views`；
+1. 翻译内容以单独的网页为基本单位，每个网页对应一个翻译文件，例如 Creating And Combining Views 这篇教程，它的 url 是 `https://developer.apple.com/tutorials/swiftui/creating-and-combining-views`，那么它的翻译文件存储路径就应当为 `project/swiftui/creating-and-combining-views`；
 2. 翻译文件的基本结构是一个一维数组，每个数组元素由三部分组成，“内容”，“提示”，“翻译”。
-
     * “内容”：相关文档的原始内容，为英文，由 SwiftGG 项目组提供；
     * “提示”：可以增加的额外信息，帮助开发者快速理解当前内容的小提示；
     * “翻译”：需要翻译和校对的主要内容，是我们与社区小伙伴共建的核心部分。
