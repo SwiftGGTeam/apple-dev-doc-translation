@@ -297,7 +297,7 @@
 - 内容: The sample app separates its state data and imperative code from RecipeEditor
     by defining a structure, RecipeEditorConfig.
   提示: ''
-  翻译: '该案例应用通过定义一个结构，RecipeEditorConfig，将状态数据和命令代码与RecipeEditor分开。'
+  翻译: '这个案例应用通过定义一个结构，RecipeEditorConfig，将状态数据和命令代码与RecipeEditor分开。'
 - 内容: Separate properties and imperative code from the view
   提示: ''
   翻译: '从视图中分离属性和命令代码'
