@@ -5,6 +5,7 @@ name: Reorder-on-Merge
 # Controls when the workflow will run
 on:
   pull_request:
+    branches: [ "main" ]
     types:
       - closed
 
@@ -13,7 +14,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: macOS-latest
+    runs-on: macos-13
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -25,49 +26,50 @@ jobs:
         run: |
           if [ "${{ github.event.pull_request.merged }}" != "true" ]; then
             echo "This PR isn't merged, so the action is quited."
-            exit 0
+            curl \
+            -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/cancel"
           fi
 
       # Runs a set of commands using the runners shell
       - name: Download the SwiftGGFormatter Tool
         run: |
-          curl -s https://api.github.com/repos/SwiftGGTeam/SwiftGGFormatter/releases/latest | grep browser_download_url | cut -d '"' -f 4 | wget -qi -
-          unzip SwiftGGFormatter.zip
+          wget https://github.com/SwiftGGTeam/SwiftGGFormatter/releases/download/1.0.0/SwiftGGFormatter.zip
+          unzip ./SwiftGGFormatter.zip
+          chmod o+rwx ./SwiftGGFormatter.zip
       
       - name: Fetch PR Info
         id: pr_info
-        uses: actions/github-script@v4
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const prNumber = context.payload.pull_request.number;
-            const { data: files } = await github.pulls.listFiles({
+            const { data: files } = await github.rest.pulls.listFiles({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: prNumber
             });
             const ymlFiles = files.filter(file => file.filename.endsWith('.yml')).map(file => file.filename);
-            return ymlFiles;
+            const result = ymlFiles.join(" ");
+            return result;
       
-      - name: Gain Changed Files in the current PR
-        run: |
-          changedFiles=${{ steps.pr_info.outputs.result }}
-          
       - name: Reorder
         run: |
+          changedFiles=(${{ steps.pr_info.outputs.result }})
           for file in $changedFiles; do
-            echo "Reorder: $file"
-            ./SwiftGGFormatter "$file"
+            echo "Reorder: ./$file"
+            ./SwiftGGFormatter "./$file"
+            git add "$file"
           done
           
       - name: Push to the Repo
         run: |
-          git config user.name "underthestars-zhy"
-          git config user.email "zhuhaoyu0909@icloud.com"
-          git add .
-          git commit -m "Actions: Apply formatting changes"
-          git push origin HEAD:main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m "Auto Reformat"
+          git push
           
       
