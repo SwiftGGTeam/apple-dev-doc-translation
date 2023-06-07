@@ -1,228 +1,168 @@
-- 内容: 'To determine which SymbolVariants to apply, fill or none, the control uses
-    a ternary conditional operator. This operator takes three parts, which takes the
-    form of question ? answer1 : answer2. For more information, see Ternary Conditional
-    Operator.'
+- 内容: 'Creating a custom input control that binds to a value'
   提示: ''
   翻译: ''
-- 内容: Note
+- 内容: 'Provide interactions that are unique to your app with custom controls that bind to a value.'
   提示: ''
   翻译: ''
-- 内容: When the integer value is equal to the rating value, the closure resets the
-    recipe’s rating to no stars by setting rating to 0.
+- 内容: 'SwiftUI provides input controls like Slider, TextField, and many others that bind to a value and can change the value as a person’s interacts with the control. But every app is different. You may find that you need a custom control that provides behavior unique to your app.'
   提示: ''
   翻译: ''
-- 内容: To experiment with the code, download the project files and open the sample
-    in Xcode.
+- 内容: 'SwiftUI provides the building blocks you need to create a custom input control for your app. This tutorial walks through an example of one such control, a rating control. The sample app uses this control to let people rate recipes from 1 to 5 stars.'
   提示: ''
   翻译: ''
-- 内容: ForEach iterates through a collection of data defined as a range of Int instances,
-    1 to 5.
+- 内容: 'To experiment with the code, download the project files and open the sample in Xcode.'
   提示: ''
   翻译: ''
-- 内容: StarRating is able to display a set of stars to indicate the rating of a recipe.
-    For instance, if the recipe’s rating is 4, the control displays four filled stars,
-    followed by one empty star. To make StarRating interactive, it uses the onTapGesture(count:perform:)
-    action.
+- 内容: 'Design a custom control'
   提示: ''
   翻译: ''
-- 内容: Provide an alternative to a state variable by using a custom binding.
+- 内容: 'Before implementing a custom control, ask yourself what data does the control need, what does it do with that data, and how it does it represent that data visually within the app. The sample app, for instance, needs an Int property that represents the rating of a recipe. The control needs to be able to change the value of this property. And because the control shows the rating of a recipe, it needs to display a set of stars that reflects the rating value; for instance, the control displays five stars when the rating value is 5.'
   提示: ''
   翻译: ''
-- 内容: The structure defines a Binding variable named rating, which stores the rating
-    of a recipe.
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'The sample defines the custom control as a structure named StarRating.'
   提示: ''
   翻译: ''
-- 内容: The control set the color of the stars using the foregroundColor(_:) view modifier.
+- 内容: 'This structure conforms to the View protocol because the control appears as part of the app’s user interface.'
   提示: ''
   翻译: ''
-- 内容: The control displays a star using an instance of Image.
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: Display the custom control in other views
+- 内容: 'The structure defines a Binding variable named rating, which stores the rating of a recipe.'
   提示: ''
   翻译: ''
-- 内容: RegularTitleView defines a binding variable that stores a recipe received from
-    another view.
+- 内容: 'By defining rating as a binding variable, StarRating can read and write the value even though another view is responsible for creating the value.'
   提示: ''
   翻译: ''
-- 内容: The sample displays an image of a star using the initializer method init(systemName:).
-    This method creates an image view that displays a system symbol image. Symbol
-    images like star come from SF Symbols, a library of iconography that you can use
-    in your app.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Before implementing a custom control, ask yourself what data does the control
-    need, what does it do with that data, and how it does it represent that data visually
-    within the app. The sample app, for instance, needs an Int property that represents
-    the rating of a recipe. The control needs to be able to change the value of this
-    property. And because the control shows the rating of a recipe, it needs to display
-    a set of stars that reflects the rating value; for instance, the control displays
-    five stars when the rating value is 5.
+- 内容: 'The private constant maxRating stores the highest rating possible that a person can give a recipe.'
   提示: ''
   翻译: ''
-- 内容: Make the control interactive
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: SwiftUI provides the building blocks you need to create a custom input control
-    for your app. This tutorial walks through an example of one such control, a rating
-    control. The sample app uses this control to let people rate recipes from 1 to
-    5 stars.
+- 内容: 'Note'
   提示: ''
   翻译: ''
-- 内容: The control displays a filled star when the integer value is less than or equal
-    to the rating value and an empty star when the integer value is greater than rating,
-    so the control applies the symbolVariant(_:) modifier to the Image instance.
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: The structure RegularTitleView is a view that displays the title and subtitle
-    of a recipe along with its rating.
+- 内容: 'The HStack displays the rating stars in a horizontal line.'
   提示: ''
   翻译: ''
-- 内容: The HStack displays the rating stars in a horizontal line.
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: Change the color of the stars by replacing accentColor with a different color,
-    such as yellow.
+- 内容: 'Inside the HStack, the control uses a ForEach structure to display the number of stars indicated by the maxRating constant.'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'ForEach iterates through a collection of data defined as a range of Int instances, 1 to 5.'
   提示: ''
   翻译: ''
-- 内容: Experiment
+- 内容: 'Important'
   提示: ''
   翻译: ''
-- 内容: This binding allows the view to read and write data to an instance of Recipe.
-    However, the view isn’t the owner of the recipe. Another view in the sample is
-    responsible for creating and owning the Recipe instance.
+- 内容: 'The id parameter is of type ID, which is Hashable. The ForEach structure uses this parameter to identify the data, that is, the integer values 1 through 5. The parameter value is the identity key path \.self, which specifies an Int instance for each integer. Because Int is hashable, using this key path satisfies the requirements of the ForEach initializer method init(_:id:content:). And because the data is an increasing range of integers that will never have duplicate values, it’s okay to use each integer value as its identifier.'
   提示: ''
   翻译: ''
-- 内容: StarRating displays five empty stars to indicate that the recipe has no rating.
+- 内容: 'Step 7'
   提示: ''
   翻译: ''
-- 内容: Inside the HStack, the control uses a ForEach structure to display the number
-    of stars indicated by the maxRating constant.
+- 内容: 'The control displays a star using an instance of Image.'
   提示: ''
   翻译: ''
-- 内容: The id parameter is of type ID, which is Hashable. The ForEach structure uses
-    this parameter to identify the data, that is, the integer values 1 through 5.
-    The parameter value is the identity key path \.self, which specifies an Int instance
-    for each integer. Because Int is hashable, using this key path satisfies the requirements
-    of the ForEach initializer method init(_:id:content:). And because the data is
-    an increasing range of integers that will never have duplicate values, it’s okay
-    to use each integer value as its identifier.
+- 内容: 'The sample displays an image of a star using the initializer method init(systemName:). This method creates an image view that displays a system symbol image. Symbol images like star come from SF Symbols, a library of iconography that you can use in your app.'
   提示: ''
   翻译: ''
-- 内容: Step 8
+- 内容: 'Experiment'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'Change the symbol from a star to another symbol such as circle.'
   提示: ''
   翻译: ''
-- 内容: When the integer value isn’t equal to the rating value, the closure sets rating
-    to the integer value, which indicates the new rating that the person assigns to
-    the recipe.
+- 内容: 'Step 8'
   提示: ''
   翻译: ''
-- 内容: To make it possible for a person to interact with the rating control, StarRating
-    adds the onTapGesture(count:perform:) action to each Image instance created in
-    the ForEach loop.
+- 内容: 'The control displays a filled star when the integer value is less than or equal to the rating value and an empty star when the integer value is greater than rating, so the control applies the symbolVariant(_:) modifier to the Image instance.'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'To determine which SymbolVariants to apply, fill or none, the control uses a ternary conditional operator. This operator takes three parts, which takes the form of question ? answer1 : answer2. For more information, see Ternary Conditional Operator.'
   提示: ''
   翻译: ''
-- 内容: Every SwiftUI view must implement body to provide the contents of the view.
+- 内容: 'Step 9'
   提示: ''
   翻译: ''
-- 内容: By setting rating to the integer value, StarRating updates its appearance to
-    show filled stars up to the number identified by value, followed by empty stars
-    up to the number identified by maxRating.
+- 内容: 'The control set the color of the stars using the foregroundColor(_:) view modifier.'
   提示: ''
   翻译: ''
-- 内容: Creating a custom input control that binds to a value
+- 内容: 'Make the control interactive'
   提示: ''
   翻译: ''
-- 内容: Step 9
+- 内容: 'StarRating is able to display a set of stars to indicate the rating of a recipe. For instance, if the recipe’s rating is 4, the control displays four filled stars, followed by one empty star. To make StarRating interactive, it uses the onTapGesture(count:perform:) action.'
   提示: ''
   翻译: ''
-- 内容: As a person interacts with the StarRating control, SwiftUI redraws the view
-    to reflect the selected rating.
+- 内容: 'To make it possible for a person to interact with the rating control, StarRating adds the onTapGesture(count:perform:) action to each Image instance created in the ForEach loop.'
   提示: ''
   翻译: ''
-- 内容: In the sample app, StarRating appears under the recipe title that appears in
-    the recipe detail view.
+- 内容: 'The tap gesture performs the action defined in the closure when a person clicks or taps a star Image instance. The star indicates the rating that StarRating assigns to the recipe. For example, if a person taps the fourth star, the recipe’s rating is set to 4. Tap the fourth star again and StarRating resets the recipe’s rating to 0 or no stars.'
   提示: ''
   翻译: ''
-- 内容: The private constant maxRating stores the highest rating possible that a person
-    can give a recipe.
+- 内容: 'When the integer value isn’t equal to the rating value, the closure sets rating to the integer value, which indicates the new rating that the person assigns to the recipe.'
   提示: ''
   翻译: ''
-- 内容: By defining rating as a binding variable, StarRating can read and write the
-    value even though another view is responsible for creating the value.
+- 内容: 'By setting rating to the integer value, StarRating updates its appearance to show filled stars up to the number identified by value, followed by empty stars up to the number identified by maxRating.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'When the integer value is equal to the rating value, the closure resets the recipe’s rating to no stars by setting rating to 0.'
   提示: ''
   翻译: ''
-- 内容: Change the symbol from a star to another symbol such as circle.
+- 内容: 'StarRating displays five empty stars to indicate that the recipe has no rating.'
   提示: ''
   翻译: ''
-- 内容: The tap gesture performs the action defined in the closure when a person clicks
-    or taps a star Image instance. The star indicates the rating that StarRating assigns
-    to the recipe. For example, if a person taps the fourth star, the recipe’s rating
-    is set to 4. Tap the fourth star again and StarRating resets the recipe’s rating
-    to 0 or no stars.
+- 内容: 'Display the custom control in other views'
   提示: ''
   翻译: ''
-- 内容: The dollar sign ($) prefix on the variable name recipe indicates that the call
-    is passing a binding to StarRating.
+- 内容: 'StarRating is ready to go. It has the data it needs, it can apply changes to that data, and it can visually represent the current state of the data in the app’s user interface. The next step is to make use of the custom input control.'
   提示: ''
   翻译: ''
-- 内容: Important
+- 内容: 'In the sample app, StarRating appears under the recipe title that appears in the recipe detail view.'
   提示: ''
   翻译: ''
-- 内容: The sample defines the custom control as a structure named StarRating.
+- 内容: 'The structure RegularTitleView is a view that displays the title and subtitle of a recipe along with its rating.'
   提示: ''
   翻译: ''
-- 内容: Design a custom control
+- 内容: 'RegularTitleView defines a binding variable that stores a recipe received from another view.'
   提示: ''
   翻译: ''
-- 内容: Like all other SwiftUI views, StarRating implements the required computed property
-    body.
+- 内容: 'This binding allows the view to read and write data to an instance of Recipe. However, the view isn’t the owner of the recipe. Another view in the sample is responsible for creating and owning the Recipe instance.'
   提示: ''
   翻译: ''
-- 内容: Defining the source of truth using a custom binding
+- 内容: 'The view shares a binding to the recipe’s rating property with the custom control StarRating, which allows the control to read and write to that property.'
   提示: ''
   翻译: ''
-- 内容: SwiftUI provides input controls like Slider, TextField, and many others that
-    bind to a value and can change the value as a person’s interacts with the control.
-    But every app is different. You may find that you need a custom control that provides
-    behavior unique to your app.
+- 内容: 'As a person interacts with the StarRating control, SwiftUI redraws the view to reflect the selected rating.'
   提示: ''
   翻译: ''
-- 内容: This structure conforms to the View protocol because the control appears as
-    part of the app’s user interface.
+- 内容: 'The dollar sign ($) prefix on the variable name recipe indicates that the call is passing a binding to StarRating.'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'Defining the source of truth using a custom binding'
   提示: ''
   翻译: ''
-- 内容: StarRating is ready to go. It has the data it needs, it can apply changes to
-    that data, and it can visually represent the current state of the data in the
-    app’s user interface. The next step is to make use of the custom input control.
+- 内容: 'Provide an alternative to a state variable by using a custom binding.'
   提示: ''
   翻译: ''
-- 内容: Provide interactions that are unique to your app with custom controls that bind
-    to a value.
+- 内容: 'Change the color of the stars by replacing accentColor with a different color, such as yellow.'
   提示: ''
   翻译: ''
-- 内容: Step 7
+- 内容: 'Every SwiftUI view must implement body to provide the contents of the view.'
   提示: ''
   翻译: ''
-- 内容: The view shares a binding to the recipe’s rating property with the custom control
-    StarRating, which allows the control to read and write to that property.
+- 内容: 'Like all other SwiftUI views, StarRating implements the required computed property body.'
   提示: ''
   翻译: ''
