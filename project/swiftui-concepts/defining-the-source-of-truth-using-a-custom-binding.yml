@@ -6,7 +6,7 @@
   翻译: '通过使用自定义绑定提供状态变量的替代方案。'
 - 内容: 'The most common way to define a source of truth that binds to other views in your app is to declare a state variable using the State property wrapper. However, there may be those rare occasions when the source of truth is dynamic and can’t be defined using the @State attribute. For instance, this sample app needs to retrieve a recipe as the source of truth using the recipe’s id. The app accomplishes this by creating a computed property that returns a custom binding.'
   提示: ''
-  翻译: '定义与应用中其他视图绑定的数据源的最常见方式是使用State属性包装器声明一个状态变量。然而，在一些罕见的情况下，数据源是动态的，不能用 @State 包装器来定义。例如，这个示例应用需要使用配方的 id 来检索一个配方作为数据源。该应用通过创建一个返回自定义绑定的计算属性来实现这一目的。'
+  翻译: '定义与应用中其他视图绑定的数据源的最常见方式是使用 State 属性包装器声明一个状态变量。然而，在一些罕见的情况下，数据源是动态的，不能用 @State 包装器来定义。例如，这个示例应用需要使用配方的 id 来检索一个配方作为数据源。该应用通过创建一个返回自定义绑定的计算属性来实现这一目的。'
 - 内容: 'To experiment with the code, download the project files and open the sample in Xcode.'
   提示: ''
   翻译: '如果要亲自尝试代码，请下载项目文件，并在Xcode中打开案例。'
