@@ -135,7 +135,7 @@
     images like globe come from SF Symbols, a library of icons that you can use in
     your app.
   提示: ''
-  翻译: '示例中使用初始化方法 init(systemName:) 展示了一个地球图片。这个方法创建了一个展示系统符号的图像视图。如展示中的地球，以及其他的符号图片都来自 SF Symbols，这是一个包含丰富 icon（图标）的库，你都可以在你的 app 内使用。
+  翻译: '示例中使用初始化方法 init(systemName:) 展示了一个地球图片。这个方法创建了一个展示系统符号的图像视图。如展示中的地球，以及其他的符号图片都来自 SF Symbols，这是一个包含丰富 icon（图标）的库，你都可以在你的 app 内使用。'
 - 内容: Step 9
   提示: ''
   翻译: '第 9 步'
