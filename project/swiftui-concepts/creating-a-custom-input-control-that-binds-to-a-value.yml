@@ -6,7 +6,7 @@
   翻译: '通过使用与特定值绑定的自定义控件为你的应用提供独一无二的交互体验。'
 - 内容: 'SwiftUI provides input controls like Slider, TextField, and many others that bind to a value and can change the value as a person’s interacts with the control. But every app is different. You may find that you need a custom control that provides behavior unique to your app.'
   提示: ''
-  翻译: 'SwiftUI提供了一些与特定值绑定的输入控制组件，例如滑动条，文本输入框等。这些组件的值会随着用户与其交互而改变。但是每个应用都是独一无二的。你可能会发现，你需要一个自定义控件来提供你的应用所特有的交互行为。'
+  翻译: 'SwiftUI 提供了一些与特定值绑定的输入控制组件，例如滑动条，文本输入框等。这些组件的值会随着用户与其交互而改变。但是每个应用都是独一无二的。你可能会发现，你需要一个自定义控件来提供你的应用所特有的交互行为。'
 - 内容: 'SwiftUI provides the building blocks you need to create a custom input control for your app. This tutorial walks through an example of one such control, a rating control. The sample app uses this control to let people rate recipes from 1 to 5 stars.'
   提示: ''
   翻译: 'SwiftUI 提供了为你的应用创建自定义输入控件所需要的构建组件。本教程将介绍这样的控件的一个例子，也就是一个评级控件。该案例应用通过这个控件让用户给菜谱从 1 到 5 星评分'
