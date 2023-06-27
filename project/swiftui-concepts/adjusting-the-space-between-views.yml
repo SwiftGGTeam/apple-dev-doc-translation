@@ -46,7 +46,7 @@
 - 内容: 'An HStack, like many of SwiftUI’s built-in collection views, puts some spacing between its subviews by default.'
   提示: ''
   翻译: 'HStack 就像 SwiftUI 中许多内置的集合视图一样，默认情况下会在其子视图之间添加一些间距。'
-- 内容: 'Customize a container's spacing'
+- 内容: "Customize a container's spacing"
   提示: ''
   翻译: '自定义容器的间距'
 - 内容: 'The default spacing of an HStack isn’t right for all layouts. You can specify a constant spacing between a stack’s subviews, spacing that scales with Dynamic Type, or no spacing at all.'
