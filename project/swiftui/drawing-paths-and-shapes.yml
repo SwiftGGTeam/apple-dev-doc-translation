@@ -12,11 +12,6 @@
     of the view, even if its ancestor views aren’t square.
   提示: ''
   翻译: 保持 1:1 的长宽比，徽章能够始终显示在视图的中心位置，即使其父级视图并非正方形。
-- 内容: You use GeometryReader to dynamically draw, position, and size views instead
-    of hard-coding numbers that might not be correct when you reuse a view somewhere
-    else in your app, or on a different-sized display.
-  提示: ''
-  翻译: 你使用 GeometryReader 来动态绘制、定位和调整视图大小，而不是硬编码数字，当你在应用程序的其他地方或在不同大小的显示器上重用视图时，硬编码数字可能不正确。
 - 内容: Step 6
   提示: ''
   翻译: 步骤 6
@@ -54,9 +49,6 @@
     all of the new files that you added in this tutorial into a Badges group.
   提示: ''
   翻译: 为了使项目结构清晰，在继续下一个教程之前，将你在本教程中添加的所有新文件移动到 Badges 文件夹中。
-- 内容: Question 1 of 3
-  提示: ''
-  翻译: 第 1 个问题，共 3 个
 - 内容: To create the badge, you’ll start by defining data that you can use to draw
     a hexagon shape for the badge’s background.
   提示: ''
@@ -221,10 +213,6 @@
     to addLine(to:) begin a line at the previous point and continue to the new point.
   提示: ''
   翻译: addLine(to:) 方法接受一个点并绘制它。连续调用  addLine(to:) 的从前一个点连线到下一个点，最终形成一个形状。
-- 内容: You use GeometryReader to automatically identify the type and position of shape
-    views in your app’s view hierarchy, such as Circle.
-  提示: ''
-  翻译: 你使用 GeometryReader 来自动识别应用程序视图层次结构中形状视图的类型和位置，例如 Circle。
 - 内容: Drawing Paths and Shapes
   提示: ''
   翻译: ''
@@ -253,10 +241,6 @@
     select Swift File from the iOS Templates sheet, and click Next.
   提示: ''
   翻译: 在导航窗格中选择 View 文件夹后，选择“File”>“New”>“File”，从“iOS Templates”表中选择“Swift File”，然后单击“Next”。
-- 内容: You use GeometryReader to divide the parent view into a grid that you use to
-    lay out views onscreen.
-  提示: ''
-  翻译: 你使用 GeometryReader 将父视图划分为一个网格，你可以使用该网格在屏幕上布置视图。
 - 内容: Step 4
   提示: ''
   翻译: 步骤 4
@@ -264,9 +248,6 @@
     icon and creates a corresponding item in the catalog.
   提示: ''
   翻译: Xcode会识别该文件夹包含应用程序图标的所有不同尺寸，并且在目录中创建对应的项。
-- 内容: What is the purpose of GeometryReader?
-  提示: ''
-  翻译: GeometryReader 的用途是什么？
 - 内容: Step 9
   提示: ''
   翻译: 步骤 9

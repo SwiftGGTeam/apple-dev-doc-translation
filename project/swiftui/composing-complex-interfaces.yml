@@ -43,9 +43,6 @@
 - 内容: Check Your Understanding
   提示: ''
   翻译: ''
-- 内容: ContentView
-  提示: ''
-  翻译: ContentView
 - 内容: Create a Category Row
   提示: ''
   翻译: 创建一个横向滚动显示的类别组
@@ -165,9 +162,6 @@
 - 内容: Step 1
   提示: ''
   翻译: 步骤 1
-- 内容: Landmarks
-  提示: ''
-  翻译: Landmarks
 - 内容: Start by reading category data from the landmarkData.json file.
   提示: ''
   翻译: 首先从 landmarkData.json 文件中读取分类数据。
@@ -191,12 +185,6 @@
 - 内容: Give each tab a label.
   提示: ''
   翻译: 为每个底部标签添加文本和图标。
-- 内容: Which view is the root view for the Landmarks app?
-  提示: ''
-  翻译: Landmarks 应用的根视图是哪个？
-- 内容: Question 1 of 3
-  提示: ''
-  翻译: 问题 1（共 3 个问题）
 - 内容: In ModelData.swift, add a computed categories dictionary, with category names
     as keys, and an array of associated landmarks for each key.
   提示: ''
@@ -237,9 +225,6 @@
 - 内容: Step 2
   提示: ''
   翻译: 步骤 2
-- 内容: LandmarksApp
-  提示: ''
-  翻译: LandmarksApp
 - 内容: Create a Category List
   提示: ''
   翻译: 创建一个类别列表

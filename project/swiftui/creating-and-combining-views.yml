@@ -134,12 +134,6 @@
     to change or remove a modifier, Xcode updates your code immediately to match.
   提示: ''
   翻译: 视图的修改始终来源于你的代码。当使用检查器更改或删除修饰符时，Xcode 会立即更新你的源代码来匹配你的修改。
-- 内容: When creating a custom SwiftUI view, where do you declare the view’s layout?
-  提示: ''
-  翻译: 汉语翻译
-- 内容: In the layoutSubviews() method.
-  提示: ''
-  翻译: 汉语翻译
 - 内容: When you apply a modifier to a layout view like a stack, SwiftUI applies the
     modifier to all the elements contained in the group.
   提示: ''
@@ -304,15 +298,9 @@
 - 内容: These adjustments make room for the text by moving the image upwards.
   提示: ''
   翻译: 向上调整图片来为文本腾出空间。
-- 内容: In the view’s initializer.
-  提示: ''
-  翻译: 在这个视图的初始化器中
 - 内容: In the Project navigator, select LandmarksApp.swift.
   提示: ''
   翻译: 在左侧的项目导航栏中，点击 LandmarksApp.swift 文件。
-- 内容: In the body property.
-  提示: ''
-  翻译: 汉语翻译
 - 内容: The popover shows different attributes that you can customize, depending on
     the type of view you inspect.
   提示: ''
@@ -360,13 +348,6 @@
 - 内容: Switch the border color to white.
   提示: ''
   翻译: 将边框颜色切换成白色
-- 内容: With the basic landmark detail view set up, you need to provide a way for users
-    to see the full list of landmarks, and to view the details about each location.
-  提示: ''
-  翻译: 汉语翻译
-- 内容: Question 1 of 4
-  提示: ''
-  翻译: 汉语翻译
 - 内容: Edit the VStack initializer to align the views by their leading edges.
   提示: ''
   翻译: 编辑 VStack 初始化方法，让文本居左对齐。

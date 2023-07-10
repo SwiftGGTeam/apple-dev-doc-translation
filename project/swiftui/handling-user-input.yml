@@ -38,9 +38,6 @@
 - 内容: "\x01Step 7"
   提示: ''
   翻译: 步骤 7
-- 内容: Which of the following passes data downward in the view hierarchy?
-  提示: ''
-  翻译: 以下哪项在视图层次结构中向下传递数据？
 - 内容: Users receive a badge whenever they visit a landmark in their list. Of course,
     for a user to receive a badge, you’ll need to create one. This tutorial takes
     you through the process of creating a badge by combining paths and shapes, which
@@ -54,9 +51,6 @@
     false.
   提示: ''
   翻译: 添加一个名为 showFavoritesOnly 的 @State 属性，初始值设置为 false。
-- 内容: Question 1 of 3
-  提示: ''
-  翻译: 第 1 个问题，共 3 个
 - 内容: Section 1
   提示: ''
   翻译: 第 1 节
@@ -294,9 +288,6 @@
     create a few more groups.
   提示: ''
   翻译: 随着项目的增长，我们有必要给文件进行结构化管理。 在继续之前，再创建几个文件夹。
-- 内容: The @EnvironmentObject attribute.
-  提示: ''
-  翻译: '@EnvironmentObject 属性。'
 - 内容: Collect the general purpose CircleImage.swift, MapView.swift, and FavoriteButton.swift,
     into a Helpers group, and the landmark views into a Landmarks group.
   提示: ''
@@ -344,9 +335,6 @@
     when you run the app in the simulator or on a device.
   提示: ''
   翻译: 接下来，当你在模拟器或设备上运行应用程序时，你将更新 App 文件将模型对象放入环境中。
-- 内容: The environmentObject(_:) modifier.
-  提示: ''
-  翻译: environmentObject(_:) 修饰符。
 - 内容: Handling User Input
   提示: ''
   翻译: ''

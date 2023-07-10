@@ -70,9 +70,6 @@
     only about the image itself.
   提示: ''
   翻译: 你将属性设置为私有，因为 Landmarks 结构的使用方只关心图像本身，不需要知道图片名称。
-- 内容: UITableView
-  提示: ''
-  翻译: UITableView
 - 内容: Call the navigationTitle(_:) modifier method to set the title of the navigation
     bar when displaying the list.
   提示: ''
@@ -127,10 +124,6 @@
 - 内容: Building Lists and Navigation
   提示: ''
   翻译: ''
-- 内容: In addition to List, which of these types presents a dynamic list of views from
-    a collection?
-  提示: ''
-  翻译: 除了 List 之外，以下哪种类型可以从集合中呈现动态视图列表？
 - 内容: Choose File > New > File to create a new Swift file in your project, and name
     it Landmark.swift.
   提示: ''
@@ -400,9 +393,6 @@
     mode. Click the Live Preview button and tap a landmark to visit the detail page.
   提示: ''
   翻译: 你可以直接在预览中尝试导航，方法是切换到实时模式。点击实时预览按钮，点击一个地标来访问详细页面。
-- 内容: Question 1 of 4
-  提示: ''
-  翻译: 问题 1/4
 - 内容: Define a Landmark structure with a few properties matching names of some of
     the keys in the landmarkData.json data file.
   提示: ''
@@ -455,9 +445,6 @@
     the previews that are most helpful to you.
   提示: ''
   翻译: 你可以自定义预览提供类返回的内容，来呈现对你最有帮助的预览。
-- 内容: Group
-  提示: ''
-  翻译: Group
 - 内容: Complete the row by adding an image before the text view, and a spacer after
     it.
   提示: ''
@@ -475,9 +462,6 @@
 - 内容: Section 3
   提示: ''
   翻译: 第 3 节
-- 内容: ForEach
-  提示: ''
-  翻译: ForEach
 - 内容: Step 1
   提示: ''
   翻译: 步骤 1
