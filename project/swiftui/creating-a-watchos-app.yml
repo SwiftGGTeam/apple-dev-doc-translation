@@ -103,15 +103,9 @@
     on all supported device sizes.
   提示: ''
   翻译: 通过针对最大和最小的表盘进行测试，你可以了解你的应用程序自适应的效果。 和之前一样，你应该在所有支持的设备尺寸上测试你的用户界面。
-- 内容: Watch App for iOS App
-  提示: ''
-  翻译: 适用于 iOS 应用程序的手表应用程序
 - 内容: Note
   提示: ''
   翻译: 笔记
-- 内容: Watch App
-  提示: ''
-  翻译: 手表应用
 - 内容: When Apple Watch receives a notification, it looks for a scene in your app associated
     with the notification’s category.
   提示: ''
@@ -218,9 +212,6 @@
 - 内容: Select the Landmarks-Watch (Notification) scheme, and build and run your app.
   提示: ''
   翻译: 选择 Landmarks-Watch (Notification) 方案，编译并运行你的应用程序。
-- 内容: Question 1 of 2
-  提示: ''
-  翻译: 第 1 个问题，共 2 个
 - 内容: This scales the circle image to match the display’s width and ensures the landmark
     name is visible below the circle image.
   提示: ''
@@ -277,10 +268,6 @@
 - 内容: Select the WatchLandmarks scheme.
   提示: ''
   翻译: 选择 WatchLandmarks 方案。
-- 内容: Which application template do you use when adding a watchOS target to an iOS
-    project?
-  提示: ''
-  翻译: 将 watchOS 目标添加到 iOS 项目时，你使用哪个应用程序模板？
 - 内容: This makes the symbols you selected in the previous steps available to your
     watchOS app.
   提示: ''
@@ -303,9 +290,6 @@
     structure.
   提示: ''
   翻译: 将 modelData、landmark 和 landmarkIndex 属性添加到新的 LandmarkDetail 结构体中。
-- 内容: Game App
-  提示: ''
-  翻译: 游戏应用
 - 内容: Creating a watchOS App
   提示: ''
   翻译: ''

@@ -6,9 +6,6 @@
     view.
   提示: ''
   翻译: 接下来，你将创建一个自定义视图来呈现你的 UIViewControllerRepresentable 视图。
-- 内容: Which protocol do you use to bridge UIKit view controllers into SwiftUI?
-  提示: ''
-  翻译: 你使用哪种协议将 UIKit 视图控制器桥接到 SwiftUI 中？
 - 内容: Because SwiftUI calls this method whenever a page switching animation completes,
     you can find the index of the current view controller and update the binding.
   提示: ''
@@ -166,12 +163,6 @@
 - 内容: Tip
   提示: ''
   翻译: 提示
-- 内容: UIViewRepresentable
-  提示: ''
-  翻译: UIViewRepresentable
-- 内容: Question 1 of 2
-  提示: ''
-  翻译: 第 1 个问题，共 2 个
 - 内容: Add a Custom Page Control
   提示: ''
   翻译: 添加自定义页面控件
@@ -197,9 +188,6 @@
     the @State property’s value.
   提示: ''
   翻译: 添加具有 currentPage 属性的文本视图，以便你可以观察 @State 属性的值。
-- 内容: UIHostingController
-  提示: ''
-  翻译: UIHostingController
 - 内容: In addition to declaring the @Binding property, you also update the call to
     setViewControllers(_:direction:animated:), passing the value of the currentPage
     binding.
@@ -235,9 +223,6 @@
   提示: ''
   翻译: 在几个简短的步骤中，你已经完成了很多工作 —— PageViewController 使用 UIPageViewController 来显示来自 SwiftUI
     视图的内容。 现在是时候启用滑动交互以从一个页面移动到另一个页面了。
-- 内容: UIViewControllerRepresentable
-  提示: ''
-  翻译: UIViewControllerRepresentable
 - 内容: Creating a watchOS App
   提示: ''
   翻译: ''
