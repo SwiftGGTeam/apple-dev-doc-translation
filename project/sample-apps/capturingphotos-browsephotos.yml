@@ -1,239 +1,165 @@
-- 内容: Note
+- 内容: 'Note'
   提示: ''
   翻译: ''
-- 内容: Fetching the Photo Assets
+- 内容: 'Fetching the Photo Assets'
   提示: ''
   翻译: ''
-- 内容: You use a lazy vertical grid (LazyVGrid) to display your photos as items in
-    a grid layout. Because the layout uses a vertical grid, you only need to decide
-    how many columns you want and the spacing between each item. After the grid has
-    the number of columns, it expands vertically to add enough rows for displaying
-    all of your photos.
+- 内容: 'You use a lazy vertical grid (LazyVGrid) to display your photos as items in a grid layout. Because the layout uses a vertical grid, you only need to decide how many columns you want and the spacing between each item. After the grid has the number of columns, it expands vertically to add enough rows for displaying all of your photos.'
   提示: ''
   翻译: ''
-- 内容: Your result closure looks for an image in the result. If it finds one, it updates
-    your image property.
+- 内容: 'Your result closure looks for an image in the result. If it finds one, it updates your image property.'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: Enjoy taking photos? Most of us do, and it’s easy to end up with hundreds or
-    thousands of photos in your library. 🏞
+- 内容: 'Enjoy taking photos? Most of us do, and it’s easy to end up with hundreds or thousands of photos in your library. 🏞'
   提示: ''
   翻译: ''
-- 内容: Using the Photo Collection
+- 内容: 'Using the Photo Collection'
   提示: ''
   翻译: ''
-- 内容: When you open the gallery, you’ll no longer see the viewfinder, so there’s no
-    need to keep updating it. Instead, you’d rather concentrate the device’s performance
-    on displaying your photos. To control when the camera’s preview stream is active,
-    use the navigation link’s onAppear(perform:) modifier to pause it when the gallery
-    appears, and onDisappear(perform:) to resume it again when you navigate back to
-    the camera.
+- 内容: 'When you open the gallery, you’ll no longer see the viewfinder, so there’s no need to keep updating it. Instead, you’d rather concentrate the device’s performance on displaying your photos. To control when the camera’s preview stream is active, use the navigation link’s onAppear(perform:) modifier to pause it when the gallery appears, and onDisappear(perform:) to resume it again when you navigate back to the camera.'
   提示: ''
   翻译: ''
-- 内容: Each item in your photo collection is known as a photo asset. Find out how to
-    fetch those assets.
+- 内容: 'Each item in your photo collection is known as a photo asset. Find out how to fetch those assets.'
   提示: ''
   翻译: ''
-- 内容: A view can use its task(priority:_:) modifier to run some code asynchronously
-    whenever the view loads.
+- 内容: 'A view can use its task(priority:_:) modifier to run some code asynchronously whenever the view loads.'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: Tip
+- 内容: 'Tip'
   提示: ''
   翻译: ''
-- 内容: The photoItemView(asset:) method creates a view that displays a small image
-    thumbnail for a photo asset. You’ll use this view as the label for the navigation
-    link, displaying each link as a thumbnail-sized image of the photo.
+- 内容: 'The photoItemView(asset:) method creates a view that displays a small image thumbnail for a photo asset. You’ll use this view as the label for the navigation link, displaying each link as a thumbnail-sized image of the photo.'
   提示: ''
   翻译: ''
-- 内容: In your camera view, use a navigation link to take you to your photo gallery.
-    A navigation link is just like a button — you can even give it a label and an
-    icon. You place this button to the left of the shutter button.
+- 内容: 'In your camera view, use a navigation link to take you to your photo gallery. A navigation link is just like a button — you can even give it a label and an icon. You place this button to the left of the shutter button.'
   提示: ''
   翻译: ''
-- 内容: Why lazy? Well, if the grid is larger than its containing view, the view only
-    displays the items that are currently visible. This “laziness” actually enhances
-    the performance of your app, especially as you scroll through the grid of photos.
+- 内容: 'Why lazy? Well, if the grid is larger than its containing view, the view only displays the items that are currently visible. This “laziness” actually enhances the performance of your app, especially as you scroll through the grid of photos.'
   提示: ''
   翻译: ''
-- 内容: You could use a fixed number of columns in your grid, but a more responsive
-    approach is to display as many columns as you can, depending on the width of the
-    view. This creates a much better experience as people resize your app. To create
-    a grid that adapts to the width of your view, define an adaptive GridItem and
-    specify the size and spacing you want it to maintain.
+- 内容: 'You could use a fixed number of columns in your grid, but a more responsive approach is to display as many columns as you can, depending on the width of the view. This creates a much better experience as people resize your app. To create a grid that adapts to the width of your view, define an adaptive GridItem and specify the size and spacing you want it to maintain.'
   提示: ''
   翻译: ''
-- 内容: Your view has an image state property ready to hold the image after loading
-    it. It’s an optional type — Image? — because you want it to start off without
-    any value.
+- 内容: 'Your view has an image state property ready to hold the image after loading it. It’s an optional type — Image? — because you want it to start off without any value.'
   提示: ''
   翻译: ''
-- 内容: Displaying a Photo
+- 内容: 'Displaying a Photo'
   提示: ''
   翻译: ''
-- 内容: Your result closure receives one or more calls from the cache. If the cache
-    already contains the image you requested, it immediately calls your closure with
-    the image in its result. If the cache doesn’t have the requested image, then it
-    loads the image from the photo asset and caches it. While loading the image, the
-    cache may first call your closure with a low-resolution image, before finally
-    delivering the high-resolution image in the result.
+- 内容: 'Your result closure receives one or more calls from the cache. If the cache already contains the image you requested, it immediately calls your closure with the image in its result. If the cache doesn’t have the requested image, then it loads the image from the photo asset and caches it. While loading the image, the cache may first call your closure with a low-resolution image, before finally delivering the high-resolution image in the result.'
   提示: ''
   翻译: ''
-- 内容: You use a PhotoCollectionView to display your photos in a scrolling grid, with
-    the most recent photos at the top.
+- 内容: 'You use a PhotoCollectionView to display your photos in a scrolling grid, with the most recent photos at the top.'
   提示: ''
   翻译: ''
-- 内容: 'Your data model’s photoCollection has a photoAssets property that enables use
-    of the photo assets collection just like you would an array. You can fetch a photo
-    asset using its index: photoAssets[4], or use photoAssets.count to get the number
-    of photos in the collection.'
+- 内容: 'Your data model’s photoCollection has a photoAssets property that enables use of the photo assets collection just like you would an array. You can fetch a photo asset using its index: photoAssets[4], or use photoAssets.count to get the number of photos in the collection.'
   提示: ''
   翻译: ''
-- 内容: Browse the photos in your photo library.
+- 内容: 'Browse the photos in your photo library.'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Step 8
+- 内容: 'Step 8'
   提示: ''
   翻译: ''
-- 内容: When you tap or click a navigation link, SwiftUI takes you to another view —
-    in this case, the photo collection view — that you use to display your photo gallery.
-    If you use navigation links within a NavigationStack, SwiftUI manages the presentation
-    of your views so you can easily navigate between them.
+- 内容: 'When you tap or click a navigation link, SwiftUI takes you to another view — in this case, the photo collection view — that you use to display your photo gallery. If you use navigation links within a NavigationStack, SwiftUI manages the presentation of your views so you can easily navigate between them.'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: Learn about the photo collection in your data model and how it provides the
-    photos for your gallery.
+- 内容: 'Learn about the photo collection in your data model and how it provides the photos for your gallery.'
   提示: ''
   翻译: ''
-- 内容: Learn how the photo view loads and displays your photo.
+- 内容: 'Learn how the photo view loads and displays your photo.'
   提示: ''
   翻译: ''
-- 内容: You’ll notice that photoAssets is a published property of PhotoCollection, which
-    is an observable object. This means that you can respond to changes in the photo
-    assets, such as when photos are added or deleted.
+- 内容: 'You’ll notice that photoAssets is a published property of PhotoCollection, which is an observable object. This means that you can respond to changes in the photo assets, such as when photos are added or deleted.'
   提示: ''
   翻译: ''
-- 内容: Step 9
+- 内容: 'Step 9'
   提示: ''
   翻译: ''
-- 内容: This is where you add code to request a high-resolution image from the cache
-    for the photo asset, specifying the size you want. You also provide the cache
-    with a closure that contains code it can call when it has a result.
+- 内容: 'This is where you add code to request a high-resolution image from the cache for the photo asset, specifying the size you want. You also provide the cache with a closure that contains code it can call when it has a result.'
   提示: ''
   翻译: ''
-- 内容: Find out how to navigate to the photo gallery and connect it to your photo library.
+- 内容: 'Find out how to navigate to the photo gallery and connect it to your photo library.'
   提示: ''
   翻译: ''
-- 内容: Recognizing Gestures with Machine Learning
+- 内容: 'Recognizing Gestures with Machine Learning'
   提示: ''
   翻译: ''
-- 内容: Create a NavigationLink for each grid item that, when tapped or clicked, displays
-    the individual photo at full size using the destination PhotoView initialized
-    with the photo asset.
+- 内容: 'Create a NavigationLink for each grid item that, when tapped or clicked, displays the individual photo at full size using the destination PhotoView initialized with the photo asset.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: You also initialize the view with a cache property that holds a reference to
-    your image cache. You can request an image of a specified size from the image
-    cache. After loading the image from the photo asset, the cache delivers it back
-    to you. The image cache also keeps recently-requested images in memory, so it
-    doesn’t have to reload them if you request them again.
+- 内容: 'You also initialize the view with a cache property that holds a reference to your image cache. You can request an image of a specified size from the image cache. After loading the image from the photo asset, the cache delivers it back to you. The image cache also keeps recently-requested images in memory, so it doesn’t have to reload them if you request them again.'
   提示: ''
   翻译: ''
-- 内容: Inside your grid, use ForEach to iterate over the photo assets in your collection
-    and generate a view for each asset — these views populate your grid. Because your
-    grid is lazy, as you scroll, ForEach only operates on the visible photo assets.
+- 内容: 'Inside your grid, use ForEach to iterate over the photo assets in your collection and generate a view for each asset — these views populate your grid. Because your grid is lazy, as you scroll, ForEach only operates on the visible photo assets.'
   提示: ''
   翻译: ''
-- 内容: Browsing Your Photos
+- 内容: 'Browsing Your Photos'
   提示: ''
   翻译: ''
-- 内容: Navigating to the Photo Gallery
+- 内容: 'Navigating to the Photo Gallery'
   提示: ''
   翻译: ''
-- 内容: When it comes to displaying a photo on its own, you’ll use PhotoView. In your
-    photo view, you display a high-resolution image that you request from the photo.
-    You also have an overlay with buttons for favoriting or deleting the photo.
+- 内容: 'When it comes to displaying a photo on its own, you’ll use PhotoView. In your photo view, you display a high-resolution image that you request from the photo. You also have an overlay with buttons for favoriting or deleting the photo.'
   提示: ''
   翻译: ''
-- 内容: Step 7
+- 内容: 'Step 7'
   提示: ''
   翻译: ''
-- 内容: By passing your model’s photoCollection to the PhotoCollectionView when you
-    initialize it, you provide the collection of photos that you want to display in
-    your gallery.
+- 内容: 'By passing your model’s photoCollection to the PhotoCollectionView when you initialize it, you provide the collection of photos that you want to display in your gallery.'
   提示: ''
   翻译: ''
-- 内容: Step 10
+- 内容: 'Step 10'
   提示: ''
   翻译: ''
-- 内容: Discover how to display your photos in a scrolling grid.
+- 内容: 'Discover how to display your photos in a scrolling grid.'
   提示: ''
   翻译: ''
-- 内容: You can also iterate over the assets in photoAssets using a loop. You’ll find
-    this incredibly useful for building your gallery.
+- 内容: 'You can also iterate over the assets in photoAssets using a loop. You’ll find this incredibly useful for building your gallery.'
   提示: ''
   翻译: ''
-- 内容: When you create your PhotoCollectionView, the photoCollection property initializes
-    with a reference to your model’s photoCollection. It provides all of the data
-    you need to build your photo gallery. By making photoCollection an observed object,
-    SwiftUI updates your photo collection view in response to changes in the collection’s
-    published values.
+- 内容: 'When you create your PhotoCollectionView, the photoCollection property initializes with a reference to your model’s photoCollection. It provides all of the data you need to build your photo gallery. By making photoCollection an observed object, SwiftUI updates your photo collection view in response to changes in the collection’s published values.'
   提示: ''
   翻译: ''
-- 内容: However, if image doesn’t have a value, you use a ProgressView to display a
-    spinner as a placeholder. Look very carefully, and you might just see this spinner
-    when your view first loads, before the cache has a chance to load an image from
-    the photo asset.
+- 内容: 'However, if image doesn’t have a value, you use a ProgressView to display a spinner as a placeholder. Look very carefully, and you might just see this spinner when your view first loads, before the cache has a chance to load an image from the photo asset.'
   提示: ''
   翻译: ''
-- 内容: Imagine having hundreds — or thousands — of photos. Even with adaptive layout,
-    your grid can get very tall — way taller than the space you have to display it!
-    Make your grid scrollable by placing it inside a ScrollView. This makes it so
-    your grid can have as many rows as it needs, and you’ll be able to scroll up and
-    down through your photos.
+- 内容: 'Imagine having hundreds — or thousands — of photos. Even with adaptive layout, your grid can get very tall — way taller than the space you have to display it! Make your grid scrollable by placing it inside a ScrollView. This makes it so your grid can have as many rows as it needs, and you’ll be able to scroll up and down through your photos.'
   提示: ''
   翻译: ''
-- 内容: Your photo view has a photoAsset property for the photo it displays. You pass
-    this in when you initialize the PhotoView.
+- 内容: 'Your photo view has a photoAsset property for the photo it displays. You pass this in when you initialize the PhotoView.'
   提示: ''
   翻译: ''
-- 内容: Building the Photo Gallery
+- 内容: 'Building the Photo Gallery'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: Follow your photos as they’re retrieved from your photo library and displayed
-    in a scrolling gallery you can browse.
+- 内容: 'Follow your photos as they’re retrieved from your photo library and displayed in a scrolling gallery you can browse.'
   提示: ''
   翻译: ''
-- 内容: Your data model has a photoCollection property that can represent any collection
-    of items in your photo library. This could be your entire photo library, or just
-    one album, or even the results from a search. You can include all of your photos
-    in your library by initializing photoCollection with a Smart Album .smartAlbumUserLibrary.
+- 内容: 'Your data model has a photoCollection property that can represent any collection of items in your photo library. This could be your entire photo library, or just one album, or even the results from a search. You can include all of your photos in your library by initializing photoCollection with a Smart Album .smartAlbumUserLibrary.'
   提示: ''
   翻译: ''
-- 内容: Explore how to transform hand pose images from the camera into readable data
-    your machine learning model can use to predict gestures.
+- 内容: 'Explore how to transform hand pose images from the camera into readable data your machine learning model can use to predict gestures.'
   提示: ''
   翻译: ''
-- 内容: Because you’ve made image a state property, SwiftUI updates your view when its
-    value changes. If image contains a value, you unwrap the image and display it
-    in your view.
+- 内容: 'Because you’ve made image a state property, SwiftUI updates your view when its value changes. If image contains a value, you unwrap the image and display it in your view.'
   提示: ''
   翻译: ''

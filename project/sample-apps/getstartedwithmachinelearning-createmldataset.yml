@@ -1,77 +1,57 @@
-- 内容: Adding in these options before a training session creates four new images per
-    option you use. For example, using the .rotate option generates four new images
-    and applies a random rotation angle to the new images.
+- 内容: 'Creating Your Own Machine Learning Dataset'
   提示: ''
   翻译: ''
-- 内容: Automatically add image rotation, translation, and flipping to your training
-    dataset.
+- 内容: 'Learn how to create a dataset for your own machine learning model.'
   提示: ''
   翻译: ''
-- 内容: 'Here, the trainer is augmenting the training data by adding these three options:
-    .rotate, .translate, .horizontallyFlip. When you train a new ML model, the training
-    session automatically uses these augmentations to improve the model’s predictions.'
+- 内容: 'Collect and organize data for your model'
   提示: ''
   翻译: ''
-- 内容: Experiment
+- 内容: 'Tips for creating your own dataset.'
   提示: ''
   翻译: ''
-- 内容: Tips for creating your own dataset.
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: 'In Swift Playgrounds, you’ll be able to gather images of hand poses and label
-    them to your game’s moves: Rock ✊, Paper ✋, and Scissors ✌️. These labeled images
-    are the only examples that the machine’s “brain” has ever seen, so make sure they’re
-    representative of what each hand pose looks like.'
+- 内容: 'Computers are great at detecting data patterns when given enough examples. To create a hand pose machine learning (ML) model, you’ll need several images of hands.'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: ML engineers often need to examine their datasets to ensure they always contain
-    the best possible sources to return quality results. This process is called data
-    cleaning, and it’s one of the most important steps in ML since it dramatically
-    affects how your ML model performs.
+- 内容: 'In Swift Playgrounds, you’ll be able to gather images of hand poses and label them to your game’s moves: Rock ✊, Paper ✋, and Scissors ✌️. These labeled images are the only examples that the machine’s “brain” has ever seen, so make sure they’re representative of what each hand pose looks like.'
   提示: ''
   翻译: ''
-- 内容: Computers are great at detecting data patterns when given enough examples. To
-    create a hand pose machine learning (ML) model, you’ll need several images of
-    hands.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Collect and organize data for your model
+- 内容: 'ML engineers often need to examine their datasets to ensure they always contain the best possible sources to return quality results. This process is called data cleaning, and it’s one of the most important steps in ML since it dramatically affects how your ML model performs.'
   提示: ''
   翻译: ''
-- 内容: Now that you’ve learned how to collect datasets for ML models, try it yourself
-    by going to the Swift Playgrounds App to collect images and create a dataset for
-    use with your own personalized ML model!
+- 内容: 'Experiment'
   提示: ''
   翻译: ''
-- 内容: Collect your own dataset in Swift Playgrounds
+- 内容: 'Clean your dataset to ensure that the image contains a hand pose, that the pose isn’t too close to or far from the camera, that images aren’t mislabeled (like a Rock image accidentally labeled as Scissors), that the dataset doesn’t include any exact duplicate images, and that the dataset contains (roughly) equal amounts of images for each hand gesture.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'Increase the size of your training dataset artificially'
   提示: ''
   翻译: ''
-- 内容: Clean your dataset to ensure that the image contains a hand pose, that the pose
-    isn’t too close to or far from the camera, that images aren’t mislabeled (like
-    a Rock image accidentally labeled as Scissors), that the dataset doesn’t include
-    any exact duplicate images, and that the dataset contains (roughly) equal amounts
-    of images for each hand gesture.
+- 内容: 'Automatically add image rotation, translation, and flipping to your training dataset.'
   提示: ''
   翻译: ''
-- 内容: Increase the size of your training dataset artificially
+- 内容: 'Adding in these options before a training session creates four new images per option you use. For example, using the .rotate option generates four new images and applies a random rotation angle to the new images.'
   提示: ''
   翻译: ''
-- 内容: Creating Your Own Machine Learning Dataset
+- 内容: 'Here, the trainer is augmenting the training data by adding these three options: .rotate, .translate, .horizontallyFlip. When you train a new ML model, the training session automatically uses these augmentations to improve the model’s predictions.'
   提示: ''
   翻译: ''
-- 内容: If you don’t plan to use dozens of images to train the model, that’s OK. One
-    way you can increase your training dataset is by using MLImageClassifier.ImageAugmentationOptions.
+- 内容: 'Collect your own dataset in Swift Playgrounds'
   提示: ''
   翻译: ''
-- 内容: Learn how to create a dataset for your own machine learning model.
+- 内容: 'Now that you’ve learned how to collect datasets for ML models, try it yourself by going to the Swift Playgrounds App to collect images and create a dataset for use with your own personalized ML model!'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'If you don’t plan to use dozens of images to train the model, that’s OK. One way you can increase your training dataset is by using MLImageClassifier.ImageAugmentationOptions.'
   提示: ''
   翻译: ''

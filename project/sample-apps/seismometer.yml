@@ -1,428 +1,291 @@
-- 内容: Your device has sensors such as accelerometers and gyroscopes which sense its
-    motion and orientation. The Core Motion framework gives you access to data from
-    these and other sensors.
+- 内容: 'Seismometer'
   提示: ''
   翻译: ''
-- 内容: The updateMotionData() method does the core work of the motion detector. It’s
-    responsible for updating all published properties with current data from the sensors,
-    as well as calling the code in onUpdate.
+- 内容: 'Present dynamic data in custom views.'
   提示: ''
   翻译: ''
-- 内容: You can use an overlay to put content directly on top of a view. The overlay
-    occupies the same area as its parent view. In this overlay, a Spacer pushes a
-    small Circle to the bottom of a VStack so it aligns with the base of the needle.
+- 内容: 'Welcome to Seismometer.'
   提示: ''
   翻译: ''
-- 内容: The .number style has modifiers much like those for SwiftUI views. For example,
-    the .sign modifier lets you format the number so that it’s always preceded by
-    a sign, even when the number is positive. You can also use the .precision modifier
-    to specify exactly how many digits to use.
+- 内容: 'You can use your iPad to detect vibrations using its built-in motion sensors. This sample shows how to display vibration information in two formats: a needle and a line graph.'
   提示: ''
   翻译: ''
-- 内容: A CMMotionManager is the object that you use to get motion data from the sensors
-    in your iPad, such as the accelerometer. It gathers information from the sensors
-    and translates their data into values you can understand.
+- 内容: 'Try out Seismometer by placing your iPad on a flat surface and then jostling it a bit. Or you can hold your iPad and move it up and down slowly.'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'Motion Detector'
   提示: ''
   翻译: ''
-- 内容: The deviceMotion data may not be there in certain conditions. To see if the
-    data exists, try to assign deviceMotion to a variable or constant using if let.
-    If the motion data exists, it’s assigned to data and the code inside the braces
-    runs. Otherwise, it skips the entire if statement.
+- 内容: 'You can use the MotionDetector class to observe the motion of your device.'
   提示: ''
   翻译: ''
-- 内容: 'The LineGraph.swift file represents the main view of the seismometer. The initializer
-    for LineGraph has four parameters: the data to display, the maximum amount of
-    data in the graph, and the minimum and maximum values corresponding to its bottom
-    and top edges.'
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: The needle is just a rectangle with a .frame modifier to give it a narrow, tall
-    shape. It also uses the .foregroundColor modifier to adopt the app’s accent color.
-    Try changing the accent color of this sample to see how it affects the view.
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: Try commenting out the .clipped modifier to see what happens with the graph
-    display.
+- 内容: 'A CMMotionManager is the object that you use to get motion data from the sensors in your iPad, such as the accelerometer. It gathers information from the sensors and translates their data into values you can understand.'
   提示: ''
   翻译: ''
-- 内容: You use bindings to let other views control state properties. In this case,
-    you’re telling the slider it can update the value of sensitivity as the user interacts
-    with it.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: A unit point is useful for defining a point inside any view, regardless of its
-    size. This one defines the midpoint of a view (width-wise) at its bottom. Regardless
-    of the view’s size, the point is exactly at that location relative to the view’s
-    width and height.
+- 内容: 'The timer property stores a Timer instance. A timer waits for certain period of time, defined in the updateInterval property, before running some code. The MotionDetector uses the timer to update its pitch, roll, and zAcceleration values at regular intervals.'
   提示: ''
   翻译: ''
-- 内容: Step 8
+- 内容: 'Note'
   提示: ''
   翻译: ''
-- 内容: This code creates a new timer and schedules it to run. The updateInterval property
-    tells the timer how long to wait between updates, and repeats is set to true so
-    the timer runs forever until you stop it. (If you pass false to repeats, the timer
-    only runs once.) The block of code at the end of the line that reads { _ in is
-    the start of a closure that contains the code run by the timer. The closure calls
-    the updateMotionData() method.
+- 内容: 'Choose an update interval that makes sense for your app. For example, you’ll want a short update interval for the seismometers in this project because the interface presents real-time data as you move your iPad around.'
   提示: ''
   翻译: ''
-- 内容: Try out Seismometer by placing your iPad on a flat surface and then jostling
-    it a bit. Or you can hold your iPad and move it up and down slowly.
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: As you explore the seismometer, you’ll notice that the data can contain values
-    outside the minimum and maximum range, but they aren’t displayed because they
-    fall outside the view bounds.
+- 内容: 'These three properties store data for the tilt of your device in two dimensions (roll and pitch), as well as its vertical acceleration (zAcceleration).'
   提示: ''
   翻译: ''
-- 内容: The formatted() method operates on a number of basic types such as Date, Int,
-    and Double, all of which are commonly represented as strings in an app. Because
-    there are so many ways to format these strings, the formatted() method gives you
-    ways to customize how they’re represented. For example, does a number represent
-    a percentage, a simple value, or maybe a price?
+- 内容: 'These properties have a @Published property wrapper, which means that any SwiftUI view that depends on their values automatically updates when the values change. You make a view dependent on a published property by using that value in the view’s code. The NeedleSeismometer and GraphSeismometer samples use these properties to update when the MotionDetector detects changes to the values of roll, pitch, and zAcceleration.'
   提示: ''
   翻译: ''
-- 内容: Seismometer
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: The GraphSeismometer view displays a line graph of your device’s vibration.
-    It uses the zAcceleration data from a MotionDetector instance to detect vibration,
-    and translates that data into Y values in the graph; the X values represent time.
+- 内容: 'This property stores code that runs when the MotionDetector updates its motion data. If you want to execute custom actions when the motion data changes, you can put your own code into onUpdate in your instance of MotionDetector.'
   提示: ''
   翻译: ''
-- 内容: The amplification constant is useful for controlling the sensitivity of the
-    display. Try changing its value to see how that affects the needle.
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: 'The next three parameters control features of the slider. in: 0...1: specifies
-    the slider’s range of values, from minimum to maximum. Use the minimumValueLabel
-    and maximumValueLabel parameters to add labels at the left and right ends of the
-    slider, respectively.'
+- 内容: 'This method starts updating the motion detector.'
   提示: ''
   翻译: ''
-- 内容: Use the .rotationEffect modifier to rotate the rectangle for the needle, and
-    set the rotationAngle and needleAnchor properties to define the needle’s behavior.
-    You pass in rotationAngle as the first argument, which interprets the motion data
-    to calculate the correct needle angle.
+- 内容: 'Step 7'
   提示: ''
   翻译: ''
-- 内容: Step 12
+- 内容: 'Always use isDeviceMotionAvailable to verify that motion data is available before you try to access it.'
   提示: ''
   翻译: ''
-- 内容: A CMDeviceMotion instance represents device motion, stored in data. The CMDeviceMotion
-    class has quite a few properties for describing the input from the motion sensors.
-    Use the attitude property to get the device’s tilt in three directions. You may
-    be familiar with X, Y, and Z axes in 3D space, which relate to pitch, roll, and
-    yaw, respectively.
+- 内容: 'Step 8'
   提示: ''
   翻译: ''
-- 内容: The rotationAngle property returns the amount the needle rotates for a given
-    sensor reading. The rotationEffect property expects an Angle instance, so you
-    can create one using the zAcceleration property of the motion detector. The motion
-    detector represents upward acceleration with a negative number, but you’re multiplying
-    by -1 to make upward acceleration positive, and downward acceleration negative.
+- 内容: 'This method tells the CMMotionManager to start updating motion data.'
   提示: ''
   翻译: ''
-- 内容: Without this overlay, you’d get a plain rectangle that rotates at its base.
-    But to make things a little more polished, this overlay adds a small circle at
-    the bottom.
+- 内容: 'Step 9'
   提示: ''
   翻译: ''
-- 内容: Note
+- 内容: 'This code creates a new timer and schedules it to run. The updateInterval property tells the timer how long to wait between updates, and repeats is set to true so the timer runs forever until you stop it. (If you pass false to repeats, the timer only runs once.) The block of code at the end of the line that reads { _ in is the start of a closure that contains the code run by the timer. The closure calls the updateMotionData() method.'
   提示: ''
   翻译: ''
-- 内容: The maxData property represents the maximum number of data points your graph
-    shows. This is vital, because the seismometer updates 100 times per second, which
-    produces a lot of data, and you don’t want to keep that around forever. When you
-    accumulate enough data, you’ll start deleting the old ones.
+- 内容: 'Step 10'
   提示: ''
   翻译: ''
-- 内容: These properties have a @Published property wrapper, which means that any SwiftUI
-    view that depends on their values automatically updates when the values change.
-    You make a view dependent on a published property by using that value in the view’s
-    code. The NeedleSeismometer and GraphSeismometer samples use these properties
-    to update when the MotionDetector detects changes to the values of roll, pitch,
-    and zAcceleration.
+- 内容: 'The updateMotionData() method does the core work of the motion detector. It’s responsible for updating all published properties with current data from the sensors, as well as calling the code in onUpdate.'
   提示: ''
   翻译: ''
-- 内容: The argument to formatted() is a format style. The .number style gives you a
-    string that describes this Double value as a simple number, as opposed to a percentage
-    or a price.
+- 内容: 'Step 11'
   提示: ''
   翻译: ''
-- 内容: Learn how to display the vibration of your device as an animated line graph.
+- 内容: 'The deviceMotion data may not be there in certain conditions. To see if the data exists, try to assign deviceMotion to a variable or constant using if let. If the motion data exists, it’s assigned to data and the code inside the braces runs. Otherwise, it skips the entire if statement.'
   提示: ''
   翻译: ''
-- 内容: The graphMaxValueMostSensitive property represents the maximum value the graph
-    displays at its most sensitive, and graphMaxValueLeastSensitive represents the
-    maximum value displayed at its least sensitive. Along with sensitivity, these
-    properties control the graph’s display.
+- 内容: 'Step 12'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'A CMDeviceMotion instance represents device motion, stored in data. The CMDeviceMotion class has quite a few properties for describing the input from the motion sensors. Use the attitude property to get the device’s tilt in three directions. You may be familiar with X, Y, and Z axes in 3D space, which relate to pitch, roll, and yaw, respectively.'
   提示: ''
   翻译: ''
-- 内容: Recognizing Gestures
+- 内容: 'Step 13'
   提示: ''
   翻译: ''
-- 内容: To store a history of motion values to draw the line graph, assign the code
-    inside the braces to the onUpdate property. This tells the motion detector to
-    run that code whenever there’s new data to display. This code takes the latest
-    motion data and adds it to the data array.
+- 内容: 'Use the userAcceleration property to get the device’s acceleration after accounting for the downward pull of gravity. If your device is still, this number is 0. However, the value changes to a negative number when you lift your iPad upward, or to a positive number when you move your iPad downward.'
   提示: ''
   翻译: ''
-- 内容: 'You can use your iPad to detect vibrations using its built-in motion sensors.
-    This sample shows how to display vibration information in two formats: a needle
-    and a line graph.'
+- 内容: 'Step 14'
   提示: ''
   翻译: ''
-- 内容: The stop() method tells the CMMotionManager class to stop updating its values
-    by calling stopDeviceMotionUpdates(), then it stops the timer by calling invalidate().
+- 内容: 'You run the code in onUpdate just as you’d call any function, with a set of parentheses following its name.'
   提示: ''
   翻译: ''
-- 内容: This method returns a string that describes the value of a Double with a fixed
-    number of digits. You can pass in the number of integer digits and fraction digits
-    you want, or leave those arguments out for the default values of 2.
+- 内容: 'Step 15'
   提示: ''
   翻译: ''
-- 内容: The motionDetector property holds a MotionDetector instance. The motion detector
-    senses changes in your device’s motion and provides that data for use in your
-    code.
+- 内容: 'The stop() method tells the CMMotionManager class to stop updating its values by calling stopDeviceMotionUpdates(), then it stops the timer by calling invalidate().'
   提示: ''
   翻译: ''
-- 内容: The data property stores the seismometer data you’ll graph in this view as an
-    array of Double values. It includes a @State property wrapper because you want
-    the line graph to update whenever the data changes.
+- 内容: 'Step 16'
   提示: ''
   翻译: ''
-- 内容: Learn how the top-level view of the app passes motion data to its child views.
+- 内容: 'This deinitializer runs when a MotionDetector instance is about to go away. It’s important to clean up here; otherwise the timer continues to run even after the motion detector is gone.'
   提示: ''
   翻译: ''
-- 内容: The NeedleSeismometer view displays a needle that moves as your device vibrates.
-    It uses the zAcceleration data from a MotionDetector instance to detect vibration,
-    and translates that data into left and right rotation of the needle.
+- 内容: 'Needle Seismometer'
   提示: ''
   翻译: ''
-- 内容: Step 10
+- 内容: 'Learn how to display a needle that registers the vibration of your device.'
   提示: ''
   翻译: ''
-- 内容: The needleAnchor property defines the point of rotation for the needle as a
-    UnitPoint. A unit point has x and y coordinates like a regular point, but their
-    values only range between 0 and 1.
+- 内容: 'The NeedleSeismometer view displays a needle that moves as your device vibrates. It uses the zAcceleration data from a MotionDetector instance to detect vibration, and translates that data into left and right rotation of the needle.'
   提示: ''
   翻译: ''
-- 内容: Double Extension
+- 内容: 'The motionDetector property holds a MotionDetector instance. The motion detector senses changes in your device’s motion and provides that data for use in your code.'
   提示: ''
   翻译: ''
-- 内容: You can use the .onAppear modifier to perform actions when this view first appears.
-    It’s the perfect place to start the motion detector. Use the .onDisappear modifier
-    to stop the detector when the view isn’t visible.
+- 内容: 'The property has an @EnvironmentObject property wrapper because this view expects the app to put a motion detector in the environment for it to use.'
   提示: ''
   翻译: ''
-- 内容: The detector property holds the MotionDetector instance that’s shared throughout
-    the app. The code annotates the property with @StateObject to indicate that SwiftUI
-    keeps track of its updates. You can share state objects with other views, but
-    this view is its owner.
+- 内容: 'The seismometer display is a vertical stack (VStack) with a rotating needle, text that displays the raw values from the sensor, and some instructions for people to follow.'
   提示: ''
   翻译: ''
-- 内容: The property has an @EnvironmentObject property wrapper because this view expects
-    the app to put a motion detector in the environment for it to use.
+- 内容: 'You can use a ZStack to layer views on top of each other. Here, the background view for the gauge goes underneath the needle itself. The background draws a semicircle with marks around its edge. Check out the code in GaugeBackground.swift if you’re curious how that’s done.'
   提示: ''
   翻译: ''
-- 内容: Step 7
+- 内容: 'The needle is just a rectangle with a .frame modifier to give it a narrow, tall shape. It also uses the .foregroundColor modifier to adopt the app’s accent color. Try changing the accent color of this sample to see how it affects the view.'
   提示: ''
   翻译: ''
-- 内容: The sensitivity property controls how sensitive the seismometer is to motion.
-    Sensitivity affects the line graph by expanding it vertically. The higher the
-    sensitivity, the larger the peaks and valleys will appear in the graph.
+- 内容: 'Use the .rotationEffect modifier to rotate the rectangle for the needle, and set the rotationAngle and needleAnchor properties to define the needle’s behavior. You pass in rotationAngle as the first argument, which interprets the motion data to calculate the correct needle angle.'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'By default, rotation happens around the center of a view; however, you can use the needleAnchor property as the second argument so the needle rotates at its base.'
   提示: ''
   翻译: ''
-- 内容: The modifier .aspectRatio gives it a square shape.
+- 内容: 'The rotationAngle property returns the amount the needle rotates for a given sensor reading. The rotationEffect property expects an Angle instance, so you can create one using the zAcceleration property of the motion detector. The motion detector represents upward acceleration with a negative number, but you’re multiplying by -1 to make upward acceleration positive, and downward acceleration negative.'
   提示: ''
   翻译: ''
-- 内容: Choose an update interval that makes sense for your app. For example, you’ll
-    want a short update interval for the seismometers in this project because the
-    interface presents real-time data as you move your iPad around.
+- 内容: 'Experiment'
   提示: ''
   翻译: ''
-- 内容: You can use the MotionDetector class to observe the motion of your device.
+- 内容: 'The amplification constant is useful for controlling the sensitivity of the display. Try changing its value to see how that affects the needle.'
   提示: ''
   翻译: ''
-- 内容: This method starts updating the motion detector.
+- 内容: 'The needleAnchor property defines the point of rotation for the needle as a UnitPoint. A unit point has x and y coordinates like a regular point, but their values only range between 0 and 1.'
   提示: ''
   翻译: ''
-- 内容: Welcome to Seismometer.
+- 内容: 'A unit point is useful for defining a point inside any view, regardless of its size. This one defines the midpoint of a view (width-wise) at its bottom. Regardless of the view’s size, the point is exactly at that location relative to the view’s width and height.'
   提示: ''
   翻译: ''
-- 内容: Step 11
+- 内容: 'Without this overlay, you’d get a plain rectangle that rotates at its base. But to make things a little more polished, this overlay adds a small circle at the bottom.'
   提示: ''
   翻译: ''
-- 内容: Graph Seismometer
+- 内容: 'You can use an overlay to put content directly on top of a view. The overlay occupies the same area as its parent view. In this overlay, a Spacer pushes a small Circle to the bottom of a VStack so it aligns with the base of the needle.'
   提示: ''
   翻译: ''
-- 内容: Here’s where the maxData property comes into play. After you’ve reached the
-    limit, you’ll drop the first item in the array (the oldest data point) and make
-    a new array out of the result.
+- 内容: 'Graph Seismometer'
   提示: ''
   翻译: ''
-- 内容: Motion Detector
+- 内容: 'Learn how to display the vibration of your device as an animated line graph.'
   提示: ''
   翻译: ''
-- 内容: These three properties store data for the tilt of your device in two dimensions
-    (roll and pitch), as well as its vertical acceleration (zAcceleration).
+- 内容: 'The GraphSeismometer view displays a line graph of your device’s vibration. It uses the zAcceleration data from a MotionDetector instance to detect vibration, and translates that data into Y values in the graph; the X values represent time.'
   提示: ''
   翻译: ''
-- 内容: Investigate using an extension on Double to format text in an easy to read way.
+- 内容: 'This property holds a MotionDetector instance. The motion detector senses changes in your device’s motion and provides that data for you to use in your code.'
   提示: ''
   翻译: ''
-- 内容: Always use isDeviceMotionAvailable to verify that motion data is available before
-    you try to access it.
+- 内容: 'The data property stores the seismometer data you’ll graph in this view as an array of Double values. It includes a @State property wrapper because you want the line graph to update whenever the data changes.'
   提示: ''
   翻译: ''
-- 内容: You can use an extension to create custom behaviors for existing types. Declaring
-    extension Double means you’re adding new capabilities to the Double type. When
-    you use a Double value, you can access anything defined in this extension.
+- 内容: 'The maxData property represents the maximum number of data points your graph shows. This is vital, because the seismometer updates 100 times per second, which produces a lot of data, and you don’t want to keep that around forever. When you accumulate enough data, you’ll start deleting the old ones.'
   提示: ''
   翻译: ''
-- 内容: 'This property represents the maximum value of the graph: the one that’s represented
-    by the top edge. The calculation uses the sensitivity properties declared above.'
+- 内容: 'The sensitivity property controls how sensitive the seismometer is to motion. Sensitivity affects the line graph by expanding it vertically. The higher the sensitivity, the larger the peaks and valleys will appear in the graph.'
   提示: ''
   翻译: ''
-- 内容: Step 16
+- 内容: 'The graphMaxValueMostSensitive property represents the maximum value the graph displays at its most sensitive, and graphMaxValueLeastSensitive represents the maximum value displayed at its least sensitive. Along with sensitivity, these properties control the graph’s display.'
   提示: ''
   翻译: ''
-- 内容: The SeismometerBrowser view displays the two options for seismometer display
-    in a list. When you choose a display from the list, the app displays that view.
-    The browser is a container for the other two views, so it also acts as the manager
-    of the MotionDetector instance that gathers motion data from the device.
+- 内容: 'Try changing these values to affect the range of sensitivity of the graph. (Note that graphMaxValueMostSensitive should always be less than graphMaxValueLeastSensitive.)'
   提示: ''
   翻译: ''
-- 内容: This property holds a MotionDetector instance. The motion detector senses changes
-    in your device’s motion and provides that data for you to use in your code.
+- 内容: 'This property represents the maximum value of the graph: the one that’s represented by the top edge. The calculation uses the sensitivity properties declared above.'
   提示: ''
   翻译: ''
-- 内容: By default, rotation happens around the center of a view; however, you can use
-    the needleAnchor property as the second argument so the needle rotates at its
-    base.
+- 内容: 'The LineGraph.swift file represents the main view of the seismometer. The initializer for LineGraph has four parameters: the data to display, the maximum amount of data in the graph, and the minimum and maximum values corresponding to its bottom and top edges.'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'As you explore the seismometer, you’ll notice that the data can contain values outside the minimum and maximum range, but they aren’t displayed because they fall outside the view bounds.'
   提示: ''
   翻译: ''
-- 内容: You run the code in onUpdate just as you’d call any function, with a set of
-    parentheses following its name.
+- 内容: 'These five modifiers configure the line graph display. The .clipped modifier prevents the line from drawing outside its frame. You can use .background to set the background color. By using .accentColor the display can adapt to your app’s theme. Using opacity makes the color less bold.'
   提示: ''
   翻译: ''
-- 内容: These five modifiers configure the line graph display. The .clipped modifier
-    prevents the line from drawing outside its frame. You can use .background to set
-    the background color. By using .accentColor the display can adapt to your app’s
-    theme. Using opacity makes the color less bold.
+- 内容: 'Try commenting out the .clipped modifier to see what happens with the graph display.'
   提示: ''
   翻译: ''
-- 内容: Needle Seismometer
+- 内容: 'You can curve the points of the graph by adding .cornerRadius to the line. Change the number to make the curves broader or narrower. The .padding modifier adds some space around the edges to keep it away from other views.'
   提示: ''
   翻译: ''
-- 内容: This property stores code that runs when the MotionDetector updates its motion
-    data. If you want to execute custom actions when the motion data changes, you
-    can put your own code into onUpdate in your instance of MotionDetector.
+- 内容: 'The modifier .aspectRatio gives it a square shape.'
   提示: ''
   翻译: ''
-- 内容: To give other views access to the motion detector, you can use the .environmentObject
-    modifier to add it to the app’s environment. Any child view of this view can use
-    it by declaring a property of the same type and annotating it with @EnvironmentObject.
+- 内容: 'Try changing the number to 2, or 0.3, to see how that affects the display.'
   提示: ''
   翻译: ''
-- 内容: Try changing the number to 2, or 0.3, to see how that affects the display.
+- 内容: 'The Slider control affects the sensitivity of the graph display. Its first parameter, value: $sensitivity, is a binding to the sensitivity state property.'
   提示: ''
   翻译: ''
-- 内容: This method tells the CMMotionManager to start updating motion data.
+- 内容: 'You use bindings to let other views control state properties. In this case, you’re telling the slider it can update the value of sensitivity as the user interacts with it.'
   提示: ''
   翻译: ''
-- 内容: This deinitializer runs when a MotionDetector instance is about to go away.
-    It’s important to clean up here; otherwise the timer continues to run even after
-    the motion detector is gone.
+- 内容: 'The next three parameters control features of the slider. in: 0...1: specifies the slider’s range of values, from minimum to maximum. Use the minimumValueLabel and maximumValueLabel parameters to add labels at the left and right ends of the slider, respectively.'
   提示: ''
   翻译: ''
-- 内容: Experiment
+- 内容: 'To store a history of motion values to draw the line graph, assign the code inside the braces to the onUpdate property. This tells the motion detector to run that code whenever there’s new data to display. This code takes the latest motion data and adds it to the data array.'
   提示: ''
   翻译: ''
-- 内容: Update shapes or other content in response to taps, rotations, or other Multi-Touch
-    gestures.
+- 内容: 'Append the zAcceleration of the device to the data array with every motion detector update. Use zAcceleration to chart up- and downward motion of the device. That makes the graph correspond visually to the movement of the device. When you lift your iPad, the line goes upward on the graph.'
   提示: ''
   翻译: ''
-- 内容: Step 13
+- 内容: 'Here’s where the maxData property comes into play. After you’ve reached the limit, you’ll drop the first item in the array (the oldest data point) and make a new array out of the result.'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'Seismometer Browser'
   提示: ''
   翻译: ''
-- 内容: Step 9
+- 内容: 'Learn how the top-level view of the app passes motion data to its child views.'
   提示: ''
   翻译: ''
-- 内容: Step 14
+- 内容: 'The SeismometerBrowser view displays the two options for seismometer display in a list. When you choose a display from the list, the app displays that view. The browser is a container for the other two views, so it also acts as the manager of the MotionDetector instance that gathers motion data from the device.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'The detector property holds the MotionDetector instance that’s shared throughout the app. The code annotates the property with @StateObject to indicate that SwiftUI keeps track of its updates. You can share state objects with other views, but this view is its owner.'
   提示: ''
   翻译: ''
-- 内容: Step 15
+- 内容: 'To give other views access to the motion detector, you can use the .environmentObject modifier to add it to the app’s environment. Any child view of this view can use it by declaring a property of the same type and annotating it with @EnvironmentObject.'
   提示: ''
   翻译: ''
-- 内容: 'The Slider control affects the sensitivity of the graph display. Its first
-    parameter, value: $sensitivity, is a binding to the sensitivity state property.'
+- 内容: 'You can use the .onAppear modifier to perform actions when this view first appears. It’s the perfect place to start the motion detector. Use the .onDisappear modifier to stop the detector when the view isn’t visible.'
   提示: ''
   翻译: ''
-- 内容: The timer property stores a Timer instance. A timer waits for certain period
-    of time, defined in the updateInterval property, before running some code. The
-    MotionDetector uses the timer to update its pitch, roll, and zAcceleration values
-    at regular intervals.
+- 内容: 'Double Extension'
   提示: ''
   翻译: ''
-- 内容: Seismometer Browser
+- 内容: 'Investigate using an extension on Double to format text in an easy to read way.'
   提示: ''
   翻译: ''
-- 内容: You can use a ZStack to layer views on top of each other. Here, the background
-    view for the gauge goes underneath the needle itself. The background draws a semicircle
-    with marks around its edge. Check out the code in GaugeBackground.swift if you’re
-    curious how that’s done.
+- 内容: 'You can use an extension to create custom behaviors for existing types. Declaring extension Double means you’re adding new capabilities to the Double type. When you use a Double value, you can access anything defined in this extension.'
   提示: ''
   翻译: ''
-- 内容: You can curve the points of the graph by adding .cornerRadius to the line. Change
-    the number to make the curves broader or narrower. The .padding modifier adds
-    some space around the edges to keep it away from other views.
+- 内容: 'This method returns a string that describes the value of a Double with a fixed number of digits. You can pass in the number of integer digits and fraction digits you want, or leave those arguments out for the default values of 2.'
   提示: ''
   翻译: ''
-- 内容: Present dynamic data in custom views.
+- 内容: 'The formatted() method operates on a number of basic types such as Date, Int, and Double, all of which are commonly represented as strings in an app. Because there are so many ways to format these strings, the formatted() method gives you ways to customize how they’re represented. For example, does a number represent a percentage, a simple value, or maybe a price?'
   提示: ''
   翻译: ''
-- 内容: Use the userAcceleration property to get the device’s acceleration after accounting
-    for the downward pull of gravity. If your device is still, this number is 0. However,
-    the value changes to a negative number when you lift your iPad upward, or to a
-    positive number when you move your iPad downward.
+- 内容: 'The argument to formatted() is a format style. The .number style gives you a string that describes this Double value as a simple number, as opposed to a percentage or a price.'
   提示: ''
   翻译: ''
-- 内容: Learn how to display a needle that registers the vibration of your device.
+- 内容: 'The .number style has modifiers much like those for SwiftUI views. For example, the .sign modifier lets you format the number so that it’s always preceded by a sign, even when the number is positive. You can also use the .precision modifier to specify exactly how many digits to use.'
   提示: ''
   翻译: ''
-- 内容: Append the zAcceleration of the device to the data array with every motion detector
-    update. Use zAcceleration to chart up- and downward motion of the device. That
-    makes the graph correspond visually to the movement of the device. When you lift
-    your iPad, the line goes upward on the graph.
+- 内容: 'Recognizing Gestures'
   提示: ''
   翻译: ''
-- 内容: Try changing these values to affect the range of sensitivity of the graph. (Note
-    that graphMaxValueMostSensitive should always be less than graphMaxValueLeastSensitive.)
+- 内容: 'Update shapes or other content in response to taps, rotations, or other Multi-Touch gestures.'
   提示: ''
   翻译: ''
-- 内容: The seismometer display is a vertical stack (VStack) with a rotating needle,
-    text that displays the raw values from the sensor, and some instructions for people
-    to follow.
+- 内容: 'Your device has sensors such as accelerometers and gyroscopes which sense its motion and orientation. The Core Motion framework gives you access to data from these and other sensors.'
   提示: ''
   翻译: ''

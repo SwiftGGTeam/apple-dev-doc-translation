@@ -1,285 +1,213 @@
-- 内容: Note
+- 内容: 'Choose Your Own Story'
   提示: ''
   翻译: ''
-- 内容: Notice the three quotation marks above and below the text? This is a special
-    way to create a String value. You can read and edit your story much more easily
-    with this special syntax because you can include multiple lines and quotation
-    marks in the text.
+- 内容: 'Provide dynamic navigation between views.'
   提示: ''
   翻译: ''
-- 内容: Displaying a Story Page
+- 内容: 'In this sample, you can write a story with many different paths and outcomes. Your reader can make choices at important points in the narrative, resulting in different experiences based on their responses.'
   提示: ''
   翻译: ''
-- 内容: SwiftUI uses the id argument to tell the choices apart from each other. Because
-    each choice has different text, you can use the text property to identify them.
+- 内容: 'There are several parts to this app. StoryData contains the story itself, including the text on each page and the choices the reader can make.'
   提示: ''
   翻译: ''
-- 内容: StoryView is the top-level view of your app. When your app runs, this is the
-    first view it displays.
+- 内容: 'StoryView sets up the navigation for the app, and StoryPageView displays the contents of one page of the story.'
   提示: ''
   翻译: ''
-- 内容: To display a story, the app uses an instance of the Story type that contains
-    all of the story’s data. To change this data, go to the StoryData.swift file and
-    look for the global variable story.
+- 内容: 'You can start in StoryData and write your own narrative, or you can learn about and modify the look and feel of the app in StoryView and StoryPageView.'
   提示: ''
   翻译: ''
-- 内容: StoryView sets up the navigation for the app, and StoryPageView displays the
-    contents of one page of the story.
+- 内容: 'Create Your Own Story'
   提示: ''
   翻译: ''
-- 内容: You’ll use the custom types defined here to model the story data. Your app uses
-    an instance of the Story type to display a series of story pages, each with some
-    narrative text and a number of choices for the reader.
+- 内容: 'Customize the story to create a narrative of your own.'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: Try customizing the text of each choice to see how the app preview updates the
-    buttons.
+- 内容: 'To construct your narrative, the app needs an instance of Story, which takes an array of StoryPage instances. Each page of your story contains some narrative text and an array of choices to select from. That choice takes you to another story page with more choices that take you to another story page, and so on.'
   提示: ''
   翻译: ''
-- 内容: The destination property stores an Int. The value is the index of the page that
-    the choice navigates to.
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: The Choice type defines a choice readers can make while reading a story.
+- 内容: 'Here’s the text of your first story page. Try changing it to something new, and notice how the app preview changes. When you’re ready, you can edit this text to start creating your story.'
   提示: ''
   翻译: ''
-- 内容: You can experiment with these modifiers to change how the choice links look.
-    For example, try removing or changing the padding, or changing the background
-    color.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: These two modifiers apply to a view when it’s enclosed in a navigation view.
-    A navigation view provides a navigation bar at the top of the screen that can
-    display a title and a back button, along with other items you can customize, such
-    as extra buttons and text.
+- 内容: 'Notice the three quotation marks above and below the text? This is a special way to create a String value. You can read and edit your story much more easily with this special syntax because you can include multiple lines and quotation marks in the text.'
   提示: ''
   翻译: ''
-- 内容: The .navigationBarTitleDisplayMode modifier controls how the title appears in
-    the navigation bar. Providing .inline as the modifier’s value makes the title
-    smaller in size. You can try the other two possible values — .automatic and .large
-    — to see how they make the app look.
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: The ScrollView lets you display content that’s bigger than the screen. Because
-    a story page might have a lot of text, you want the reader to be able to scroll
-    through it.
+- 内容: 'In addition to the intro text, each page offers readers some choices for what happens next in the story. The page displays these choices as buttons below the text.'
   提示: ''
   翻译: ''
-- 内容: Provide dynamic navigation between views.
+- 内容: 'Experiment'
   提示: ''
   翻译: ''
-- 内容: The code between the braces is what the navigation link displays as its content
-    — what the user taps.
+- 内容: 'Try customizing the text of each choice to see how the app preview updates the buttons.'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: Experiment
+- 内容: 'The destination property of the choice is the key to story navigation. The number is the index of the page for the app to display when a reader taps to select that choice. Arrays start counting at 0, so the index of the first page is 0, the second page is 1, and so on.'
   提示: ''
   翻译: ''
-- 内容: Try adding a new page and customizing its text and choices. You’re now ready
-    to start writing the adventure!
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: Customize the story to create a narrative of your own.
+- 内容: 'Try changing the destination of one of these choices and then test where the button navigates to in the app preview. Be careful, though. You have 21 story pages, so using an index higher than 20 causes the app to crash due to an index out of range error.'
   提示: ''
   翻译: ''
-- 内容: Step 11
+- 内容: 'Step 7'
   提示: ''
   翻译: ''
-- 内容: In this sample, you can write a story with many different paths and outcomes.
-    Your reader can make choices at important points in the narrative, resulting in
-    different experiences based on their responses.
+- 内容: 'To add a new page to the story, copy an existing story page, such as this one, and paste it below the last story page in the array.'
   提示: ''
   翻译: ''
-- 内容: Date Planner
+- 内容: 'Try adding a new page and customizing its text and choices. You’re now ready to start writing the adventure!'
   提示: ''
   翻译: ''
-- 内容: The ForEach view passes each item of the choices collection into its body. You
-    can use the choice to create a NavigationLink.
+- 内容: 'Story Data Model'
   提示: ''
   翻译: ''
-- 内容: Present hierarchical information in a list.
+- 内容: 'Learn how to structure the story data for your reader’s adventure.'
   提示: ''
   翻译: ''
-- 内容: Explore and modify the story’s user interface (UI) using basic SwiftUI views.
+- 内容: 'You’ll use the custom types defined here to model the story data. Your app uses an instance of the Story type to display a series of story pages, each with some narrative text and a number of choices for the reader.'
   提示: ''
   翻译: ''
-- 内容: Creating a Navigation View
+- 内容: 'The pages property holds an array of StoryPage values, each corresponding to a page of your story.'
   提示: ''
   翻译: ''
-- 内容: Step 8
+- 内容: 'The StoryPage type contains a text value for the narrative text on the page, and a choices array that contains an array of StoryChoice options that a reader can choose from to navigate to another page.'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'The Choice type defines a choice readers can make while reading a story.'
   提示: ''
   翻译: ''
-- 内容: Step 13
+- 内容: 'The text property holds a String that describes the choice readers can make.'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'The destination property stores an Int. The value is the index of the page that the choice navigates to.'
   提示: ''
   翻译: ''
-- 内容: The text property holds a String that describes the choice readers can make.
+- 内容: 'Creating a Navigation View'
   提示: ''
   翻译: ''
-- 内容: To manage navigation through the story, the app wraps each story page in a NavigationStack.
+- 内容: 'To manage navigation through the story, the app wraps each story page in a NavigationStack.'
   提示: ''
   翻译: ''
-- 内容: 'A NavigationLink needs two things: a destination and content to display. The
-    destination of the navigation link is the page that the choice navigates to.'
+- 内容: 'StoryView is the top-level view of your app. When your app runs, this is the first view it displays.'
   提示: ''
   翻译: ''
-- 内容: This property stores the index of the current story page.
+- 内容: 'To display and navigate between each story page, you’ll use a NavigationStack. This view acts as a container to display one StoryPageView at a time and transition to the next view when the reader taps a NavigationLink.'
   提示: ''
   翻译: ''
-- 内容: Step 9
+- 内容: 'The navigation view displays StoryPageView as its content. Notice that you initialize this view with the global variable story from the StoryData file, and you show the first page, with an index of 0.'
   提示: ''
   翻译: ''
-- 内容: Step 12
+- 内容: 'Displaying a Story Page'
   提示: ''
   翻译: ''
-- 内容: The destination property of the choice is the key to story navigation. The number
-    is the index of the page for the app to display when a reader taps to select that
-    choice. Arrays start counting at 0, so the index of the first page is 0, the second
-    page is 1, and so on.
+- 内容: 'Explore and modify the story’s user interface (UI) using basic SwiftUI views.'
   提示: ''
   翻译: ''
-- 内容: The StoryPage type contains a text value for the narrative text on the page,
-    and a choices array that contains an array of StoryChoice options that a reader
-    can choose from to navigate to another page.
+- 内容: 'StoryPageView displays your story so readers can navigate by making choices provided on each page.'
   提示: ''
   翻译: ''
-- 内容: Step 14
+- 内容: 'To display a story, the app uses an instance of the Story type that contains all of the story’s data. To change this data, go to the StoryData.swift file and look for the global variable story.'
   提示: ''
   翻译: ''
-- 内容: Try changing the destination of one of these choices and then test where the
-    button navigates to in the app preview. Be careful, though. You have 21 story
-    pages, so using an index higher than 20 causes the app to crash due to an index
-    out of range error.
+- 内容: 'This property stores the index of the current story page.'
   提示: ''
   翻译: ''
-- 内容: You can display the current page number in the navigation bar by setting its
-    title using the .navigationTitle modifier. Because people expect page numbers
-    to begin at 1, but array indices start at 0, you’ll need to add 1 to the pageIndex
-    property.
+- 内容: 'A VStack arranges content vertically onscreen. At the top is the text of the current page, and at the bottom are the choices the reader can make on the page. When the reader taps to select a choice, the app navigates to another page.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'The ScrollView lets you display content that’s bigger than the screen. Because a story page might have a lot of text, you want the reader to be able to scroll through it.'
   提示: ''
   翻译: ''
-- 内容: To add a new page to the story, copy an existing story page, such as this one,
-    and paste it below the last story page in the array.
+- 内容: 'The Text view displays the story text from the current page.'
   提示: ''
   翻译: ''
-- 内容: Step 15
+- 内容: 'The ForEach structure generates views for a collection of things. In this case, the collection is the choices array of the current page in the story. The code within the braces runs once for each choice.'
   提示: ''
   翻译: ''
-- 内容: 'The .frame modifier puts the text inside an invisible frame. By specifying
-    maxWidth: .infinity, you’re telling the frame to expand as wide as it’s allowed,
-    and alignment: .leading aligns the text inside the frame to the leading edge.'
+- 内容: 'Note'
   提示: ''
   翻译: ''
-- 内容: These next three modifiers provide a pleasing visual style to the NavigationLink
-    view for each choice. The .padding modifier adds some space around the link’s
-    contents. The .background modifier applies a gray color with 25 percent opacity,
-    and the .cornerRadius modifer rounds its corners.
+- 内容: 'SwiftUI uses the id argument to tell the choices apart from each other. Because each choice has different text, you can use the text property to identify them.'
   提示: ''
   翻译: ''
-- 内容: Create Your Own Story
+- 内容: 'Step 8'
   提示: ''
   翻译: ''
-- 内容: In addition to the intro text, each page offers readers some choices for what
-    happens next in the story. The page displays these choices as buttons below the
-    text.
+- 内容: 'The ForEach view passes each item of the choices collection into its body. You can use the choice to create a NavigationLink.'
   提示: ''
   翻译: ''
-- 内容: Step 10
+- 内容: 'A NavigationLink needs two things: a destination and content to display. The destination of the navigation link is the page that the choice navigates to.'
   提示: ''
   翻译: ''
-- 内容: You can start in StoryData and write your own narrative, or you can learn about
-    and modify the look and feel of the app in StoryView and StoryPageView.
+- 内容: 'Step 9'
   提示: ''
   翻译: ''
-- 内容: There are several parts to this app. StoryData contains the story itself, including
-    the text on each page and the choices the reader can make.
+- 内容: 'The code between the braces is what the navigation link displays as its content — what the user taps.'
   提示: ''
   翻译: ''
-- 内容: Try removing or changing these modifiers to see how they affect the choice text.
+- 内容: 'Navigation links don’t work if they aren’t inside a navigation view (either a NavigationStack or NavigationSplitView), so you’ll notice that the preview for this view won’t let you navigate to the next page. The StoryView creates the navigation view that contains the StoryPageView. Use the app preview, or the preview for the StoryView, to test your story navigation.'
   提示: ''
   翻译: ''
-- 内容: Navigation links don’t work if they aren’t inside a navigation view (either
-    a NavigationStack or NavigationSplitView), so you’ll notice that the preview for
-    this view won’t let you navigate to the next page. The StoryView creates the navigation
-    view that contains the StoryPageView. Use the app preview, or the preview for
-    the StoryView, to test your story navigation.
+- 内容: 'Step 10'
   提示: ''
   翻译: ''
-- 内容: The Text view displays the story text from the current page.
+- 内容: 'The most important thing in this label is the Text for displaying the choices. But it’d be nice to match the text alignment with the story page text. To align the text, you’ll use two modifiers: .multilineTextAlignment and frame. Applying the .multilineTextAlignment modifier to the Text view aligns the text to its leading edge.'
   提示: ''
   翻译: ''
-- 内容: The pages property holds an array of StoryPage values, each corresponding to
-    a page of your story.
+- 内容: 'Step 11'
   提示: ''
   翻译: ''
-- 内容: Story Data Model
+- 内容: 'The .frame modifier puts the text inside an invisible frame. By specifying maxWidth: .infinity, you’re telling the frame to expand as wide as it’s allowed, and alignment: .leading aligns the text inside the frame to the leading edge.'
   提示: ''
   翻译: ''
-- 内容: 'The most important thing in this label is the Text for displaying the choices.
-    But it’d be nice to match the text alignment with the story page text. To align
-    the text, you’ll use two modifiers: .multilineTextAlignment and frame. Applying
-    the .multilineTextAlignment modifier to the Text view aligns the text to its leading
-    edge.'
+- 内容: 'Try removing or changing these modifiers to see how they affect the choice text.'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'Step 12'
   提示: ''
   翻译: ''
-- 内容: The ForEach structure generates views for a collection of things. In this case,
-    the collection is the choices array of the current page in the story. The code
-    within the braces runs once for each choice.
+- 内容: 'These next three modifiers provide a pleasing visual style to the NavigationLink view for each choice. The .padding modifier adds some space around the link’s contents. The .background modifier applies a gray color with 25 percent opacity, and the .cornerRadius modifer rounds its corners.'
   提示: ''
   翻译: ''
-- 内容: Choose Your Own Story
+- 内容: 'You can experiment with these modifiers to change how the choice links look. For example, try removing or changing the padding, or changing the background color.'
   提示: ''
   翻译: ''
-- 内容: StoryPageView displays your story so readers can navigate by making choices
-    provided on each page.
+- 内容: 'Step 13'
   提示: ''
   翻译: ''
-- 内容: The navigation view displays StoryPageView as its content. Notice that you initialize
-    this view with the global variable story from the StoryData file, and you show
-    the first page, with an index of 0.
+- 内容: 'These two modifiers apply to a view when it’s enclosed in a navigation view. A navigation view provides a navigation bar at the top of the screen that can display a title and a back button, along with other items you can customize, such as extra buttons and text.'
   提示: ''
   翻译: ''
-- 内容: A VStack arranges content vertically onscreen. At the top is the text of the
-    current page, and at the bottom are the choices the reader can make on the page.
-    When the reader taps to select a choice, the app navigates to another page.
+- 内容: 'Step 14'
   提示: ''
   翻译: ''
-- 内容: Step 7
+- 内容: 'You can display the current page number in the navigation bar by setting its title using the .navigationTitle modifier. Because people expect page numbers to begin at 1, but array indices start at 0, you’ll need to add 1 to the pageIndex property.'
   提示: ''
   翻译: ''
-- 内容: To construct your narrative, the app needs an instance of Story, which takes
-    an array of StoryPage instances. Each page of your story contains some narrative
-    text and an array of choices to select from. That choice takes you to another
-    story page with more choices that take you to another story page, and so on.
+- 内容: 'Step 15'
   提示: ''
   翻译: ''
-- 内容: Learn how to structure the story data for your reader’s adventure.
+- 内容: 'The .navigationBarTitleDisplayMode modifier controls how the title appears in the navigation bar. Providing .inline as the modifier’s value makes the title smaller in size. You can try the other two possible values — .automatic and .large — to see how they make the app look.'
   提示: ''
   翻译: ''
-- 内容: To display and navigate between each story page, you’ll use a NavigationStack.
-    This view acts as a container to display one StoryPageView at a time and transition
-    to the next view when the reader taps a NavigationLink.
+- 内容: 'Date Planner'
   提示: ''
   翻译: ''
-- 内容: Here’s the text of your first story page. Try changing it to something new,
-    and notice how the app preview changes. When you’re ready, you can edit this text
-    to start creating your story.
+- 内容: 'Present hierarchical information in a list.'
   提示: ''
   翻译: ''

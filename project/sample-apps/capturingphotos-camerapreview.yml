@@ -1,134 +1,108 @@
-- 内容: Note
+- 内容: 'Previewing the Camera Output'
   提示: ''
   翻译: ''
-- 内容: Previewing the Camera Output
+- 内容: 'Preview the output from the camera.'
   提示: ''
   翻译: ''
-- 内容: Learn how to process the preview stream so that it’s ready to display in the
-    viewfinder.
+- 内容: 'Your camera’s video output sends a continuous stream of individual images (video frames). You display these in a viewfinder so you can see exactly what the camera is looking at before composing your shot and taking a photo.'
   提示: ''
   翻译: ''
-- 内容: Your device may have access to several capture devices — for example, the front
-    and back cameras on iPad — and you can switch between these using the camera’s
-    switchCaptureDevice() method. Learn more about capture devices in Cameras and
-    Media Capture.
+- 内容: 'Discover more about how this works. 🎞'
   提示: ''
   翻译: ''
-- 内容: Your data model has a camera property that represents one of the physical cameras
-    — or capture devices — available to your device.
+- 内容: 'Using the Camera'
   提示: ''
   翻译: ''
-- 内容: By binding the the model’s viewfinderImage property to your ViewfinderView,
-    you ensure that the viewfinder updates whenever the view receives a new preview
-    image. Because the preview image updates many times per second, your eyes see
-    it as live video in the viewfinder.
+- 内容: 'Learn about the camera in your data model.'
   提示: ''
   翻译: ''
-- 内容: Learn about the stream of preview images from your camera.
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: Your camera’s video output sends a continuous stream of individual images (video
-    frames). You display these in a viewfinder so you can see exactly what the camera
-    is looking at before composing your shot and taking a photo.
+- 内容: 'Your data model has a camera property that represents one of the physical cameras — or capture devices — available to your device.'
   提示: ''
   翻译: ''
-- 内容: Tip
+- 内容: 'Note'
   提示: ''
   翻译: ''
-- 内容: Preview the output from the camera.
+- 内容: 'Your device may have access to several capture devices — for example, the front and back cameras on iPad — and you can switch between these using the camera’s switchCaptureDevice() method. Learn more about capture devices in Cameras and Media Capture.'
   提示: ''
   翻译: ''
-- 内容: Exploring the Preview Stream
+- 内容: 'Tip'
   提示: ''
   翻译: ''
 - 内容: 'To start using the camera, you call its start() method: await model.camera.start()'
   提示: ''
   翻译: ''
-- 内容: After calling the camera’s start() method, its video output produces a stream
-    of low-resolution preview images (video frames), at rates of up to 60 frames a
-    second.
+- 内容: 'Exploring the Preview Stream'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'Learn about the stream of preview images from your camera.'
   提示: ''
   翻译: ''
-- 内容: In handleCameraPreviews, turn the preview stream of CIImage objects from the
-    camera into a stream of Image views, ready for display.
+- 内容: 'After calling the camera’s start() method, its video output produces a stream of low-resolution preview images (video frames), at rates of up to 60 frames a second.'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: You receive these preview images through the camera’s previewStream property,
-    as an asynchronous stream of CIImage (Core Image) objects.
+- 内容: 'You receive these preview images through the camera’s previewStream property, as an asynchronous stream of CIImage (Core Image) objects.'
   提示: ''
   翻译: ''
-- 内容: Using the Camera
+- 内容: 'Processing the Preview Stream'
   提示: ''
   翻译: ''
-- 内容: Your for-await loop waits for each image in your transformed imageStream before
-    doing something with it.
+- 内容: 'Learn how to process the preview stream so that it’s ready to display in the viewfinder.'
   提示: ''
   翻译: ''
-- 内容: Your CameraView has a ViewfinderView that it uses to display live video from
-    the camera.
+- 内容: 'Your data model has a dedicated task to handle the stream of preview images from the camera, using its handleCameraPreviews function.'
   提示: ''
   翻译: ''
-- 内容: In this case you use the stream’s map(_:) function to convert each element —
-    $0 — into an Image instance using an image property extension of CIImage. This
-    transforms the stream of CIImage instances into a stream of Image instances.
+- 内容: 'In handleCameraPreviews, turn the preview stream of CIImage objects from the camera into a stream of Image views, ready for display.'
   提示: ''
   翻译: ''
-- 内容: An AsyncStream is a stream of values that are produced at time intervals. The
-    values form a sequence, but with its values arriving asynchronously — an AsyncSequence.
-    You can do many of the same things you can do with any other sequence of values,
-    such as with an array.
+- 内容: 'An AsyncStream is a stream of values that are produced at time intervals. The values form a sequence, but with its values arriving asynchronously — an AsyncSequence. You can do many of the same things you can do with any other sequence of values, such as with an array.'
   提示: ''
   翻译: ''
-- 内容: Learn more about working with asynchronous sequences in the Swift Programming
-    Language Guide.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Discover more about how this works. 🎞
+- 内容: 'In this case you use the stream’s map(_:) function to convert each element — $0 — into an Image instance using an image property extension of CIImage. This transforms the stream of CIImage instances into a stream of Image instances.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: Viewing the Preview Stream
+- 内容: 'Your for-await loop waits for each image in your transformed imageStream before doing something with it.'
   提示: ''
   翻译: ''
-- 内容: You use the image from the preview stream to update your data model’s viewfinderImage
-    property. SwiftUI makes sure that any views using this property get updated when
-    the viewfinderImage value changes.
+- 内容: 'Learn more about working with asynchronous sequences in the Swift Programming Language Guide.'
   提示: ''
   翻译: ''
-- 内容: Learn about the camera in your data model.
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: Take photos with the camera, add them to your photo library, and display them
-    in your app.
+- 内容: 'You use the image from the preview stream to update your data model’s viewfinderImage property. SwiftUI makes sure that any views using this property get updated when the viewfinderImage value changes.'
   提示: ''
   翻译: ''
-- 内容: Capturing and Saving a Photo
+- 内容: 'Viewing the Preview Stream'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'See how you can connect your viewfinder view to the processed preview stream.'
   提示: ''
   翻译: ''
-- 内容: See how you can connect your viewfinder view to the processed preview stream.
+- 内容: 'Your CameraView has a ViewfinderView that it uses to display live video from the camera.'
   提示: ''
   翻译: ''
-- 内容: You can learn more about Tasks in the Swift standard library.
+- 内容: 'By binding the the model’s viewfinderImage property to your ViewfinderView, you ensure that the viewfinder updates whenever the view receives a new preview image. Because the preview image updates many times per second, your eyes see it as live video in the viewfinder.'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'Capturing and Saving a Photo'
   提示: ''
   翻译: ''
-- 内容: Processing the Preview Stream
+- 内容: 'Take photos with the camera, add them to your photo library, and display them in your app.'
   提示: ''
   翻译: ''
-- 内容: Your data model has a dedicated task to handle the stream of preview images
-    from the camera, using its handleCameraPreviews function.
+- 内容: 'You can learn more about Tasks in the Swift standard library.'
   提示: ''
   翻译: ''

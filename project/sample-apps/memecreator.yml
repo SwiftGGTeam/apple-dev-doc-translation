@@ -1,240 +1,171 @@
-- 内容: The function is also marked throws. This tells you that the function can throw
-    an error when you call it. In MemeCreator, the code handles this error with try?
-    by ignoring any values it throws.
+- 内容: 'The function is also marked throws. This tells you that the function can throw an error when you call it. In MemeCreator, the code handles this error with try? by ignoring any values it throws.'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: Creating the Panda Model
+- 内容: 'Creating the Panda Model'
   提示: ''
   翻译: ''
-- 内容: To share its data, MemeCreator passes in PandaCollectionFetcher as an environment
-    object, making it available to all of the child views of MemeCreator. An environment
-    object must also be an observable object, which enables all views observing its
-    data to update whenever that data changes.
+- 内容: 'To share its data, MemeCreator passes in PandaCollectionFetcher as an environment object, making it available to all of the child views of MemeCreator. An environment object must also be an observable object, which enables all views observing its data to update whenever that data changes.'
   提示: ''
   翻译: ''
-- 内容: Finally, decode the JSON data and assign it to the published variable, imageData.
-    Now you have all of the data you need to create panda memes.
+- 内容: 'Finally, decode the JSON data and assign it to the published variable, imageData. Now you have all of the data you need to create panda memes.'
   提示: ''
   翻译: ''
-- 内容: Bubble Level
+- 内容: 'Bubble Level'
   提示: ''
   翻译: ''
-- 内容: To add text, use a button that changes the focus state of the text field to
-    true. This automatically inserts the cursor in the text field so you can add text.
+- 内容: 'To add text, use a button that changes the focus state of the text field to true. This automatically inserts the cursor in the text field so you can add text.'
   提示: ''
   翻译: ''
-- 内容: The fetchData function retrieves the JSON data. Notice that it’s marked as async
-    to indicate that the function runs asynchronously. Because it might take a little
-    time to fetch the data from the internet, an async function pauses until the data
-    returns. Meantime, your app’s code continues to run in the background.
+- 内容: 'The fetchData function retrieves the JSON data. Notice that it’s marked as async to indicate that the function runs asynchronously. Because it might take a little time to fetch the data from the internet, an async function pauses until the data returns. Meantime, your app’s code continues to run in the background.'
   提示: ''
   翻译: ''
-- 内容: Inside the view body, create an AsyncImage and pass in the imageUrl to load
-    the panda image. An AsyncImage view loads asynchronously, so you’ll need to show
-    something in its place while the image loads, and show something else if image
-    loading fails. You’ll handle all of this logic in the following if statement.
+- 内容: 'Inside the view body, create an AsyncImage and pass in the imageUrl to load the panda image. An AsyncImage view loads asynchronously, so you’ll need to show something in its place while the image loads, and show something else if image loading fails. You’ll handle all of this logic in the following if statement.'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: Tip
+- 内容: 'Tip'
   提示: ''
   翻译: ''
-- 内容: MemeCreator is where you bring everything together to make panda memes. As the
-    top-level view of your app, this is where you’ll display the panda image along
-    with tools for adding and editing text.
+- 内容: 'MemeCreator is where you bring everything together to make panda memes. As the top-level view of your app, this is where you’ll display the panda image along with tools for adding and editing text.'
   提示: ''
   翻译: ''
-- 内容: Each panda contains a text description as well as an imageUrl, which points
-    to a panda image. This is the data you’ll use to download a panda image.
+- 内容: 'Each panda contains a text description as well as an imageUrl, which points to a panda image. This is the data you’ll use to download a panda image.'
   提示: ''
   翻译: ''
-- 内容: Check to see if any errors occurred while loading the image. If so, you can
-    provide a view that tells the user something went wrong.
+- 内容: 'Check to see if any errors occurred while loading the image. If so, you can provide a view that tells the user something went wrong.'
   提示: ''
   翻译: ''
-- 内容: Investigate how to use a URL to load an image asynchronously.
+- 内容: 'Investigate how to use a URL to load an image asynchronously.'
   提示: ''
   翻译: ''
-- 内容: To change the image, you can push a button that retrieves a random Panda from
-    the PandaCollection and sets it as the currentPanda. Because currentPanda is a
-    published value, the LoadableImage view automatically updates to use the latest
-    currentPanda data whenever it changes.
+- 内容: 'To change the image, you can push a button that retrieves a random Panda from the PandaCollection and sets it as the currentPanda. Because currentPanda is a published value, the LoadableImage view automatically updates to use the latest currentPanda data whenever it changes.'
   提示: ''
   翻译: ''
-- 内容: When you have the JSON data, you can use it to load panda images. To accomplish
-    this, compose your LoadableImage view from AsyncImage, a view that loads an image
-    asynchronously.
+- 内容: 'When you have the JSON data, you can use it to load panda images. To accomplish this, compose your LoadableImage view from AsyncImage, a view that loads an image asynchronously.'
   提示: ''
   翻译: ''
-- 内容: Step 8
+- 内容: 'Step 8'
   提示: ''
   翻译: ''
-- 内容: PandaCollectionFetcher handles data fetching in your app. It’s an observable
-    object, which allows it to publish changes to its values to all UI elements observing
-    them. In this case, you’ll have an image view that’s waiting for new Panda data
-    so it can update its image and description.
+- 内容: 'PandaCollectionFetcher handles data fetching in your app. It’s an observable object, which allows it to publish changes to its values to all UI elements observing them. In this case, you’ll have an image view that’s waiting for new Panda data so it can update its image and description.'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: After your data returns, you’ll check the URL response to verify that you didn’t
-    receive an error. This code generates a badRequest error if the response’s status
-    code isn’t equal to 200, indicating a successful request.
+- 内容: 'After your data returns, you’ll check the URL response to verify that you didn’t receive an error. This code generates a badRequest error if the response’s status code isn’t equal to 200, indicating a successful request.'
   提示: ''
   翻译: ''
-- 内容: Before you start loading panda images, the fetcher needs to retrieve the JSON
-    data. The .task modifier defines a task to complete when the view first appears.
-    This is where you’ll call fetcher.fetchData() to retrieve the JSON data.
+- 内容: 'Before you start loading panda images, the fetcher needs to retrieve the JSON data. The .task modifier defines a task to complete when the view first appears. This is where you’ll call fetcher.fetchData() to retrieve the JSON data.'
   提示: ''
   翻译: ''
-- 内容: If you haven’t received an image and you don’t have an error, that means the
-    image is loading. To let people know that the image is downloading, use ProgressView
-    to display an animation while the image loads.
+- 内容: 'If you haven’t received an image and you don’t have an error, that means the image is loading. To let people know that the image is downloading, use ProgressView to display an animation while the image loads.'
   提示: ''
   翻译: ''
-- 内容: Meme Creator
+- 内容: 'Meme Creator'
   提示: ''
   翻译: ''
-- 内容: To create an image, LoadableImage needs data about the Panda it’s loading. The
-    metadata supplied here includes the image URL and the description.
+- 内容: 'To create an image, LoadableImage needs data about the Panda it’s loading. The metadata supplied here includes the image URL and the description.'
   提示: ''
   翻译: ''
-- 内容: Check to see if an image is available. If there is, great — this is the panda
-    image you’ll display using the description as the accessibility text.
+- 内容: 'Check to see if an image is available. If there is, great — this is the panda image you’ll display using the description as the accessibility text.'
   提示: ''
   翻译: ''
-- 内容: Making the Meme Creator
+- 内容: 'Making the Meme Creator'
   提示: ''
   翻译: ''
-- 内容: Step 9
+- 内容: 'Step 9'
   提示: ''
   翻译: ''
-- 内容: If you didn’t make fetchData asynchronous, the app might experience some lag
-    while it loads images individually.
+- 内容: 'If you didn’t make fetchData asynchronous, the app might experience some lag while it loads images individually.'
   提示: ''
   翻译: ''
-- 内容: Creating Asynchronous Images
+- 内容: 'Creating Asynchronous Images'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: The image also has a text overlay, which you can add as a modifier. This overlay
-    shows the meme text. The text field uses three state variables, memeText, textSize,
-    and textColor to dynamically change the data of the text field in response to
-    user editing actions. The text field can become focused by passing the @FocusState
-    variable into the .focused modifier.
+- 内容: 'The image also has a text overlay, which you can add as a modifier. This overlay shows the meme text. The text field uses three state variables, memeText, textSize, and textColor to dynamically change the data of the text field in response to user editing actions. The text field can become focused by passing the @FocusState variable into the .focused modifier.'
   提示: ''
   翻译: ''
-- 内容: To fetch its data, the app uses an observable object, PandaCollectionFetcher.
-    This is where all of the data fetching occurs.
+- 内容: 'To fetch its data, the app uses an observable object, PandaCollectionFetcher. This is where all of the data fetching occurs.'
   提示: ''
   翻译: ''
-- 内容: Inside fetchData, check to see if you have a valid URL.
+- 内容: 'Inside fetchData, check to see if you have a valid URL.'
   提示: ''
   翻译: ''
-- 内容: You’ll use the data from your app to create a meme-generating UI. Explore how
-    to compose this view in this walkthrough.
+- 内容: 'You’ll use the data from your app to create a meme-generating UI. Explore how to compose this view in this walkthrough.'
   提示: ''
   翻译: ''
-- 内容: Explore how the app makes its fetched data available to the entire view hierarchy.
+- 内容: 'Explore how the app makes its fetched data available to the entire view hierarchy.'
   提示: ''
   翻译: ''
-- 内容: Sharing App Data
+- 内容: 'Sharing App Data'
   提示: ''
   翻译: ''
-- 内容: When you create an instance of AsyncImage, SwiftUI provides you with phase data,
-    which updates you on the state of image loading. For example, phase.error provides
-    you with errors that occur, while phase.image provides an image, if available.
-    You can use the phase data to show the appropriate UI based on the phase state.
+- 内容: 'When you create an instance of AsyncImage, SwiftUI provides you with phase data, which updates you on the state of image loading. For example, phase.error provides you with errors that occur, while phase.image provides an image, if available. You can use the phase data to show the appropriate UI based on the phase state.'
   提示: ''
   翻译: ''
-- 内容: This is the Panda model object. It’s structured to mirror the JSON data returned
-    from this URL.
+- 内容: 'This is the Panda model object. It’s structured to mirror the JSON data returned from this URL.'
   提示: ''
   翻译: ''
-- 内容: Fetching Panda Data
+- 内容: 'Fetching Panda Data'
   提示: ''
   翻译: ''
-- 内容: In this walkthrough, you’ll learn how asynchronous data fetching works, and
-    how to use it when retrieving panda images and their corresponding data in JSON
-    format.
+- 内容: 'In this walkthrough, you’ll learn how asynchronous data fetching works, and how to use it when retrieving panda images and their corresponding data in JSON format.'
   提示: ''
   翻译: ''
-- 内容: Access and display device sensor data by subscribing to notifications.
+- 内容: 'Access and display device sensor data by subscribing to notifications.'
   提示: ''
   翻译: ''
-- 内容: Finally, you can modify the state variables textSize and textColor using the
-    slider and color picker at the bottom of the UI. These controls modify the values
-    of those state variables to automatically update the meme text appearance.
+- 内容: 'Finally, you can modify the state variables textSize and textColor using the slider and color picker at the bottom of the UI. These controls modify the values of those state variables to automatically update the meme text appearance.'
   提示: ''
   翻译: ''
-- 内容: To create a meme, you’ll load some images from a URL, which could take some
-    time depending on the speed of your internet connection to the server. You’ll
-    use an asynchronous request so that your app can keep doing other things in the
-    background, like responding to user actions, while waiting for the images to load
-    into the UI.
+- 内容: 'To create a meme, you’ll load some images from a URL, which could take some time depending on the speed of your internet connection to the server. You’ll use an asynchronous request so that your app can keep doing other things in the background, like responding to user actions, while waiting for the images to load into the UI.'
   提示: ''
   翻译: ''
-- 内容: Welcome to the Meme Creator app, where you’ll learn to fetch data from the internet
-    to create panda memes.
+- 内容: 'Welcome to the Meme Creator app, where you’ll learn to fetch data from the internet to create panda memes.'
   提示: ''
   翻译: ''
-- 内容: In the closure, you’ll insert try? await before calling fetcher.fetchData().
-    These words correspond to how you defined fetchData() with async throws. Because
-    the function is asynchronous, await means that you’ll wait for the results of
-    the async function to return, and try followed by a question mark - try? - means
-    you’ll try calling the function, but ignore any error that it throws.
+- 内容: 'In the closure, you’ll insert try? await before calling fetcher.fetchData(). These words correspond to how you defined fetchData() with async throws. Because the function is asynchronous, await means that you’ll wait for the results of the async function to return, and try followed by a question mark - try? - means you’ll try calling the function, but ignore any error that it throws.'
   提示: ''
   翻译: ''
-- 内容: 'There are two published values: imageData, a PandaCollection that you populate
-    with JSON data, and currentPanda, a Panda model object that you display in the
-    app’s UI.'
+- 内容: 'There are two published values: imageData, a PandaCollection that you populate with JSON data, and currentPanda, a Panda model object that you display in the app’s UI.'
   提示: ''
   翻译: ''
-- 内容: In MemeCreatorApp, you passed in a PandaCollectionFetcher as an environment
-    object to the top level view. Here, you access that environment object by defining
-    a fetcher variable with the @EnvironmentObject property wrapper.
+- 内容: 'In MemeCreatorApp, you passed in a PandaCollectionFetcher as an environment object to the top level view. Here, you access that environment object by defining a fetcher variable with the @EnvironmentObject property wrapper.'
   提示: ''
   翻译: ''
-- 内容: Learn how to model structured JSON data from a data source as a Swift structure.
+- 内容: 'Learn how to model structured JSON data from a data source as a Swift structure.'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: To fetch these images and their metadata, you’ll use an observable object that
-    fetches data asynchronously. You’ll learn more about how to structure asynchronous
-    functions in this walkthrough.
+- 内容: 'To fetch these images and their metadata, you’ll use an observable object that fetches data asynchronously. You’ll learn more about how to structure asynchronous functions in this walkthrough.'
   提示: ''
   翻译: ''
-- 内容: In the UI for this view, you’ll use LoadableImage to asynchronously load an
-    image based on the data fetcher’s currentPanda. Even if your JSON data hasn’t
-    loaded yet, the app provides a default currentPanda to load as the first image.
+- 内容: 'In the UI for this view, you’ll use LoadableImage to asynchronously load an image based on the data fetcher’s currentPanda. Even if your JSON data hasn’t loaded yet, the app provides a default currentPanda to load as the first image.'
   提示: ''
   翻译: ''
-- 内容: A PandaCollection is composed of an array of Panda model objects. This mirrors
-    the format of the JSON data, which enables you to easily decode URLs and descriptive
-    text from your JSON data into a PandaCollection instance.
+- 内容: 'A PandaCollection is composed of an array of Panda model objects. This mirrors the format of the JSON data, which enables you to easily decode URLs and descriptive text from your JSON data into a PandaCollection instance.'
   提示: ''
   翻译: ''
-- 内容: Call another async function — URLSession.shared.data(for:) — which passes in
-    a URL request using the URL you’ve defined. This call is also marked await, because
-    this is where the function pauses as it waits for the response from the URL request.
+- 内容: 'Call another async function — URLSession.shared.data(for:) — which passes in a URL request using the URL you’ve defined. This call is also marked await, because this is where the function pauses as it waits for the response from the URL request.'
   提示: ''
   翻译: ''
-- 内容: Step 7
+- 内容: 'Step 7'
   提示: ''
   翻译: ''
-- 内容: Fetch structured data from a server asynchronously.
+- 内容: 'Fetch structured data from a server asynchronously.'
   提示: ''
   翻译: ''
