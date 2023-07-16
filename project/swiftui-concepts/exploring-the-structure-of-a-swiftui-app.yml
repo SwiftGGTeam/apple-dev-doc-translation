@@ -99,7 +99,7 @@
   翻译: 'ContentView 是遵循 View protocol（协议）的 struct（结构体）。'
 - 内容: 'A view defines one or more visual elements that appear somewhere on a screen. A view is typically made up of other views, creating a view hierarchy.'
   提示: ''
-  翻译: 'view（视图）定义了一个或多个出现在屏幕上的可见元素。view（视图）通常由其他视图构成，最终 view hierarchy（视图树）。'
+  翻译: 'view（视图）定义了一个或多个出现在屏幕上的可见元素。view（视图）通常由其他视图构成，最终形成 view hierarchy（视图树）。'
 - 内容: 'Implementing body is a common pattern that you see throughout your SwiftUI code; for instance, when a structure conforms to protocols such as App, Scene, and View.'
   提示: ''
   翻译: '在编写 SwiftUI 代码的过程中，在结构体中实现 body（主体）属性，是一种非常常见的模式；例如，当结构体遵循 App，Scene，View 协议时，内部都要实现 body（主体）属性。'
