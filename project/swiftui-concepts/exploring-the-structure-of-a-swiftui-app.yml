@@ -159,7 +159,7 @@
   翻译: '第 10 步'
 - 内容: 'When you run the sample app, it displays the scene that contains the view hierarchy described in ContentView.'
   提示: ''
-  翻译: '但你运行示例 App，他会展示 scene（场景），该场景包含 ContentView 里的 view hierachy（视图树）'
+  翻译: '当你运行示例 App，他会展示 scene（场景），该场景包含 ContentView 里所描述的 view hierachy（视图树）'
 - 内容: 'Build and run the sample using Xcode. Then play around with code by following the suggested experiments mentioned in the previous steps.'
   提示: ''
   翻译: '使用 Xcode 编译并运行示例。然后按照前面步骤中提到的建议的实践内容，尝试编写一下代码。'
