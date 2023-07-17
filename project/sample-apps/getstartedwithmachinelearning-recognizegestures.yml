@@ -1,109 +1,87 @@
-- 内容: If the model successfully receives an input, you’ll receive an output of a label
-    and the confidence, or probability, of that image.
+- 内容: 'Recognizing Gestures with Machine Learning'
   提示: ''
   翻译: ''
-- 内容: Every time your camera’s frame updates, your app gathers VNHumanHandPoseObservations
-    from the frame’s pixel buffer.
+- 内容: 'Explore how to transform hand pose images from the camera into readable data your machine learning model can use to predict gestures.'
   提示: ''
   翻译: ''
-- 内容: Explore the fundamentals of machine learning
+- 内容: 'Explore the fundamentals of machine learning'
   提示: ''
   翻译: ''
-- 内容: An ML model receives information as input to produce an educated guess of what
-    that information represents. This is known as a prediction.
+- 内容: 'Learn the basics of how machine learning uses data to create a classifier model.'
   提示: ''
   翻译: ''
-- 内容: You can think of an ML model as a machine’s brain and all the knowledge it knows
-    about a certain type of pattern – in this case, hand poses.
+- 内容: 'Step 1'
   提示: ''
   翻译: ''
-- 内容: Learn how to debug your machine learning model and make improvements in its
-    predictions.
+- 内容: 'Machine learning (ML) is the process of how you can “teach” computers, like your iPad or Mac, to make educated guesses by providing them with lots of examples, commonly referred to as data.'
   提示: ''
   翻译: ''
-- 内容: This app uses image classification to recognize different hand poses shown in
-    the camera. Classification is a type of ML algorithm that categorizes examples
-    from a dataset into different groups. You’ll use the MLHandPoseClassifier to classify
-    different hand poses from a stream of images from the camera.
+- 内容: 'Step 2'
   提示: ''
   翻译: ''
-- 内容: Step 6
+- 内容: 'Humans are able to see very few examples of hand poses and immediately tell the difference between a rock pose and scissors pose. However, a computer requires many examples of those hand poses to correctly identify them.'
   提示: ''
   翻译: ''
-- 内容: The camera in your app is the machine’s eyes. You can use image data from the
-    camera as input for the HandPoseMLModel. Your ML model uses this data to identify
-    the different types of hand poses.
+- 内容: 'Step 3'
   提示: ''
   翻译: ''
-- 内容: Step 3
+- 内容: 'This is because a computer requires lots of data to accurately identify and distinguish meaningful features of hand poses, something that the human brain can do rather effortlessly.'
   提示: ''
   翻译: ''
-- 内容: Vision then extracts an MLMultiArray from these observations. An MLMultiArray
-    instance provides location coordinates that (in this case) map to the finger joints,
-    giving your ML model a rich set of hand-position data that it uses to train itself.
+- 内容: 'Step 4'
   提示: ''
   翻译: ''
-- 内容: Step 4
+- 内容: 'Step 5'
   提示: ''
   翻译: ''
-- 内容: This is because a computer requires lots of data to accurately identify and
-    distinguish meaningful features of hand poses, something that the human brain
-    can do rather effortlessly.
+- 内容: 'This app uses image classification to recognize different hand poses shown in the camera. Classification is a type of ML algorithm that categorizes examples from a dataset into different groups. You’ll use the MLHandPoseClassifier to classify different hand poses from a stream of images from the camera.'
   提示: ''
   翻译: ''
-- 内容: Providing readable data to your ML model
+- 内容: 'Step 6'
   提示: ''
   翻译: ''
-- 内容: Use the Vision framework to pass image data into your ML model.
+- 内容: 'To create an ML model, you need to provide a large amount of data — in this case, images — to the classifier. This process is known as training your ML model, because you’re teaching it how to recognize different things.'
   提示: ''
   翻译: ''
-- 内容: Debugging Your Machine Learning Model
+- 内容: 'Learn about ML models'
   提示: ''
   翻译: ''
-- 内容: To create an ML model, you need to provide a large amount of data — in this
-    case, images — to the classifier. This process is known as training your ML model,
-    because you’re teaching it how to recognize different things.
+- 内容: 'Learn how a model takes in camera data to generate a prediction.'
   提示: ''
   翻译: ''
-- 内容: Recognizing Gestures with Machine Learning
+- 内容: 'You can think of an ML model as a machine’s brain and all the knowledge it knows about a certain type of pattern – in this case, hand poses.'
   提示: ''
   翻译: ''
-- 内容: To add ML to your app, you’ll use the Create ML and Core ML frameworks.
+- 内容: 'An ML model receives information as input to produce an educated guess of what that information represents. This is known as a prediction.'
   提示: ''
   翻译: ''
-- 内容: Step 1
+- 内容: 'The camera in your app is the machine’s eyes. You can use image data from the camera as input for the HandPoseMLModel. Your ML model uses this data to identify the different types of hand poses.'
   提示: ''
   翻译: ''
-- 内容: Learn the basics of how machine learning uses data to create a classifier model.
+- 内容: 'If the model successfully receives an input, you’ll receive an output of a label and the confidence, or probability, of that image.'
   提示: ''
   翻译: ''
-- 内容: The Vision Framework makes it easy for your app to convert the camera’s image
-    data into something the ML model can understand.
+- 内容: 'Providing readable data to your ML model'
   提示: ''
   翻译: ''
-- 内容: Machine learning (ML) is the process of how you can “teach” computers, like
-    your iPad or Mac, to make educated guesses by providing them with lots of examples,
-    commonly referred to as data.
+- 内容: 'Use the Vision framework to pass image data into your ML model.'
   提示: ''
   翻译: ''
-- 内容: Step 2
+- 内容: 'The Vision Framework makes it easy for your app to convert the camera’s image data into something the ML model can understand.'
   提示: ''
   翻译: ''
-- 内容: Learn how a model takes in camera data to generate a prediction.
+- 内容: 'Every time your camera’s frame updates, your app gathers VNHumanHandPoseObservations from the frame’s pixel buffer.'
   提示: ''
   翻译: ''
-- 内容: Explore how to transform hand pose images from the camera into readable data
-    your machine learning model can use to predict gestures.
+- 内容: 'Vision then extracts an MLMultiArray from these observations. An MLMultiArray instance provides location coordinates that (in this case) map to the finger joints, giving your ML model a rich set of hand-position data that it uses to train itself.'
   提示: ''
   翻译: ''
-- 内容: Humans are able to see very few examples of hand poses and immediately tell
-    the difference between a rock pose and scissors pose. However, a computer requires
-    many examples of those hand poses to correctly identify them.
+- 内容: 'Debugging Your Machine Learning Model'
   提示: ''
   翻译: ''
-- 内容: Step 5
+- 内容: 'Learn how to debug your machine learning model and make improvements in its predictions.'
   提示: ''
   翻译: ''
-- 内容: Learn about ML models
+- 内容: 'To add ML to your app, you’ll use the Create ML and Core ML frameworks.'
   提示: ''
   翻译: ''
