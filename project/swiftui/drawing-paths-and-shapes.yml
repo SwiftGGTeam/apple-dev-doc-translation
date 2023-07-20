@@ -1,275 +1,228 @@
-- 内容: Define a Segment structure to hold the three points that represent one side
-    of the hexagon; import CoreGraphics so you can use CGPoint.
-  提示: ''
-  翻译: 定义一个 Segment 结构来保存代表六边形一侧的三个点； 导入 CoreGraphics，以便你可以使用 CGPoint。
-- 内容: Create a new SwiftUI view called Badge.
-  提示: ''
-  翻译: 创建一个名为 Badge 的新 SwiftUI 视图。
-- 内容: Add a ForEach view to rotate and display copies of the badge symbol.
-  提示: ''
-  翻译: 添加 ForEach 视图来旋转和显示徽章图案的副本。
-- 内容: By preserving a 1:1 aspect ratio, the badge maintains its position at the center
-    of the view, even if its ancestor views aren’t square.
-  提示: ''
-  翻译: 保持 1:1 的长宽比，徽章能够始终显示在视图的中心位置，即使其父级视图并非正方形。
-- 内容: Step 6
-  提示: ''
-  翻译: 步骤 6
-- 内容: First you’ll give your app an icon, to establish a look for the badge.
-  提示: ''
-  翻译: 首先，你将为你的应用程序提供一个图标，做为 App 的 Logo。
-- 内容: Step 8
-  提示: ''
-  翻译: 步骤 8
-- 内容: You’ll use this structure to define the shape of a hexagon.
-  提示: ''
-  翻译: 你将使用这个结构体来定义六边形的数据。
-- 内容: Draw the Badge Symbol
-  提示: ''
-  翻译: 绘制徽章图标
-- 内容: Replace the solid black background with a gradient to match the design.
-  提示: ''
-  翻译: 按照设计效果，用渐变替换纯黑色背景。
-- 内容: Animating Views and Transitions
+- 内容: 'Drawing Paths and Shapes'
   提示: ''
   翻译: ''
-- 内容: Combine the Badge Foreground and Background
+- 内容: 'Users receive a badge whenever they visit a landmark in their list. Of course, for a user to receive a badge, you’ll need to create one. This tutorial takes you through the process of creating a badge by combining paths and shapes, which you then overlay with another shape that represents the location.'
   提示: ''
-  翻译: 合并徽章内容和背景
-- 内容: Users receive a badge whenever they visit a landmark in their list. Of course,
-    for a user to receive a badge, you’ll need to create one. This tutorial takes
-    you through the process of creating a badge by combining paths and shapes, which
-    you then overlay with another shape that represents the location.
+  翻译: '每当用户访问其列表中的地标时，他们都会收到一个徽章。 当然，要让用户收到徽章，你需要创建一个。 本教程将引导你完成通过组合路径和形状创建徽章的过程，然后你将其与代表该位置的另一个形状叠加。'
+- 内容: 'If you want to create multiple badges for different kinds of landmarks, try experimenting with the overlaid symbol, varying the amount of repetition, or changing the various angles and scales.'
   提示: ''
-  翻译: 每当用户访问其列表中的地标时，他们都会收到一个徽章。 当然，要让用户收到徽章，你需要创建一个。 本教程将引导你完成通过组合路径和形状创建徽章的过程，然后你将其与代表该位置的另一个形状叠加。
-- 内容: Lay the badge’s symbol over the badge background by placing it in a ZStack.
+  翻译: '如果你想为不同类型的地标创建多个徽章，请尝试使用叠加符号进行试验，改变重复次数，或更改各种角度和比例。'
+- 内容: 'Follow the steps to build this project, or download the finished project to explore on your own.'
   提示: ''
-  翻译: 将徽章图案放置在 ZStack 中，将其置于徽章背景之上。
-- 内容: To keep the project organized, before moving on to the next tutorial, collect
-    all of the new files that you added in this tutorial into a Badges group.
+  翻译: '按照步骤构建此项目，或下载完成的项目以自行探索。'
+- 内容: 'Create Drawing Data for a Badge View'
   提示: ''
-  翻译: 为了使项目结构清晰，在继续下一个教程之前，将你在本教程中添加的所有新文件移动到 Badges 文件夹中。
-- 内容: To create the badge, you’ll start by defining data that you can use to draw
-    a hexagon shape for the badge’s background.
+  翻译: '为徽章视图创建绘图数据'
+- 内容: 'To create the badge, you’ll start by defining data that you can use to draw a hexagon shape for the badge’s background.'
   提示: ''
-  翻译: 要创建徽章，你需要先定义数据，用来绘制徽章背景的六边形形状。
-- 内容: Section 1
+  翻译: '要创建徽章，你需要先定义数据，用来绘制徽章背景的六边形形状。'
+- 内容: 'Step 1'
   提示: ''
-  翻译: 第 1 节
-- 内容: When using SwiftUI, you can individually animate changes to views, or to a view’s
-    state, no matter where the effects are. SwiftUI handles all the complexity of
-    these combined, overlapping, and interruptible animations for you.
+  翻译: '步骤 1'
+- 内容: 'With the Views group selected in the navigation pane, choose File > New > File, select Swift File from the iOS Templates sheet, and click Next.'
   提示: ''
-  翻译: 使用 SwiftUI 时，你可以单独为视图或视图状态的更改设置动画，无论效果在哪里。 SwiftUI 为你处理这些组合、重叠和可中断动画的所有复杂性。
-- 内容: Name the new file HexagonParameters.swift.
+  翻译: '在导航窗格中选择 View 文件夹后，选择“File”>“New”>“File”，从“iOS Templates”表中选择“Swift File”，然后单击“Next”。'
+- 内容: 'Step 2'
   提示: ''
-  翻译: 将新文件命名为 HexagonParameters.swift。
-- 内容: If you want to create multiple badges for different kinds of landmarks, try
-    experimenting with the overlaid symbol, varying the amount of repetition, or changing
-    the various angles and scales.
+  翻译: '步骤 2'
+- 内容: 'Name the new file HexagonParameters.swift.'
   提示: ''
-  翻译: 如果你想为不同类型的地标创建多个徽章，请尝试使用叠加符号进行试验，改变重复次数，或更改各种角度和比例。
-- 内容: Create Drawing Data for a Badge View
+  翻译: '将新文件命名为 HexagonParameters.swift。'
+- 内容: 'You’ll use this structure to define the shape of a hexagon.'
   提示: ''
-  翻译: 为徽章视图创建绘图数据
-- 内容: Draw the top portion of the symbol using the path APIs.
+  翻译: '你将使用这个结构体来定义六边形的数据。'
+- 内容: 'Step 3'
   提示: ''
-  翻译: 使用 Path API 绘制图标的顶部。
-- 内容: Check Your Understanding
+  翻译: '步骤 3'
+- 内容: 'Inside the new file, create a structure called HexagonParameters.'
+  提示: ''
+  翻译: '在新文件中，创建一个名为 HexagonParameters 的结构体。'
+- 内容: 'Step 4'
+  提示: ''
+  翻译: '步骤 4'
+- 内容: 'Define a Segment structure to hold the three points that represent one side of the hexagon; import CoreGraphics so you can use CGPoint.'
+  提示: ''
+  翻译: '定义一个 Segment 结构来保存代表六边形一侧的三个点； 导入 CoreGraphics，以便你可以使用 CGPoint。'
+- 内容: 'Each side starts where the previous ends, moves in a straight line to the first point, and then moves over a Bézier curve at the corner to the second point. The third point controls the shape of the curve.'
+  提示: ''
+  翻译: '每条边都从前一条边结束的点开始，沿直线移动到第一个点，然后通过拐角处的贝塞尔曲线移动到第二个点。 第三点控制曲线的形状。'
+- 内容: 'Step 5'
+  提示: ''
+  翻译: '步骤 5'
+- 内容: 'Create an array to hold segments.'
+  提示: ''
+  翻译: '创建一个数组来存储 Segment。'
+- 内容: 'Step 6'
+  提示: ''
+  翻译: '步骤 6'
+- 内容: 'Add data for the six segments, one for each side of the hexagon.'
+  提示: ''
+  翻译: '为六个部分分别添加数据，每个部分对应六边形的一条边。'
+- 内容: 'The values are stored as a fraction of a unit square having its origin in the upper left, with positive x to the right and positive y down. Later, you’ll use these fractions to find the actual points of a hexagon with a given size.'
+  提示: ''
+  翻译: '这些数值以一个正方形为基准坐标，按照比例设置，正 x 向右，正 y 向下。 待会你将使用这些比例数值来查找具有给定大小的六边形的实际点。'
+- 内容: 'Step 7'
+  提示: ''
+  翻译: '步骤 7'
+- 内容: 'Add an adjustment value that lets you tune the shape of the hexagon.'
+  提示: ''
+  翻译: '添加一个调整值，使你可以调整六边形的形状。'
+- 内容: 'Draw the Badge Background'
+  提示: ''
+  翻译: '绘制徽章背景'
+- 内容: 'Use the graphics APIs in SwiftUI to draw a custom badge shape.'
+  提示: ''
+  翻译: '使用 SwiftUI 中的图形 API 绘制自定义徽章形状。'
+- 内容: 'Create another new file with File > New > File, this time selecting SwiftUI View from the iOS Templates sheet. Click Next and then name the file BadgeBackground.swift.'
+  提示: ''
+  翻译: '使用 File > New > File 创建另一个新文件，这次从 iOS 模板中选择 SwiftUI 视图。 单击下一步，然后将文件命名为 BadgeBackground.swift。'
+- 内容: 'In BadgeBackground.swift, add a Path shape to the badge and apply the fill() modifier to turn the shape into a view.'
+  提示: ''
+  翻译: '在 BadgeBackground.swift 中，将 Path 形状添加到徽章并使用 fill() 修饰符将形状变成视图。'
+- 内容: 'You use paths to combine lines, curves, and other drawing primitives to form more complex shapes like the badge’s hexagonal background.'
+  提示: ''
+  翻译: '你可以使用 Path 来组合直线、曲线和其他绘图基础元素，来组合成更复杂的形状，例如徽章的六边形背景。'
+- 内容: 'Add a starting point to the path, assuming a container with size 100 x 100 px.'
+  提示: ''
+  翻译: '假设容器大小为 100 x 100 像素，将起点添加到 Path。'
+- 内容: 'The move(to:) method moves the drawing cursor within the bounds of a shape as though an imaginary pen or pencil is hovering over the area, waiting to start drawing.'
+  提示: ''
+  翻译: 'move(to:) 方法就像一支想要开始绘画的虚拟笔或铅笔悬浮在形状区域内，可以在区域内移动绘画光标。'
+- 内容: 'Draw the lines for each point of the shape data to create a rough hexagonal shape.'
+  提示: ''
+  翻译: '给形状数据的每个点连线来创建一个大致的六边形。'
+- 内容: 'The addLine(to:) method takes a single point and draws it. Successive calls to addLine(to:) begin a line at the previous point and continue to the new point.'
+  提示: ''
+  翻译: 'addLine(to:) 方法接受一个点并绘制它。连续调用  addLine(to:) 的从前一个点连线到下一个点，最终形成一个形状。'
+- 内容: 'Don’t worry if your hexagon looks a little unusual; that’s because you’re ignoring the curved part of each segment at the shape’s corners. You’ll account for that next.'
+  提示: ''
+  翻译: '如果你的六边形看起来有点不太对劲，别担心； 那是因为你忽略了线段边角处的弯曲部分。 接下来你会考虑到这一点。'
+- 内容: 'Use the addQuadCurve(to:control:) method to draw the Bézier curves for the badge’s corners.'
+  提示: ''
+  翻译: '使用 addQuadCurve(to:control:) 方法绘制徽章拐角处的贝塞尔曲线。'
+- 内容: 'Wrap the path in a GeometryReader so the badge can use the size of its containing view, which defines the size instead of hard-coding the value (100).'
+  提示: ''
+  翻译: '将 Path 包装在 GeometryReader 中，让徽章可以获取到父视图的大小，这样就不用使用写死 100 来设置大小。'
+- 内容: 'Using the smallest of the geometry’s two dimensions preserves the aspect ratio of the badge when its containing view isn’t square.'
+  提示: ''
+  翻译: '当徽章的父视图不是正方形时，使用 geometry 的两个维度中最小的一个可以保留徽章的长宽比。'
+- 内容: 'Scale the shape on the x-axis using xScale, and then add xOffset to recenter the shape within its geometry.'
+  提示: ''
+  翻译: '使用 xScale 在 x 轴上缩放形状，然后添加 xOffset 让图形重新居中。'
+- 内容: 'Step 8'
+  提示: ''
+  翻译: '步骤 8'
+- 内容: 'Replace the solid black background with a gradient to match the design.'
+  提示: ''
+  翻译: '按照设计效果，用渐变替换纯黑色背景。'
+- 内容: 'Step 9'
+  提示: ''
+  翻译: '步骤 9'
+- 内容: 'Apply the aspectRatio(_:contentMode:) modifier to the gradient fill.'
+  提示: ''
+  翻译: '将 aspectRatio(_:contentMode:) 修饰符应用到渐变视图上。'
+- 内容: 'By preserving a 1:1 aspect ratio, the badge maintains its position at the center of the view, even if its ancestor views aren’t square.'
+  提示: ''
+  翻译: '保持 1:1 的长宽比，徽章能够始终显示在视图的中心位置，即使其父级视图并非正方形。'
+- 内容: 'Draw the Badge Symbol'
+  提示: ''
+  翻译: '绘制徽章图标'
+- 内容: 'The Landmarks badge has a custom insignia in its center that’s based on the mountain that appears in the Landmarks app icon.'
+  提示: ''
+  翻译: '地标应用的徽章在其中心拥有一个定制的图案，其灵感来源于地标应用图标中出现的山峰。'
+- 内容: 'The mountain symbol consists of two shapes: one that represents a snowcap at the peak, and the other that represents vegetation along the approach. You’ll draw them using two partially triangular shapes that are set apart by a small gap.'
+  提示: ''
+  翻译: '这个山峰图标由两个形状组成：一个代表山顶的雪帽，另一个代表沿途的植被。你将绘制两个略带三角形状的图案来完成它们，这两个形状之间有一个小间隙。'
+- 内容: 'First you’ll give your app an icon, to establish a look for the badge.'
+  提示: ''
+  翻译: '首先，你将为你的应用程序提供一个图标，做为 App 的 Logo。'
+- 内容: 'Delete the empty AppIcon item from your project’s Asset Catalog, and then drag the AppIcon.appiconset folder from the downloaded projects’ Resources folder into the Asset catalog.'
+  提示: ''
+  翻译: '从项目的 Asset Catalog 中删除空的 AppIcon，然后将 AppIcon.appiconset 文件夹从下载的项目的 Resources 文件夹直接拖到 Asset 目录中。'
+- 内容: 'Xcode recognizes the folder as containing all the size variations of an app icon and creates a corresponding item in the catalog.'
+  提示: ''
+  翻译: 'Xcode 会识别该文件夹包含应用程序图标的所有不同尺寸，并且在目录中创建对应的项。'
+- 内容: 'Next, you’ll build the matching badge symbol.'
+  提示: ''
+  翻译: '接下来，你将构建对应的徽章图标。'
+- 内容: 'Create a new custom view called BadgeSymbol for the mountain shape that’s stamped in a rotated pattern in the badge design.'
+  提示: ''
+  翻译: '创建一个名为BadgeSymbol的新自定义视图，以旋转图案呈现山的形状。'
+- 内容: 'Draw the top portion of the symbol using the path APIs.'
+  提示: ''
+  翻译: '使用 Path API 绘制图标的顶部。'
+- 内容: 'Experiment'
+  提示: ''
+  翻译: '实验'
+- 内容: 'Adjust the numeric multipliers associated with the spacing, topWidth, and topHeight constants to see how they influence the overall shape.'
+  提示: ''
+  翻译: '调整与 spacing、topWidth 和 totopHeight 常量关联的数值的乘数，观察它们如何影响整体形状。'
+- 内容: 'Draw the bottom portion of the symbol.'
+  提示: ''
+  翻译: '绘制符号的底部。'
+- 内容: 'Use the move(to:) modifier to insert a gap between multiple shapes in the same path.'
+  提示: ''
+  翻译: '使用 move(to:) 修饰符在同一路径中的多个形状之间插入间隙。'
+- 内容: 'Fill the symbol with the purple color from the design.'
+  提示: ''
+  翻译: '用紫色来填充图标颜色。'
+- 内容: 'Create a new RotatedBadgeSymbol view to encapsulate the concept of a rotated symbol.'
+  提示: ''
+  翻译: '创建一个新的 RotatedBadgeSymbol 视图来封装旋转图标。'
+- 内容: 'Adjust the angle in the preview to test the effect of the rotation.'
+  提示: ''
+  翻译: '在预览中调整角度，测试旋转效果。'
+- 内容: 'Combine the Badge Foreground and Background'
+  提示: ''
+  翻译: '合并徽章内容和背景'
+- 内容: 'The badge design calls for the mountain shape to be rotated and repeated multiple times on top of the badge background.'
+  提示: ''
+  翻译: '徽章设计要求山形图案在徽章背景上旋转并重复多次。'
+- 内容: 'Define a new type for rotation and leverage the ForEach view to apply the same adjustments to multiple copies of the mountain shape.'
+  提示: ''
+  翻译: '定义一个新的旋转类型，并利用 ForEach 将相同的调整应用于多个山形的副本。'
+- 内容: 'Create a new SwiftUI view called Badge.'
+  提示: ''
+  翻译: '创建一个名为 Badge 的新 SwiftUI 视图。'
+- 内容: 'Place BadgeBackground in the body of Badge.'
+  提示: ''
+  翻译: '将 BadgeBackground 放在 Badge 的主体中。'
+- 内容: 'Lay the badge’s symbol over the badge background by placing it in a ZStack.'
+  提示: ''
+  翻译: '将徽章图案放置在 ZStack 中，将其置于徽章背景之上。'
+- 内容: 'As it appears now, the badge symbol is too large compared to the intended design and relative size of the background.'
+  提示: ''
+  翻译: '根据目前的展示效果，与预期设计及背景相对尺寸相比，徽章图标过大。'
+- 内容: 'Correct the size of the badge symbol by reading the surrounding geometry and scaling the symbol.'
+  提示: ''
+  翻译: '通过读取布局的 geometry 并缩放图案来更正徽章图案的大小。'
+- 内容: 'Add a ForEach view to rotate and display copies of the badge symbol.'
+  提示: ''
+  翻译: '添加 ForEach 视图来旋转和显示徽章图案的副本。'
+- 内容: 'A full, 360° rotation split into eight segments creates a sun-like pattern by repeating the mountain symbol.'
+  提示: ''
+  翻译: '一个完整的 360° 旋转分为八个部分，通过重复山峰图案创建一个类似太阳的图案。'
+- 内容: 'To keep the project organized, before moving on to the next tutorial, collect all of the new files that you added in this tutorial into a Badges group.'
+  提示: ''
+  翻译: '为了使项目结构清晰，在继续下一个教程之前，将你在本教程中添加的所有新文件移动到 Badges 文件夹中。'
+- 内容: 'Check Your Understanding'
   提示: ''
   翻译: ''
-- 内容: Draw the lines for each point of the shape data to create a rough hexagonal
-    shape.
-  提示: ''
-  翻译: 给形状数据的每个点连线来创建一个大致的六边形。
-- 内容: You use paths to combine lines, curves, and other drawing primitives to form
-    more complex shapes like the badge’s hexagonal background.
-  提示: ''
-  翻译: 你可以使用 Path 来组合直线、曲线和其他绘图基础元素，来组合成更复杂的形状，例如徽章的六边形背景。
-- 内容: Create another new file with File > New > File, this time selecting SwiftUI
-    View from the iOS Templates sheet. Click Next and then name the file BadgeBackground.swift.
-  提示: ''
-  翻译: 使用 File > New > File 创建另一个新文件，这次从 iOS 模板中选择 SwiftUI 视图。 单击下一步，然后将文件命名为 BadgeBackground.swift。
-- 内容: Fill the symbol with the purple color from the design.
-  提示: ''
-  翻译: 用紫色来填充图标颜色。
-- 内容: Correct the size of the badge symbol by reading the surrounding geometry and
-    scaling the symbol.
-  提示: ''
-  翻译: 通过读取布局的 geometry 并缩放图案来更正徽章图案的大小。
-- 内容: Adjust the angle in the preview to test the effect of the rotation.
-  提示: ''
-  翻译: 在预览中调整角度，测试旋转效果。
-- 内容: The badge design calls for the mountain shape to be rotated and repeated multiple
-    times on top of the badge background.
-  提示: ''
-  翻译: 徽章设计要求山形图案在徽章背景上旋转并重复多次。
-- 内容: Scale the shape on the x-axis using xScale, and then add xOffset to recenter
-    the shape within its geometry.
-  提示: ''
-  翻译: 使用 xScale 在 x 轴上缩放形状，然后添加 xOffset 让图形重新居中。
-- 内容: Step 3
-  提示: ''
-  翻译: 步骤 3
-- 内容: Section 2
-  提示: ''
-  翻译: 第 2 节
-- 内容: Draw the Badge Background
-  提示: ''
-  翻译: 绘制徽章背景
-- 内容: Don’t worry if your hexagon looks a little unusual; that’s because you’re ignoring
-    the curved part of each segment at the shape’s corners. You’ll account for that
-    next.
-  提示: ''
-  翻译: 如果你的六边形看起来有点不太对劲，别担心； 那是因为你忽略了线段边角处的弯曲部分。 接下来你会考虑到这一点。
-- 内容: Add an adjustment value that lets you tune the shape of the hexagon.
-  提示: ''
-  翻译: 添加一个调整值，使你可以调整六边形的形状。
-- 内容: Next, you’ll build the matching badge symbol.
-  提示: ''
-  翻译: 接下来，你将构建对应的徽章图标。
-- 内容: Section 4
-  提示: ''
-  翻译: 第 4 节
-- 内容: The values are stored as a fraction of a unit square having its origin in the
-    upper left, with positive x to the right and positive y down. Later, you’ll use
-    these fractions to find the actual points of a hexagon with a given size.
-  提示: ''
-  翻译: 这些数值以一个正方形为基准坐标，按照比例设置，正 x 向右，正 y 向下。 待会你将使用这些比例数值来查找具有给定大小的六边形的实际点。
-- 内容: A full, 360° rotation split into eight segments creates a sun-like pattern by
-    repeating the mountain symbol.
-  提示: ''
-  翻译: 一个完整的 360° 旋转分为八个部分，通过重复山峰图案创建一个类似太阳的图案。
-- 内容: Step 5
-  提示: ''
-  翻译: 步骤 5
-- 内容: Step 7
-  提示: ''
-  翻译: 步骤 7
-- 内容: The move(to:) method moves the drawing cursor within the bounds of a shape as
-    though an imaginary pen or pencil is hovering over the area, waiting to start
-    drawing.
-  提示: ''
-  翻译: move(to:) 方法就像一支想要开始绘画的虚拟笔或铅笔悬浮在形状区域内，可以在区域内移动绘画光标。
-- 内容: Add a starting point to the path, assuming a container with size 100 x 100 px.
-  提示: ''
-  翻译: 假设容器大小为 100 x 100 像素，将起点添加到 Path。
-- 内容: Use the addQuadCurve(to:control:) method to draw the Bézier curves for the badge’s
-    corners.
-  提示: ''
-  翻译: 使用 addQuadCurve(to:control:) 方法绘制徽章拐角处的贝塞尔曲线。
-- 内容: Apply the aspectRatio(_:contentMode:) modifier to the gradient fill.
-  提示: ''
-  翻译: 将 aspectRatio(_:contentMode:) 修饰符应用到渐变视图上。
-- 内容: Each side starts where the previous ends, moves in a straight line to the first
-    point, and then moves over a Bézier curve at the corner to the second point. The
-    third point controls the shape of the curve.
-  提示: ''
-  翻译: 每条边都从前一条边结束的点开始，沿直线移动到第一个点，然后通过拐角处的贝塞尔曲线移动到第二个点。 第三点控制曲线的形状。
-- 内容: Use the graphics APIs in SwiftUI to draw a custom badge shape.
-  提示: ''
-  翻译: 使用 SwiftUI 中的图形 API 绘制自定义徽章形状。
-- 内容: In BadgeBackground.swift, add a Path shape to the badge and apply the fill()
-    modifier to turn the shape into a view.
-  提示: ''
-  翻译: 在 BadgeBackground.swift 中，将 Path 形状添加到徽章并使用 fill() 修饰符将形状变成视图。
-- 内容: Follow the steps to build this project, or download the finished project to
-    explore on your own.
-  提示: ''
-  翻译: 按照步骤构建此项目，或下载完成的项目以自行探索。
-- 内容: As it appears now, the badge symbol is too large compared to the intended design
-    and relative size of the background.
-  提示: ''
-  翻译: 根据目前的展示效果，与预期设计及背景相对尺寸相比，徽章图标过大。
-- 内容: Using the smallest of the geometry’s two dimensions preserves the aspect ratio
-    of the badge when its containing view isn’t square.
-  提示: ''
-  翻译: 当徽章的父视图不是正方形时，使用 geometry 的两个维度中最小的一个可以保留徽章的长宽比。
-- 内容: Draw the bottom portion of the symbol.
-  提示: ''
-  翻译: 绘制符号的底部。
-- 内容: The Landmarks badge has a custom insignia in its center that’s based on the
-    mountain that appears in the Landmarks app icon.
-  提示: ''
-  翻译: 地标应用的徽章在其中心拥有一个定制的图案，其灵感来源于地标应用图标中出现的山峰。
-- 内容: Add data for the six segments, one for each side of the hexagon.
-  提示: ''
-  翻译: 为六个部分分别添加数据，每个部分对应六边形的一条边。
-- 内容: Wrap the path in a GeometryReader so the badge can use the size of its containing
-    view, which defines the size instead of hard-coding the value (100).
-  提示: ''
-  翻译: 将 Path 包装在 GeometryReader 中，让徽章可以获取到父视图的大小，这样就不用使用写死 100 来设置大小。
-- 内容: Step 2
-  提示: ''
-  翻译: 步骤 2
-- 内容: Create a new custom view called BadgeSymbol for the mountain shape that’s stamped
-    in a rotated pattern in the badge design.
-  提示: ''
-  翻译: 创建一个名为BadgeSymbol的新自定义视图，以旋转图案呈现山的形状。
-- 内容: Place BadgeBackground in the body of Badge.
-  提示: ''
-  翻译: 将 BadgeBackground 放在 Badge 的主体中。
-- 内容: The addLine(to:) method takes a single point and draws it. Successive calls
-    to addLine(to:) begin a line at the previous point and continue to the new point.
-  提示: ''
-  翻译: addLine(to:) 方法接受一个点并绘制它。连续调用  addLine(to:) 的从前一个点连线到下一个点，最终形成一个形状。
-- 内容: Drawing Paths and Shapes
+- 内容: 'Animating Views and Transitions'
   提示: ''
   翻译: ''
-- 内容: Adjust the numeric multipliers associated with the spacing, topWidth, and topHeight
-    constants to see how they influence the overall shape.
+- 内容: 'When using SwiftUI, you can individually animate changes to views, or to a view’s state, no matter where the effects are. SwiftUI handles all the complexity of these combined, overlapping, and interruptible animations for you.'
   提示: ''
-  翻译: 调整与 spacing、topWidth 和 totopHeight 常量关联的数值的乘数，观察它们如何影响整体形状。
-- 内容: Experiment
+  翻译: '使用 SwiftUI 时，你可以单独为视图或视图状态的更改设置动画，无论效果在哪里。 SwiftUI 为你处理这些组合、重叠和可中断动画的所有复杂性。'
+- 内容: 'Section 1'
   提示: ''
-  翻译: 实验
-- 内容: Create a new RotatedBadgeSymbol view to encapsulate the concept of a rotated
-    symbol.
+  翻译: '第 1 节'
+- 内容: 'Section 2'
   提示: ''
-  翻译: 创建一个新的 RotatedBadgeSymbol 视图来封装旋转图标。
-- 内容: Use the move(to:) modifier to insert a gap between multiple shapes in the same
-    path.
+  翻译: '第 2 节'
+- 内容: 'Section 4'
   提示: ''
-  翻译: 使用 move(to:) 修饰符在同一路径中的多个形状之间插入间隙。
-- 内容: 'The mountain symbol consists of two shapes: one that represents a snowcap at
-    the peak, and the other that represents vegetation along the approach. You’ll
-    draw them using two partially triangular shapes that are set apart by a small
-    gap.'
+  翻译: '第 4 节'
+- 内容: 'Section 3'
   提示: ''
-  翻译: 这个山峰图标由两个形状组成：一个代表山顶的雪帽，另一个代表沿途的植被。你将绘制两个略带三角形状的图案来完成它们，这两个形状之间有一个小间隙。
-- 内容: With the Views group selected in the navigation pane, choose File > New > File,
-    select Swift File from the iOS Templates sheet, and click Next.
-  提示: ''
-  翻译: 在导航窗格中选择 View 文件夹后，选择“File”>“New”>“File”，从“iOS Templates”表中选择“Swift File”，然后单击“Next”。
-- 内容: Step 4
-  提示: ''
-  翻译: 步骤 4
-- 内容: Xcode recognizes the folder as containing all the size variations of an app
-    icon and creates a corresponding item in the catalog.
-  提示: ''
-  翻译: Xcode 会识别该文件夹包含应用程序图标的所有不同尺寸，并且在目录中创建对应的项。
-- 内容: Step 9
-  提示: ''
-  翻译: 步骤 9
-- 内容: Section 3
-  提示: ''
-  翻译: 第 3 节
-- 内容: Inside the new file, create a structure called HexagonParameters.
-  提示: ''
-  翻译: 在新文件中，创建一个名为 HexagonParameters 的结构体。
-- 内容: Step 1
-  提示: ''
-  翻译: 步骤 1
-- 内容: Define a new type for rotation and leverage the ForEach view to apply the same
-    adjustments to multiple copies of the mountain shape.
-  提示: ''
-  翻译: 定义一个新的旋转类型，并利用 ForEach 将相同的调整应用于多个山形的副本。
-- 内容: Delete the empty AppIcon item from your project’s Asset Catalog, and then drag
-    the AppIcon.appiconset folder from the downloaded projects’ Resources folder into
-    the Asset catalog.
-  提示: ''
-  翻译: 从项目的 Asset Catalog 中删除空的 AppIcon，然后将 AppIcon.appiconset 文件夹从下载的项目的 Resources
-    文件夹直接拖到 Asset 目录中。
-- 内容: Create an array to hold segments.
-  提示: ''
-  翻译: 创建一个数组来存储 Segment。
+  翻译: '第 3 节'
