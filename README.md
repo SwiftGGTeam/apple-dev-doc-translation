@@ -63,7 +63,6 @@ SwiftGG 是一个致力于为 Swift 语言和 iOS 开发者提供高质量中文
 
 ### 开发成员
 - [SketchK](https://github.com/SketchK)
-- [numbbbbb](https://github.com/numbbbbb)
 - [zyterence](https://github.com/zyterence)
 - [OneeMe](https://github.com/OneeMe)
 - [IanIsMyUsername](https://github.com/IanIsMyUsername)
