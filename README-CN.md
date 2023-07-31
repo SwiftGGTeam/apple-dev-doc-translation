@@ -62,12 +62,16 @@ SwiftGG 是一个致力于为 Swift 语言和 iOS 开发者提供高质量中文
 - **[微博](https://weibo.com/swiftguide)**
 
 ### 开发成员
-- [SketchK](https://github.com/SketchK)
+
+- [SketchK](https://github.com/SwiftGGTeam/swiftgg-trans-plugin/commits?author=SketchK)
 - [zyterence](https://github.com/zyterence)
 - [OneeMe](https://github.com/OneeMe)
 - [IanIsMyUsername](https://github.com/IanIsMyUsername)
 - [hiETsang](https://github.com/hiETsang)
 - [Ryan-BetterMe](https://github.com/Ryan-BetterMe)
+- [JacobMao](https://github.com/JacobMao)
+- [RyanZhu](https://github.com/underthestars-zhy)
+- [yongfrank](https://github.com/yongfrank)
 
 ## 许可证
 和 [苹果官方文档](https://swift.org/documentation/) 协议一致：[Creative Commons Attribution 4.0 International (CC BY 4.0) License](https://creativecommons.org/licenses/by/4.0/)。

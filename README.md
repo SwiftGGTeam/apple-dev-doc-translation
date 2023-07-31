@@ -2,7 +2,7 @@
 
 [简体中文](./README-CN.md)
 
-The SwiftUI-Tutorial-Chinese repository is used to store translation files for the [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin). We aggregate and sort the original text, translations, and hint information from Apple's official documents, aiming to provide developers with a high-quality Chinese tutorial.
+The SwiftUI-Tutorial-Chinese repository is used to store translation files for the [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin). We aggregate and sort the original text, translations, and hint information from Apple's official documents, aiming to provide developers with a high-quality Chinese and other languages tutorial.
 
 The translation mapping files are stored in the yaml file format. The following is a specific introduction to the storage rules and storage format:
 
@@ -77,12 +77,15 @@ You can also follow us through the following ways:
 
 ### Development Team
 
-- [SketchK](https://github.com/SketchK)
+- [SketchK](https://github.com/SwiftGGTeam/swiftgg-trans-plugin/commits?author=SketchK)
 - [zyterence](https://github.com/zyterence)
 - [OneeMe](https://github.com/OneeMe)
 - [IanIsMyUsername](https://github.com/IanIsMyUsername)
 - [hiETsang](https://github.com/hiETsang)
 - [Ryan-BetterMe](https://github.com/Ryan-BetterMe)
+- [JacobMao](https://github.com/JacobMao)
+- [RyanZhu](https://github.com/underthestars-zhy)
+- [yongfrank](https://github.com/yongfrank)
 
 ## License
 
