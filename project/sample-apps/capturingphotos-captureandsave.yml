@@ -1,149 +1,111 @@
-- 内容: Step 5
+- 内容: 'Capturing and Saving a Photo'
   提示: ''
-  翻译: ''
-- 内容: Processing and Saving a Photo
+  翻译: '拍摄和保存照片'
+- 内容: 'Take photos with the camera, add them to your photo library, and display them in your app.'
   提示: ''
-  翻译: ''
-- 内容: The savePhoto(imageData:) method creates a task and passes on the real work
-    of saving the photo data to the photoCollection object by calling its addImage(_:)
-    method. And that’s fine! The data model’s job is to coordinate data flow between
-    the app’s data objects.
+  翻译: '使用摄像头拍照，将照片添加到你的照片库中，并在你的 app 中显示它们。'
+- 内容: 'Smile! Click! A lot happens in quick succession when you take a photo. 📸'
   提示: ''
-  翻译: ''
-- 内容: When you take a photo, you want to capture an image with the highest possible
-    resolution. This contrasts with the preview images, which tend to have a lower
-    resolution to facilitate rapidly updating previews in the viewfinder. Your camera
-    has a special photo output that its takePhoto() method uses to capture high-resolution
-    images of what you see in the viewfinder.
+  翻译: '微笑！点击！在拍照时会迅速发生很多事情。'
+- 内容: 'Follow the action after you tap or click the shutter button, to investigate what happens from that moment to when the photo shows up in your photo library.'
   提示: ''
-  翻译: ''
-- 内容: Now that you’ve got the captured photo, you add it into the camera’s photo stream.
-    It’s then available to any object in your app waiting for a photo, like the data
-    model.
+  翻译: '随着你点击相机视图或点击快门之后，来探索从这一刻到照片出现在你照片库中所发生的过程。'
+- 内容: 'Responding to the Shutter Button'
   提示: ''
-  翻译: ''
-- 内容: The for-await loop now waits for a photoData element to arrive in your unpacked
-    stream before processing it.
+  翻译: '响应快门按钮'
+- 内容: 'Learn how to handle the shutter button action, and request the camera to take a photo.'
   提示: ''
-  翻译: ''
-- 内容: Step 6
+  翻译: '学习如何处理快门按钮的操作，并请求摄像头拍摄照片。'
+- 内容: 'Step 1'
   提示: ''
-  翻译: ''
-- 内容: Tip
+  翻译: '第一步'
+- 内容: 'When you tap or click the shutter button in your camera view, things start happening!'
   提示: ''
-  翻译: ''
-- 内容: Responding to the Shutter Button
+  翻译: '当你点击相机视图或点击快门按钮时，事情就开始发生了！'
+- 内容: 'Step 2'
   提示: ''
-  翻译: ''
-- 内容: You’ll recall that, as an asynchronous stream, photoStream is very much like
-    a Sequence. You can use its compactMap(_:) method to call unpackPhoto(_:) for
-    each photo ($0) in the stream. This transforms the stream of AVCapturePhoto instances
-    into a much more useful stream of PhotoData instances.
+  翻译: '第二步'
+- 内容: 'The button springs into action, grabs the model’s camera object, then calls its takePhoto() method. Keep going to find out how it takes a photo!'
   提示: ''
-  翻译: ''
-- 内容: Call your model’s savePhoto(imageData:) method to save the image data from photoData
-    as a new photo in your photo library.
+  翻译: '按钮迅速响应，获取模型中的 camera 对象，然后调用它的 takePhoto() 方法。下面我们会解释它是如何能拍摄一张照片的！'
+- 内容: 'Capturing a Photo'
   提示: ''
-  翻译: ''
-- 内容: Browse the photos in your photo library.
+  翻译: '拍摄一张照片'
+- 内容: 'When you take a photo, the camera captures image data from its sensor. Learn how to initiate this, and handle the resulting captured photo.'
   提示: ''
-  翻译: ''
-- 内容: Step 3
+  翻译: '当你拍照时，摄像头会从其传感器中捕获图像数据。学习如何发起拍照，并处理捕获到的照片。'
+- 内容: 'When you take a photo, you want to capture an image with the highest possible resolution. This contrasts with the preview images, which tend to have a lower resolution to facilitate rapidly updating previews in the viewfinder. Your camera has a special photo output that its takePhoto() method uses to capture high-resolution images of what you see in the viewfinder.'
   提示: ''
-  翻译: ''
-- 内容: Step 8
+  翻译: '当你拍摄照片时，你希望以尽可能高的分辨率捕获图像。这与预览图像形成了对比，预览图像通常具有较低的分辨率，以便在取景器中快速更新预览。
+        你的摄像头具有一个专门的照片输出，这里的 takePhoto() 方法就使用该输出来捕获在取景器中所见的高分辨率图像。'
+- 内容: 'You start the real work of taking the photo by requesting the photo output to capture a photo. If all goes well, this is when you hear a reassuring shutter sound to let you — and anyone nearby — know that you’ve just taken a photo.'
   提示: ''
-  翻译: ''
-- 内容: Step 4
+  翻译: '通过请求照片输出来拍摄照片，你便开始了实际的拍照工作。如果一切顺利，这时你会听到令人放心的快门声音，让你和周围的人都知道你刚刚拍摄了一张照片。'
+- 内容: 'Step 3'
   提示: ''
-  翻译: ''
-- 内容: To unpack the photoStream, you’ll use the unpackPhoto(_:) function, which takes
-    a captured photo and returns a PhotoData instance that contains a low-resolution
-    image thumbnail as an Image, the size of the image thumbnail, a high-resolution
-    image as Data, and the size of the high-resolution image.
+  翻译: '第三步'
+- 内容: 'You might wonder why capturePhoto doesn’t just return the photo. That’s because capturing a photo takes time: the camera may need to focus, or wait for the flash, and then there’s the exposure time. The capturePhoto method is asynchronous, with the captured photo typically arriving a short time after you tap or click the shutter button.'
   提示: ''
-  翻译: ''
-- 内容: The button springs into action, grabs the model’s camera object, then calls
-    its takePhoto() method. Keep going to find out how it takes a photo!
+  翻译: '你可能会想知道为什么 capturePhoto 方法不直接返回照片。这是因为拍摄照片需要时间：相机可能需要对焦，或者等待闪光灯，以及还有曝光时间。
+        capturePhoto 方法是异步的，通常在你点击相机视图或点击快门按钮后的短暂时间内就会收到照片。'
+- 内容: 'Step 4'
   提示: ''
-  翻译: ''
-- 内容: When you take a photo, the camera captures image data from its sensor. Learn
-    how to initiate this, and handle the resulting captured photo.
+  翻译: '第四步'
+- 内容: 'After the photo capture has completed, you receive a callback to another method in your camera object: photoOutput(_:didFinishProcessingPhoto:error:). Its first argument receives the captured photo as an instance of AVCapturePhoto.'
   提示: ''
-  翻译: ''
-- 内容: Capturing a Photo
+  翻译: '在捕获照片完成后，camera 对象的另一个回调方法：photoOutput(_:didFinishProcessingPhoto:error:) 会被调用。它的第二个参数是一个类型为 AVCapturePhoto 的实例，其就是被捕获的照片。'
+- 内容: 'Step 5'
   提示: ''
-  翻译: ''
-- 内容: When you tap or click the shutter button in your camera view, things start happening!
+  翻译: '第五步'
+- 内容: 'Now that you’ve got the captured photo, you add it into the camera’s photo stream. It’s then available to any object in your app waiting for a photo, like the data model.'
   提示: ''
-  翻译: ''
-- 内容: 'You might wonder why capturePhoto doesn’t just return the photo. That’s because
-    capturing a photo takes time: the camera may need to focus, or wait for the flash,
-    and then there’s the exposure time. The capturePhoto method is asynchronous, with
-    the captured photo typically arriving a short time after you tap or click the
-    shutter button.'
+  翻译: '现在你已经获得了照片，并将它添加到 camera 的照片流中。然后你 app 中任何一个等待照片数据的对象（例如数据模型）都可以使用它。'
+- 内容: 'Processing and Saving a Photo'
   提示: ''
-  翻译: ''
-- 内容: Step 1
+  翻译: '处理和保存照片'
+- 内容: 'Discover how to unpack a captured photo and save it to your photo library.'
   提示: ''
-  翻译: ''
-- 内容: Browsing Your Photos
+  翻译: '了解如何解包捕获的照片并将其保存到照片库中。'
+- 内容: 'Your data model is patiently awaiting newly-captured photos. Just as for preview images, it has a dedicated task for handling the captured photo stream from the camera, using its handleCameraPhotos method.'
   提示: ''
-  翻译: ''
-- 内容: You use the thumbnail image in photoData to update your model’s thumbnailImage
-    property.
+  翻译: '你的数据模型正在耐心地等待新捕获到的照片。就像处理预览图像一样，它也有一个专门的 Task 处理来自 camera 对象的被捕获的照片流，这个 Task 调用 handleCameraPhotos 方法。'
+- 内容: 'Tip'
   提示: ''
-  翻译: ''
-- 内容: Your data model is patiently awaiting newly-captured photos. Just as for preview
-    images, it has a dedicated task for handling the captured photo stream from the
-    camera, using its handleCameraPhotos method.
+  翻译: '注释'
+- 内容: 'You can learn more about Tasks in the Swift standard library.'
   提示: ''
-  翻译: ''
-- 内容: Take photos with the camera, add them to your photo library, and display them
-    in your app.
+  翻译: '你可以在 Swift 标准库中了解更多关于 Task 的信息。'
+- 内容: 'Each AVCapturePhoto element in the camera’s photoStream may contain several images at different resolutions, as well as other metadata about the image, such as its size and the date and time the image was captured. You have to unpack it to get the images and metadata that you want. The first thing you do in handleCameraPhotos is to convert photoStream into a more useful unpackedPhotoStream, in which each element is an instance of the PhotoData structure that contains the data you want.'
   提示: ''
-  翻译: ''
-- 内容: Smile! Click! A lot happens in quick succession when you take a photo. 📸
+  翻译: 'camera 的 photoStream 中的每个 AVCapturePhoto 元素可能包含有多个不同分辨率的图像，以及关于这个图像的其他元数据，如大小以及图像捕获的日期和时间。
+        你需要解包它以获取你想要的图像和元数据。在 handleCameraPhotos 中的第一件事就是将 photoStream 转换为一个更有用的 unpackedPhotoStream，其中每个元素都是 PhotoData 结构的实例，其包含你想要的那些数据。'
+- 内容: 'To unpack the photoStream, you’ll use the unpackPhoto(_:) function, which takes a captured photo and returns a PhotoData instance that contains a low-resolution image thumbnail as an Image, the size of the image thumbnail, a high-resolution image as Data, and the size of the high-resolution image.'
   提示: ''
-  翻译: ''
-- 内容: Follow the action after you tap or click the shutter button, to investigate
-    what happens from that moment to when the photo shows up in your photo library.
+  翻译: '你会使用 unpackPhoto(_:) 方法来解包 photoStream，它接受一个捕获的照片作为参数，并返回一个 PhotoData 实例。
+        该实例包含一个类型为 Image 的低分辨率图像作为缩略图，以及这个缩略图的大小；还有一个类型为 Data 的高分辨率图像，和此图像的大小。'
+- 内容: 'You’ll recall that, as an asynchronous stream, photoStream is very much like a Sequence. You can use its compactMap(_:) method to call unpackPhoto(_:) for each photo ($0) in the stream. This transforms the stream of AVCapturePhoto instances into a much more useful stream of PhotoData instances.'
   提示: ''
-  翻译: ''
-- 内容: 'After the photo capture has completed, you receive a callback to another method
-    in your camera object: photoOutput(_:didFinishProcessingPhoto:error:). Its first
-    argument receives the captured photo as an instance of AVCapturePhoto.'
+  翻译: '你可能还记得，作为一个异步流，photoStream 是非常类似于一个普通序列的。你可以使用它的 compactMap(:) 方法来对流中的每个照片（也就是例子中的 $0）调用 unpackPhoto(:)。
+        这将把 AVCapturePhoto 实例的流转换为一个更有用的 PhotoData 实例的流。'
+- 内容: 'The for-await loop now waits for a photoData element to arrive in your unpacked stream before processing it.'
   提示: ''
-  翻译: ''
-- 内容: You start the real work of taking the photo by requesting the photo output to
-    capture a photo. If all goes well, this is when you hear a reassuring shutter
-    sound to let you — and anyone nearby — know that you’ve just taken a photo.
+  翻译: '现在，for-await 循环会等待一个 photoData 元素到达你的 unpackedPhotoStream 中，然后处理它。'
+- 内容: 'Step 6'
   提示: ''
-  翻译: ''
-- 内容: Learn how to handle the shutter button action, and request the camera to take
-    a photo.
+  翻译: '第六步'
+- 内容: 'You use the thumbnail image in photoData to update your model’s thumbnailImage property.'
   提示: ''
-  翻译: ''
-- 内容: Capturing and Saving a Photo
+  翻译: '你使用 photoData 中的缩略图来更新模型的 thumbnailImage 属性。'
+- 内容: 'Step 7'
   提示: ''
-  翻译: ''
-- 内容: Step 2
+  翻译: '第七步'
+- 内容: 'Call your model’s savePhoto(imageData:) method to save the image data from photoData as a new photo in your photo library.'
   提示: ''
-  翻译: ''
-- 内容: You can learn more about Tasks in the Swift standard library.
+  翻译: '调用你模型的 savePhoto(imageData:) 方法，将 photoData 中的图像数据保存为照片库中的新照片。'
+- 内容: 'Step 8'
   提示: ''
-  翻译: ''
-- 内容: Discover how to unpack a captured photo and save it to your photo library.
+  翻译: '第八步'
+- 内容: 'The savePhoto(imageData:) method creates a task and passes on the real work of saving the photo data to the photoCollection object by calling its addImage(_:) method. And that’s fine! The data model’s job is to coordinate data flow between the app’s data objects.'
   提示: ''
-  翻译: ''
-- 内容: Step 7
-  提示: ''
-  翻译: ''
-- 内容: Each AVCapturePhoto element in the camera’s photoStream may contain several
-    images at different resolutions, as well as other metadata about the image, such
-    as its size and the date and time the image was captured. You have to unpack it
-    to get the images and metadata that you want. The first thing you do in handleCameraPhotos
-    is to convert photoStream into a more useful unpackedPhotoStream, in which each
-    element is an instance of the PhotoData structure that contains the data you want.
-  提示: ''
-  翻译: ''
+  翻译: 'savePhoto(imageData:) 方法创建了一个 Task，并通过调用 photoCollection 对象的 addImage(_:) 方法将真正保存照片数据的工作委托给它。
+        这是完全可以的！数据模型的工作之一就是协调 app 数据对象之间的数据流。'

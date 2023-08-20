@@ -57,10 +57,6 @@
 - 内容: Step 6
   提示: ''
   翻译: 步骤 6
-- 内容: How do you prevent the rotation effect from being animated in the following
-    example?
-  提示: ''
-  翻译: 在以下示例中，如何防止旋转效果被动画化？
 - 内容: Be sure to use the live preview throughout this tutorial so you can experiment
     with the results of each step.
   提示: ''
@@ -89,10 +85,6 @@
     use the default animation by removing the call’s input parameter.
   提示: ''
   翻译: 在继续下一节之前，请通过删除调用的输入参数将 withAnimation 函数恢复为使用默认动画。
-- 内容: Shield the rotation from being animated by applying the withoutAnimation(_:)
-    modifier.
-  提示: ''
-  翻译: 通过应用withoutAnimation(_:)修饰符来防止旋转被动画化。
 - 内容: Composing Complex Interfaces
   提示: ''
   翻译: ''
@@ -149,13 +141,6 @@
     and access the new property in the view’s transition modifier.
   提示: ''
   翻译: 将刚刚添加的过渡作为 AnyTransition 的静态属性提取，并在视图的过渡修饰符中访问新属性。
-- 内容: The rotationEffect(_:) modifier can’t be animated, so you don’t need to change
-    the code to prevent animation.
-  提示: ''
-  翻译: 无法对rotationEffect(:)修饰符进行动画化，因此无需更改代码以防止动画。
-- 内容: Pass nil to the animation(_:value:) modifier.
-  提示: ''
-  翻译: 将nil传递给animation(:value:)修饰符。
 - 内容: Add Hiking Data to the App
   提示: ''
   翻译: ''
@@ -224,9 +209,6 @@
 - 内容: Section 4
   提示: ''
   翻译: 第 4 节
-- 内容: Question 1 of 3
-  提示: ''
-  翻译: 问题1/3
 - 内容: Take SwiftUI for a spin. Try combining different animation effects to see what’s
     possible.
   提示: ''

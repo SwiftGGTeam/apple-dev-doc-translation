@@ -36,7 +36,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Download the SwiftGGFormatter Tool
         run: |
-          wget https://github.com/SwiftGGTeam/SwiftGGFormatter/releases/download/1.0.0/SwiftGGFormatter.zip
+          wget https://github.com/SwiftGGTeam/SwiftGGFormatter/releases/download/1.0.1/SwiftGGFormatter.zip
           unzip ./SwiftGGFormatter.zip
           chmod o+rwx ./SwiftGGFormatter.zip
       

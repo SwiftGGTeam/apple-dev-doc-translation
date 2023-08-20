@@ -70,10 +70,6 @@
 - 内容: Update ProfileHost to display the new summary view.
   提示: ''
   翻译: 更新 ProfileHost 显示新的摘要视图。
-- 内容: How do you update a view when the editing state changes; for example, when a
-    user taps Done after editing their profile?
-  提示: ''
-  翻译: 当编辑状态改变时，你如何更新一个视图； 例如，当用户在编辑个人资料后点击完成时？
 - 内容: Step 8
   提示: ''
   翻译: 步骤 8
@@ -206,9 +202,6 @@
 - 内容: Section 4
   提示: ''
   翻译: 第 4 节
-- 内容: Question 1 of 3
-  提示: ''
-  翻译: 第 1 个问题，共 3 个
 - 内容: Create a new view named ProfileEditor and include a binding to the draft copy
     of the user’s profile.
   提示: ''

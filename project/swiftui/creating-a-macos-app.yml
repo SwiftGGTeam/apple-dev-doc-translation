@@ -11,9 +11,6 @@
 - 内容: You’ll define content for the menu next.
   提示: ''
   翻译: 接下来你将定义菜单的内容。
-- 内容: The model can’t access the filter settings.
-  提示: ''
-  翻译: 该模型无法访问过滤器设置。
 - 内容: Adding the second child view automatically converts the list to use the sidebar
     list style.
   提示: ''
@@ -52,10 +49,6 @@
     available in macOS.
   提示: ''
   翻译: 预览失败是因为 navigationBarTitleDisplayMode(_:) 方法在 macOS 中不可用。
-- 内容: Why does the Landmarks app define the filteredLandmarks array in a view instead
-    of inside the model?
-  提示: ''
-  翻译: 为什么 Landmarks 应用程序在视图中而不是在模型中定义 filteredLandmarks 数组？
 - 内容: Run the macOS target and see how the menu operates.
   提示: ''
   翻译: 运行 macOS 目标并查看菜单的运行方式。
@@ -468,9 +461,6 @@
 - 内容: The content now has the right width, but each row has too much information.
   提示: ''
   翻译: 内容现在有正确的宽度了，但每一行的信息太多了。
-- 内容: So the app can easily present different filtered lists in different windows.
-  提示: ''
-  翻译: 因此，该应用程序可以轻松地在不同的窗口中呈现不同的过滤列表。
 - 内容: Section 5
   提示: ''
   翻译: 第 5 节
@@ -511,12 +501,6 @@
 - 内容: Add a Picker to the menu to set the filter category.
   提示: ''
   翻译: 在菜单中添加一个 Picker 来设置过滤器类别。
-- 内容: Question 1 of 4
-  提示: ''
-  翻译: 第 1 题，共 4 题
-- 内容: You shouldn’t put computed properties in your model.
-  提示: ''
-  翻译: 你不应该把计算属性放在你的模型中。
 - 内容: In ContentView in the MacLandmarks group, add LandmarkList as the top level
     view, with constraints on the frame size.
   提示: ''
