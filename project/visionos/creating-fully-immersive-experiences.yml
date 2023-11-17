@@ -42,7 +42,7 @@
   翻译: '警告'
 - 内容: 'When you start a fully immersive experience, visionOS defines a system boundary that extends 1.5 meters from the initial position of the person’s head. If their head moves outside of that zone, the system automatically stops the immersive experience and turns on the external video again. This feature is an assistant to help prevent someone from colliding with objects.'
   提示: ''
-  翻译: '当你启动完全沉浸式体验时，visionOS 定义了一个系统边界，其范围从用户头部的初始位置延伸 1.5 米。如果他们的头部移动到该区域之外，系统会自动停止沉浸式体验并重新打开外部视频。这个功能有助于防止用户与物体碰撞。'
+  翻译: '当你启动完全沉浸式体验时，visionOS 定义了一个系统边界，其范围从用户头部的初始位置延伸 1.5 米。如果用户的头部移动到该区域之外，系统会自动停止沉浸式体验并重新打开外部视频。这个功能有助于防止用户与物体碰撞。'
 - 内容: 'For guidelines on how to design fully immersive experiences, see Human Interface Guidelines.'
   提示: ''
   翻译: '有关如何设计完全沉浸式体验的指南，请阅读 [人机界面指南](https://developer.apple.com/design/human-interface-guidelines)。'
