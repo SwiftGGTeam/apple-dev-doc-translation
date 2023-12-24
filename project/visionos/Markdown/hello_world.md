@@ -9,7 +9,7 @@
 
 Hello World 使用了这些工具向人们介绍地球--这个我们称之为家的星球。该应用程序展示了地球的倾斜角如何形成季节，物体如何围绕地球运行，以及地球在太空中的样子。
 
-(Hello World 主界面)[https://docs-assets.developer.apple.com/published/efa8e7a0a97cfab20bf0f4c307b9b121/Hello-World-overview.mp4]
+[Hello World 主界面](https://docs-assets.developer.apple.com/published/efa8e7a0a97cfab20bf0f4c307b9b121/Hello-World-overview.mp4)
 
 该应用程序使用 SwiftUI 来制作其用户界面，其中包含了 2D 和 3D 元素。为了创建、自定义和管理 3D 模型和效果，它还依赖于 RealityKit 框架和 Reality Composer Pro。
 
@@ -46,7 +46,7 @@ NavigationStack(path: $model.navigationPath) {
 
 visionOS 导航栈与其他平台的导航栈具有相同的行为。当它首次出现时，导航栈会显示其根视图。当用户点击内嵌的导航链接 （[NavigationLink](https://developer.apple.com/documentation/SwiftUI/NavigationLink)） 时，导航栈会绘制一个新视图并在工具栏中显示一个后退按钮。当用户点击后退按钮时，导航堆将恢复上一个视图。
 
-(工具栏上的后退按钮)[https://docs-assets.developer.apple.com/published/49e8a76a78f786512b2e230446048f6b/HW-navigation-stack@2x.png]
+[工具栏上的后退按钮](https://docs-assets.developer.apple.com/published/49e8a76a78f786512b2e230446048f6b/HW-navigation-stack@2x.png)
 
 上面代码中的 [navigationDestination(for:destination:)](https://developer.apple.com/documentation/SwiftUI/View/navigationDestination(for:destination:)) 视图修饰符的尾部闭包，会根据链接初始化时传入的模块，在用户激活链接时显示相应的视图：
 
@@ -67,7 +67,7 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
 ### 在新场景中显示可交互的地球仪
 当地球仪（globe）模块打开时，主窗口中会显示一些有关地球的知识，旁边装饰着一个解释内容的平面图像。为了帮助用户更好地理解模块内容，该模块包含了一个名为“View Globe”的按钮，该按钮可在新窗口中打开一个三维交互式的地球仪。
 
-(地球仪模块)[https://docs-assets.developer.apple.com/published/ed0991feb181a5ed416d5625a64a7858/HW-interactive-globe@2x.png]
+[地球仪模块](https://docs-assets.developer.apple.com/published/ed0991feb181a5ed416d5625a64a7858/HW-interactive-globe@2x.png)
 
 为了能够打开多种场景类型，Hello World 在其 [Information Property List](https://developer.apple.com/documentation/bundleresources/information_property_list) 文件中包含了 [UIApplicationSceneManifest](https://developer.apple.com/documentation/bundleresources/information_property_list/uiapplicationscenemanifest) 键。该键的值是一个字典，其中包含了 [UIApplicationSupportsMultipleScenes](https://developer.apple.com/documentation/bundleresources/information_property_list/uiapplicationscenemanifest/uiapplicationsupportsmultiplescenes) 键，且其值为：true
 
@@ -105,7 +105,7 @@ WindowGroup(id: Module.globe.name) {
 
 地球仪模块显示了一个 View Globe 按钮。当用户点击该按钮后，系统会根据当前状态来显示三维窗口或关闭窗口。Hello World 通过创建一个按钮样式的 [Toggle](https://developer.apple.com/documentation/SwiftUI/Toggle)，并将其嵌入到自定义 GlobeToggle 视图中来实现这一功能。
 
-(打开和关闭地球仪的 Toggle)[https://docs-assets.developer.apple.com/published/eb12be06271bc341482cef34a0d3fe21/HW-toggle-globe@2x.png]
+[打开和关闭地球仪的 Toggle](https://docs-assets.developer.apple.com/published/eb12be06271bc341482cef34a0d3fe21/HW-toggle-globe@2x.png)
 
 ```swift
 struct GlobeToggle: View {
@@ -141,7 +141,7 @@ struct GlobeToggle: View {
 
 应用的第二个模块，“轨道上的物体”（Objects in Orbit）提供了月球和人造卫星等绕地球飞行的物体的信息。为了让用户了解这些对象的外观，该模块直接在窗口内显示这些对象的 3D 模型。
 
-(窗口内的 3D 模型)[https://docs-assets.developer.apple.com/published/9d4c7932de939ee1ea2c7e902f78773b/HW-3D-models@2x.png]
+[窗口内的 3D 模型](https://docs-assets.developer.apple.com/published/9d4c7932de939ee1ea2c7e902f78773b/HW-3D-models@2x.png)
 
 Hello World 在自定义的 ItemView 中使用 [Model3D](https://developer.apple.com/documentation/RealityKit/Model3D) 结构体从资源包里加载这些模型。视图会根据可用空间对模型进行缩放和定位，并视情况调整角度：
 
@@ -200,7 +200,7 @@ Picker("Satellite", selection: $selection) {
 
 人们可以直观地看到卫星是如何围绕地球运动的，因为应用的轨道模块将地球、月球和一个通信卫星显示在同一个系统里。用户可以将该系统拖动到环境中的任何位置，或使用标准手势调整其大小。用户自己也可以在系统移动以获得不同的视角。
 
-(地球、月球，和卫星)[https://docs-assets.developer.apple.com/published/2676d82b6eea571323fc514dfb7dbe52/HW-orbit-module@2x.png]
+[地球、月球，和卫星](https://docs-assets.developer.apple.com/published/2676d82b6eea571323fc514dfb7dbe52/HW-orbit-module@2x.png)
 
 > 备注
 > 想了解如何在 visionOS 中使用手势进行设计，请阅读《用户界面指南》（[Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines)）中的手势（[Gestures](https://developer.apple.com/design/Human-Interface-Guidelines/gestures)）章节。
@@ -256,7 +256,7 @@ struct OrbitToggle: View {
 
 当用户点击按钮后，应用将接管整个显示屏，并在各个方位显示星星。地球出现在正前方，月球在右侧，太阳在左侧。主窗口还显示了一个小型控制面板，用户可以用它来退出完全沉浸式体验。
 
-(完全沉浸式中的地球和控制菜单)[https://docs-assets.developer.apple.com/published/95819f4dc2608e187d9d35fb4746441c/HW-solar-system@2x.png]
+[完全沉浸式中的地球和控制菜单](https://docs-assets.developer.apple.com/published/95819f4dc2608e187d9d35fb4746441c/HW-solar-system@2x.png)
 
 > 提示
 > 用户可以按下设备的数码表冠来退出完全沉浸式体验，但通常情况下，在应用程序中提供一个内置机制来控制体验是非常有帮助的。
