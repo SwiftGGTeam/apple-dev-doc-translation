@@ -9,7 +9,7 @@
 
 Hello World 使用了这些工具向人们介绍地球--这个我们称之为家的星球。该应用程序展示了地球的倾斜角如何形成季节，物体如何围绕地球运行，以及地球在太空中的样子。
 
-https://docs-assets.developer.apple.com/published/efa8e7a0a97cfab20bf0f4c307b9b121/Hello-World-overview.mp4
+(Hello World 主界面)[https://docs-assets.developer.apple.com/published/efa8e7a0a97cfab20bf0f4c307b9b121/Hello-World-overview.mp4]
 
 该应用程序使用 SwiftUI 来制作其用户界面，其中包含了 2D 和 3D 元素。为了创建、自定义和管理 3D 模型和效果，它还依赖于 RealityKit 框架和 Reality Composer Pro。
 
@@ -27,11 +27,8 @@ WindowGroup("Hello World", id: "modules") {
 
 与其他平台（如 macOS 和 iOS）一样，visionOS 将窗口组显示为用户熟悉的窗口。在 visionOS 中，用户可以在共享空间中调整窗口大小并移动窗口。即使你的应用提供了复杂的 3D 体验，窗口也是应用的一个很好的起点，因为它可以让用户由浅入深地顺利进入体验。同时窗口也是提供说明或放置控件的理想位置。
 
----
-**提示**
-
-此窗口组使用了 [plain](https://developer.apple.com/documentation/SwiftUI/WindowStyle/plain) 窗口样式以保持控件悬浮在毛玻璃背景上的效果。即使没有此行代码 visionOS 也会自动添加毛玻璃背景效果。
----
+> 提示
+> 此窗口组使用了 [plain](https://developer.apple.com/documentation/SwiftUI/WindowStyle/plain) 窗口样式以保持控件悬浮在毛玻璃背景上的效果。即使没有此行代码 visionOS 也会自动添加毛玻璃背景效果。
 
 ### 使用导航栈展示不同的模块
 
@@ -49,7 +46,7 @@ NavigationStack(path: $model.navigationPath) {
 
 visionOS 导航栈与其他平台的导航栈具有相同的行为。当它首次出现时，导航栈会显示其根视图。当用户点击内嵌的导航链接 （[NavigationLink](https://developer.apple.com/documentation/SwiftUI/NavigationLink)） 时，导航栈会绘制一个新视图并在工具栏中显示一个后退按钮。当用户点击后退按钮时，导航堆将恢复上一个视图。
 
-https://docs-assets.developer.apple.com/published/49e8a76a78f786512b2e230446048f6b/HW-navigation-stack@2x.png
+(工具栏上的后退按钮)[https://docs-assets.developer.apple.com/published/49e8a76a78f786512b2e230446048f6b/HW-navigation-stack@2x.png]
 
 上面代码中的 [navigationDestination(for:destination:)](https://developer.apple.com/documentation/SwiftUI/View/navigationDestination(for:destination:)) 视图修饰符的尾部闭包，会根据链接初始化时传入的模块，在用户激活链接时显示相应的视图：
 
@@ -70,7 +67,7 @@ enum Module: String, Identifiable, CaseIterable, Equatable {
 ### 在新场景中显示可交互的地球仪
 当地球仪（globe）模块打开时，主窗口中会显示一些有关地球的知识，旁边装饰着一个解释内容的平面图像。为了帮助用户更好地理解模块内容，该模块包含了一个名为“View Globe”的按钮，该按钮可在新窗口中打开一个三维交互式的地球仪。
 
-https://docs-assets.developer.apple.com/published/ed0991feb181a5ed416d5625a64a7858/HW-interactive-globe@2x.png
+(地球仪模块)[https://docs-assets.developer.apple.com/published/ed0991feb181a5ed416d5625a64a7858/HW-interactive-globe@2x.png]
 
 为了能够打开多种场景类型，Hello World 在其 [Information Property List](https://developer.apple.com/documentation/bundleresources/information_property_list) 文件中包含了 [UIApplicationSceneManifest](https://developer.apple.com/documentation/bundleresources/information_property_list/uiapplicationscenemanifest) 键。该键的值是一个字典，其中包含了 [UIApplicationSupportsMultipleScenes](https://developer.apple.com/documentation/bundleresources/information_property_list/uiapplicationscenemanifest/uiapplicationsupportsmultiplescenes) 键，且其值为：true
 
@@ -100,7 +97,7 @@ WindowGroup(id: Module.globe.name) {
 
 由于 Hello World 使用了三维 （[volumetric](https://developer.apple.com/documentation/SwiftUI/WindowStyle/volumetric)） 窗口样式场景修饰符，因此该窗口组创建了一个可自定义深度的窗口--非常适合在有边界的区域中显示三维模型，其行为就像一个透明的盒子。用户可以像移动任何其他窗口一样在共享空间中移动这个盒子，而里面的内容则保持不变。[defaultSize(width:height:depth:in:)](https://developer.apple.com/documentation/SwiftUI/Scene/defaultSize(width:height:depth:in:)) 修饰符用来指定窗口的（包含深度的）大小（以米为单位）。
 
-https://docs-assets.developer.apple.com/published/8712f59eefa7840850fe229d9eec5e2b/HW-globe-detail.mp4
+(地球仪的运作视频)[https://docs-assets.developer.apple.com/published/8712f59eefa7840850fe229d9eec5e2b/HW-globe-detail.mp4]
 
 该 Globe 视图虽然包含了 3D 内容，但其本身仍然只是一个 SwiftUI 视图。它的 [ZStack](https://developer.apple.com/documentation/SwiftUI/ZStack) 中包含了两个元素：一个绘制地球模型的子视图，另一个子视图负责提供控制面板，用户可以使用它来配置地球仪的外观。
 
@@ -108,7 +105,7 @@ https://docs-assets.developer.apple.com/published/8712f59eefa7840850fe229d9eec5e
 
 地球仪模块显示了一个 View Globe 按钮。当用户点击该按钮后，系统会根据当前状态来显示三维窗口或关闭窗口。Hello World 通过创建一个按钮样式的 [Toggle](https://developer.apple.com/documentation/SwiftUI/Toggle)，并将其嵌入到自定义 GlobeToggle 视图中来实现这一功能。
 
-https://docs-assets.developer.apple.com/published/eb12be06271bc341482cef34a0d3fe21/HW-toggle-globe@2x.png
+(打开和关闭地球仪的 Toggle)[https://docs-assets.developer.apple.com/published/eb12be06271bc341482cef34a0d3fe21/HW-toggle-globe@2x.png]
 
 ```swift
 struct GlobeToggle: View {
@@ -144,7 +141,7 @@ struct GlobeToggle: View {
 
 应用的第二个模块，“轨道上的物体”（Objects in Orbit）提供了月球和人造卫星等绕地球飞行的物体的信息。为了让用户了解这些对象的外观，该模块直接在窗口内显示这些对象的 3D 模型。
 
-https://docs-assets.developer.apple.com/published/9d4c7932de939ee1ea2c7e902f78773b/HW-3D-models@2x.png
+(窗口内的 3D 模型)[https://docs-assets.developer.apple.com/published/9d4c7932de939ee1ea2c7e902f78773b/HW-3D-models@2x.png]
 
 Hello World 在自定义的 ItemView 中使用 [Model3D](https://developer.apple.com/documentation/RealityKit/Model3D) 结构体从资源包里加载这些模型。视图会根据可用空间对模型进行缩放和定位，并视情况调整角度：
 
@@ -203,13 +200,10 @@ Picker("Satellite", selection: $selection) {
 
 人们可以直观地看到卫星是如何围绕地球运动的，因为应用的轨道模块将地球、月球和一个通信卫星显示在同一个系统里。用户可以将该系统拖动到环境中的任何位置，或使用标准手势调整其大小。用户自己也可以在系统移动以获得不同的视角。
 
-https://docs-assets.developer.apple.com/published/2676d82b6eea571323fc514dfb7dbe52/HW-orbit-module@2x.png
+(地球、月球，和卫星)[https://docs-assets.developer.apple.com/published/2676d82b6eea571323fc514dfb7dbe52/HW-orbit-module@2x.png]
 
----
-**备注**
-
-  想了解如何在 visionOS 中使用手势进行设计，请阅读《用户界面指南》（[Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines)）中的手势（[Gestures](https://developer.apple.com/design/Human-Interface-Guidelines/gestures)）章节。
----
+> 备注
+> 想了解如何在 visionOS 中使用手势进行设计，请阅读《用户界面指南》（[Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines)）中的手势（[Gestures](https://developer.apple.com/design/Human-Interface-Guidelines/gestures)）章节。
 
 为创建这一效果，应用在 [mix](https://developer.apple.com/documentation/SwiftUI/ImmersionStyle/mixed) 沉浸风格的 [ImmersiveSpace](https://developer.apple.com/documentation/SwiftUI/ImmersiveSpace) 场景中展示了 Orbit 视图--其中包含了一个模拟整套系统的 [RealityView](https://developer.apple.com/documentation/RealityKit/RealityView)：
 
@@ -256,19 +250,16 @@ struct OrbitToggle: View {
 - 打开和关闭空间操作是异步的，因此它们的使用出现在 [Task](https://developer.apple.com/documentation/Swift/Task) 闭包中。
 
 
-### 使用完全浸入式从太空观察太阳系
+### 使用完全沉浸式从太空观察太阳系
 
 应用的最后一个模块意在帮助用户了解地球在太阳系中的位置。与其他模块一样，这个模块包括了说明、装饰图像、及一个指向另一个场景的按钮--在本模块的场景中，用户可以从太空中观察地球。
 
 当用户点击按钮后，应用将接管整个显示屏，并在各个方位显示星星。地球出现在正前方，月球在右侧，太阳在左侧。主窗口还显示了一个小型控制面板，用户可以用它来退出完全沉浸式体验。
 
-https://docs-assets.developer.apple.com/published/95819f4dc2608e187d9d35fb4746441c/HW-solar-system@2x.png
+(完全沉浸式中的地球和控制菜单)[https://docs-assets.developer.apple.com/published/95819f4dc2608e187d9d35fb4746441c/HW-solar-system@2x.png]
 
----
-**提示**
-
-用户可以按下设备的数码表冠来退出完全沉浸式体验，但通常情况下，在应用程序中提供一个内置机制来控制体验是非常有帮助的。
----
+> 提示
+> 用户可以按下设备的数码表冠来退出完全沉浸式体验，但通常情况下，在应用程序中提供一个内置机制来控制体验是非常有帮助的。
 
 本模块使用了另一个沉浸式空间场景，但此处使用的是 [full](https://developer.apple.com/documentation/SwiftUI/ImmersionStyle/full) 沉浸风格，它会关闭设备的现实映射功能：
 
@@ -331,7 +322,7 @@ ZStack {
 
 ## 另见
 
-### 其他应用示例
+#### 其他应用示例
 
 - [Happy Beam](https://developer.apple.com/documentation/visionos/happybeam)
 利用一片空间和 ARKit 创建有趣的游戏。
@@ -340,7 +331,7 @@ ZStack {
 - [Diorama](https://developer.apple.com/documentation/visionos/diorama)
 使用 Reality Composer Pro 为您的 visionOS 应用程序设计场景。
 
-### 相关文章
+#### 相关文章
 
 - [Creating your first visionOS app](https://developer.apple.com/documentation/visionos/creating-your-first-visionos-app)
 使用 SwiftUI 构建新的 visionOS App，并添加特定于平台的功能。
