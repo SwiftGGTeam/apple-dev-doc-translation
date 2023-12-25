@@ -33,7 +33,7 @@
   翻译: '从 .reality 文件加载资源，会比加载单个资源文件要快得多，而且更有效率。'
 - 内容: 'Orient yourself in Reality Composer Pro'
   提示: ''
-  翻译: ''
+  翻译: '熟悉 Reality Composer Pro 的操作界面'
 - 内容: 'The Reality Composer Pro window has several sections. The top-half displays the active scene. If you have multiple scenes, the window shows a tab bar at the top with one tab for each open scene. A scene in Reality Composer Pro is an entity hierarchy stored in a .usda file.'
   提示: ''
   翻译: 'Reality Composer Pro 窗口包含多个部分。在上半部分显示处于活跃状态的场景。如果你有多个场景，在窗口顶部会有标签栏，每一个打开的场景对应一个标签页。在 Reality Composer Pro 中的场景是一个保存在 .usda 文件中的实体层级。'
