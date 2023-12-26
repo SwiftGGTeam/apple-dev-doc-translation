@@ -39,7 +39,7 @@
 
 RealityKit 是苹果为构建 3D 模型，以及在屏幕中动态更新场景，而开发的框架。在 visionOS 系统中，可以同时使用 RealityKit 和 SwiftUI 将 App 中 2D 和 3D 内容丝滑的融合起来。加载现有的 USDZ Assets，或者使用 Reality Composer Pro，为你的 App 内容，创建一个富有动画，符合物理特性，有光影效果，音效，和自定义行为的场景。以 Swift Package 方式将 Reality Composer Pro project 添加关联到你的 Xcode 项目中，然后在你的 Xcode 项目 Swift 代码中，使用 import ModuleName 方式引用。(和使用和苹果其他 Framework 一样，用 ModuleName 来引用)。更多关于怎样管理项目文件，请参照 [Managing files and folders in your Xcode project](https://developer.apple.com/documentation/Xcode/managing-files-and-folders-in-your-xcode-project) 。
 
-> 译者推荐：了解更多请参阅[Creating 3D Content with Reality Composer](https://developer.apple.com/documentation/realitykit/creating-3d-content-with-reality-composer#Add-the-Composition-to-Your-App)文档和[Meet Reality Composer Pro](https://developer.apple.com/videos/play/wwdc2023/10083/?time=75)视频。
+> 译者推荐：了解更多请参阅 [Creating 3D Content with Reality Composer](https://developer.apple.com/documentation/realitykit/creating-3d-content-with-reality-composer#Add-the-Composition-to-Your-App) 文档和 [Meet Reality Composer Pro](https://developer.apple.com/videos/play/wwdc2023/10083/?time=75) 视频。
 
 ![Dynamic 3D Scene](https://docs-assets.developer.apple.com/published/1ed1e6e2b884fbf653f4e9450e90bf1d/dynamic-3D-scene@2x.png)
 
