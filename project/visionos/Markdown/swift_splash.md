@@ -178,16 +178,12 @@ public func calculateRideDuration() {
 有两种不同的方式可供玩家在 Swift Splash 中进行交互来构建和编辑游乐设施。他们可以通过 SwiftUI 窗口完成特定的操作，例如新增一段新滑道，或是移除一段已经添加到设施中的滑道部件。玩家还可利用 visionOS 支持的标准手势来操作部件，包括点按、双击、拖动和旋转。玩家点击部件以选择或取消选择它。当玩家双击部件时，他们会选择该部件，而不会取消选中的其他部件。当有人去拖移部件时，它会在沉浸式空间中移动，如果和另一个部件靠得足够近，它们就会自动吸附在一起。使用两指旋转手势会让选中的轨道部件或所有部件沿着 Z 轴进行旋转。
 
 [新增部件](https://docs-assets.developer.apple.com/published/d227ea2e245015ecd44926e4ae73af2b/SS-add-piece.mp4)
-*新增部件*
 
 [删除部件](https://docs-assets.developer.apple.com/published/3e1a1770ab82e584cef407bd656d08e1/SS-delete-single.mp4)
-*删除部件*
 
 [旋转部件](https://docs-assets.developer.apple.com/published/0f5fe14f9080234b49cee2b7b0d3395e/SS-rotate-single.mp4)
-*旋转部件*
 
 [移动部件](https://docs-assets.developer.apple.com/published/937c6d8611b3ea87d90a3cdbc0183e67/SS-drag.mp4)
-*移动部件*
 
 Swift Splash 在目标实体上采用标准的 SwiftUI 手势去处理其所有的交互操作。为了能随时给任意手势提供支持，应用内使用 [SimultaneousGesture](https://developer.apple.com/documentation/SwiftUI/SimultaneousGesture) 来进行声明。所有的手势代码都包含在 TrackBuildingView 中，这个视图管理着应用内的沉浸式空间。以下是在应用中定义旋转手势的代码：
 
