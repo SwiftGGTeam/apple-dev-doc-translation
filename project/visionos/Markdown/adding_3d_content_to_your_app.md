@@ -22,7 +22,7 @@
 
 根据需求在你的自定义视图中添加 深度效应，并使用下面这些 3D 布局选项在你的二维平面窗口（ window ）中摆设视图（ view ）。
 
-- 使用 [shadow(color:radius:x:y:)](https://developer.apple.com/documentation/SwiftUI/View/shadow(color:radius:x:y:)) 或者 [visualEffect(_:)](https://developer.apple.com/documentation/SwiftUI/View/visualEffect(_:)) 修改视图（ view ）显示外观，使其更具有深度效果。
+- 使用 [shadow(color:radius:x\:y:)](https://developer.apple.com/documentation/SwiftUI/View/shadow(color:radius:x:y:)) 或者 [visualEffect(_:)](https://developer.apple.com/documentation/SwiftUI/View/visualEffect(_:)) 修改视图（ view ）显示外观，使其更具有深度效果。
 
 - 使用 [hoverEffect(_:isEnabled:)](https://developer.apple.com/documentation/SwiftUI/View/hoverEffect(_:isEnabled:)) 方法，使视图（ view ）能够以突出移动或高亮的方式响应用户视线关注。
 
@@ -30,7 +30,7 @@
 
 - 使用 [transform3DEffect(_:)](https://developer.apple.com/documentation/SwiftUI/View/transform3DEffect(_:)) ，为视图（ view ）变化添加 3D 动画效果。'
 
-- 使用 [rotation3DEffect(_:axis:anchor:anchorZ:perspective:)](https://developer.apple.com/documentation/SwiftUI/View/rotation3DEffect(_:axis:anchor:anchorZ:perspective:)) 来旋转视图。
+- 使用 [rotation3DEffect(_:axis:anchor\:anchorZ:perspective:)](https://developer.apple.com/documentation/SwiftUI/View/rotation3DEffect(_:axis:anchor:anchorZ:perspective:)) 来旋转视图。
 
 另外，你也可以在二维平面窗口（ window ）添加静态 3D 模型，来为 2D 视图（ view ）增加视觉深度。 Model3D 视图类型可以加载 USDZ 文件，或者以 Asset 方式加载，并在窗口（ window ）以文件的固有尺寸展示。通过这种方式展示 3D 内容，前提是你已经有了可展示的模型数据，模型数据可以是放在 App 本地，或者通过网络加载。例如，电商类的 App 可以使用 Model3D 类型视图来展示商品的 3D 效果。
 
