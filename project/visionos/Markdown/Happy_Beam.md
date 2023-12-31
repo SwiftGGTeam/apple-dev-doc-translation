@@ -185,3 +185,118 @@ let heartMidpointWorldTransform = simd_matrix(
 return heartMidpointWorldTransform
 ```
 
+## 支持多种输入
+
+若要支持辅助功能和一般用户首选项，请在使用手势跟踪作为输入形式的应用中包含多种类型的输入。
+
+Happy Beam支持多种输入：
+
+![img-1](https://docs-assets.developer.apple.com/published/f8a2fed7cbcfb2cc62c0a3996bee40a0/HB-interactive-hands@2x.png) | ![img-2](https://docs-assets.developer.apple.com/published/9fd7384ba167df2a7b8547c4814faf8f/HB-turret@2x.png)
+----- | -----
+来自 ARKit 的交互式手势手势，带有自定义心形手势。 | 拖动手势输入以旋转其平台上的静止光束。
+
+![img-3](https://docs-assets.developer.apple.com/published/7b08dd9be3dd8a0a12386d29ebd5e654/HB-accessibility@2x.png) | ![img-4](https://docs-assets.developer.apple.com/published/846e5d397ba2a3e6e8550090b033e958/HB-controller@2x.png)
+来自 RealityKit 的辅助功能组件，用于支持自定义操作，为云点加油。 | 游戏控制器支持，使通过切换控制对光束的控制更具交互性。
+
+## 使用 RealityKit 显示 3D 内容
+
+应用程序中的 3D 内容以资产的形式提供，您可以从 Reality Composer Pro 导出这些资源。将每个资产放置在代表沉浸式空间的 RealityView 资产中。
+
+下面展示了Happy Beam在游戏开始时如何生成云彩，以及落地式光束投影仪的材质。因为游戏使用碰撞检测来保持得分——当它们碰撞时，光束会让脾气暴躁的云振作起来——所以你要为每个可能涉及的模型制作碰撞形状。
+
+```swift
+@MainActor
+func placeCloud(start: Point3D, end: Point3D, speed: Double) async throws -> Entity {
+    let cloud = await loadFromRealityComposerPro(
+        named: BundleAssets.cloudEntity,
+        fromSceneNamed: BundleAssets.cloudScene
+    )!
+        .clone(recursive: true)
+    
+    cloud.generateCollisionShapes(recursive: true)
+    cloud.components[PhysicsBodyComponent.self] = PhysicsBodyComponent()
+    
+    var accessibilityComponent = AccessibilityComponent()
+    accessibilityComponent.label = "Cloud"
+    accessibilityComponent.value = "Grumpy"
+    accessibilityComponent.isAccessibilityElement = true
+    accessibilityComponent.traits = [.button, .playsSound]
+    accessibilityComponent.systemActions = [.activate]
+    cloud.components[AccessibilityComponent.self] = accessibilityComponent
+    
+    let animation = cloudMovementAnimations[cloudPathsIndex]
+    
+    cloud.playAnimation(animation, transitionDuration: 1.0, startsPaused: false)
+    cloudAnimate(cloud, kind: .sadBlink, shouldRepeat: false)
+    spaceOrigin.addChild(cloud)
+    
+    return cloud
+}
+```
+
+## 添加同播共享对多人游戏体验的支持
+
+您可以在 visionOS 中使用“群组活动”框架在 FaceTime 通话期间支持同播共享。Happy Beam 使用小组活动来同步分数、活跃玩家列表以及每个玩家投射光束的位置。
+
+> 注意
+> 使用 [Apple Vision Pro developer kit](https://developer.apple.com/visionos/work-with-apple/) 的开发者可以通过安装 [Persona Preview Profile](https://developer.apple.com/download/all/?q=persona) 在设备上测试空间同播共享体验。
+
+使用可靠的渠道发送正确的信息，即使信息可能会因此而略有延迟。Happy Beam如何更新游戏模型的分数状态以响应分数消息，如下所示：
+
+```swift
+sessionInfo.reliableMessenger = GroupSessionMessenger(session: newSession, deliveryMode: .reliable)
+
+
+Task {
+    for await (message, sender) in sessionInfo!.reliableMessenger!.messages(of: ScoreMessage.self) {
+        gameModel.clouds[message.cloudID].isHappy = true
+        gameModel
+            .players
+            .filter { $0.name == sender.source.id.asPlayerName }
+            .first!
+            .score += 1
+    }
+}
+```
+
+使用不可靠的信使发送具有低延迟要求的数据。由于传递模式不可靠，因此某些消息可能无法到达。当通话中的每个参与者在 FaceTime 通话中选择“空间”选项时，Happy Beam 会使用不可靠模式向光束位置发送实时更新。
+
+```swift
+sessionInfo.messenger = GroupSessionMessenger(session: newSession, deliveryMode: .unreliable)
+```
+
+Happy Beam如何序列化每条消息的beam数据如下：
+
+```swift
+// Send each player's beam data during FaceTime calls where players have selected the Spatial option.
+func sendBeamPositionUpdate(_ pose: Pose3D) {
+    if let sessionInfo = sessionInfo, let session = sessionInfo.session, let messenger = sessionInfo.messenger {
+        let everyoneElse = session.activeParticipants.subtracting([session.localParticipant])
+        
+        if isShowingBeam, gameModel.isSpatial {
+            messenger.send(BeamMessage(pose: pose), to: .only(everyoneElse)) { error in
+                if let error = error { print("Message failure:", error) }
+            }
+        }
+    }
+}
+```
+
+## 另见
+
+- [将真实世界的环境融入沉浸式体验中](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience)
+通过使应用的内容响应世界的本地形状来创建身临其境的体验。
+- [你好，世界](https://developer.apple.com/documentation/visionos/world)
+使用窗口、体量和沉浸式空间让人们了解地球。
+- [目标视频](https://developer.apple.com/documentation/visionos/destination-video)
+利用 3D 视频和空间音频提供身临其境的体验。
+- [西洋镜](https://developer.apple.com/documentation/visionos/diorama)
+使用 Reality Composer Pro 为您的 visionOS 应用程序设计场景。
+
+#### 相关视频
+
+![page-1](https://developer.apple.com/videos/play/wwdc2023/10082) | ![page-2](https://developer.apple.com/videos/play/wwdc2023/10096)
+----- | -----
+了解用于空间计算的 ARKit | 为空间计算构建出色的游戏
+![page-3](https://developer.apple.com/videos/play/wwdc2023/10034) | ![page-4](https://developer.apple.com/videos/play/wwdc2023/10087)
+打造无障碍空间体验 | 构建空间同播共享体验
