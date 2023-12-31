@@ -194,7 +194,6 @@ Happy Beam支持多种输入：
 ![img-1](https://docs-assets.developer.apple.com/published/f8a2fed7cbcfb2cc62c0a3996bee40a0/HB-interactive-hands@2x.png) | ![img-2](https://docs-assets.developer.apple.com/published/9fd7384ba167df2a7b8547c4814faf8f/HB-turret@2x.png)
 ----- | -----
 来自 ARKit 的交互式手势手势，带有自定义心形手势。 | 拖动手势输入以旋转其平台上的静止光束。
-
 ![img-3](https://docs-assets.developer.apple.com/published/7b08dd9be3dd8a0a12386d29ebd5e654/HB-accessibility@2x.png) | ![img-4](https://docs-assets.developer.apple.com/published/846e5d397ba2a3e6e8550090b033e958/HB-controller@2x.png)
 来自 RealityKit 的辅助功能组件，用于支持自定义操作，为云点加油。 | 游戏控制器支持，使通过切换控制对光束的控制更具交互性。
 
