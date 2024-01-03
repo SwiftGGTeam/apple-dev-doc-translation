@@ -4,23 +4,23 @@
 
 ## 概述
 
-在 visionOS 中，您可以使用多种不同的框架创建有趣、动态的游戏和应用，以创建新型空间体验：RealityKit、ARKit、SwiftUI 和小组活动。此示例介绍了 Happy Beam，这是一款游戏，您和朋友可以在其中进行 FaceTime 通话并一起玩。
+在 visionOS 中，您可以使用多种不同的框架创建有趣、动态的游戏和应用，以创建新型空间体验：RealityKit、ARKit、SwiftUI 和 Group Activities。此示例介绍了快乐光束(Happy Beam)，这是一款游戏，您和朋友可以在其中进行 FaceTime 通话并一起玩。
 
-您将学习游戏的机制，其中脾气暴躁的云朵在空间中漂浮，人们通过用手制作心形来投射光束来玩游戏。人们将光束对准云朵以振作起来，记分计数器会跟踪每个玩家在云彩中振作的表现。
+这个游戏的机制是：暴躁乌云在空间中漂浮，玩家通过用心形手势投射光束来进行游戏。玩家使用光束射击乌云并使其振作起来，同时记分器会记录每个玩家在振奋乌云时的表现。
 
 [试玩视频](https://docs-assets.developer.apple.com/published/299cd298aee541a80039720b4f488cf5/Happy-Beam-overview.mp4)
 
-## 在 SwiftUI 中设计游戏界面
+## 使用 SwiftUI 设计游戏界面
 
 visionOS 中的大多数应用都以窗口的形式启动，该窗口会根据应用的需要打开不同的场景类型。
 
-在这里，您可以看到 Happy Beam 如何使用多个 SwiftUI 视图向人们呈现一个有趣的界面，这些视图显示欢迎屏幕、提供说明的教练屏幕、记分牌和游戏结束屏幕。
+在这里，您可以看到 Happy Beam 如何使用多个 SwiftUI 视图向玩家呈现一个有趣的用户界面，其中包括了欢迎界面、提供规则说明的教学界面、记分板和游戏结束界面。
 
-欢迎窗口 | 指示 | 记分牌 | 结束窗口
+欢迎窗口 | 教学 | 记分板 | 结束窗口
  ----- | ----- | ----- | ----- 
 ![img-1](https://docs-assets.developer.apple.com/published/a4a95e6a952a19f93222788b422649e2/HB-welcome@2x.png) | ![img-2](https://docs-assets.developer.apple.com/published/61d185d073ca3656c70068c897317b92/HB-instructions@2x.png) | ![img-3](https://docs-assets.developer.apple.com/published/79c888c096819fd9309e3427e1a5d05a/HB-scoreboard@2x.png) | ![img-4](https://docs-assets.developer.apple.com/published/658efc9a3068fd8f3e815d448db59ebc/HB-ending@2x.png)
 
-下面显示了应用中显示游戏每个阶段的主要视图：
+下方代码中包含了应用中每个游戏阶段显示的主要视图：
 
 ```swift
 struct HappyBeam: View {
@@ -62,7 +62,7 @@ struct HappyBeam: View {
 }
 ```
 
-当 3D 内容开始出现时，游戏会打开一个沉浸式空间，以在主窗口之外和人周围环境中呈现内容。
+当 3D 内容开始出现时，游戏会打开一个沉浸式空间，以在主窗口之外，玩家周围环境之中呈现内容。
 
 ```swift
 @main
@@ -86,13 +86,13 @@ struct HappyBeamApp: App {
 }
 ```
 
-HappyBeam 容器视图声明对以下各项 openImmersiveSpace 的依赖关系：
+`HappyBeam` 容器视图定义了一个名为 `openImmersiveSpace` 的依赖：
 
 ```swift
 @Environment(\.openImmersiveSpace) private var openImmersiveSpace
 ```
 
-稍后，当需要开始显示 3D 内容时，它会使用该依赖项从应用的声明中打开空间：
+稍后，当需要开始显示 3D 内容时，该视图会使用此依赖从应用的声明中打开沉浸式空间：
 
 ```swift
 if gameModel.countDown == 0 {
@@ -105,7 +105,7 @@ if gameModel.countDown == 0 {
 
 ## 使用 ARKit 检测心形手势
 
-Happy Beam 应用程序使用 ARKit 在 visionOS 中对 3D 手部跟踪的支持来识别中央心形手势。使用手部追踪需要跑步会话和佩戴者的授权。它使用 NSHandsTrackingUsageDescription 用户信息密钥向玩家解释为什么应用程序请求手部跟踪权限。
+Happy Beam 应用程序使用 ARKit 支持的 visionOS 中 3D 手部追踪功能来识别中央*心形*手势。使用手部追踪需要一个处于前台的会话以及设备佩戴者的授权。它使用 `NSHandsTrackingUsageDescription` 用户信息键中的字符串向玩家解释为什么应用程序请求手部追踪权限。
 
 [心形手势](https://docs-assets.developer.apple.com/published/1d628bd12b2b0b094fea1fba46ed9545/HB-custom-gestures@2x.png)
 
@@ -121,9 +121,9 @@ Task {
 
 当您的应用仅显示窗口或音量时，手势跟踪数据不可用。相反，当您演示沉浸式空间时，它可用，如上例所示。
 
-您可以使用 ARKit 数据检测手势，其准确性取决于您的用例和预期体验。例如，Happy Beam 可能需要严格定位手指关节，使其与心形非常相似。然而，相反，它会提示人们做一个心形，并使用启发式方法来指示手势何时足够接近。
+您可以使用 ARKit 数据检测手势，其准确程度取决于您的用例和预期体验。例如，Happy Beam 可以更加严格地要求手指关节位置，使其必须非常接近心形。然而，实际上应用会提示人们摆出心形手势，并使用启发式的方法来提示手势已经足够接近心形。
 
-下面检查一个人的拇指和食指是否几乎接触：
+下述代码检查玩家的拇指和食指是否近乎接触：
 
 ```swift
 // Get the position of all joints in world coordinates.
