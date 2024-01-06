@@ -1,6 +1,6 @@
 # 快乐光束
 
-利用 Full Space 使用 ARKit 创建有趣的游戏。
+使用 ARKit 在 Full Space 中创建有趣的游戏。
 
 ## 概述
 
@@ -283,14 +283,26 @@ func sendBeamPositionUpdate(_ pose: Pose3D) {
 
 ## 另见
 
+#### 相关示例
+
 - [将真实世界的环境融入沉浸式体验中](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience)
 通过使应用的内容响应世界的本地形状来创建身临其境的体验。
 - [你好，世界](https://developer.apple.com/documentation/visionos/world)
 使用窗口、体量和沉浸式空间让人们了解地球。
-- [目标视频](https://developer.apple.com/documentation/visionos/destination-video)
+- [目的地视频](https://developer.apple.com/documentation/visionos/destination-video)
 利用 3D 视频和空间音频提供身临其境的体验。
 - [西洋镜](https://developer.apple.com/documentation/visionos/diorama)
 使用 Reality Composer Pro 为您的 visionOS 应用程序设计场景。
+
+#### 相关文章
+- [设置对 ARKit 数据的访问](https://developer.apple.com/documentation/visionos/setting-up-access-to-arkit-data)
+检查您的 App 是否可以使用 ARKit 并尊重他人的隐私。
+- [将内容放置在检测到的平面上](https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes)
+检测水平表面（如桌子和地板）以及垂直平面（如墙壁和门）。
+- [跟踪世界空间中的特定点](https://developer.apple.com/documentation/visionos/tracking-points-in-world-space)
+在 ARKit 中检索应用商店定位点的位置和方向。
+- [在 3D 空间中跟踪预配准图像](https://developer.apple.com/documentation/visionos/tracking-images-in-3d-space)
+根据已知图像在人周围环境中的当前位置放置内容。
 
 #### 相关视频
 
