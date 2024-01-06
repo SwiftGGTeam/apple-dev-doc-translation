@@ -233,12 +233,12 @@ func placeCloud(start: Point3D, end: Point3D, speed: Double) async throws -> Ent
 }
 ```
 
-## 添加 SharePlay 以支持多人游戏体验
+## 添加同播共享以支持多人游戏体验
 
-您可以在 visionOS 中通过 Group Activities 框架在 FaceTime 通话期间支持 SharePlay。Happy Beam 使用 Group Activities 来同步分数、活跃玩家列表以及每个玩家射出光束的位置。
+您可以在 visionOS 中通过 Group Activities 框架在 FaceTime 通话期间支持同播共享。Happy Beam 使用 Group Activities 来同步分数、活跃玩家列表以及每个玩家射出光束的位置。
 
 > 注意
-> 使用 [Apple Vision Pro developer kit](https://developer.apple.com/visionos/work-with-apple/) 的开发者可以通过安装 [Persona Preview Profile](https://developer.apple.com/download/all/?q=persona) 在设备上测试空间中的 SharePlay 体验。
+> 使用 [Apple Vision Pro developer kit](https://developer.apple.com/visionos/work-with-apple/) 的开发者可以通过安装 [Persona Preview Profile](https://developer.apple.com/download/all/?q=persona) 在设备上测试空间中的同播共享体验。
 
 使用可靠的频道发送要求正确性的信息，即使因此可能会稍有延迟。下面展示了 Happy Beam 如何根据分数信息更新游戏模型的分数状态：
 
