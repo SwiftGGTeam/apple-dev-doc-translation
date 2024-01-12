@@ -1,8 +1,8 @@
-# SwiftUI-Tutorial-Chinese
+# apple-dev-doc-translation
 
 [简体中文](./README-CN.md)
 
-The SwiftUI-Tutorial-Chinese repository is used to store translation files for the [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin). We aggregate and sort the original text, translations, and hint information from Apple's official documents, aiming to provide developers with a high-quality Chinese and other languages tutorial.
+The apple-dev-doc-translation repository is used to store translation files for the [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin). We aggregate and sort the original text, translations, and hint information from Apple's official documents, aiming to provide developers with a high-quality Chinese and other languages tutorial.
 
 The translation mapping files are stored in the yaml file format. The following is a specific introduction to the storage rules and storage format:
 
@@ -58,7 +58,7 @@ Formatting guidelines and process instructions:
 
 ### How to correct or modify the translated content?
 
-You can find the corresponding yaml translation file in the project repository, correct the translation, and then submit a Pull Request for modification. If you are unfamiliar with GitHub operations, you can also provide feedback via **[GitHub Issues](https://github.com/SwiftGGTeam/swiftui-tutorial-chinese/issues)**, and we will handle it as soon as possible.
+You can find the corresponding yaml translation file in the project repository, correct the translation, and then submit a Pull Request for modification. If you are unfamiliar with GitHub operations, you can also provide feedback via **[GitHub Issues](https://github.com/SwiftGGTeam/apple-dev-doc-translation/issues)**, and we will handle it as soon as possible.
 
 ## Related Links
 
