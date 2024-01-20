@@ -4,7 +4,7 @@
 
 ## 概述
 
-Destination Video 是一款适用于 visionOS、iOS 和 tvOS 的多平台视频播放应用程序。人们可以在浏览图书馆内容和播放他们感兴趣的视频时获得熟悉的媒体浏览体验。该应用程序在支持的平台上提供类似的体验，但利用 visionOS 的独特功能来创建新颖、身临其境的播放体验。
+Destination Video 是一款适用于 visionOS、iOS 和 tvOS 的多平台视频播放应用。应用为用户提供了熟悉的媒体浏览体验：在图书馆中浏览内容并可以播放感兴趣的视频。该应用在所有支持的平台上提供了相近的体验，但同时也利用了 visionOS 的特有功能来创建新颖、身临其境的视听体验。
 
 [演示视频](https://docs-assets.developer.apple.com/published/473827229dad2914cdf0f7c616f9da2b/Destination-Video-overview.mp4)
 
