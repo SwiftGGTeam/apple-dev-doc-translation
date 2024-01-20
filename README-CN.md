@@ -1,5 +1,5 @@
-# SwiftUI-Tutorial-Chinese
-SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin) 插件的翻译文件。我们将 Apple 官方文档的原文，翻译和提示信息进行归拢整理，旨在为广大开发者提供一个高质量的中文教程。
+# apple-dev-doc-translation
+apple-dev-doc-translation 仓库用于存放 [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin) 插件的翻译文件。我们将 Apple 官方文档的原文，翻译和提示信息进行归拢整理，旨在为广大开发者提供一个高质量的中文教程。
 
 翻译的映射文件是以 yaml 文件格式进行存储的，以下是存储规则和存储格式的具体介绍：
 
@@ -49,7 +49,7 @@ SwiftUI-Tutorial-Chinese 仓库用于存放 [swiftgg-trans-plugin](https://githu
 - Pull Request 发起方式参考 SwiftGG [Pull Request 说明](https://github.com/SwiftGGTeam/translation/blob/master/%E7%BF%BB%E8%AF%91%E6%B5%81%E7%A8%8B%E6%A6%82%E8%BF%B0%E5%8F%8APR%E8%AF%B4%E6%98%8E.md#%E5%A6%82%E4%BD%95%E5%8F%91%E8%B5%B7-pull-request)
 
 ### 如何给翻译内容纠错或修正？
-可以在项目仓库中找到对应的 yaml 翻译文件，对翻译进行更正之后，提交 Pull Request 进行修改。若你不熟悉 GitHub 操作，也可以通过 **[GitHub Issues](https://github.com/SwiftGGTeam/swiftui-tutorial-chinese/issues)** 向我们反馈，我们会尽快进行处理。
+可以在项目仓库中找到对应的 yaml 翻译文件，对翻译进行更正之后，提交 Pull Request 进行修改。若你不熟悉 GitHub 操作，也可以通过 **[GitHub Issues](https://github.com/SwiftGGTeam/apple-dev-doc-translation/issues)** 向我们反馈，我们会尽快进行处理。
 
 ## 相关链接
 - [swiftgg-trans-plugin](https://github.com/SwiftGGTeam/swiftgg-trans-plugin)：本项目的浏览器插件源码仓库。
