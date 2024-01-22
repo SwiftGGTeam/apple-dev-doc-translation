@@ -8,27 +8,27 @@ Destination Video 是一款适用于 visionOS、iOS 和 tvOS 的多平台视频�
 
 [演示视频](https://docs-assets.developer.apple.com/published/473827229dad2914cdf0f7c616f9da2b/Destination-Video-overview.mp4)
 
-### 在内嵌播放器中播放视频
+### 在内联播放器中播放视频
 
-当您在资源库中选择视频时，“目标视频”会显示一个视图，其中显示有关该项目的其他详细信息。该视图显示用于播放视频的控件，并指定是否将其包含在“待播清单”列表中。在visionOS中，它还会沿其前缘显示视频海报。点击视图的“预览”按钮可显示视频的内联预览。
+当您在资源库中选择视频时，“目的地视频”会显示一个有关该项目详情的视图。该视图显示播放视频的控件，并允许用户指定是否将其包含在“待播清单”列表中。在visionOS中，它还会靠左显示一张视频海报。点击视图中的“预览”按钮可在行中显示视频的预览。
 
 [演示视频](https://docs-assets.developer.apple.com/published/1b23463c1339306b1921101dc14fd7aa/DV-inline.mp4)
 
-当您将对象 [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 的界面显示为另一个视图的子项时，内联控件将显示暂停、跳过和查找等。在应用中显示标准播放控件可提供熟悉的 UI，该 UI 可自动调整其外观以适应每个平台，并且在大多数情况下是推荐的选择。
+当您将 [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 的界面作为一个子视图显示时，暂停、跳过和查找等内联控件将显示。在应用中显示标准播放控件可提供可自动调整其外观以适应平台的熟悉 UI，这在大多数情况下是推荐的选择。
 
-目标视频使用简单的 UI 作为内联播放器视图：一个用于切换播放状态的按钮。 [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 不提供此控件样式，但应用使用它来显示视频内容，而无需控件，方法是将其 [showsPlaybackControls](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/1615824-showsplaybackcontrols) 属性的值设置为 `false`。然后，它会覆盖所需的自定义播放控件。有关如何实现此功能的详细信息，请参阅目标视频 InlinePlayerView 的类型。
+目的地视频使用简单的 UI 作为内联播放器视图：一个用于切换播放状态的按钮。 [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 不提供此控件样式，但本应用仅仅使用它来显示视频内容，而不显示控件，其实现方法是将 [`showsPlaybackControls`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/1615824-showsplaybackcontrols) 属性的值设置为 `false`。然后应用会用所需的自定义播放控件覆盖在上。如想了解此功能的详情，请参阅目的地视频中的 `InlinePlayerView` 类型。
 
 > 注意
-> [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 仅支持在内联嵌入时显示 2D 内容。
+> [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 在内联嵌入时仅支持显示 2D 内容。
 
 ### 在全屏播放器中播放视频
 
-visionOS 最令人兴奋的功能之一是它能够播放 3D 视频和空间音频，这为观看体验增加了更深层次的沉浸感。在应用中播放 3D 内容需要 [AVPlayerViewController](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 显示全屏。当您以这种方式呈现播放器时，系统会自动将其停靠在理想的观看位置，并提供简化的播放控件，使用户专注于内容。
+visionOS 最令人兴奋的功能之一是它能够播放 3D 视频和空间音频，这为观看体验增加了更深层的沉浸感。在应用中播放 3D 内容需要在全屏模式下显示 [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller)。当您以这种方式呈现播放器时，系统会自动将其停靠在理想的观看位置，并提供简化的播放控件，使用户专注于内容。
 
 > 注意
-> 在 iOS 或 Apple tvOS 中，通常使用 [fullScreenCover(isPresented:onDismiss:content:)](https://developer.apple.com/documentation/SwiftUI/View/fullScreenCover(isPresented:onDismiss:content:)) 修饰符在全屏演示文稿中演示视频。此 API 在 visionOS 中可用;但是，为全屏播放显示播放器的建议方法是将其设置为应用窗口组的根视图。
+> 在 iOS 或 Apple tvOS 中，你可以使用 [`fullScreenCover(isPresented:onDismiss:content:)`](https://developer.apple.com/documentation/SwiftUI/View/fullScreenCover(isPresented:onDismiss:content:)) 修饰符在全屏模式下演示视频。此 API 在 visionOS 亦可用；然而，推荐的全屏模式播放视频方法是将视图设置为应用窗口组的根视图。
 
-默认情况下，目标视频会 `ContentView` 显示应用的库。它观察对播放器模型属性的更改，该 `presentation` 属性指示应用是请求内联播放还是全屏播放。当演示状态更改为 `fullWindow` 时，视图将重新绘制 UI，以显示播放器视图来代替库。
+默认情况下，目的地视频的 `ContentView` 会显示应用的资源库。它观察对播放器模型中 `presentation`（演示状态） 属性的更改，属性的变化意味着应用请求内联播放或全屏播放。当演示状态变为 `fullWindow` 时，视图将重新绘制 UI，用播放器视图来代替原本的资源库视图。
 
 ```swift
 struct ContentView: View {
@@ -56,7 +56,7 @@ struct ContentView: View {
 }
 ```
 
-当有人在详细信息视图上选择“播放视频”按钮时，应用会调用播放器模型的方法，请求 `loadVideo(_: presentation:)` `fullWindow` 演示选项。
+当用户在详细信息视图上选择了“播放视频”按钮时，应用会调用播放器模型的 `loadVideo(_: presentation:)` 方法，请求`fullWindow` 演示选项。
 
 ```swift
 Button {
@@ -67,9 +67,9 @@ Button {
 }
 ```
 
-播放器模型成功加载视频内容进行播放后，会将其 `presentation` 值更新为 `fullWindow` ，这会导致应用将库替换为 `PlayerView` 。
+当播放器模型成功加载视频内容并播放后，会将其 `presentation` 值更新为 `fullWindow` ，这会让应用将资源库替换为 `PlayerView` 。
 
-要在 visionOS 中关闭全屏播放器，用户点击播放器 UI 中的“后退”按钮。为了处理此操作，应用的 [`PlayerViewControllerDelegate`](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate) 类型定义了一个 `AVPlayerViewControllerDelegate` 处理消除的对象。
+要在 visionOS 中关闭全屏播放器，用户可以点击播放器 UI 中的“后退”按钮。为了处理此操作，应用的 `PlayerViewControllerDelegate` 类型定义了一个 [`AVPlayerViewControllerDelegate`](https://developer.apple.com/documentation/avkit/avplayerviewcontrollerdelegate) 对象，用于关闭界面。
 
 ```swift
 func playerViewController(_ playerViewController: AVPlayerViewController,
@@ -79,7 +79,7 @@ func playerViewController(_ playerViewController: AVPlayerViewController,
 }
 ```
 
-当委托收到此调用时，它会从播放器模型中清除媒体，并将演示状态重置回其默认值，这会导致目标视频应用重新显示库视图。
+当委托（delegate）收到此调用时，它会从播放器模型中清除媒体，并将演示状态重置回其默认值，这会让目的地视频应用重新显示资源库视图。
 
 ### 配置空间音频体验
 
@@ -171,7 +171,7 @@ struct DestinationVideo: App {
 
 Destination Video 应用创造了一种体验，人们可以跨设备和平台与他人一起观看视频。它定义了一个名为采用该协议 [`GroupActivity`](https://developer.apple.com/documentation/GroupActivities/GroupActivity) 的组活动 `VideoWatchingActivity` 。当人们激活了 FaceTime 通话并在全屏播放器中播放视频时，通话中的每个人都有资格播放该视频。
 
-该应用程序的 VideoWatchingCoordinator 参与者管理 Destination Video 的同播共享功能。它观察新会话的激活，当一个 `VideoWatchingActivity` 会话启动时，它会 [`GroupSession`](https://developer.apple.com/documentation/GroupActivities/GroupSession) 在播放器对象的 [`AVPlaybackCoordinator`](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinator)。
+该应用程序的 VideoWatchingCoordinator 参与者管理 Destination Video 的同播共享功能。它观察新会话的激活，当一个 `VideoWatchingActivity` 会话启动时，它会 [`GroupSession`](https://developer.apple.com/documentation/GroupActivities/GroupSession) 在播放器模型的 [`AVPlaybackCoordinator`](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinator)。
 
 ```swift
 private var groupSession: GroupSession<VideoWatchingActivity>? {
