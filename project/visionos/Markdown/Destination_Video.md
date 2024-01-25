@@ -83,9 +83,9 @@ func playerViewController(_ playerViewController: AVPlayerViewController,
 
 ### 配置空间音频体验
 
-媒体播放应用需要对其功能和音频会话进行通用配置。除了执行[配置应用以进行媒体播放](https://developer.apple.com/documentation/avfoundation/media_playback/configuring_your_app_for_media_playback)中概述的步骤外，Destination Video 还采用新的 [`AVAudioSession`](https://developer.apple.com/documentation/avfaudio/avaudiosession) API 来自定义用户的空间音频体验。
+媒体播放应用需要对其功能和音频会话进行通用配置。除了执行[配置应用以进行媒体播放](https://developer.apple.com/documentation/avfoundation/media_playback/configuring_your_app_for_media_playback)中列举的步骤之外，Destination Video 还采用新的 [`AVAudioSession`](https://developer.apple.com/documentation/avfaudio/avaudiosession) API 来自定义用户的空间音频体验。
 
-应用成功加载视频进行播放后，会为当前演示文稿配置空间音频体验。对于内联播放器视图，它将体验设置为一个小型的、集中的声场，其中音频源自视图的位置。当显示视频全窗口时，它会将体验设置为大型、完全沉浸式的声场。
+应用成功加载视频进行播放后，会为当前的演示内容配置空间音频体验。对于内联播放器视图，它将体验设置为一个小型的、集中的声场，其中音源来自视图的位置。当显示全屏视频时，它会将体验设置为大型、完全沉浸式的声场。
 
 ```swift
 /// Configures a person's intended Spatial Audio experience to best fit the presentation.
@@ -110,9 +110,9 @@ private func configureAudioExperience(for presentation: Presentation) {
 }
 ```
 
-### 呈现身临其境的空间
+### 呈现沉浸式空间
 
-为 visionOS 构建视频播放应用程序提供了新的机会，可以增强播放器窗口范围之外的观看体验。为了增加更高的沉浸感，该示例提供了一个沉浸式空间，该空间在观看视频时显示人周围的场景。它在应用结构中 `DestinationVideo` 定义沉浸式空间。
+在 visionOS 上制作视频播放应用提供了新的机会，因为开发者可以将观看体验扩展到播放器窗口之外。为了提供更强的沉浸感，该示例提供了一个在用户观看视频时在其周围显示风景的沉浸式空间。应用结构体 `DestinationVideo` 中定义了沉浸式空间。
 
 ```swift
 struct DestinationVideo: App {
@@ -136,11 +136,11 @@ struct DestinationVideo: App {
 }
 ```
 
-沉浸式空间呈现了 的实例 `DestinationView` ，它将纹理映射到围绕人显示的球体内部。该应用程序使用沉浸式风格呈现它，它允许某人通过转动设备上的数码表冠来更改他们的 `.progressive` 沉浸感。
+沉浸式空间呈现了一个 `DestinationView` 的实例，它将纹理映射到围绕用户而显示的球体内部。应用使用 `.progressive` 风格呈现它，该风格允许用户通过转动设备上的“数码表冠”来修改沉浸度。
 
 [演示视频](https://docs-assets.developer.apple.com/published/6bca50241441a64e7ef14eb97cb9c0d6/DV-immersive-space.mp4)
 
-当用户导航到视频的详细信息视图时，“目标视频”应用会自动显示沉浸式空间，并在返回库时将其关闭。为了监视这些事件，应用会观察其导航路径以确定导航事件发生的时间，以便可以显示或关闭空间。
+应用会在用户进入视频详情视图时自动显示沉浸式空间，并在返回资源库时将其关闭。为了监视这些事件，应用会观察其导航路径以确定导航事件发生的时机，并显示或关闭空间。
 
 ```swift
 .onChange(of: navigationPath) {
@@ -167,11 +167,11 @@ struct DestinationVideo: App {
 
 ### 提供共享的观看体验
 
-增强应用播放体验的最佳方法之一是使该体验可与他人共享。您可以使用 [`AVFoundation`](https://developer.apple.com/documentation/avfoundation) 和 [Group Activities](https://developer.apple.com/documentation/GroupActivities) 框架来构建[同播共享](https://developer.apple.com/shareplay/)体验，即使人们不能在同一位置，也能将他们聚集在一起。
+增强应用播放体验的最佳方法之一是使体验可与他人共享。您可以使用 [`AVFoundation`](https://developer.apple.com/documentation/avfoundation) 和 [Group Activities](https://developer.apple.com/documentation/GroupActivities) 框架来构建[同播共享](https://developer.apple.com/shareplay/)体验，即使用户们不在同一个地方，同播体验也能够拉近他们的距离。
 
-Destination Video 应用创造了一种体验，人们可以跨设备和平台与他人一起观看视频。它定义了一个名为采用该协议 [`GroupActivity`](https://developer.apple.com/documentation/GroupActivities/GroupActivity) 的组活动 `VideoWatchingActivity` 。当人们激活了 FaceTime 通话并在全屏播放器中播放视频时，通话中的每个人都有资格播放该视频。
+目的地视频创造了一种用户可以跨设备和平台与他人一起观看视频的体验。它定义了一个名为 `VideoWatchingActivity` 且遵循 [`GroupActivity`](https://developer.apple.com/documentation/GroupActivities/GroupActivity) 协议的群组活动。当用户们激活了 FaceTime 通话并在全屏播放器中播放视频时，通话中的每个人都有权限播放该视频。
 
-该应用程序的 VideoWatchingCoordinator 参与者管理 Destination Video 的同播共享功能。它观察新会话的激活，当一个 `VideoWatchingActivity` 会话启动时，它会 [`GroupSession`](https://developer.apple.com/documentation/GroupActivities/GroupSession) 在播放器模型的 [`AVPlaybackCoordinator`](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinator)。
+应用的 `VideoWatchingCoordinator` actor 管理目的地视频的同播共享功能。它观察新 `VideoWatchingActivity` 会话的激活，当一个会话启动时，它将 [`GroupSession`](https://developer.apple.com/documentation/GroupActivities/GroupSession) 对象设置为播放器对象的 [`AVPlaybackCoordinator`](https://developer.apple.com/documentation/avfoundation/avplaybackcoordinator)。
 
 ```swift
 private var groupSession: GroupSession<VideoWatchingActivity>? {
@@ -184,7 +184,7 @@ private var groupSession: GroupSession<VideoWatchingActivity>? {
 }
 ```
 
-将播放器配置为使用群组会话后，当 App 加载新视频时，他们就有资格在 FaceTime 通话中与他人共享。
+将播放器配置使用群组会话后，每当应用加载了新视频，它们都可以在 FaceTime 通话中与他人共享。
 
 ## 另见
 
