@@ -282,7 +282,7 @@
     stack that contains details about the park.
   提示: ''
   翻译: 在本节中，你将使用垂直堆栈将标题放在包含公园信息的水平堆栈上方。
-- 内容: Creating and Combining Views
+- 内容: Creating and combining views
   提示: ''
   翻译: ''
 - 内容: Next you’ll create a map that centers on a given coordinate. You can use the
