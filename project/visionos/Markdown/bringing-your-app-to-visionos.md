@@ -1,47 +1,47 @@
-# 将现有应用程序引入 visionOS
+# 将您的现有应用引入 visionOS
 
-使用 visionOS SDK 构建 iPadOS 或 iOS App 版本，并更新代码以适应平台差异。
+使用 visionOS SDK 将您的 iPadOS 或 iOS 应用重构一个新版本，并更新代码以适应平台差异。
 
 ## 概述
 
-如果您有在 iPadOS 或 iOS 中运行的现有 App，您可以针对 visionOS SDK 构建该 App，以便在平台上运行它。专为 visionOS 构建的应用程序采用标准系统外观，在平台上看起来更自然。更新应用也是添加在平台上运行良好的元素的机会，例如 3D 内容和沉浸式体验。
+如果您有在 iPadOS 或 iOS 中运行的现存应用，您可以使用 visionOS SDK 构建该应用程序，以便在该平台上运行。为 visionOS 专门构建的应用采用标准系统外观，在该平台上看起来更自然。同时，更新应用也是添加在该平台上吸引眼球的元素（如 3D 内容和沉浸式体验）的好机会。
 
-在大多数情况下，要支持 visionOS，您需要做的就是更新 Xcode 项目的设置并重新编译代码。根据你的应用，你可能需要进行其他更改，以考虑仅在 iOS SDK 中找到的功能。虽然大多数相同的技术在两个平台上都可用，但有些技术没有意义或需要 visionOS 设备上不存在的硬件。例如，人们通常不使用头戴式设备进行非接触式支付，因此使用 ProximityReader 框架的应用在 visionOS 中运行时必须禁用这些功能。
+在大多数情况下，您只需、更新 Xcode 的项目设置并重新编译代码即可支持 visionOS。根据你的应用，你可能需要进行其他更改，以解决那些仅在 iOS SDK 中支持的功能。虽然大多数同类技术在两个平台上都可用，有些技术在 visionOS 设备上并不合理，或者需要的硬件并不存在。例如，人们通常不使用头戴式设备进行电子支付，因此使用 ProximityReader 框架的应用在 visionOS 中运行时必须禁用这些功能。
 
 > 备注  
-> 如果您在 iOS 应用中使用 ARKit 来创建增强现实体验，则需要进行其他更改才能在 visionOS 中支持 ARKit。有关如何更新此类应用程序的信息，请参阅[将 ARKit 应用程序引入 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)。
+> 如果您在 iOS 应用中使用了 ARKit 来实现增强现实体验，则需要进行额外的更改才能在 visionOS 中支持 ARKit。有关如何更新此类应用，请参阅[将 ARKit 应用程序引入 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)。
 
-### 将 visionOS 添加为应用支持的目标
+### 将 visionOS 添加为应用的支持终端（supported destination）
 
-更新应用程序的第一步是将 visionOS 添加为支持的目标。在项目的设置中，选择应用目标并导航到“常规”选项卡。在“支持的目标”中，点按添加 （+） 按钮以添加新目标位置，然后选择“Apple Vision”选项。通过添加此选项，您可以专门为 visionOS SDK 构建应用程序。
+更新应用的第一步是将 visionOS 添加为支持终端。在您的项目设置中，选择应用目标并导航到 General 选项卡。在 Supported Destinations 选项中，单击添加 （+） 按钮以添加新的终端，并选择 Apple Vision 选项。添加该选项后，您就可以专门为 visionOS SDK 构建应用了。
 
-[图片](https://docs-assets.developer.apple.com/published/e86829433550d1659cc49fdb34ea7ff4/bringingExistingAppsToVision~dark@2x.png)
+[支持终端面板](https://docs-assets.developer.apple.com/published/e86829433550d1659cc49fdb34ea7ff4/bringingExistingAppsToVision~dark@2x.png)
 
-当您将 Apple Vision 添加为目的位置时，Xcode 会对项目的构建设置进行一些一次性更改。添加目标后，您可以修改项目的构建设置和构建阶段，以专门针对 visionOS 自定义构建行为。例如，您可以删除应用的 visionOS 版本的依赖项，或更改要编译的源文件集。
+将 Apple Vision 添加为目标时，Xcode 会对项目的构建设置进行一些一次性更改。添加终端后，您可以修改项目的构建设置和构建阶段，以定制针对 visionOS 的构建行为。例如，您可以移除 visionOS 版应用的依赖项，或更改要编译的源文件集。
 
 有关如何更新目标配置的更多信息，请参阅[自定义目标的构建阶段](https://developer.apple.com/documentation/Xcode/customizing-the-build-phases-of-a-target)。
 
-### 清理使用已弃用 API 的代码
+### 清理使用废弃 API 的代码
 
-在为 visionOS 构建之前，修复 iOS 版本代码中的任何弃用警告。当 API 不再相关或存在合适的替代项时，Apple 会将其标记为已弃用。当您编译调用已弃用 API 的代码时，编译器会生成警告，并通常会建议替换供您改用。visionOS 完全删除了许多已弃用的符号，将这些弃用警告变成了平台上的缺失符号错误。在应用的 iOS 版本中进行更改，以查看原始弃用警告和替换详细信息。
+在为 visionOS 构建之前，修复 iOS 版本代码中的任何弃用警告。当 API 不再适用或存在合适的替代品时，Apple 就会将其标记为废弃。当你编译调用已废弃 API 的代码时，编译器会生成警告，并经常建议你使用替代品。visionOS 完全删除了许多已废弃的符号，这些废弃警告也因此变成了该平台上的符号缺失错误。请在 iOS 版本的应用查看原始的弃用警告和替换详情。
 
-除了单个符号之外，以下框架在 iOS 和 visionOS 中均已完全弃用。如果您的应用仍在使用这些框架，请立即停止使用它们。每个框架的参考文档都包含有关如何更新代码的信息。
+除个别符号外，以下框架在 iOS 和 visionOS 中均已被完全弃用。如果您的应用仍在使用这些框架，请立即停止使用。每个框架的参考文档都包含有关如何修改代码的详情。
 
-- Accounts 帐户
-- Address Book 通訊錄
-- Address Book UI 通讯簿 UI
-- Assets Library 资产库
-- GLKit GLKit的
-- iAd iAd的
-- Newsstand Kit 报亭套件
-- NotificationCenter 通知中心
-- OpenGL ES OpenGL ES的
+- Accounts
+- Address Book
+- Address Book UI
+- Assets Library
+- GLKit
+- iAd
+- Newsstand Kit
+- NotificationCenter
+- OpenGL ES
 
 ### 隔离 visionOS 中不可用的功能
 
-iOS SDK 包含许多不适用于 visionOS 的框架，因为它们使用的硬件不可用，或者它们的功能不适用于平台。尽可能移动使用这些框架的代码以分隔源文件，并仅在应用的 iOS 版本中包含这些文件。
+iOS SDK 包含许多不适用于 visionOS 的框架，这可能是因为框架使用的硬件不可用，也可能是因为框架功能功能不适用于该平台。尽可能将使用这些框架的代码移到独立的源文件中，并只在 iOS 版本的应用中包含这些文件。
 
-如果无法将代码隔离到单独的源文件，请使用条件语句（如下所示）为 visionOS 和 iOS 提供不同的代码路径。以下示例展示了如何在 visionOS 和 iOS 中配置条件语句以执行单独的代码路径：
+如果无法将代码隔离到单独的源文件中，可使用条件语句（如下面的语句）为 visionOS 和 iOS 提供不同的代码路径。下面的示例展示了如何配置条件语句，以便在 visionOS 和 iOS 中执行不同的代码路径：
 
 ```swift
 #if os(visionOS)
@@ -53,8 +53,8 @@ iOS SDK 包含许多不适用于 visionOS 的框架，因为它们使用的硬�
 
 以下框架在 iOS SDK 中可用，但在 visionOS SDK 中不可用。
 
------ | ----- | -----
 ActivityKit | AdSupport | AppClip
+--- | --- | ---
 AutomatedDeviceEnrollment | BusinessChat | CarKey
 CarPlay | Cinematic | ClockKit
 CoreLocationUI | CoreMediaIO | CoreNFC
@@ -67,29 +67,29 @@ SafetyKit | ScreenTime | SensorKit
 ServiceManagement | Social | Twitter
 WidgetKit | WorkoutKit
 
-某些框架的行为更改会影响 visionOS 中的应用，而某些框架会在所需硬件不可用时禁用功能。为了帮助您避免将 API 用于缺少的功能，许多框架都提供了 API 来检查这些功能的可用性。继续使用这些 API，并在功能不可用时采取适当的措施。在其他情况下，请准备好框架代码在使用时不执行任何操作或生成错误。
+有些框架的行为变化会影响您在 visionOS 中的应用，有些框架会在所需硬件不可用时禁用功能。为了帮助您避免使用缺失功能的 API，许多框架都提供了检查功能可用性的 API。继续使用这些 API，并在功能不可用时采取适当的措施。否则，请做好框架代码失效或报错的准备。
 
-- 方舟。此框架要求您为 iOS 和 visionOS 使用不同的 API。有关更多信息，请参阅[将 ARKit 应用程序引入 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)。
-- AutomaticAssessmentConfiguration。如果您尝试在 visionOS 中启动测试，框架将返回错误。
-- AVFoundation。捕获界面在 visionOS 中不可用。使用可用性检查来确定存在哪些服务。
-- 呼叫套件。您可以继续提供 IP 语音 （VoIP） 服务，但无法提供电话号码验证、呼叫阻止和其他与手机网络相关的服务。
-- 时钟套件。此框架的 API 在 visionOS 中不执行任何操作。
-- 核心触觉。visionOS 播放音频反馈，而不是触觉反馈。
-- CoreLocation。您可以使用标准定位服务请求某人的位置，但大多数其他服务都不可用。使用可用性检查来确定存在哪些服务。“始终”授权级别不可用，并自动变为“使用时”授权。
-- 核心运动。气压计数据不可用，但大多数其他传感器可用。使用可用性检查来确定可以使用哪些传感器。
-- HealthKit 和 HealthKitUI。运行状况数据不可用。使用可用性检查来确定信息何时可用。
-- 地图套件。涉及航向信息的用户跟踪功能不可用。
-- 媒体播放器。某些 API 在 visionOS 中不可用。
-- MetricKit。您可以收集设备上的诊断日志并生成报告，但无法收集指标。
-- 音乐套件。某些 API 在 visionOS 中不可用。
-- NearbyInteraction。该框架在 visionOS 中不执行任何操作。使用可用性检查来确定服务何时存在。
-- PushToTalk。一键通服务不可用。在创建 [`PTChannelManager`](https://developer.apple.com/documentation/PushToTalk/PTChannelManager) .
-- Safari服务。现在显示的 [`SFSafariViewController`](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) 链接会在 Safari 应用程序中打开一个新场景。
-- UIKit的。系统报告最多两个同时触摸输入 - 每个人的手一个。所有系统手势识别器都能正确处理这些输入，包括需要多个手指的缩放和旋转手势。如果您有需要两根以上手指的自定义手势识别器，请将其更新为仅在 visionOS 中支持一次或两次触摸。
-- 愿景套件。API [`DataScannerViewController`](https://developer.apple.com/documentation/visionkit/datascannerviewcontroller) 不可用，但其他功能仍然可用。
-- 监视连接。该框架仅支持 iPhone 和 Apple Watch 之间的连接。使用可用性检查来确定服务何时可用。
+- **ARKit**。此框架要求您为 iOS 和 visionOS 使用不同的 API。有关详细信息，请参阅[将 ARKit 应用程序引入 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)。
+- **AutomaticAssessmentConfiguration**。如果您尝试在 visionOS 中启动测试，该框架会返回错误。
+- **AVFoundation**。截屏接口在 visionOS 中不可用。请使用可用性检查来确定哪些服务可用。
+- **CallKit**。您可以继续提供 Voice-over-IP (VoIP) 服务，但电话号码验证、呼叫阻断和其他蜂窝相关服务不可用。
+- **ClockKit**。该框架的 API 在 visionOS 中不起作用。
+- **CoreHaptics**。visionOS 使用音频反馈而非触觉反馈。
+- **CoreLocation**。 您可以使用标准定位服务请求某人的位置，但大多数其他服务都不可用。请使用可用性检查确认哪些服务可用。“始终”授权级别不可用，会自动变为“使用中”授权。
+- **CoreMotion**。 气压计数据不可用，但大多数其他传感器可用。使用可用性检查来确认哪些传感器可以使用。
+- **HealthKit** 和 **HealthKitUI**。健康数据不可用。使用可用性检查确认信息何时可用。
+- **MapKit**。涉及航向信息的用户跟踪功能不可用。
+- **MediaPlayer**。某些 API 在 visionOS 中不可用。
+- **MetricKit**。您可以收集设备上的诊断日志并生成报告，但无法收集指标。
+- **MusicKit**。某些 API 在 visionOS 中不可用。
+- **NearbyInteraction**。该框架在 visionOS 中不起作用。使用可用性检查来确认服务是否存在。
+- **PushToTalk**。一键通话服务不可用。请检查创建 [PTChannelManager](https://developer.apple.com/documentation/PushToTalk/PTChannelManager) 时的错误。
+- **SafariServices**。显示 [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) 的链接会在 Safari 应用程序中打开一个新场景。
+- **UIKit**。 系统最多可同时反馈两个触控输入 - 双手各一个。所有系统手势识别器都能正确处理这些输入，包括需要多手指操作的缩放和旋转手势。如果你有需要两个以上手指的自定义手势，请在 visionOS 中将其更新为只有一个或两个触控的手势。
+- **VisionKit**。 [DataScannerViewController](https://developer.apple.com/documentation/VisionKit/DataScannerViewController) API 不可用，但其他功能仍然可用。
+- **WatchConnectivity**。该框架仅支持 iPhone 与 Apple Watch 之间的连接。使用可用性检查确认服务何时可用。
 
-有关如何将代码隔离到应用的 iOS 版本的其他信息，请参阅[在特定平台或 OS 版本上运行代码](https://developer.apple.com/documentation/Xcode/running-code-on-a-specific-version)。
+有关如何将代码隔离到 iOS 应用版本的更多信息，请参阅[在特定平台或操作系统版本上运行代码](https://developer.apple.com/documentation/Xcode/running-code-on-a-specific-version)。
 
 ### 更新界面以利用 visionOS 功能
 
