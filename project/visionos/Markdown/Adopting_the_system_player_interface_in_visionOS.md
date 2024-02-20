@@ -9,14 +9,14 @@
 > 备注  
 > 除了提供系统播放界面，你还可以使用 `AVPlayerViewController` 提供类似于 macOS 中 QuickTime Player 的媒体剪辑体验。更多信息，请参考 [visionOS 中修剪和导出媒体](https://developer.apple.com/documentation/avkit/trimming_and_exporting_media_in_visionos)。
 
-### 探索演示选项
+### 探索展示方式
 
-使用 [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 在 visionOS 的窗口环境中播放视频，它会自动调整其用户界面以适应当前演示方式。例如，当你将其嵌套在另一个视图中时，它会显示一个内联用户界面：
+使用 [`AVPlayerViewController`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller) 在 visionOS 的窗口环境中播放视频，它会自动调整其用户界面以适应当前展示方式。例如，当你将其嵌套在另一个视图中时，它会显示一个内嵌用户界面：
 
-[内联用户界面](https://docs-assets.developer.apple.com/published/b40dac6540/rendered2x-1686261702.png)
+[内嵌用户界面](https://docs-assets.developer.apple.com/published/b40dac6540/rendered2x-1686261702.png)
 
 > 备注  
-> 当你以内联方式展示播放器时，它仅支持标准 2D 视频。如要播放 3D 内容，请使用全屏展示。
+> 当你以内嵌方式展示播放器时，它仅支持标准 2D 视频。如要播放 3D 内容，请使用全屏展示。
 
 将播放器设置为应用的唯一根视图，或使用 [`fullScreenCover(item:onDismiss:content:)`](https://developer.apple.com/documentation/swiftui/view/fullscreencover(item:ondismiss:content:)) 修饰符，可以以全屏模式展示播放器。在全屏模式下，播放器呈现出一种更加偏内容导向的设计，默认会调暗环境光线，以提供更合适的观看效果。这为欣赏 2D 和 3D 内容提供了精简的观看体验。
 
@@ -24,7 +24,7 @@
 
 ### 显示相关元数据
 
-在当前播放项目包含标题和副标题元数据时，用户界面会在传输栏上方显示标题视图。当播放实时内容时，标题视图还可能显示一个徽章，向观众提示内容状态。
+在当前播放项目包含标题和副标题元数据时，用户界面会在播放栏上方显示标题视图。当播放实时内容时，标题视图还可能显示一个徽章，向观众提示内容状态。
 
 [显示元数据](https://docs-assets.developer.apple.com/published/91be82aff6/rendered2x-1686273923.png)
 
