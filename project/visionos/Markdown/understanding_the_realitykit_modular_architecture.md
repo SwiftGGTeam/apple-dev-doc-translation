@@ -1,6 +1,6 @@
-# 了解如何构建 RealityKit 模块'
+# 了解 RealityKit 的模块化架构
 
-理解在 RealityKit 中一切如何相互配合'
+了解如何在 RealityKit 中将一切组合在一起。
 
 ## 概览
 

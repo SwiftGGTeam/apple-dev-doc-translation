@@ -1,6 +1,6 @@
 # 在 visionOS 中绘制基于图层的清晰内容
 
-在 visionOS 中，从自定义的 Core Animation 图层中以多种分辨率提供文本和矢量图形
+在 visionOS 中，从自定义的 Core Animation 图层中以多种分辨率提供文本和矢量图像。
 
 ## 概述
 
