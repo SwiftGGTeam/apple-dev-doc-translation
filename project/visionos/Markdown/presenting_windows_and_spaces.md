@@ -1,6 +1,6 @@
 # 展示窗口和空间
 
-打开和关闭组成应用界面的场景。
+打开和关闭构成应用界面的场景。
 
 
 ## 概述
@@ -185,7 +185,7 @@ Button("Start") {
 
 #### SwiftUI
 
-- [Hello World](https://developer.apple.com/documentation/visionos/world)
-使用窗口、立体空间和沉浸式空间向人们介绍地球。
-- [Positioning and sizing windows](https://developer.apple.com/documentation/visionos/positioning-and-sizing-windows)
-影响你的 app 所呈现窗口的初始几何布局。
+- [你好，世界](https://developer.apple.com/documentation/visionos/world)
+使用窗口、体量和沉浸式空间让用户了解地球。
+- [窗口的定位和尺寸调整](https://developer.apple.com/documentation/visionos/positioning-and-sizing-windows)
+改变应用窗口的初始几何形状。

@@ -79,7 +79,7 @@ parentLayer.addSublayer(layer)
 
 - [Creating your first visionOS app](https://developer.apple.com/documentation/visionos/creating-your-first-visionos-app)
 使用 SwiftUI 构建新的 visionOS App，并添加平台专属的功能。
-- [Adding 3D content to your app](https://developer.apple.com/documentation/visionos/adding-3d-content-to-your-app)
-为你的 visionOS app 添加深度和维度，并了解如何将 app 的内容融入到人们的周围环境中。
-- [Creating fully immersive experiences in your app](https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences)
-将空间与你使用 RealityKit 或 Metal 创建的内容相结合，构建完全身临其境的体验。
+- [为应用添加 3D 内容](https://developer.apple.com/documentation/visionos/adding-3d-content-to-your-app)
+为你的 visionOS 应用添加深度和维度，并了解如何将应用的内容融入用户周围环境中。
+- [在应用中构建完全沉浸式的体验](https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences)
+将 RealityKit 或 Metal 创建的内容与空间结合，构建完全沉浸式的体验。

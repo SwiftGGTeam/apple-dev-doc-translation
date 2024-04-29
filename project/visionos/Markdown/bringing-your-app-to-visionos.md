@@ -6,7 +6,7 @@
 
 如果你有一个在 iPadOS 或 iOS 上运行的应用，你可以使用 visionOS SDK 构建该应用程序，以便在该平台上运行。为 visionOS 专门构建的应用采用标准系统外观，在该平台上看起来更自然。同时，更新应用也是添加在该平台上吸引眼球的元素（如 3D 内容和沉浸式体验）的好机会。
 
-在大多数情况下，你只需更新 Xcode 的项目设置并重新编译代码即可支持 visionOS。根据你的应用，你可能需要进行其他更改，以解决那些仅在 iOS SDK 中支持的功能。虽然在两个平台上多数技术都是通用的，有些技术在 visionOS 设备上并不合理，或者需要的硬件并不存在。例如，人们通常不使用头戴式设备进行电子支付，因此使用 ProximityReader 框架的应用在 visionOS 中运行时必须禁用这些功能。
+在大多数情况下，你只需更新 Xcode 的项目设置并重新编译代码即可支持 visionOS。根据你的应用，你可能需要进行其他更改，以解决那些仅在 iOS SDK 中支持的功能。虽然在两个平台上多数技术都是通用的，有些技术在 visionOS 设备上并不合理，或者需要的硬件并不存在。例如，用户通常不使用头戴式设备进行电子支付，因此使用 ProximityReader 框架的应用在 visionOS 中运行时必须禁用这些功能。
 
 > 备注  
 > 如果你在 iOS 应用中使用了 ARKit 来实现增强现实体验，则需要进行额外的更改才能在 visionOS 中支持 ARKit。有关如何更新此类应用，请参阅[将 ARKit 应用移植到 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)。
@@ -97,7 +97,7 @@ WidgetKit | WorkoutKit
 
 - **深度**。许多 SwiftUI 和 UIKit 视图都使用视觉效果来增加深度。请寻找类似的方法，将深度元素融入进你的自定义视图中。
 - **3D 内容**。想想在哪些内容中可以加入 3D 模型和形状。使用 RealityKit 实现你的内容，并使用 [`RealityView`](https://developer.apple.com/documentation/RealityKit/RealityView) 从你的应用中展示这些内容。请参阅[在应用中添加 3D 内容](https://developer.apple.com/documentation/visionos/adding-3d-content-to-your-app)。
-- **沉浸式体验**。显示一个空间，让人们沉浸在你的应用内容中。空间可以让你将内容呈现在用户周围的任何地方。你还可以创建只显示当前应用内容的完全沉浸式体验。请参阅[在应用中创建完全沉浸式体验](https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences)。
+- **沉浸式体验**。显示一个空间，让用户沉浸在你的应用内容中。空间可以让你将内容呈现在用户周围的任何地方。你还可以创建只显示当前应用内容的完全沉浸式体验。请参阅[在应用中创建完全沉浸式体验](https://developer.apple.com/documentation/visionos/creating-fully-immersive-experiences)。
 - **与周围环境的互动**。使用 ARKit 可促进你的内容与周围环境之间的互动。例如，检测平面以用作内容的锚点。请参阅 [ARKit。](https://developer.apple.com/documentation/arkit)
 
 如果你使用 UIKit 构建了界面，你仍可将 iOS 故事板加载到你的应用中，但无法为 visionOS 定制界面或包含 3D 内容。要在应用中包含 visionOS 内容，请使用 [`UIHostingController`](https://developer.apple.com/documentation/SwiftUI/UIHostingController) 或 [`UIViewRepresentable`](https://developer.apple.com/documentation/SwiftUI/UIViewRepresentable) 以编程方式添加 SwiftUI 视图。又或者，将界面的相关部分迁移到 SwiftUI。将界面迁移到 SwiftUI 会减少需要维护的代码，并更容易验证你的界面是否按你的需求运行。
@@ -118,7 +118,7 @@ WidgetKit | WorkoutKit
 - **基于运动的应用**。这包括了追踪用户位置变化的应用程序，如提供转弯指示或导航的应用程序。也包括了追踪身体运动的应用程序。
 - **自拍或摄影类应用**。这包括以通过设备摄像头捕捉图像或视频为主要目的的应用程序。
 
-如果你的应用使用了不支持的功能，但在没有该功能的情况下也能正常运行，你仍然可以将应用移植到 visionOS 中。移除不支持的功能，并专注于将其他内容移植到该平台。例如，如果你有一款应用可以让人们写下笔记并拍照放在笔记中，那么你可以在 visionOS 中禁用拍照功能，但允许用户添加文字并整合已有的图片。
+如果你的应用使用了不支持的功能，但在没有该功能的情况下也能正常运行，你仍然可以将应用移植到 visionOS 中。移除不支持的功能，并专注于将其他内容移植到该平台。例如，如果你有一款应用可以让用户写下笔记并拍照放在笔记中，那么你可以在 visionOS 中禁用拍照功能，但允许用户添加文字并整合已有的图片。
 
 ## 另见
 

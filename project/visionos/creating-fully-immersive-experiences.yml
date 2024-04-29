@@ -1,9 +1,9 @@
 - 内容: 'Creating fully immersive experiences in your app'
   提示: ''
-  翻译: '在你的应用中创造完全沉浸式的体验'
+  翻译: '在应用中构建完全沉浸式的体验'
 - 内容: 'Build fully immersive experiences by combining spaces with content you create using RealityKit or Metal.'
   提示: ''
-  翻译: '通过将 RealityKit 或 Metal 创建的内容与空间结合，构建完全沉浸式的体验。'
+  翻译: '将 RealityKit 或 Metal 创建的内容与空间结合，构建完全沉浸式的体验。'
 - 内容: 'Overview'
   提示: ''
   翻译: '概述'
@@ -85,5 +85,3 @@
 - 内容: 'For details on how to render content using Metal and Compositor Services, and manage interactions with your content, see Drawing fully immersive content using Metal.'
   提示: ''
   翻译: '有关如何使用 Metal 和 Compositor Services 渲染内容以及管理与内容交互的详细信息，请参阅 [使用 Metal 绘制完全沉浸式内容](https://developer.apple.com/documentation/compositorservices/drawing_fully_immersive_content_using_metal)。'
-
-
