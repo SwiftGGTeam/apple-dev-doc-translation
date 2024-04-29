@@ -2,6 +2,8 @@
 
 为 Apple Vision Pro 打造全新的应用程序和游戏世界。
 
+> visionOS 1.0+
+
 ## 概述
 
 visionOS 是支持 Apple Vision Pro 的操作系统。将 visionOS 与熟悉的工具和技术结合使用，可为空间计算打造身临其境的应用和游戏。
@@ -94,3 +96,61 @@ Swift Splash<br/><br/>使用 RealityKit 在 visionOS 中搭建一个交互式的
 
 ### ARKit
 
+- [快乐光束](https://developer.apple.com/documentation/visionos/happybeam)  
+使用 ARKit 在 Full Space 中创建有趣的游戏。
+- [设置对 ARKit 数据的访问](https://developer.apple.com/documentation/visionos/setting-up-access-to-arkit-data)  
+检查你的应用是否可以使用 ARKit 并尊重用户隐私。
+- [在沉浸式体验中融入真实世界的环境](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience)  
+让你的应用内容与当地世界的地形相呼应，从而创造身临其境的体验。
+- [在检测到的平面上放置内容](https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes)  
+检测水平平面（如桌子和地板）以及垂直平面（如墙壁和门）。
+- [追踪世界空间中的特定点](https://developer.apple.com/documentation/visionos/tracking-points-in-world-space)  
+检索应用在 ARKit 中存储的锚点的位置和方向。
+- [在三维空间中追踪预登记图像](https://developer.apple.com/documentation/visionos/tracking-images-in-3d-space)  
+根据已知图像的当前位置在用户周围来放置内容。
+
+### 视频播放
+
+- [目的地视频](https://developer.apple.com/documentation/visionos/destination-video)  
+利用 3D 视频和空间音频提供身临其境的体验。
+- [配置应用以进行媒体播放](https://developer.apple.com/documentation/avfoundation/media_playback/configuring_your_app_for_media_playback)  
+配置应用以启用系统标准媒体播放行为。
+- [在 visionOS 中采用系统播放器界面](https://developer.apple.com/documentation/avkit/adopting_the_system_player_interface_in_visionos)  
+为观看 3D 视频内容提供优化的观看体验。
+- [控制播放器的传输行为](https://developer.apple.com/documentation/avfoundation/media_playback/controlling_the_transport_behavior_of_a_player)  
+播放、暂停和搜索媒体演示。
+- [监控应用中的播放进度](https://developer.apple.com/documentation/avfoundation/media_playback/monitoring_playback_progress_in_your_app)  
+观察媒体资源的播放情况以更新应用的用户界面状态。
+- [在 visionOS 中剪辑和导出媒体](https://developer.apple.com/documentation/avkit/trimming_and_exporting_media_in_visionos)  
+在应用中显示标准控件，以编辑当前播放媒体的时间线。
+
+### Xcode 和 Instruments
+
+- [诊断和解决运行中应用的错误](https://developer.apple.com/documentation/Xcode/diagnosing-and-resolving-bugs-in-your-running-app)  
+检查应用以隔离错误、定位崩溃、识别过多的系统资源使用、可视化内存错误并调查其外观问题。
+- [诊断运行中应用的外观问题](https://developer.apple.com/documentation/Xcode/diagnosing-issues-in-the-appearance-of-your-running-app)  
+检查运行中的应用，调查其显示内容的外观和位置问题。
+- [为你的 visionOS 应用创建性能计划](https://developer.apple.com/documentation/visionos/creating-a-performance-plan-for-visionos-app)  
+确定应用的性能和功耗目标，并制定衡量和评估这些目标的计划。
+- [分析 visionOS 应用的性能](https://developer.apple.com/documentation/visionos/analyzing-the-performance-of-your-visionos-app)  
+使用 Instruments 中的 RealityKit 追踪模板来评估和改进 visionOS 应用的性能。
+- [配置应用图标](https://developer.apple.com/documentation/Xcode/configuring-your-app-icon)  
+添加多种应用图标，以便在“设置”、搜索结果和 App Store 等位置显示你的应用。
+
+### 模拟器
+
+- [在模拟器或设备上运行应用](https://developer.apple.com/documentation/Xcode/running-your-app-in-simulator-or-on-a-device)  
+在模拟的 iOS、tvOS、watchOS 或 visionOS 设备上，或在与连接到 Mac 的设备上启动应用。
+- [在 visionOS 模拟器中与应用互动](https://developer.apple.com/documentation/Xcode/interacting-with-your-app-in-the-visionos-simulator)  
+在模拟器中使用 Mac 浏览空间并控制与 visionOS 应用的交互。
+
+### iOS 迁移和兼容性
+
+- [将现有应用移植到 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-app-to-visionos)  
+使用 visionOS SDK 为你的 iPadOS 或 iOS 应用构建一个新版本，并更新代码以适应平台差异。
+- [将 ARKit 应用移植到 visionOS](https://developer.apple.com/documentation/visionos/bringing-your-arkit-app-to-visionos)  
+更新使用了 ARKit 的 iPadOS 或 iOS 应用，并在 visionOS 中提供相同的体验。
+- [检查现有应用是否与 visionOS 兼容](https://developer.apple.com/documentation/visionos/checking-whether-your-app-is-compatible-with-visionos)  
+确认你现有的 iOS 或 iPadOS 应用能否原封不动地在 visionOS 中正常运行，还是需要进行修改以处理平台差异。
+- [使现有应用与 visionOS 兼容](https://developer.apple.com/documentation/visionos/making-your-app-compatible-with-visionos)  
+修改你的 iPadOS 或 iOS 应用，以便在 visionOS 中成功运行。
