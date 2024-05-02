@@ -27,7 +27,7 @@
   翻译: '探索新型交互方式'
 - 内容: 'People can select an element by looking at it and tapping their fingers together. They can also pinch, drag, zoom, and rotate objects using specific hand gestures. SwiftUI provides built-in support for these standard gestures, so rely on them for most of your app’s input. When you want to go beyond the standard gestures, use ARKit to create custom gestures.'
   提示: ''
-  翻译: '人们可以通过注视某个元素，并将两个手指轻敲合并来选择它。他们还可以使用特定的手势进行捏、拖拽、缩放和旋转对象。SwiftUI 为这些标准手势提供了系统支持，因此大多数应用输入都依赖于它们。当您想使用标准手势以外的手势时，可以使用 ARKit 创建自定义手势。'
+  翻译: '用户可以通过注视某个元素，并将两个手指轻敲合并来选择它。他们还可以使用特定的手势进行捏、拖拽、缩放和旋转对象。SwiftUI 为这些标准手势提供了系统支持，因此大多数应用输入都依赖于它们。当您想使用标准手势以外的手势时，可以使用 ARKit 创建自定义手势。'
 - 内容: 'Dive into featured sample apps'
   提示: ''
   翻译: '深入了解特色的示例 App'

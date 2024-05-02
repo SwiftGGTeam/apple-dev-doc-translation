@@ -9,7 +9,7 @@
   翻译: '概览'
 - 内容: 'visionOS is an immersive platform that supports people of all abilities. Even though experiences incorporate stunning visual content and hand- and eye-tracking technologies, people can engage with content in other ways. In fact, the platform supports people in many different situations, including those who are blind, have low vision, have limited mobility, or have limb differences. With the help of assistive technologies, people can interact with all of your app’s content.'
   提示: ''
-  翻译: 'visionOS 是一个可以支持不同人群的沉浸式平台。虽然平台的体验融合了引人入胜的视觉内容和手眼追踪技术，但人们仍可以通过其他方式与内容互动。事实上，平台为许多不同人群都提供了支持，包括视力障碍者、行动不便者或是有肢体差异的用户。在辅助技术的帮助下，用户就能全面地与应用中的内容进行互动。'
+  翻译: 'visionOS 是一个可以支持不同人群的沉浸式平台。虽然平台的体验融合了引人入胜的视觉内容和手眼追踪技术，但用户仍可以通过其他方式与内容互动。事实上，平台为许多不同人群都提供了支持，包括视力障碍者、行动不便者或是有肢体差异的用户。在辅助技术的帮助下，用户就能全面地与应用中的内容进行互动。'
 - 内容: 'During development, enable VoiceOver and other assistive features and test your app’s accessibility support. Make sure people can navigate your app’s interface intuitively, and that all of the necessary elements are present. Improve the descriptive information for those elements to communicate their intended purpose. And make sure your app adapts to changing conditions, such as changes to the Dynamic Type setting while your app is running.'
   提示: ''
   翻译: '在开发过程中，建议启用 VoiceOver 以及其他辅助特性，来测试你的应用对辅助功能的支持情况。要确保用户能够直观地操作应用界面，并确认所有必要的元素都已展示到位。为这些元素增加描述信息，传达其预期的用途。并且确保你的应用能够适配那些会动态改变的设置，例如在应用运行时 Dynamic Type 的设置发生变化。'

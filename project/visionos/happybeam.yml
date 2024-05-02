@@ -45,7 +45,7 @@
   翻译: '当您的应用仅显示窗口或体量时，手部追踪数据不可用。相反，当您演示沉浸式空间时，它可用，如上例所示。'
 - 内容: 'You can detect gestures using ARKit data with a level of accuracy that depends on your use case and intended experience. For example, Happy Beam could require strict positioning of finger joints to closely resemble a heart shape. Instead, however, it prompts people to make a heart shape and uses a heuristic to indicate when the gesture is close enough.'
   提示: ''
-  翻译: '您可以使用 ARKit 数据检测手势，其准确程度取决于您的用例和预期体验。例如，Happy Beam 可以更加严格地要求手指关节位置，规定手势必须非常接近心形。然而，实际上应用会提示人们摆出心形手势，并使用启发式的方法来提示手势已经足够接近心形。'
+  翻译: '您可以使用 ARKit 数据检测手势，其准确程度取决于您的用例和预期体验。例如，Happy Beam 可以更加严格地要求手指关节位置，规定手势必须非常接近心形。然而，实际上应用会提示用户摆出心形手势，并使用启发式的方法来提示手势已经足够接近心形。'
 - 内容: 'The following checks whether a person’s thumbs and index fingers are almost touching:'
   提示: ''
   翻译: '下述代码检查玩家的拇指和食指是否近乎接触：'
