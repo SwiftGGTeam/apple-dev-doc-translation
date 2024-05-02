@@ -1,6 +1,6 @@
-# Diorama
+# 西洋镜
 
-使用 Reality Composer Pro 设计 visionOS 应用程序中的场景
+使用 Reality Composer Pro 设计 visionOS 应用中的场景。
 
 [下载本文的示例项目](https://docs-assets.developer.apple.com/published/de92f635b991/Diorama.zip)
 
