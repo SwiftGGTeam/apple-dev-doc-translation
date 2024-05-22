@@ -78,4 +78,4 @@ ARKit 保留的你应用中世界锚点的唯一信息是它们的 [`UUID`](http
 - [在检测到的平面上放置内容](https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes)  
 检测水平平面（如桌子和地板）以及垂直平面（如墙壁和门）。
 - [在三维空间中追踪预登记图像](https://developer.apple.com/documentation/visionos/tracking-images-in-3d-space)  
-根据已知图像的当前位置在用户周围来放置内容。
+根据已知图像的当前位置在用户周围放置内容。

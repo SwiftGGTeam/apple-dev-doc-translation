@@ -105,7 +105,7 @@ visionOS 是为 Apple Vision Pro 提供支持的操作系统。将 visionOS 与�
 - [追踪世界空间中的特定点](https://developer.apple.com/documentation/visionos/tracking-points-in-world-space)  
 检索应用在 ARKit 中存储的锚点的位置和方向。
 - [在三维空间中追踪预登记图像](https://developer.apple.com/documentation/visionos/tracking-images-in-3d-space)  
-根据已知图像的当前位置在用户周围来放置内容。
+根据已知图像的当前位置在用户周围放置内容。
 
 ### 视频播放
 
