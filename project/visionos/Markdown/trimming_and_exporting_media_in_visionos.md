@@ -1,6 +1,6 @@
 # 在 visionOS 中剪辑和导出媒体
 
-在应用中显示标准控件，以编辑当前播放媒体的时间轴。
+在应用中显示标准控件，以编辑当前播放媒体的时间线。
 
 ## 概述
 
@@ -8,7 +8,7 @@
 
 [媒体剪辑界面](https://docs-assets.developer.apple.com/published/68c56a39c0/renderedDark2x-1685984498.png)
 
-启用此功能后，用户可以指定显示媒体时间轴的某个片段。本文将介绍如何在应用中采用这一功能，并说明如何使用 AVFoundation 导出剪辑后的结果。
+启用此功能后，用户可以指定显示媒体时间线的某个片段。本文将介绍如何在应用中采用这一功能，并说明如何使用 AVFoundation 导出剪辑后的结果。
 
 ### 确定媒体是否支持剪辑
 
@@ -39,7 +39,7 @@ var controller: AVPlayerViewController? {
 
 ### 启用剪辑用户界面
 
-确定播放器视图控制器支持编辑当前媒体的时间轴后，调用播放器的 [`beginTrimming(completionHandler:)`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/4131582-begintrimming) 方法启用其剪辑界面。你需要在异步上下文中调用此方法：
+确定播放器视图控制器支持编辑当前媒体的时间线后，调用播放器的 [`beginTrimming(completionHandler:)`](https://developer.apple.com/documentation/avkit/avplayerviewcontroller/4131582-begintrimming) 方法启用其剪辑界面。你需要在异步上下文中调用此方法：
 
 ```swift
 /// Enables the player view controller's media trimming interface.

@@ -121,7 +121,7 @@ Task {
 
 当您的应用仅显示窗口或音量时，手势跟踪数据不可用。相反，当您演示沉浸式空间时，它可用，如上例所示。
 
-您可以使用 ARKit 数据检测手势，其准确程度取决于您的用例和预期体验。例如，Happy Beam 可以更加严格地要求手指关节位置，规定手势必须非常接近心形。然而，实际上应用会提示人们摆出心形手势，并使用启发式的方法来提示手势已经足够接近心形。
+您可以使用 ARKit 数据检测手势，其准确程度取决于您的用例和预期体验。例如，Happy Beam 可以更加严格地要求手指关节位置，规定手势必须非常接近心形。然而，实际上应用会提示用户摆出心形手势，并使用启发式的方法来提示手势已经足够接近心形。
 
 下述代码检查玩家的拇指和食指是否近乎接触：
 
@@ -288,7 +288,7 @@ func sendBeamPositionUpdate(_ pose: Pose3D) {
 - [将真实世界的环境融入沉浸式体验中](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience)
 通过使应用的内容响应世界的本地形状来创建身临其境的体验。
 - [你好，世界](https://developer.apple.com/documentation/visionos/world)
-使用窗口、体量和沉浸式空间让人们了解地球。
+使用窗口、体量和沉浸式空间让用户了解地球。
 - [目的地视频](https://developer.apple.com/documentation/visionos/destination-video)
 利用 3D 视频和空间音频提供身临其境的体验。
 - [西洋镜](https://developer.apple.com/documentation/visionos/diorama)

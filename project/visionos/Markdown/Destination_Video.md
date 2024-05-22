@@ -191,7 +191,7 @@ private var groupSession: GroupSession<VideoWatchingActivity>? {
 #### 相关示例
 
 - [你好，世界](https://developer.apple.com/documentation/visionos/world)
-使用窗口、体量和沉浸式空间让人们了解地球。
+使用窗口、体量和沉浸式空间让用户了解地球。
 - [快乐光束](https://developer.apple.com/documentation/visionos/happybeam)
 使用 ARKit 在 Full Space 中创建有趣的游戏。
 - [西洋镜](https://developer.apple.com/documentation/visionos/diorama)
