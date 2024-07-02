@@ -13,7 +13,7 @@
 <br>
 </p>
 
-除了帮助你创建场景之外，Reality Composer Pro 还允许你向场景中的实体添加和配置组件（甚至是你编写的自定义组件），还能让你使用基于节点的材质编辑器（称为着色器图形（Shader Graph））创建复杂的材质和特效。
+除了帮助你创建场景之外，Reality Composer Pro 还允许你向场景中的实体添加和配置组件（甚至是你编写的自定义组件），还能让你使用基于节点的材质编辑器（称为着色器图表（Shader Graph））创建复杂的材质和特效。
 
 ### 启动 Reality Composer Pro
 
@@ -30,7 +30,7 @@
 
 Reality Composer Pro 窗口有几个部分。上半部分显示活动场景。如果有多个场景，窗口顶部会显示一个选项卡栏，每个打开的场景都有一个选项卡。Reality Composer Pro 中的*场景*是存储在 `.usda` 文件中的实体层次结构。
 
-顶部窗格的左侧包含层次浏览器，显示活动场景中实体的树形表示。你可以使用左上角的工具栏按钮切换它，以显示错误和警告。中间窗格是三维视图，显示活动场景的三维呈现。右上方是检查器，根据当前的焦点，会显示三维视图、层次视图或“着色器图形”中选择项目的可配置值。
+顶部窗格的左侧包含层次浏览器，显示活动场景中实体的树形表示。你可以使用左上角的工具栏按钮切换它，以显示错误和警告。中间窗格是三维视图，显示活动场景的三维呈现。右上方是检查器，根据当前的焦点，会显示三维视图、层次视图或“着色器图表”中选择项目的可配置值。
 
 > 提示  
 > 一个 Reality Composer Pro 场景可以代表整个 RealityKit 场景，你可以在 Reality Composer Pro 项目中拥有多个场景，每个场景在同一个应用中驱动不同的 [`RealityView`](https://developer.apple.com/documentation/RealityKit/RealityView)。场景还可以包含作为构建模块使用的实体集合。例如，如果你有一个飞机模型，你可以为它创建一个场景，其中包含它的三维模型、使引擎冒烟的粒子效果以及代表飞机发出的各种声音的音频实体或组件。然后，你的应用就可以加载这些组合资源，并在任何需要的位置一起使用这些资源。
@@ -40,7 +40,7 @@ Reality Composer Pro 的下半部分包含以下四个选项卡：
 项目浏览器（Project Browser）  
     显示项目中的所有资源。
 
-着色器图形（Shader Graph）  
+着色器图表（Shader Graph）  
     基于节点的进阶材质编辑器。
 
 音频混合器（Audio Mixer）  
@@ -49,7 +49,7 @@ Reality Composer Pro 的下半部分包含以下四个选项卡：
 统计信息（Statistics）  
     有关当前打开场景的信息，如包含的实体、顶点和动画数量。
 
-<img alt="Reality Composer Pro 项目窗口截图。窗口顶部有一个名为 “Biplane”的选项卡。窗口垂直分为两部分。顶部有三个窗格：左侧是三维场景的层次视图，中间是玩具飞机模型，右侧是检查器。底部有四个选项卡，分别标有 “项目浏览器”、“着色器图形”、“音频混合器”和“统计”。当前选择的是“项目浏览器”，它也分为三个部分，左边是层次结构，中间是图标网格，右边是检查器，显示中间所选资源的实体层次结构。" src="https://docs-assets.developer.apple.com/published/e6d31f6e17f93c7fafe3e125f120b289/RCPro-BiplaneWindow~dark@2x.png">
+<img alt="Reality Composer Pro 项目窗口截图。窗口顶部有一个名为 “Biplane”的选项卡。窗口垂直分为两部分。顶部有三个窗格：左侧是三维场景的层次视图，中间是玩具飞机模型，右侧是检查器。底部有四个选项卡，分别标有 “项目浏览器”、“着色器图表”、“音频混合器”和“统计”。当前选择的是“项目浏览器”，它也分为三个部分，左边是层次结构，中间是图标网格，右边是检查器，显示中间所选资源的实体层次结构。" src="https://docs-assets.developer.apple.com/published/e6d31f6e17f93c7fafe3e125f120b289/RCPro-BiplaneWindow~dark@2x.png">
 
 Reality Composer Pro 项目开始时只有一个名为 `Scene` 的空场景，该场景存储在一个名为 `Scene.usda` 的文件中。你可以根据需要，通过选择 File > New > Scene 来创建更多场景。新场景在窗口顶部以选项卡的形式打开，并以 `.usda` 文件的形式出现在项目浏览器中。
 
@@ -75,7 +75,7 @@ Reality Composer Pro 项目开始时只有一个名为 `Scene` 的空场景，�
 Reality Composer Pro 可以将许多资源展示为实体，但并不能是所有资源；例如：
 
 - 当你将 USDZ 模型添加到场景中时，它们会成为一个实体或实体层次结构。
-- 图像文件不会成为实体。Reality Composer Pro 只能间接使用图像资源，例如作为在着色器图形（Shader Graph）中构建材质的源纹理。如果你拖动 Reality Composer Pro 无法将其转化为实体的资源，则不会发生任何操作。
+- 图像文件不会成为实体。Reality Composer Pro 只能间接使用图像资源，例如作为在着色器图表（Shader Graph）中构建材质的源纹理。如果你拖动 Reality Composer Pro 无法将其转化为实体的资源，则不会发生任何操作。
 
 <p style="width: 100%">
 <img align="right" width="385" height="auto" alt="显示 Reality Composer Pro 库窗口的截图。" src="https://docs-assets.developer.apple.com/published/254710e01fa59567a0913456bc970333/rcpro-library-cropped~dark@2x.png">
@@ -95,7 +95,7 @@ Reality Composer Pro 有一个资源库，你可以在自己的应用中使用�
 > 重要事项  
 > Reality Composer Pro 将导入的资源视为只读资源。
 
-你对场景中的资源所做的更改只会影响该场景的资源副本。你所做的更改将存储在场景的 `.usda` 文件中，而不是原始资源中。这意味着你可以放心地工作，而不必担心无意中更改其他场景。如果你计划对导入的三维模型进行重要改动，例如用动态着色器图形材料替换其材料，请将模型作为 `.usdc` 文件而不是 `.usdz` 文件导入，然后仅单独导入你需要的资源，以避免 Xcode 将你不需要的资源编译到你的应用中。
+你对场景中的资源所做的更改只会影响该场景的资源副本。你所做的更改将存储在场景的 `.usda` 文件中，而不是原始资源中。这意味着你可以放心地工作，而不必担心无意中更改其他场景。如果你计划对导入的三维模型进行重要改动，例如用动态着色器图表材料替换其材料，请将模型作为 `.usdc` 文件而不是 `.usdz` 文件导入，然后仅单独导入你需要的资源，以避免 Xcode 将你不需要的资源编译到你的应用中。
 
 ### 用资源组成场景
 
@@ -148,7 +148,7 @@ RealityKit 遵循一种称为实体（Entity）-组件（Component）-系统（S
 
 Reality Composer Pro 场景即是 RealityKit 实体的层次结构。你可以更改层次结构浏览器中实体之间的关系，但从 `.usdz` 文件导入的部分层次结构除外，因为 Reality Composer Pro 将其视为只读文件。
 
-要更改实体之间的关系，或在两个当前不相关的实体之间创建关系，请使用层次视图并将一个实体拖到你希望它所属的另一实体上。如果希望某个实体成为根实体，可将其拖至层次视图顶部的根目录中。
+要更改实体之间的关系，或在两个当前不相关的实体之间创建关系，请使用层次视图并将一个实体拖到你希望它所属的另一实体上。如果希望某个实体成为根实体，可将其拖至层次视图顶部的根节点中。
 
 ### 修改或创建新材料
 
@@ -163,48 +163,51 @@ Reality Composer Pro 场景即是 RealityKit 实体的层次结构。你可以�
 在层次视图中选择了一个 PBR 材质后，就可以使用检查器对其进行编辑。你可以用其他图像、颜色或数值替换任何 PBR 属性的图像、颜色或数值。对材质所做的任何更改都会影响到与该材质绑定的所有实体。你还可以通过单击场景层次视图底部的添加按钮 (+) 并选择“Material”，以从头开始创建新材质。
 </p>
 
-### 在着色器图形（Shader Graph）中构建材质
+### 在着色器图表（Shader Graph）中构建材质
 
-PBR 材质能很好地再现真实世界的表面。不过，它不能表现卡通着色器等非现实材质，也不能包含逻辑。这意味着你无法为 PBR 材质制作动画，也无法让它对应用的输入做出反应。
+PBR（物理基础渲染）材质能很好地再现真实世界的表面。不过，它不能表现卡通着色器等非现实材质，也不能包含逻辑。这意味着你无法为 PBR 材质制作动画，也无法让它对应用的输入做出反应。
 
-Reality Composer Pro 提供的第二种材质称为*自定义材质*。你可以使用“着色器图形”选项卡创建和编辑自定义材质。着色器图形为材质提供了大量的控制功能，让你可以完成原本需要编写 Metal 着色器才能完成的工作。有关编写 Metal 着色器的更多信息，请参阅 [Metal](https://developer.apple.com/documentation/metal)。
+Reality Composer Pro 提供的第二种材质称为*自定义材质*。你可以使用“着色器图表”选项卡创建和编辑自定义材质。着色器图表为材质提供了大量的控制功能，让你可以完成原本需要编写 Metal 着色器才能完成的工作。有关编写 Metal 着色器的更多信息，请参阅 [Metal](https://developer.apple.com/documentation/metal)。
 
 > 注意  
 > RealityKit 并不像你期望的那样，将 Reality Composer Pro 自定义材质表示为 [`CustomMaterial`](https://developer.apple.com/documentation/RealityKit/CustomMaterial) 的实例。相反，RealityKit 会将这些材质表示为 [`ShaderGraphMaterial`](https://developer.apple.com/documentation/RealityKit/ShaderGraphMaterial) 实例。
 
-<img alt="显示着色器图形选项卡中复杂节点图的截图。" src="https://docs-assets.developer.apple.com/published/395ff773d8c919770662b73321760993/RCPro-ShaderGraphWindow~dark@2x.png">
+<img alt="显示着色器图表选项卡中复杂节点图的截图。" src="https://docs-assets.developer.apple.com/published/395ff773d8c919770662b73321760993/RCPro-ShaderGraphWindow~dark@2x.png">
 
-在编辑器中创建的材质会影响实体的外观和形状。如果创建一个节点图并将其连接到输出节点上的自定义表面（Custom Surface）引脚，则该节点图将控制模型的表面外观，大致相当于在片段着色器中编写 Metal 代码。如果建立一个节点图并将其连接到“自定义几何体修改器”输出引脚，这些节点就会控制实体的形状，这相当于在顶点着色器中运行 Metal 代码。
+在编辑器中创建的材质会影响实体的外观和形状。如果创建一个节点图并将其连接到输出节点上的“自定义表面（Custom Surface）”引脚，则该节点图将控制模型的表面外观，大致相当于在片段着色器中编写 Metal 代码。如果建立一个节点图并将其连接到“自定义几何体修改器（Custom Geometry Modifier）”输出引脚，这些节点就会控制实体的形状，这相当于在顶点着色器中运行 Metal 代码。
 
-节点代表数值和操作，其作用与 Metal 中的变量、常量或函数相同。例如，如果需要某个值的正弦值，可将该值的输出节点连接到 `Sin` 节点的输入引脚上。双击着色器图形视图的背景或点击屏幕右侧的 "新建节点 "按钮，即可在图形中添加新节点。
+节点代表数值和操作，其作用与 Metal 中的变量、常量或函数相同。例如，如果需要某个值的正弦值，可将该值的输出节点连接到 `Sin` 节点的输入引脚上。双击着色器图表视图的背景或点击屏幕右侧的“New Node”按钮，即可在图形中添加新节点。
 
 > 重要  
-> 有些节点（如 `Sin` 节点）是通用的，可用于任一输出引脚。其他节点则专用于 "自定义曲面 "或 "几何体修改器 "输出。如果节点名称以几何图形修改器开头，则只能将其连接到几何图形修改器输出引脚。如果节点名称以 "Surface（曲面）"开头，则只能将其连接到自定义曲面输出引脚。
+> 有些节点（如 `Sin`）是通用的，可用于任一输出引脚。其他节点则专用于“自定义表面（Custom Surface）”或“几何体修改器（Custom Geometry Modifier）”输出。如果节点名称以“Geometry Modifier”开头，则只能将其连接到几何图形修改器输出引脚。如果节点名称以“Surface”开头，则只能将其连接到自定义表面输出引脚。
 
-要释放着色器图形的真正威力，需要能够通过 Swift 代码更改材质的值。Shader Graph 可以通过创建*促进输入*（即可以设置并从 Swift 中读取的参数）来实现这一功能，从而在运行时更改材质。如果你想打开或关闭某个功能，你可以创建一个布尔输入参数，并根据其值设置条件逻辑。如果想在两种颜色之间平滑插值，可以创建一个 `Float` 输入参数，并用它来控制如何在两种颜色之间插值。你可以按住 Control 键单击常量节点并选择 "推广"（Promote），将其转化为已推广的输入。你也可以通过按住 Control 键并选择 "降级"（Demote），将已升级的输入变回常量。
+要解锁着色器图表的真正威力，需要能够通过 Swift 代码更改材质的值。着色器图表可以通过创建*升级输入*来实现这一功能，这些参数可以从 Swift 中设置和读取，从而能够在运行时更改材质。如果你想打开或关闭某个功能，你可以创建一个布尔值输入参数，并根据其值设置条件逻辑。如果你想在两种颜色之间平滑地修改值，可以创建一个 `Float` 输入参数，并用它来控制如何在两种颜色之间插值。你可以按住 Control 键单击常量节点并选择“升级（Promote）”，将其转化为升级输入。你也可以通过按住 Control 键并选择“降级（Demote）”，将已升级的输入变回常量。
 
 <p style="width:100%">
 <img align="right" width="166" alt="显示检查器中“新建输入”按钮的截图。" src="https://docs-assets.developer.apple.com/published/b6b6136cf1b3a14fe5cf420a40f8af4a/RCPro-InputParameter~dark@2x.png">
 
-如果没有现有的常量可以推广，可以使用检查器创建新的推广输入。只有在层次视图中选择了材质，但着色器图形选项卡中没有选择节点时，"新建输入 "按钮才会显示在检查器中。
+如果没有现有的可升级常量，可以使用检查器创建新的升级输入。只有在层次视图中选择了材质，但着色器图表选项卡中没有选择节点时，“New Input”按钮才会显示在检查器中。
+<br>
+<br>
 <br>
 <br>
 <br>
 </p>
 
-要在 Swift 代码中更改输入参数的值，可使用 [`setParameter(name:value:)`](https://developer.apple.com/documentation/RealityKit/ShaderGraphMaterial/setParameter(name:value:))，同时传递参数名称和新值。请注意，参数名称区分大小写，因此 `name` 字符串必须与着色器图形中的参数名称完全一致。
+要在 Swift 代码中更改输入参数的值，可使用 [`setParameter(name:value:)`](https://developer.apple.com/documentation/RealityKit/ShaderGraphMaterial/setParameter(name:value:))，同时传递参数名称和新值。请注意，参数名称区分大小写，因此 `name` 字符串必须与着色器图表中的参数名称完全一致。
 
-有关着色器图形的使用示例，请参阅[西洋镜](https://developer.apple.com/documentation/visionos/diorama)和[快乐光束](https://developer.apple.com/documentation/visionos/happybeam)。
+有关着色器图表的使用示例，请参阅[西洋镜](https://developer.apple.com/documentation/visionos/diorama)和[快乐光束](https://developer.apple.com/documentation/visionos/happybeam)。
 
-### 使用引用重复使用资源
+### 使用引用以复用资源
 
 如果你的项目有多个共享资源的场景，你可以使用引用来避免创建重复的资源。*引用*的作用类似于 Finder 中的别名--它指向原始资源，其功能就如同该资源的另一个副本。
 
 <p style="width:100%">
-<img aligh="right" width="240.5" alt="显示检查器引用部分的截图。" src="https://docs-assets.developer.apple.com/published/a5c418ad184c483cc61a5f6edb2bae4e/RCPro-References~dark@2x.png">
+<img align="right" width="240.5" alt="显示检查器引用部分的截图。" src="https://docs-assets.developer.apple.com/published/a5c418ad184c483cc61a5f6edb2bae4e/RCPro-References~dark@2x.png">
 
-使用检查器创建引用。默认情况下，对于没有任何引用的实体和材质，引用部分是隐藏的。要为没有引用的资源或材质添加新的引用，请选择 Reality Composer Pro > 设置，然后取消选中隐藏空引用。
+使用检查器创建引用。默认情况下，对于没有任何引用的实体和材质，引用部分是隐藏的。要为没有引用的资源或材质添加新的引用，请选择 Reality Composer Pro > Settings，然后取消选中“隐藏空引用（Hide Empty References）”。
 
+<br>
 <br>
 <br>
 <br>
@@ -216,13 +219,13 @@ Reality Composer Pro 提供的第二种材质称为*自定义材质*。你可以
 > 重要  
 > 如果你对链接的资源进行更改，这些更改将影响每个链接的引用。
 
-### 预览设备上的场景
+### 在设备上预览场景
 
-如果你的 Mac 连接有 Apple Vision Pro，请选择预览 > 播放或单击 Reality Composer Pro 工具栏中的预览按钮，在设备上查看场景。预览按钮是工具栏右侧最左侧的按钮，即带有 Apple Vision Pro 图标的按钮。如果你连接了多个 Apple Vision Pro 设备，可通过单击预览按钮旁边的下拉菜单选择要使用的设备。
+如果你的 Mac 连接了 Apple Vision Pro，请选择 Preview > Play 或单击 Reality Composer Pro 工具栏中的预览按钮以在设备上查看场景。预览按钮是工具栏右侧最左端的按钮，即带有 Apple Vision Pro 图标的按钮。如果你连接了多个 Apple Vision Pro 设备，可通过单击预览按钮旁边的下拉菜单选择要使用的设备。
 
 ### 在 RealityKit 中加载 Reality Composer Pro 场景
 
-加载 Reality Composer Pro 场景与从应用捆绑包中加载 USDZ 资源几乎完全相同，不同的是，你必须指定 Reality Composer Pro 软件包捆绑包。你通常会在 [`RealityView`](https://developer.apple.com/documentation/RealityKit/RealityView) 初始化器的 make closure 中这样做。Reality Composer Pro 软件包定义了一个指向其软件包的全局常量，该常量以项目命名，并附加了 "Bundle"。在默认的 Xcode visionOS 模板中，Reality Composer Pro 项目名为 `RealityKitContent`，因此全局 bundle 变量名为 `realityKitContentBundle`：
+加载 Reality Composer Pro 场景与从应用捆绑包中加载 USDZ 资源几乎完全相同，只是你必须指定 Reality Composer Pro 捆绑包。你通常会在 [`RealityView`](https://developer.apple.com/documentation/RealityKit/RealityView) 初始化器的 `make` 闭包中执行这一操作。Reality Composer Pro 软件包定义了一个指向其捆绑包的全局常量，该常量以附加了“Bundle”的项目命名。在默认的 Xcode visionOS 模板中，Reality Composer Pro 项目名为 `RealityKitContent`，因此全局捆绑包变量名为 `realityKitContentBundle`：
 
 ```swift
 RealityView { content in
@@ -248,7 +251,7 @@ RealityView { content in
 ### RealityKit 和 Reality Composer Pro
 
 - [机器人植物学家](https://developer.apple.com/documentation/visionos/bot-anist)  
-构建一个多平台应用，使用窗口、体积和动画来创建机器人植物学家的温室。
+构建一个多平台应用，使用窗口、体量和动画来创建机器人植物学家的温室。
 - [Swift Splash](https://developer.apple.com/documentation/visionos/swift-splash)  
 使用 RealityKit 在 visionOS 中创建一个交互式游乐设施。
 - [西洋镜](https://developer.apple.com/documentation/visionos/diorama)  
