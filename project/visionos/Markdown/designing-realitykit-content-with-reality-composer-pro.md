@@ -111,7 +111,7 @@ Reality Composer Pro 有一个可在自己应用中使用的资源库。单击�
 - 要等比缩放所选实体，请单击旋转圆，然后向远离实体原点的方向拖动以放大实体，或向实体原点的方向拖动以缩小。由于它是等比缩放的，所以 Reality Composer Pro 显示哪个旋转手柄并不重要。
 
 <div align="center">
-    <video width="405" src="https://docs-assets.developer.apple.com/published/a2f7bf8aeb88fefc2f4b3eeeab034fc9/RCPro-Manipulator.mp4"/>
+    <video width="405" controls="true" src="https://docs-assets.developer.apple.com/published/a2f7bf8aeb88fefc2f4b3eeeab034fc9/RCPro-Manipulator.mp4"/>
 </div>
 
 > 注意  
