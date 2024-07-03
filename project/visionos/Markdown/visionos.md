@@ -99,7 +99,7 @@ visionOS 是为 Apple Vision Pro 提供支持的操作系统。将 visionOS 与�
 - [设置对 ARKit 数据的访问](https://developer.apple.com/documentation/visionos/setting-up-access-to-arkit-data)  
 检查你的应用是否可以使用 ARKit 并尊重用户隐私。
 - [在沉浸式体验中融入真实世界的环境](https://developer.apple.com/documentation/visionos/incorporating-real-world-surroundings-in-an-immersive-experience)  
-让你的应用内容与当地世界的地形相呼应，从而创造身临其境的体验。
+让你的应用内容与当地环境的地形相呼应，从而创造身临其境的体验。
 - [在检测到的平面上放置内容](https://developer.apple.com/documentation/visionos/placing-content-on-detected-planes)  
 检测水平平面（如桌子和地板）以及垂直平面（如墙壁和门）。
 - [追踪世界空间中的特定点](https://developer.apple.com/documentation/visionos/tracking-points-in-world-space)  
